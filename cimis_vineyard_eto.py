@@ -12,17 +12,24 @@ New workflow (this script):
   2. Filter for vineyard polygons; compute polygon area in California Albers.
   3. Download Census TIGER ZCTA boundaries once and cache locally; spatial-
      join vineyard polygon centroids to assign each polygon a zip code.
-  4. Build area-based weights: fraction of county vineyard area per zip code.
+  4. Build area-based weights: fraction of county/AVA vineyard area per zip code.
   5. Query the CIMIS Web API (daily ASCE ETo + precip by zip code) and
      sum daily → monthly totals per zip code.
-  6. Area-weighted mean of monthly ETo/precip → one value per county × month.
-  7. Download CA county boundaries (Census TIGER) and join ETo data to them.
-  8. Write a GeoPackage with two ready-to-use ArcGIS Pro layers:
-       • county_annual_eto  — one row per county × year  (TIME-AWARE for
-                              year slider; choropleth by water_deficit_in)
+  6. Area-weighted mean of monthly ETo/precip → one value per county × month
+     AND one value per American Viticultural Area (AVA) × month.
+  7. Download CA county boundaries (Census TIGER) and load CA AVA boundaries
+     from the bundled CA_avas.geojson; join ETo data to each.
+  8. Write a GeoPackage with four ready-to-use ArcGIS Pro layers:
+       • county_annual_eto  — one row per county × year
        • county_monthly_eto — one row per county × year × month
-                              (monthly ETo columns eto_mo01 … eto_mo12)
+       • ava_annual_eto     — one row per AVA × year
+       • ava_monthly_eto    — one row per AVA × year × month
      Also writes companion CSVs for non-spatial analysis.
+
+  AVA aggregation note: AVAs have an internal geographic and viticultural logic
+  (climate, soils, topography) that counties lack.  A vineyard centroid that
+  falls within nested AVAs (e.g., Napa Valley ⊂ North Coast) contributes to
+  BOTH — each AVA gets an independent area-weighted ET estimate.
 
 Years supported: 2014, 2016, 2018–2024  (matches DWR crop mapping releases)
 
@@ -90,6 +97,9 @@ GDB_FOLDER = Path(r"C:\Users\brian\ABT 182 Project\Grant\DWRraw\Data\onlyGDB")
 
 # All outputs (GeoPackage, CSVs, boundary caches) go here
 OUTPUT_DIR = Path(r"C:\Users\brian\ABT 182 Project\Output")
+
+# California AVA boundaries — bundled GeoJSON in this repository
+AVA_GEOJSON = Path(__file__).parent / "CA_avas.geojson"
 
 # CIMIS Web API key — register free at https://cimis.water.ca.gov
 CIMIS_APP_KEY = os.getenv("CIMIS_APP_KEY", "YOUR-APP-KEY-HERE")
@@ -276,7 +286,62 @@ def assign_zip_codes(vineyards: gpd.GeoDataFrame, zcta: gpd.GeoDataFrame) -> pd.
     if missing:
         log.warning(f"{missing:,} vineyard centroids fell outside any ZCTA and were excluded.")
     joined = joined.dropna(subset=["zip_code"])
-    return joined[["year", "county", "zip_code", "area_m2"]].copy()
+    return joined[["year", "county", "zip_code", "area_m2", "_poly_id"]].copy()
+
+
+# ============================================================
+# STEP 2b — AVA BOUNDARY ASSIGNMENT
+# ============================================================
+
+def load_ca_avas() -> gpd.GeoDataFrame:
+    """
+    Load California AVA boundaries from the bundled CA_avas.geojson.
+    Returns GeoDataFrame with columns: ava_id, ava_name, geometry (WGS-84).
+    """
+    if not AVA_GEOJSON.exists():
+        raise FileNotFoundError(
+            f"CA_avas.geojson not found at {AVA_GEOJSON}.\n"
+            "Make sure you have cloned the full repository."
+        )
+    avas = gpd.read_file(str(AVA_GEOJSON)).to_crs("EPSG:4326")
+    avas = avas[["ava_id", "name", "geometry"]].rename(columns={"name": "ava_name"})
+    log.info(f"Loaded {len(avas):,} California AVAs from {AVA_GEOJSON.name}")
+    return avas
+
+
+def assign_avas(vineyards: gpd.GeoDataFrame, avas: gpd.GeoDataFrame) -> pd.DataFrame:
+    """
+    Spatial-join each vineyard polygon centroid to AVA boundaries.
+
+    Because AVAs nest (e.g. Napa Valley ⊂ North Coast), a centroid can match
+    multiple AVAs and will appear once per matching AVA.  Each AVA gets an
+    independent water demand estimate from the vineyards inside it.
+
+    Returns DataFrame with columns: _poly_id, ava_id, ava_name.
+    """
+    centroids = vineyards[["_poly_id", "geometry"]].copy()
+    centroids["geometry"] = vineyards.geometry.centroid
+
+    joined = gpd.sjoin(
+        centroids,
+        avas[["ava_id", "ava_name", "geometry"]],
+        how="left",
+        predicate="within",
+    )
+
+    outside = joined["ava_id"].isna().sum()
+    if outside:
+        log.info(
+            f"  {outside:,} vineyard centroids outside all CA AVAs "
+            "(expected for non-wine-region vineyards — excluded from AVA output)."
+        )
+
+    in_ava = joined.dropna(subset=["ava_id"])
+    log.info(
+        f"  {len(in_ava):,} vineyard-AVA assignments "
+        f"({in_ava['ava_id'].nunique()} unique AVAs covered)."
+    )
+    return in_ava[["_poly_id", "ava_id", "ava_name"]].copy()
 
 
 # ============================================================
@@ -419,6 +484,71 @@ def aggregate_to_county(
 
 
 # ============================================================
+# STEP 4b — AREA-WEIGHTED AVA AGGREGATION
+# ============================================================
+
+def compute_ava_weights(vine_ava: pd.DataFrame) -> pd.DataFrame:
+    """
+    Compute per-zip-code weights within each AVA × year.
+    weight = (vineyard area from zip X inside AVA) / (total vineyard area inside AVA)
+    A zip code that appears in multiple AVAs gets a separate weight for each.
+    """
+    ava_total = (
+        vine_ava.groupby(["year", "ava_id"])["area_m2"]
+        .sum()
+        .rename("ava_total_m2")
+        .reset_index()
+    )
+    zip_area = (
+        vine_ava.groupby(["year", "ava_id", "zip_code"])["area_m2"]
+        .sum()
+        .rename("zip_area_m2")
+        .reset_index()
+    )
+    w = zip_area.merge(ava_total, on=["year", "ava_id"])
+    w["weight"] = w["zip_area_m2"] / w["ava_total_m2"]
+    return w
+
+
+def aggregate_to_ava(
+    eto_by_zip: pd.DataFrame,
+    ava_weights: pd.DataFrame,
+    vine_ava: pd.DataFrame,
+) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """
+    Area-weighted aggregation of zip-level ETo to AVA level.
+    Returns (ava_monthly, ava_annual).
+    ava_annual includes water_deficit_in = annual_eto_in − annual_precip_in.
+    """
+    ava_names = vine_ava[["ava_id", "ava_name"]].drop_duplicates()
+
+    merged = eto_by_zip.merge(
+        ava_weights[["year", "ava_id", "zip_code", "weight"]], on=["year", "zip_code"]
+    )
+    merged["eto_wt"]    = merged["eto_in"]    * merged["weight"]
+    merged["precip_wt"] = merged["precip_in"] * merged["weight"]
+
+    ava_monthly = (
+        merged.groupby(["year", "ava_id", "month"])
+        .agg(eto_in=("eto_wt", "sum"), precip_in=("precip_wt", "sum"))
+        .reset_index()
+        .merge(ava_names, on="ava_id")
+        .sort_values(["ava_id", "year", "month"])
+    )
+    ava_annual = (
+        ava_monthly.groupby(["year", "ava_id"])
+        .agg(annual_eto_in=("eto_in", "sum"), annual_precip_in=("precip_in", "sum"))
+        .reset_index()
+        .merge(ava_names, on="ava_id")
+        .sort_values(["ava_id", "year"])
+    )
+    ava_annual["water_deficit_in"] = (
+        ava_annual["annual_eto_in"] - ava_annual["annual_precip_in"]
+    )
+    return ava_monthly, ava_annual
+
+
+# ============================================================
 # STEP 5 — COUNTY BOUNDARIES + GEOPACKAGE FOR ARCGIS PRO
 # ============================================================
 
@@ -457,9 +587,12 @@ def build_geopackage(
     county_annual: pd.DataFrame,
     ca_counties: gpd.GeoDataFrame,
     output_path: Path,
+    ava_monthly: pd.DataFrame | None = None,
+    ava_annual: pd.DataFrame | None = None,
+    ca_avas: gpd.GeoDataFrame | None = None,
 ) -> None:
     """
-    Write two layers to a GeoPackage that are immediately usable in ArcGIS Pro.
+    Write four layers to a GeoPackage that are immediately usable in ArcGIS Pro.
 
     Layer 1 — county_annual_eto
         One row per county × year.
@@ -471,6 +604,13 @@ def build_geopackage(
         One row per county × year with monthly ETo spread into columns
         eto_mo01 … eto_mo12 (inches) and precip_mo01 … precip_mo12.
         → Use for bar/line charts per county, or Join Field workflows.
+
+    Layer 3 — ava_annual_eto  (written when ava_annual and ca_avas are provided)
+        One row per AVA × year.  Same fields as county_annual_eto.
+        → Compare water stress across American Viticultural Areas.
+
+    Layer 4 — ava_monthly_eto  (written when ava_monthly and ca_avas are provided)
+        One row per AVA × year with eto_mo01 … eto_mo12 columns.
     """
     # Normalise county name for joining
     ca_counties = ca_counties.copy()
@@ -531,6 +671,47 @@ def build_geopackage(
     log.info(f"  county_annual_eto  : {len(annual_geo):,} features  ({annual_geo['county'].nunique()} counties × {annual_geo['year'].nunique()} years)")
     log.info(f"  county_monthly_eto : {len(monthly_geo):,} features  (monthly ETo as eto_mo01…eto_mo12)")
 
+    # ── Optional AVA layers ───────────────────────────────────────────────────
+    if ava_annual is not None and ava_monthly is not None and ca_avas is not None:
+        avas = ca_avas.copy()
+
+        # ── AVA Layer 1: annual ───────────────────────────────────────────────
+        ann_ava = ava_annual.copy()
+        ava_annual_geo = avas.merge(ann_ava, on="ava_id", how="inner")
+        ava_annual_geo["date"] = pd.to_datetime(ava_annual_geo["year"].astype(str) + "-01-01")
+        for col in ["annual_eto_in", "annual_precip_in", "water_deficit_in"]:
+            if col in ava_annual_geo.columns:
+                ava_annual_geo[col] = ava_annual_geo[col].round(2)
+
+        # ── AVA Layer 2: monthly pivot ────────────────────────────────────────
+        mon_ava = ava_monthly.copy()
+        ava_eto_wide = mon_ava.pivot_table(
+            index=["year", "ava_id"], columns="month", values="eto_in"
+        ).reset_index()
+        ava_eto_wide.columns = [
+            f"eto_mo{c:02d}" if isinstance(c, int) else c for c in ava_eto_wide.columns
+        ]
+        ava_precip_wide = mon_ava.pivot_table(
+            index=["year", "ava_id"], columns="month", values="precip_in"
+        ).reset_index()
+        ava_precip_wide.columns = [
+            f"pr_mo{c:02d}" if isinstance(c, int) else c for c in ava_precip_wide.columns
+        ]
+        ava_wide = ava_eto_wide.merge(ava_precip_wide, on=["year", "ava_id"])
+        ava_names = ava_monthly[["ava_id", "ava_name"]].drop_duplicates()
+        ava_wide = ava_wide.merge(ava_names, on="ava_id")
+
+        ava_monthly_geo = avas.merge(ava_wide, on="ava_id", how="inner")
+        ava_monthly_geo["date"] = pd.to_datetime(ava_monthly_geo["year"].astype(str) + "-01-01")
+        num_cols = [c for c in ava_monthly_geo.columns if c.startswith(("eto_mo", "pr_mo"))]
+        ava_monthly_geo[num_cols] = ava_monthly_geo[num_cols].round(2)
+
+        ava_annual_geo.to_file(str(output_path),  layer="ava_annual_eto",  driver="GPKG", mode="a")
+        ava_monthly_geo.to_file(str(output_path), layer="ava_monthly_eto", driver="GPKG", mode="a")
+
+        log.info(f"  ava_annual_eto     : {len(ava_annual_geo):,} features  ({ava_annual_geo['ava_id'].nunique()} AVAs × {ava_annual_geo['year'].nunique()} years)")
+        log.info(f"  ava_monthly_eto    : {len(ava_monthly_geo):,} features  (monthly ETo as eto_mo01…eto_mo12)")
+
     _print_arcgis_instructions(output_path)
 
 
@@ -563,6 +744,13 @@ def _print_arcgis_instructions(gpkg_path: Path) -> None:
     print("   Add 'county_monthly_eto' layer.")
     print("   Fields eto_mo01 … eto_mo12 = monthly ETo (inches).")
     print("   Right-click layer → Create Chart → Bar Chart → select month fields.")
+    print()
+    print("5. AVA LAYERS")
+    print("   'ava_annual_eto'  — same as county_annual_eto but by American")
+    print("   Viticultural Area (AVA). Nested AVAs (e.g. Napa Valley ⊂ North")
+    print("   Coast) each get their own independent ET estimate.")
+    print("   'ava_monthly_eto' — monthly pivot by AVA.")
+    print("   Symbolize on water_deficit_in or annual_eto_in; enable time slider.")
     print("=" * 70)
 
 
@@ -613,18 +801,39 @@ def main() -> None:
         return
 
     vineyards = gpd.GeoDataFrame(pd.concat(all_gdfs, ignore_index=True), geometry="geometry", crs="EPSG:4326")
+    vineyards["_poly_id"] = range(len(vineyards))
     log.info(f"Total vineyard polygons across all years: {len(vineyards):,}")
 
-    # ── Step 2: Assign zip codes ──────────────────────────────────────────────
+    # ── Step 2a: Assign zip codes ─────────────────────────────────────────────
     log.info("")
     log.info("=" * 60)
-    log.info("STEP 2 — Assigning zip codes via Census ZCTA boundaries")
+    log.info("STEP 2a — Assigning zip codes via Census ZCTA boundaries")
     log.info("=" * 60)
 
     zcta = get_ca_zcta()
     vine_zip = assign_zip_codes(vineyards, zcta)
-    vine_zip.to_csv(OUTPUT_DIR / "vineyard_zip_area.csv", index=False)
     log.info(f"Unique zip codes with vineyards: {vine_zip['zip_code'].nunique():,}")
+
+    # ── Step 2b: Assign AVAs ──────────────────────────────────────────────────
+    log.info("")
+    log.info("=" * 60)
+    log.info("STEP 2b — Assigning AVAs from CA_avas.geojson")
+    log.info("=" * 60)
+
+    ca_avas = load_ca_avas()
+    ava_assignments = assign_avas(vineyards, ca_avas)
+
+    # Merge AVA assignments into vine_zip to produce vine_ava:
+    # year, county, zip_code, area_m2, ava_id, ava_name
+    # A polygon in nested AVAs (e.g. Napa Valley ⊂ North Coast) appears once per AVA.
+    vine_ava = vine_zip.merge(ava_assignments, on="_poly_id", how="inner")
+    vine_ava = vine_ava.drop(columns=["_poly_id"])
+
+    vine_zip = vine_zip.drop(columns=["_poly_id"])
+    vine_zip.to_csv(OUTPUT_DIR / "vineyard_zip_area.csv", index=False)
+    vine_ava.to_csv(OUTPUT_DIR / "vineyard_ava_zip_area.csv", index=False)
+    log.info(f"vineyard_zip_area.csv      → {vine_zip.shape[0]:,} rows")
+    log.info(f"vineyard_ava_zip_area.csv  → {vine_ava.shape[0]:,} rows  ({vine_ava['ava_id'].nunique()} AVAs)")
 
     # ── Step 3: Query CIMIS API ───────────────────────────────────────────────
     log.info("")
@@ -677,16 +886,29 @@ def main() -> None:
         log.error("No ETo data retrieved. Check your API key and zip codes.")
         return
 
-    # ── Step 4: County-level aggregation ─────────────────────────────────────
+    # ── Step 4a: County-level aggregation ────────────────────────────────────
     log.info("")
     log.info("=" * 60)
-    log.info("STEP 4 — Area-weighted aggregation to county level")
+    log.info("STEP 4a — Area-weighted aggregation to county level")
     log.info("=" * 60)
 
     county_monthly, county_annual = aggregate_to_county(all_eto, weights)
     county_monthly.to_csv(OUTPUT_DIR / "county_vineyard_eto_monthly.csv", index=False)
     county_annual.to_csv(OUTPUT_DIR / "county_vineyard_eto_annual.csv",  index=False)
-    log.info(f"CSVs written → {OUTPUT_DIR}")
+    log.info(f"county CSVs written → {OUTPUT_DIR}")
+
+    # ── Step 4b: AVA-level aggregation ───────────────────────────────────────
+    log.info("")
+    log.info("=" * 60)
+    log.info("STEP 4b — Area-weighted aggregation to AVA level")
+    log.info("=" * 60)
+
+    ava_weights = compute_ava_weights(vine_ava)
+    ava_monthly, ava_annual = aggregate_to_ava(all_eto, ava_weights, vine_ava)
+    ava_monthly.to_csv(OUTPUT_DIR / "ava_vineyard_eto_monthly.csv", index=False)
+    ava_annual.to_csv(OUTPUT_DIR / "ava_vineyard_eto_annual.csv",   index=False)
+    log.info(f"AVA CSVs written → {OUTPUT_DIR}")
+    log.info(f"  {ava_annual['ava_id'].nunique()} AVAs × {ava_annual['year'].nunique()} years")
 
     # ── Step 5: Build GeoPackage for ArcGIS Pro ───────────────────────────────
     log.info("")
@@ -696,7 +918,10 @@ def main() -> None:
 
     ca_counties = get_ca_counties()
     gpkg_path = OUTPUT_DIR / "vineyard_water_stress.gpkg"
-    build_geopackage(county_monthly, county_annual, ca_counties, gpkg_path)
+    build_geopackage(
+        county_monthly, county_annual, ca_counties, gpkg_path,
+        ava_monthly=ava_monthly, ava_annual=ava_annual, ca_avas=ca_avas,
+    )
 
     # ── Console summary ───────────────────────────────────────────────────────
     print("\n" + "=" * 70)
@@ -706,6 +931,15 @@ def main() -> None:
         index="county", columns="year", values="water_deficit_in"
     ).round(1)
     print(pivot.nlargest(10, pivot.columns[-1]).to_string())
+
+    print("\n" + "=" * 70)
+    print("Annual water deficit by AVA (ETo − precip, inches) — top 10")
+    print("=" * 70)
+    ava_pivot = ava_annual.pivot_table(
+        index="ava_name", columns="year", values="water_deficit_in"
+    ).round(1)
+    print(ava_pivot.nlargest(10, ava_pivot.columns[-1]).to_string())
+
     print("\nDone.")
 
 

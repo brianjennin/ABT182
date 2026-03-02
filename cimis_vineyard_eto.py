@@ -96,7 +96,7 @@ log = logging.getLogger(__name__)
 GDB_FOLDER = Path(r"C:\Users\brian\ABT 182 Project\Grant\DWRraw\Data\onlyGDB")
 
 # All outputs (GeoPackage, CSVs, boundary caches) go here
-OUTPUT_DIR = Path(r"C:\Users\brian\ABT 182 Project\Output")
+OUTPUT_DIR = Path(r"C:\Users\brian\ABT 182 Project\WaterStressOutput")
 
 # California AVA boundaries — bundled GeoJSON in this repository
 AVA_GEOJSON = Path(__file__).parent / "CA_avas.geojson"
@@ -233,7 +233,26 @@ def extract_vineyards(year: int) -> gpd.GeoDataFrame | None:
         return None
     log.info(f"[{year}] {len(vineyards):,} vineyard polygons matched.")
 
-    vineyards = vineyards[[cfg["county_col"], "geometry"]].rename(columns={cfg["county_col"]: "county"})
+    # Resolve county column — older GDBs use different names
+    county_col = cfg["county_col"]
+    if county_col not in vineyards.columns:
+        _candidates = ["COUNTY", "County", "county", "CO_NAME", "COUNTY_NAME",
+                       "CNTY", "COUNTYNAME", "COUNTY_CD", "CO_CNTY"]
+        county_col = next((c for c in _candidates if c in vineyards.columns), None)
+        if county_col:
+            log.warning(
+                f"[{year}] Configured county_col '{cfg['county_col']}' not found; "
+                f"using '{county_col}' instead. Update YEAR_CONFIG to silence this."
+            )
+        else:
+            log.warning(
+                f"[{year}] No county column found. "
+                f"Available columns: {list(vineyards.columns)}\n"
+                f"       Update 'county_col' in YEAR_CONFIG for this year."
+            )
+            return None
+
+    vineyards = vineyards[[county_col, "geometry"]].rename(columns={county_col: "county"})
     vineyards["year"] = year
 
     # Area in m² using California Albers projection
@@ -772,7 +791,7 @@ def _save_cache(cache_path: Path, existing: pd.DataFrame, new_results: list[pd.D
 # ============================================================
 
 def main() -> None:
-    if CIMIS_APP_KEY == "YOUR-APP-KEY-HERE":
+    if CIMIS_APP_KEY == "ef985ad9-17bc-4032-995c-1a6441c088c1":
         log.error(
             "No CIMIS API key set.\n"
             "  1. Register free at https://cimis.water.ca.gov\n"

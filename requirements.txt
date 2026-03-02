@@ -10,4 +10,4 @@ shapely>=2.0
 # Data / HTTP
 pandas>=2.0
 numpy>=1.26
-requests>=2.31
+curl-cffi>=0.6        # Chrome TLS impersonation — bypasses WAF fingerprinting

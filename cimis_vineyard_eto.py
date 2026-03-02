@@ -401,7 +401,7 @@ def _fetch_daily_eto(
     try:
         root = ET.fromstring(resp.text)
     except ET.ParseError:
-        log.error(f"    Unparseable response for zip {zip_code}")
+        log.error(f"    Unparseable response for zip {zip_code} — first 300 chars: {resp.text[:300]!r}")
         return pd.DataFrame()
 
     records = []

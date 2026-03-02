@@ -11,11 +11,6 @@ Output layers inside the GDB:
   Vineyards_2020, Vineyards_2021, Vineyards_2022, Vineyards_2023,
   Vineyards_2024
 
-GDB naming expected in INPUT_FOLDER:
-  i15_Crop_Mapping_2014.gdb  (and same pattern for 2016-2022)
-  i15_Crop_Mapping_2023_Provisional_20241127.gdb
-  i15_Crop_Mapping_2024_Provisional_20251208.gdb
-
 HOW TO RUN IN ARCGIS PRO:
   1. Open the Python window (Analysis tab > Python)
   2. Paste this entire script and press Enter
@@ -38,29 +33,64 @@ import os
 INPUT_FOLDER = r"C:\Users\brian\ABT 182 Project\Grant\DWRraw\Data\onlyGDB"
 
 # Full path for the output geodatabase (will be created if it doesn't exist)
-OUTPUT_GDB = r"C:\Users\brian\ABT 182 Project\Grant\DWRraw\Data\output_gdb"
+OUTPUT_GDB = r"C:\Users\brian\ABT 182 Project\Grant\DWRraw\Data\Vineyards_By_Year.gdb"
 
 # =============================================================================
 # CONFIGURATION — no need to edit below this line
 # =============================================================================
 
-# Value stored in the CLASS fields for vineyard polygons
-VINEYARD_CODE = "Vineyards"
-
-# Years and their exact GDB filenames
-GDB_NAMES = {
-    2014: "i15_Crop_Mapping_2014.gdb",
-    2016: "i15_Crop_Mapping_2016.gdb",
-    2018: "i15_Crop_Mapping_2018.gdb",
-    2019: "i15_Crop_Mapping_2019.gdb",
-    2020: "i15_Crop_Mapping_2020.gdb",
-    2021: "i15_Crop_Mapping_2021.gdb",
-    2022: "i15_Crop_Mapping_2022.gdb",
-    2023: "i15_Crop_Mapping_2023_Provisional_20241127.gdb",
-    2024: "i15_Crop_Mapping_2024_Provisional_20251208.gdb",
+# Exact GDB filename and feature class name for each year.
+# Note: 2022 GDB has a lowercase 'c' in its filename.
+# Note: 2014 uses a different field (DWR_Standard_Legend) than all other years.
+YEAR_CONFIG = {
+    2014: {
+        "gdb":   "i15_Crop_Mapping_2014.gdb",
+        "fc":    "i15_Crop_Mapping_2014",
+        "where": "DWR_Standard_Legend = 'V | VINEYARD'",
+    },
+    2016: {
+        "gdb":   "i15_Crop_Mapping_2016.gdb",
+        "fc":    "i15_Crop_Mapping_2016",
+        "where": "CLASS2 = 'Vineyards'",
+    },
+    2018: {
+        "gdb":   "i15_Crop_Mapping_2018.gdb",
+        "fc":    "i15_Crop_Mapping_2018",
+        "where": "CLASS2 = 'Vineyards'",
+    },
+    2019: {
+        "gdb":   "i15_Crop_Mapping_2019.gdb",
+        "fc":    "i15_Crop_Mapping_2019",
+        "where": "CLASS2 = 'Vineyards'",
+    },
+    2020: {
+        "gdb":   "i15_Crop_Mapping_2020.gdb",
+        "fc":    "i15_Crop_Mapping_2020",
+        "where": "CLASS2 = 'Vineyards'",
+    },
+    2021: {
+        "gdb":   "i15_Crop_Mapping_2021.gdb",
+        "fc":    "i15_Crop_Mapping_2021",
+        "where": "CLASS2 = 'Vineyards'",
+    },
+    2022: {
+        "gdb":   "i15_crop_mapping_2022.gdb",
+        "fc":    "i15_Crop_Mapping_2022",
+        "where": "CLASS2 = 'Vineyards'",
+    },
+    2023: {
+        "gdb":   "i15_Crop_Mapping_2023_Provisional_20241127.gdb",
+        "fc":    "i15_Crop_Mapping_2023_Provisional",
+        "where": "CLASS2 = 'Vineyards'",
+    },
+    2024: {
+        "gdb":   "i15_Crop_Mapping_2024_Provisional_20251208.gdb",
+        "fc":    "i15_Crop_Mapping_2024_Provisional",
+        "where": "CLASS2 = 'Vineyards'",
+    },
 }
 
-TARGET_YEARS = sorted(GDB_NAMES.keys())
+TARGET_YEARS = sorted(YEAR_CONFIG.keys())
 
 
 # =============================================================================
@@ -78,92 +108,33 @@ def create_output_gdb(gdb_path):
         print(f"  Output GDB already exists: {gdb_path}")
 
 
-def find_gdb_for_year(folder, year):
-    """Return the full path to the GDB for the given year, or None if not found."""
-    name = GDB_NAMES[year]
-    candidate = os.path.join(folder, name)
-    if arcpy.Exists(candidate):
-        return candidate
-    return None
-
-
-def find_polygon_feature_class(gdb_path):
+def extract_vineyards_from_gdb(year, output_gdb):
     """
-    Return the path to the main polygon feature class inside the GDB.
-    Searches both the top-level GDB and any feature datasets inside it.
-    Prefers a feature class whose name contains 'i15', 'crop', or 'land'.
-    """
-    def pick_best(fcs, workspace):
-        for fc in fcs:
-            lower = fc.lower()
-            if "i15" in lower or "crop" in lower or "land" in lower:
-                return os.path.join(workspace, fc)
-        return os.path.join(workspace, fcs[0]) if fcs else None
-
-    # Search top-level feature classes
-    arcpy.env.workspace = gdb_path
-    fcs = arcpy.ListFeatureClasses(feature_type="Polygon") or arcpy.ListFeatureClasses()
-    if fcs:
-        result = pick_best(fcs, gdb_path)
-        if result:
-            return result
-
-    # Search inside feature datasets
-    for ds in (arcpy.ListDatasets(feature_type="Feature") or []):
-        ds_path = os.path.join(gdb_path, ds)
-        arcpy.env.workspace = ds_path
-        fcs = arcpy.ListFeatureClasses(feature_type="Polygon") or arcpy.ListFeatureClasses()
-        if fcs:
-            result = pick_best(fcs, ds_path)
-            if result:
-                return result
-
-    return None
-
-
-def build_where_clause():
-    """
-    Build a WHERE clause that selects any polygon where 'Vineyards' appears
-    in any crop position (CLASS1–CLASS4).
-
-    Single-crop vineyard fields have the value in CLASS2; multi-crop fields
-    may have it in CLASS1, CLASS3, or CLASS4.
-    """
-    code = f"'{VINEYARD_CODE}'"
-    return (
-        f"CLASS1 = {code} OR CLASS2 = {code} OR "
-        f"CLASS3 = {code} OR CLASS4 = {code}"
-    )
-
-
-def extract_vineyards_from_gdb(gdb_path, year, output_gdb):
-    """
-    Extract vineyard polygons from a single year's GDB and save the result
+    Extract vineyard polygons for the given year and save the result
     as Vineyards_<year> in the output GDB.
     Returns the feature count, or -1 on failure.
     """
-    print(f"\n  Locating feature class in {os.path.basename(gdb_path)} ...")
-    fc_path = find_polygon_feature_class(gdb_path)
-    if fc_path is None:
-        print("  ERROR: No polygon feature class found — skipping.")
-        return -1
-    print(f"  Feature class: {fc_path}")
+    cfg = YEAR_CONFIG[year]
+    gdb_path = os.path.join(INPUT_FOLDER, cfg["gdb"])
+    fc_path  = os.path.join(gdb_path, cfg["fc"])
+    where    = cfg["where"]
 
-    # Confirm the expected CLASS fields exist before running the query
-    field_names = {f.name for f in arcpy.ListFields(fc_path)}
-    missing = [f for f in ("CLASS1", "CLASS2", "CLASS3", "CLASS4") if f not in field_names]
-    if missing:
-        print(f"  ERROR: Expected fields not found: {missing}")
-        print(f"  Available fields: {sorted(field_names)}")
+    if not arcpy.Exists(gdb_path):
+        print(f"  WARNING: GDB not found: {cfg['gdb']}")
         return -1
 
-    where_clause = build_where_clause()
+    if not arcpy.Exists(fc_path):
+        print(f"  WARNING: Feature class not found: {cfg['fc']}")
+        return -1
+
+    print(f"  Feature class : {cfg['fc']}")
+    print(f"  WHERE clause  : {where}")
+
     output_fc = os.path.join(output_gdb, f"Vineyards_{year}")
-
     if arcpy.Exists(output_fc):
         arcpy.management.Delete(output_fc)
 
-    arcpy.analysis.Select(fc_path, output_fc, where_clause)
+    arcpy.analysis.Select(fc_path, output_fc, where)
 
     count = int(arcpy.management.GetCount(output_fc).getOutput(0))
     print(f"  Extracted {count:,} vineyard polygons -> Vineyards_{year}")
@@ -188,16 +159,8 @@ def main():
     results = {}
 
     for year in TARGET_YEARS:
-        print(f"\n[{year}] Searching for geodatabase ...")
-        gdb_path = find_gdb_for_year(INPUT_FOLDER, year)
-
-        if gdb_path is None:
-            print(f"  WARNING: {GDB_NAMES[year]} not found in {INPUT_FOLDER}")
-            results[year] = "NOT FOUND"
-            continue
-
-        print(f"  Found: {os.path.basename(gdb_path)}")
-        count = extract_vineyards_from_gdb(gdb_path, year, OUTPUT_GDB)
+        print(f"\n[{year}]")
+        count = extract_vineyards_from_gdb(year, OUTPUT_GDB)
         results[year] = count if count >= 0 else "ERROR"
 
     # -------------------------------------------------------------------------

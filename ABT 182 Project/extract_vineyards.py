@@ -51,42 +51,42 @@ YEAR_CONFIG = {
     2016: {
         "gdb":   "i15_Crop_Mapping_2016.gdb",
         "fc":    "i15_Crop_Mapping_2016",
-        "where": "CLASS2 = 'Vineyards'",
+        "where": "CROPTYP2 LIKE 'G%'",
     },
     2018: {
         "gdb":   "i15_Crop_Mapping_2018.gdb",
         "fc":    "i15_Crop_Mapping_2018",
-        "where": "CLASS2 = 'Vineyards'",
+        "where": "CROPTYP2 LIKE 'G%'",
     },
     2019: {
         "gdb":   "i15_Crop_Mapping_2019.gdb",
         "fc":    "i15_Crop_Mapping_2019",
-        "where": "CLASS2 = 'Vineyards'",
+        "where": "CROPTYP2 LIKE 'G%'",
     },
     2020: {
         "gdb":   "i15_Crop_Mapping_2020.gdb",
         "fc":    "i15_Crop_Mapping_2020",
-        "where": "CLASS2 = 'Vineyards'",
+        "where": "CROPTYP2 LIKE 'G%'",
     },
     2021: {
         "gdb":   "i15_Crop_Mapping_2021.gdb",
         "fc":    "i15_Crop_Mapping_2021",
-        "where": "CLASS2 = 'Vineyards'",
+        "where": "CROPTYP2 LIKE 'G%'",
     },
     2022: {
         "gdb":   "i15_crop_mapping_2022.gdb",
         "fc":    "i15_Crop_Mapping_2022",
-        "where": "CLASS2 = 'Vineyards'",
+        "where": "CROPTYP2 LIKE 'G%'",
     },
     2023: {
         "gdb":   "i15_Crop_Mapping_2023_Provisional_20241127.gdb",
         "fc":    "i15_Crop_Mapping_2023_Provisional",
-        "where": "CLASS2 = 'Vineyards'",
+        "where": "CROPTYP2 LIKE 'G%'",
     },
     2024: {
         "gdb":   "i15_Crop_Mapping_2024_Provisional_20251208.gdb",
         "fc":    "i15_Crop_Mapping_2024_Provisional",
-        "where": "CLASS2 = 'Vineyards'",
+        "where": "CROPTYP2 LIKE 'G%'",
     },
 }
 

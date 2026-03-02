@@ -51,42 +51,42 @@ YEAR_CONFIG = {
     2016: {
         "gdb":   "i15_Crop_Mapping_2016.gdb",
         "fc":    "i15_Crop_Mapping_2016",
-        "where": "CROPTYP2 LIKE 'G%'",
+        "where": "CROPTYP2 LIKE 'V%'",
     },
     2018: {
         "gdb":   "i15_Crop_Mapping_2018.gdb",
         "fc":    "i15_Crop_Mapping_2018",
-        "where": "CROPTYP2 LIKE 'G%'",
+        "where": "CROPTYP2 LIKE 'V%'",
     },
     2019: {
         "gdb":   "i15_Crop_Mapping_2019.gdb",
         "fc":    "i15_Crop_Mapping_2019",
-        "where": "CROPTYP2 LIKE 'G%'",
+        "where": "CROPTYP2 LIKE 'V%'",
     },
     2020: {
         "gdb":   "i15_Crop_Mapping_2020.gdb",
         "fc":    "i15_Crop_Mapping_2020",
-        "where": "CROPTYP2 LIKE 'G%'",
+        "where": "CROPTYP2 LIKE 'V%'",
     },
     2021: {
         "gdb":   "i15_Crop_Mapping_2021.gdb",
         "fc":    "i15_Crop_Mapping_2021",
-        "where": "CROPTYP2 LIKE 'G%'",
+        "where": "CROPTYP2 LIKE 'V%'",
     },
     2022: {
         "gdb":   "i15_crop_mapping_2022.gdb",
         "fc":    "i15_Crop_Mapping_2022",
-        "where": "CROPTYP2 LIKE 'G%'",
+        "where": "CROPTYP2 LIKE 'V%'",
     },
     2023: {
         "gdb":   "i15_Crop_Mapping_2023_Provisional_20241127.gdb",
         "fc":    "i15_Crop_Mapping_2023_Provisional",
-        "where": "CROPTYP2 LIKE 'G%'",
+        "where": "CROPTYP2 LIKE 'V%'",
     },
     2024: {
         "gdb":   "i15_Crop_Mapping_2024_Provisional_20251208.gdb",
         "fc":    "i15_Crop_Mapping_2024_Provisional",
-        "where": "CROPTYP2 LIKE 'G%'",
+        "where": "CROPTYP2 LIKE 'V%'",
     },
 }
 

@@ -384,10 +384,18 @@ def _fetch_daily_eto(
         "prioritizeSCS": "Y",   # prefer Spatial CIMIS for full statewide coverage
         "unitOfMeasure": "E",   # English units — inches
     }
+    headers = {
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/124.0.0.0 Safari/537.36"
+        ),
+        "Accept": "application/xml, text/xml, */*",
+    }
     wait = 2.0
     for attempt in range(max_retries + 1):
         try:
-            resp = requests.get(_CIMIS_URL, params=params, timeout=60)
+            resp = requests.get(_CIMIS_URL, params=params, headers=headers, timeout=60)
             resp.raise_for_status()
             break
         except requests.RequestException as exc:

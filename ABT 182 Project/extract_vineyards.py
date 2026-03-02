@@ -33,10 +33,10 @@ import os
 # =============================================================================
 
 # Folder that contains all the downloaded crop mapping .gdb files
-INPUT_FOLDER = r"C:\Users\YourName\Documents\CropMapping"
+INPUT_FOLDER = r"C:\Users\brian\ABT 182 Project\Grant\DWRraw\Data\onlyGDB"
 
 # Full path for the output geodatabase (will be created if it doesn't exist)
-OUTPUT_GDB = r"C:\Users\YourName\Documents\CropMapping\Vineyards_By_Year.gdb"
+OUTPUT_GDB = r"C:\Users\brian\ABT 182 Project\Grant\DWRraw\Data\output_gdb"
 
 # =============================================================================
 # CONFIGURATION — no need to edit below this line

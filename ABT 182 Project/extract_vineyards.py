@@ -44,9 +44,8 @@ OUTPUT_GDB = r"C:\Users\brian\ABT 182 Project\Grant\DWRraw\Data\output_gdb"
 # CONFIGURATION — no need to edit below this line
 # =============================================================================
 
-# DWR i15 grape/vineyard code in the CLASS fields (right-justified, leading space)
-# G = Grapes in the DWR Standard Land Use Legend
-GRAPE_CODE = " G"
+# Value stored in the CLASS fields for vineyard polygons
+VINEYARD_CODE = "Vineyards"
 
 # Years and their exact GDB filenames
 GDB_NAMES = {
@@ -112,14 +111,13 @@ def find_polygon_feature_class(gdb_path):
 
 def build_where_clause():
     """
-    Build a WHERE clause that selects any polygon where grapes/vineyard
-    is recorded in any crop position (CLASS1–CLASS4).
+    Build a WHERE clause that selects any polygon where 'Vineyards' appears
+    in any crop position (CLASS1–CLASS4).
 
-    DWR stores crop codes right-justified in 2-char fields, so the grape
-    code ' G' has a leading space. Single-crop vineyard fields have the
-    crop in CLASS2; multi-crop fields may have it in CLASS1, CLASS3, or CLASS4.
+    Single-crop vineyard fields have the value in CLASS2; multi-crop fields
+    may have it in CLASS1, CLASS3, or CLASS4.
     """
-    code = f"'{GRAPE_CODE}'"
+    code = f"'{VINEYARD_CODE}'"
     return (
         f"CLASS1 = {code} OR CLASS2 = {code} OR "
         f"CLASS3 = {code} OR CLASS4 = {code}"

@@ -96,7 +96,7 @@ log = logging.getLogger(__name__)
 GDB_FOLDER = Path(r"C:\Users\brian\ABT 182 Project\Grant\DWRraw\Data\onlyGDB")
 
 # All outputs (GeoPackage, CSVs, boundary caches) go here
-OUTPUT_DIR = Path(r"C:\Users\brian\ABT 182 Project\Output")
+OUTPUT_DIR = Path(r"C:\Users\brian\ABT 182 Project\WaterStressOutput")
 
 # California AVA boundaries — bundled GeoJSON in this repository
 AVA_GEOJSON = Path(__file__).parent / "CA_avas.geojson"
@@ -772,7 +772,7 @@ def _save_cache(cache_path: Path, existing: pd.DataFrame, new_results: list[pd.D
 # ============================================================
 
 def main() -> None:
-    if CIMIS_APP_KEY == "YOUR-APP-KEY-HERE":
+    if CIMIS_APP_KEY == "ef985ad9-17bc-4032-995c-1a6441c088c1":
         log.error(
             "No CIMIS API key set.\n"
             "  1. Register free at https://cimis.water.ca.gov\n"

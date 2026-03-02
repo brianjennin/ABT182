@@ -2,10 +2,17 @@
 extract_vineyards.py
 --------------------
 Extracts vineyard polygons from the California DWR PROVISIONAL Statewide Crop
-Mapping Geodatabases (2014-2022) and saves each year to a single output GDB.
+Mapping Geodatabases (2014-2022) and saves a separate feature class per year
+into a single output GDB — one layer per year, intended for use in an ESRI
+app with a yearly time slider.
+
+Output layers inside the GDB:
+  Vineyards_2014, Vineyards_2016, Vineyards_2018, Vineyards_2019,
+  Vineyards_2020, Vineyards_2021, Vineyards_2022
 
 Source: California Open Data - PROVISIONAL - 20XX Statewide Crop Mapping Geodatabase
 Available years with data: 2014, 2016, 2018, 2019, 2020, 2021, 2022
+(2015 and 2017 were never released by DWR)
 
 HOW TO RUN IN ARCGIS PRO:
   1. Open the Python window (Analysis tab > Python)
@@ -29,7 +36,7 @@ import os
 INPUT_FOLDER = r"C:\Users\YourName\Documents\CropMapping"
 
 # Full path for the output geodatabase (will be created if it doesn't exist)
-OUTPUT_GDB = r"C:\Users\YourName\Documents\CropMapping\Vineyards_All_Years.gdb"
+OUTPUT_GDB = r"C:\Users\YourName\Documents\CropMapping\Vineyards_By_Year.gdb"
 
 # =============================================================================
 # CONFIGURATION — no need to edit below this line
@@ -237,33 +244,6 @@ def main():
         results[year] = count if count >= 0 else "ERROR"
 
     # -------------------------------------------------------------------------
-    # Optional: merge all years into a single combined feature class
-    # -------------------------------------------------------------------------
-    print("\n" + "=" * 60)
-    print("Merging all years into Vineyards_All_Years ...")
-
-    year_fcs = []
-    for year in TARGET_YEARS:
-        fc = os.path.join(OUTPUT_GDB, f"Vineyards_{year}")
-        if arcpy.Exists(fc) and isinstance(results.get(year), int) and results[year] > 0:
-            # Add a YEAR field so you can tell years apart in the merged layer
-            existing_fields = {f.name for f in arcpy.ListFields(fc)}
-            if "SRC_YEAR" not in existing_fields:
-                arcpy.management.AddField(fc, "SRC_YEAR", "SHORT")
-            arcpy.management.CalculateField(fc, "SRC_YEAR", str(year))
-            year_fcs.append(fc)
-
-    if year_fcs:
-        merged_fc = os.path.join(OUTPUT_GDB, "Vineyards_All_Years")
-        if arcpy.Exists(merged_fc):
-            arcpy.management.Delete(merged_fc)
-        arcpy.management.Merge(year_fcs, merged_fc)
-        total = int(arcpy.management.GetCount(merged_fc).getOutput(0))
-        print(f"  Combined layer: {total:,} total vineyard polygons")
-    else:
-        print("  No valid year layers to merge.")
-
-    # -------------------------------------------------------------------------
     # Summary
     # -------------------------------------------------------------------------
     print("\n" + "=" * 60)
@@ -276,7 +256,8 @@ def main():
             status = str(result)
         print(f"  {year}: {status}")
 
-    print(f"\nOutput GDB: {OUTPUT_GDB}")
+    print(f"\nOutput GDB : {OUTPUT_GDB}")
+    print("Layers     : Vineyards_<year> — one per year, ready to add to ArcGIS Online")
     print("Done.")
 
 

@@ -375,20 +375,24 @@ def _fetch_daily_eto(
     zip_code: str, start_date: str, end_date: str, app_key: str, max_retries: int = 4
 ) -> pd.DataFrame:
     """Single CIMIS API call for one zip code. Returns daily ETo/precip DataFrame."""
-    params = {
-        "appKey":        app_key,
-        "targets":       zip_code,
-        "startDate":     start_date,
-        "endDate":       end_date,
-        "dataItems":     "day-asce-eto,day-precip",
-        "prioritizeSCS": "Y",   # prefer Spatial CIMIS for full statewide coverage
-        "unitOfMeasure": "E",   # English units — inches
-    }
+    # Build URL manually so the comma in dataItems stays literal (not %2C).
+    # Some WAF rules (F5 BIG-IP) flag unnecessary percent-encoding of
+    # sub-delimiters as an evasion attempt; an unencoded comma is RFC-legal.
+    # prioritizeSCS is also omitted — it is undocumented and unknown parameter
+    # names alone can trip WAF signatures.
+    url = (
+        f"{_CIMIS_URL}?appKey={app_key}"
+        f"&targets={zip_code}"
+        f"&startDate={start_date}"
+        f"&endDate={end_date}"
+        f"&dataItems=day-asce-eto,day-precip"
+        f"&unitOfMeasure=E"
+    )
     wait = 2.0
     for attempt in range(max_retries + 1):
         try:
             resp = requests.get(
-                _CIMIS_URL, params=params, timeout=60, impersonate="chrome124"
+                url, timeout=60, impersonate="chrome124"
             )
             resp.raise_for_status()
             break

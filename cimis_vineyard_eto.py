@@ -70,6 +70,7 @@ import logging
 import os
 import time
 import warnings
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 import numpy as np
@@ -398,33 +399,31 @@ def _fetch_daily_eto(
             wait *= 2
 
     try:
-        payload = resp.json()
-    except ValueError:
-        log.error(f"    Non-JSON response for zip {zip_code}")
+        root = ET.fromstring(resp.text)
+    except ET.ParseError:
+        log.error(f"    Unparseable response for zip {zip_code}")
         return pd.DataFrame()
 
     records = []
-    try:
-        for provider in payload["Data"]["Providers"]:
-            for rec in provider.get("Records", []):
-                raw_date = rec.get("Date", "")
-                if not raw_date:
-                    continue
+    for rec in root.findall(".//record"):
+        raw_date = rec.get("date", "")
+        if not raw_date:
+            continue
 
-                def _val(field: str) -> float | None:
-                    v = rec.get(field, {})
-                    try:
-                        return float(v.get("Value")) if isinstance(v, dict) else None
-                    except (TypeError, ValueError):
-                        return None
+        def _val(tag: str, _rec: ET.Element = rec) -> float | None:
+            el = _rec.find(tag)
+            if el is None or not (el.text or "").strip():
+                return None
+            try:
+                return float(el.text.strip())
+            except (TypeError, ValueError):
+                return None
 
-                records.append({
-                    "date":      pd.to_datetime(raw_date),
-                    "eto_in":    _val("DayAsceEto"),
-                    "precip_in": _val("DayPrecip"),
-                })
-    except (KeyError, TypeError) as exc:
-        log.warning(f"    Unexpected CIMIS response for zip {zip_code}: {exc}")
+        records.append({
+            "date":      pd.to_datetime(raw_date),
+            "eto_in":    _val("day-asce-eto"),
+            "precip_in": _val("day-precip"),
+        })
 
     return pd.DataFrame(records)
 

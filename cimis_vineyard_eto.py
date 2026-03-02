@@ -9,27 +9,52 @@ Original workflow (ArcGIS):
 
 New workflow (this script):
   1. Read DWR i15 Crop Mapping GDBs with geopandas (no ArcGIS required).
-  2. Filter for vineyard polygons; compute area in California Albers (m²).
+  2. Filter for vineyard polygons; compute polygon area in California Albers.
   3. Download Census TIGER ZCTA boundaries once and cache locally; spatial-
      join vineyard polygon centroids to assign each polygon a zip code.
   4. Build area-based weights: fraction of county vineyard area per zip code.
-  5. Query the CIMIS Web API (daily ASCE ETo + precipitation by zip code).
-  6. Sum daily ETo → monthly totals per zip code.
-  7. Area-weighted mean of monthly ETo/precip → one row per county × month.
-  8. Write CSVs: per-zip daily cache, county monthly, county annual.
+  5. Query the CIMIS Web API (daily ASCE ETo + precip by zip code) and
+     sum daily → monthly totals per zip code.
+  6. Area-weighted mean of monthly ETo/precip → one value per county × month.
+  7. Download CA county boundaries (Census TIGER) and join ETo data to them.
+  8. Write a GeoPackage with two ready-to-use ArcGIS Pro layers:
+       • county_annual_eto  — one row per county × year  (TIME-AWARE for
+                              year slider; choropleth by water_deficit_in)
+       • county_monthly_eto — one row per county × year × month
+                              (monthly ETo columns eto_mo01 … eto_mo12)
+     Also writes companion CSVs for non-spatial analysis.
 
-Years supported: 2014, 2016, 2018-2024  (matches DWR crop mapping releases)
+Years supported: 2014, 2016, 2018–2024  (matches DWR crop mapping releases)
 
-Requirements
-------------
-    pip install geopandas pyogrio fiona requests pandas numpy shapely
+─────────────────────────────────────────────────────────────────────────────
+HOW TO OPEN IN ARCGIS PRO
+─────────────────────────────────────────────────────────────────────────────
+1. Add to map
+   Catalog pane → right-click vineyard_water_stress.gpkg → Add to Current Map
+   → choose "county_annual_eto"
+
+2. Enable time slider (year animation)
+   Layer Properties → Time tab → check "Filter layer content based on
+   attribute values" → Field: year → set Start / End years
+
+3. Choropleth symbology
+   Symbology pane → Primary symbology = Graduated Colors
+   → Field: water_deficit_in  (annual ETo − precip, inches)
+   → or choose annual_eto_in, annual_precip_in
+
+4. For monthly breakdown
+   Add "county_monthly_eto" layer; pivot chart or use the eto_mo01…eto_mo12
+   fields as series in a chart, or join to the annual layer by county+year.
+
+─────────────────────────────────────────────────────────────────────────────
+REQUIREMENTS
+─────────────────────────────────────────────────────────────────────────────
+    pip install -r requirements.txt
 
 CIMIS API key (free)
---------------------
-Register at https://cimis.water.ca.gov, log in, scroll to bottom of your
-account page, and click "Get AppKey".  Then either:
-  • Set the USER SETTINGS variable CIMIS_APP_KEY below, OR
-  • Export it as an environment variable:  export CIMIS_APP_KEY="your-key"
+    Register at https://cimis.water.ca.gov → log in → account page →
+    scroll to bottom → "Get AppKey".
+    Then either set CIMIS_APP_KEY below or:  export CIMIS_APP_KEY="your-key"
 """
 
 from __future__ import annotations
@@ -63,7 +88,7 @@ log = logging.getLogger(__name__)
 # Folder containing all downloaded DWR .gdb files
 GDB_FOLDER = Path(r"C:\Users\brian\ABT 182 Project\Grant\DWRraw\Data\onlyGDB")
 
-# Where outputs (CSVs, ZCTA cache) are written
+# All outputs (GeoPackage, CSVs, boundary caches) go here
 OUTPUT_DIR = Path(r"C:\Users\brian\ABT 182 Project\Output")
 
 # CIMIS Web API key — register free at https://cimis.water.ca.gov
@@ -74,10 +99,10 @@ TARGET_YEARS = [2014, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
 
 # Maximum zip codes kept per county per year, ranked by vineyard area.
 # None = keep all (most accurate but more API calls).
-# Set to e.g. 5 to drastically cut runtime while retaining major areas.
+# Set e.g. 5 to cut runtime while still covering major vineyard areas.
 MAX_ZIPS_PER_COUNTY = None
 
-# Seconds to pause between CIMIS API calls (avoid rate-limiting)
+# Seconds to pause between CIMIS API calls (be polite / avoid rate-limiting)
 API_DELAY_SECONDS = 1.2
 
 
@@ -91,9 +116,8 @@ YEAR_CONFIG: dict[int, dict] = {
         "fc":           "i15_Crop_Mapping_2014",
         "filter_col":   "DWR_Standard_Legend",
         "filter_value": "V | VINEYARD",
-        "filter_op":    "eq",          # exact match
+        "filter_op":    "eq",
         "county_col":   "COUNTY",
-        "area_col":     "ACRES",       # fallback if Shape_Area unavailable
     },
     2016: {
         "gdb":          "i15_Crop_Mapping_2016.gdb",
@@ -102,7 +126,6 @@ YEAR_CONFIG: dict[int, dict] = {
         "filter_value": "V",
         "filter_op":    "startswith",
         "county_col":   "COUNTY",
-        "area_col":     "ACRES",
     },
     2018: {
         "gdb":          "i15_Crop_Mapping_2018.gdb",
@@ -111,7 +134,6 @@ YEAR_CONFIG: dict[int, dict] = {
         "filter_value": "V",
         "filter_op":    "startswith",
         "county_col":   "COUNTY",
-        "area_col":     "ACRES",
     },
     2019: {
         "gdb":          "i15_Crop_Mapping_2019.gdb",
@@ -120,7 +142,6 @@ YEAR_CONFIG: dict[int, dict] = {
         "filter_value": "V",
         "filter_op":    "startswith",
         "county_col":   "COUNTY",
-        "area_col":     "ACRES",
     },
     2020: {
         "gdb":          "i15_Crop_Mapping_2020.gdb",
@@ -129,7 +150,6 @@ YEAR_CONFIG: dict[int, dict] = {
         "filter_value": "V",
         "filter_op":    "startswith",
         "county_col":   "COUNTY",
-        "area_col":     "ACRES",
     },
     2021: {
         "gdb":          "i15_Crop_Mapping_2021.gdb",
@@ -138,7 +158,6 @@ YEAR_CONFIG: dict[int, dict] = {
         "filter_value": "V",
         "filter_op":    "startswith",
         "county_col":   "COUNTY",
-        "area_col":     "ACRES",
     },
     2022: {
         "gdb":          "i15_crop_mapping_2022.gdb",
@@ -147,7 +166,6 @@ YEAR_CONFIG: dict[int, dict] = {
         "filter_value": "V",
         "filter_op":    "startswith",
         "county_col":   "COUNTY",
-        "area_col":     "ACRES",
     },
     2023: {
         "gdb":          "i15_Crop_Mapping_2023_Provisional_20241127.gdb",
@@ -156,7 +174,6 @@ YEAR_CONFIG: dict[int, dict] = {
         "filter_value": "V",
         "filter_op":    "startswith",
         "county_col":   "COUNTY",
-        "area_col":     "ACRES",
     },
     2024: {
         "gdb":          "i15_Crop_Mapping_2024_Provisional_20251208.gdb",
@@ -165,7 +182,6 @@ YEAR_CONFIG: dict[int, dict] = {
         "filter_value": "V",
         "filter_op":    "startswith",
         "county_col":   "COUNTY",
-        "area_col":     "ACRES",
     },
 }
 
@@ -177,9 +193,7 @@ YEAR_CONFIG: dict[int, dict] = {
 def extract_vineyards(year: int) -> gpd.GeoDataFrame | None:
     """
     Read the DWR i15 GDB for *year* and return vineyard polygons as a
-    GeoDataFrame in WGS-84 (EPSG:4326) with columns:
-      county, area_m2, year, geometry
-    Returns None if the GDB is missing or unreadable.
+    GeoDataFrame in WGS-84 with columns: county, area_m2, year, geometry.
     """
     cfg = YEAR_CONFIG[year]
     gdb_path = GDB_FOLDER / cfg["gdb"]
@@ -195,109 +209,72 @@ def extract_vineyards(year: int) -> gpd.GeoDataFrame | None:
         log.error(f"[{year}] Failed to read GDB: {exc}")
         return None
 
-    # --- Apply vineyard filter ---
     col = cfg["filter_col"]
     val = cfg["filter_value"]
     if col not in gdf.columns:
-        log.warning(f"[{year}] Column '{col}' not found; available: {list(gdf.columns)}")
+        log.warning(f"[{year}] Column '{col}' not found. Available: {list(gdf.columns)}")
         return None
 
-    if cfg["filter_op"] == "eq":
-        mask = gdf[col] == val
-    else:  # startswith
-        mask = gdf[col].str.startswith(val, na=False)
-
+    mask = (gdf[col] == val) if cfg["filter_op"] == "eq" else gdf[col].str.startswith(val, na=False)
     vineyards = gdf[mask].copy()
+
     if vineyards.empty:
         log.warning(f"[{year}] No vineyard polygons matched filter.")
         return None
     log.info(f"[{year}] {len(vineyards):,} vineyard polygons matched.")
 
-    # --- Standardise columns ---
-    county_col = cfg["county_col"]
-    vineyards = vineyards[[county_col, "geometry"]].copy()
-    vineyards = vineyards.rename(columns={county_col: "county"})
+    vineyards = vineyards[[cfg["county_col"], "geometry"]].rename(columns={cfg["county_col"]: "county"})
     vineyards["year"] = year
 
-    # Reproject to California Albers for accurate area (m²)
-    vineyards_albers = vineyards.to_crs("EPSG:3310")
-    vineyards["area_m2"] = vineyards_albers.geometry.area
+    # Area in m² using California Albers projection
+    vineyards["area_m2"] = vineyards.to_crs("EPSG:3310").geometry.area
 
-    # Final CRS: WGS-84 for spatial join with ZCTA
-    vineyards = vineyards.to_crs("EPSG:4326")
-
-    return vineyards[["county", "area_m2", "year", "geometry"]]
+    return vineyards.to_crs("EPSG:4326")[["county", "area_m2", "year", "geometry"]]
 
 
 # ============================================================
 # STEP 2 — ZIP CODE ASSIGNMENT VIA CENSUS ZCTA BOUNDARIES
 # ============================================================
 
-# California bounding box (WGS-84) — used to trim the national ZCTA file
-_CA_BBOX = box(-124.6, 32.4, -113.9, 42.1)
-
-def _get_zcta_cache_path() -> Path:
-    return OUTPUT_DIR / "ca_zcta_cache.gpkg"
+_CA_BBOX = box(-124.6, 32.4, -113.9, 42.1)  # California bounding box
 
 
 def get_ca_zcta() -> gpd.GeoDataFrame:
     """
     Return California ZCTA (zip-code tabulation area) boundaries.
-    Downloads the 2023 Census TIGER file on first run (~75 MB) and caches
-    the California subset as a GeoPackage for fast subsequent loads.
+    Downloads from Census TIGER once (~75 MB) and caches as a GeoPackage.
     """
-    cache = _get_zcta_cache_path()
+    cache = OUTPUT_DIR / "ca_zcta_cache.gpkg"
     if cache.exists():
-        log.info(f"Loading cached ZCTA boundaries from {cache} ...")
+        log.info("Loading cached ZCTA boundaries ...")
         return gpd.read_file(str(cache))
 
-    log.info("Downloading Census TIGER 2023 ZCTA boundaries (one-time, ~75 MB) ...")
-    url = (
-        "https://www2.census.gov/geo/tiger/TIGER2023/ZCTA520/"
-        "tl_2023_us_zcta520.zip"
-    )
+    log.info("Downloading Census TIGER ZCTA boundaries (one-time, ~75 MB) ...")
+    url = "https://www2.census.gov/geo/tiger/TIGER2023/ZCTA520/tl_2023_us_zcta520.zip"
     try:
-        all_zcta = gpd.read_file(url, engine="pyogrio")
+        all_zcta = gpd.read_file(url, engine="pyogrio").to_crs("EPSG:4326")
     except Exception as exc:
-        raise RuntimeError(
-            f"Could not download ZCTA file from Census. "
-            f"Check your internet connection or download manually:\n{url}\n{exc}"
-        ) from exc
+        raise RuntimeError(f"Could not download ZCTA file. Check your internet connection.\n{exc}") from exc
 
-    # Keep only zip codes within (or touching) California's bounding box
-    all_zcta = all_zcta.to_crs("EPSG:4326")
-    ca_zcta = all_zcta[all_zcta.intersects(_CA_BBOX)].copy()
-    ca_zcta = ca_zcta[["ZCTA5CE20", "geometry"]].rename(
-        columns={"ZCTA5CE20": "zip_code"}
-    )
-
+    ca_zcta = all_zcta[all_zcta.intersects(_CA_BBOX)][["ZCTA5CE20", "geometry"]].copy()
+    ca_zcta = ca_zcta.rename(columns={"ZCTA5CE20": "zip_code"})
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     ca_zcta.to_file(str(cache), driver="GPKG")
-    log.info(f"Cached {len(ca_zcta):,} California-area ZCTAs → {cache}")
+    log.info(f"Cached {len(ca_zcta):,} California ZCTAs → {cache}")
     return ca_zcta
 
 
-def assign_zip_codes(
-    vineyards: gpd.GeoDataFrame,
-    zcta: gpd.GeoDataFrame,
-) -> pd.DataFrame:
+def assign_zip_codes(vineyards: gpd.GeoDataFrame, zcta: gpd.GeoDataFrame) -> pd.DataFrame:
     """
     Spatial-join each vineyard polygon centroid to a ZCTA boundary.
-    Returns a DataFrame with columns: year, county, zip_code, area_m2.
-    Polygons whose centroid falls outside any ZCTA are dropped with a warning.
+    Returns DataFrame with columns: year, county, zip_code, area_m2.
     """
     centroids = vineyards.copy()
     centroids["geometry"] = vineyards.geometry.centroid
-
     joined = gpd.sjoin(centroids, zcta[["zip_code", "geometry"]], how="left", predicate="within")
-
     missing = joined["zip_code"].isna().sum()
     if missing:
-        log.warning(
-            f"{missing:,} vineyard centroids did not fall within any ZCTA and will be excluded. "
-            "This usually happens near county borders — the count is typically small."
-        )
-
+        log.warning(f"{missing:,} vineyard centroids fell outside any ZCTA and were excluded.")
     joined = joined.dropna(subset=["zip_code"])
     return joined[["year", "county", "zip_code", "area_m2"]].copy()
 
@@ -310,27 +287,18 @@ _CIMIS_URL = "https://et.water.ca.gov/api/data"
 
 
 def _fetch_daily_eto(
-    zip_code: str,
-    start_date: str,
-    end_date: str,
-    app_key: str,
-    max_retries: int = 4,
+    zip_code: str, start_date: str, end_date: str, app_key: str, max_retries: int = 4
 ) -> pd.DataFrame:
-    """
-    Single CIMIS API call for *one* zip code over a date range.
-    Returns a DataFrame with columns: date (datetime), eto_in, precip_in.
-    Returns an empty DataFrame on failure.
-    """
+    """Single CIMIS API call for one zip code. Returns daily ETo/precip DataFrame."""
     params = {
-        "appKey":       app_key,
-        "targets":      zip_code,
-        "startDate":    start_date,
-        "endDate":      end_date,
-        "dataItems":    "day-asce-eto,day-precip",
-        "prioritizeSCS": "Y",    # prefer Spatial CIMIS (full statewide coverage)
+        "appKey":        app_key,
+        "targets":       zip_code,
+        "startDate":     start_date,
+        "endDate":       end_date,
+        "dataItems":     "day-asce-eto,day-precip",
+        "prioritizeSCS": "Y",   # prefer Spatial CIMIS for full statewide coverage
         "unitOfMeasure": "E",   # English units — inches
     }
-
     wait = 2.0
     for attempt in range(max_retries + 1):
         try:
@@ -339,7 +307,7 @@ def _fetch_daily_eto(
             break
         except requests.RequestException as exc:
             if attempt == max_retries:
-                log.error(f"    CIMIS API failed after {max_retries} retries for zip {zip_code}: {exc}")
+                log.error(f"    CIMIS API failed for zip {zip_code}: {exc}")
                 return pd.DataFrame()
             log.warning(f"    Retry {attempt + 1}/{max_retries} for zip {zip_code} (wait {wait:.0f}s) ...")
             time.sleep(wait)
@@ -353,59 +321,51 @@ def _fetch_daily_eto(
 
     records = []
     try:
-        providers = payload["Data"]["Providers"]
-        for provider in providers:
+        for provider in payload["Data"]["Providers"]:
             for rec in provider.get("Records", []):
                 raw_date = rec.get("Date", "")
                 if not raw_date:
                     continue
 
-                def _parse(field: str) -> float | None:
+                def _val(field: str) -> float | None:
                     v = rec.get(field, {})
-                    val = v.get("Value") if isinstance(v, dict) else None
                     try:
-                        return float(val)
+                        return float(v.get("Value")) if isinstance(v, dict) else None
                     except (TypeError, ValueError):
                         return None
 
                 records.append({
                     "date":      pd.to_datetime(raw_date),
-                    "eto_in":    _parse("DayAsceEto"),
-                    "precip_in": _parse("DayPrecip"),
+                    "eto_in":    _val("DayAsceEto"),
+                    "precip_in": _val("DayPrecip"),
                 })
     except (KeyError, TypeError) as exc:
-        log.warning(f"    Unexpected CIMIS response structure for zip {zip_code}: {exc}")
+        log.warning(f"    Unexpected CIMIS response for zip {zip_code}: {exc}")
 
     return pd.DataFrame(records)
 
 
 def query_year_monthly(zip_code: str, year: int, app_key: str) -> pd.DataFrame:
     """
-    Query CIMIS for a full calendar year and return *monthly* totals.
-    Splits the year into two half-year requests to stay within API record limits.
+    Query CIMIS for a full calendar year.  Splits into two half-year requests
+    to stay within API record limits.
     Returns DataFrame with columns: zip_code, year, month, eto_in, precip_in.
     """
-    # Split into two half-year requests (≤183 daily records each)
-    halves = [
-        (f"{year}-01-01", f"{year}-06-30"),
-        (f"{year}-07-01", f"{year}-12-31"),
-    ]
+    halves = [(f"{year}-01-01", f"{year}-06-30"), (f"{year}-07-01", f"{year}-12-31")]
     dfs = []
     for start, end in halves:
         df = _fetch_daily_eto(zip_code, start, end, app_key)
         if not df.empty:
             dfs.append(df)
-        time.sleep(0.3)  # small pause between the two half-year calls
+        time.sleep(0.3)
 
     if not dfs:
         return pd.DataFrame()
 
     daily = pd.concat(dfs, ignore_index=True)
-    daily["year"] = daily["date"].dt.year
-    daily["month"] = daily["date"].dt.month
-
     monthly = (
-        daily.groupby(["year", "month"])
+        daily.assign(year=daily["date"].dt.year, month=daily["date"].dt.month)
+        .groupby(["year", "month"])
         .agg(eto_in=("eto_in", "sum"), precip_in=("precip_in", "sum"))
         .reset_index()
     )
@@ -418,22 +378,11 @@ def query_year_monthly(zip_code: str, year: int, app_key: str) -> pd.DataFrame:
 # ============================================================
 
 def compute_weights(vine_zip: pd.DataFrame) -> pd.DataFrame:
-    """
-    For each (year, county, zip_code), calculate the fraction of that
-    county's total vineyard area that falls within the zip code.
-    Used as weights when averaging ETo across zip codes within a county.
-    """
     county_total = (
-        vine_zip.groupby(["year", "county"])["area_m2"]
-        .sum()
-        .rename("county_total_m2")
-        .reset_index()
+        vine_zip.groupby(["year", "county"])["area_m2"].sum().rename("county_total_m2").reset_index()
     )
     zip_area = (
-        vine_zip.groupby(["year", "county", "zip_code"])["area_m2"]
-        .sum()
-        .rename("zip_area_m2")
-        .reset_index()
+        vine_zip.groupby(["year", "county", "zip_code"])["area_m2"].sum().rename("zip_area_m2").reset_index()
     )
     w = zip_area.merge(county_total, on=["year", "county"])
     w["weight"] = w["zip_area_m2"] / w["county_total_m2"]
@@ -441,48 +390,193 @@ def compute_weights(vine_zip: pd.DataFrame) -> pd.DataFrame:
 
 
 def aggregate_to_county(
-    eto_by_zip: pd.DataFrame,
-    weights: pd.DataFrame,
+    eto_by_zip: pd.DataFrame, weights: pd.DataFrame
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
     """
-    Combine ETo data with area weights and compute:
-      • county_monthly — county × year × month with area-weighted mean ETo & precip
-      • county_annual  — county × year with annual totals
-
-    Returns (county_monthly, county_annual).
+    Returns (county_monthly, county_annual) as plain DataFrames.
+    county_annual includes water_deficit_in = annual_eto_in − annual_precip_in.
     """
-    merged = eto_by_zip.merge(
-        weights[["year", "county", "zip_code", "weight"]],
-        on=["year", "zip_code"],
-    )
+    merged = eto_by_zip.merge(weights[["year", "county", "zip_code", "weight"]], on=["year", "zip_code"])
     merged["eto_wt"]    = merged["eto_in"]    * merged["weight"]
     merged["precip_wt"] = merged["precip_in"] * merged["weight"]
 
     county_monthly = (
         merged.groupby(["year", "county", "month"])
-        .agg(
-            eto_in    = ("eto_wt",    "sum"),
-            precip_in = ("precip_wt", "sum"),
-        )
+        .agg(eto_in=("eto_wt", "sum"), precip_in=("precip_wt", "sum"))
         .reset_index()
         .sort_values(["county", "year", "month"])
     )
-
     county_annual = (
         county_monthly.groupby(["year", "county"])
-        .agg(
-            annual_eto_in    = ("eto_in",    "sum"),
-            annual_precip_in = ("precip_in", "sum"),
-        )
+        .agg(annual_eto_in=("eto_in", "sum"), annual_precip_in=("precip_in", "sum"))
         .reset_index()
         .sort_values(["county", "year"])
     )
-    # Simple aridity / water-demand proxy: ETo - precip
     county_annual["water_deficit_in"] = (
         county_annual["annual_eto_in"] - county_annual["annual_precip_in"]
     )
-
     return county_monthly, county_annual
+
+
+# ============================================================
+# STEP 5 — COUNTY BOUNDARIES + GEOPACKAGE FOR ARCGIS PRO
+# ============================================================
+
+def get_ca_counties() -> gpd.GeoDataFrame:
+    """
+    Return California county boundaries (Census TIGER 2023).
+    Downloads once (~7 MB) and caches locally.
+    """
+    cache = OUTPUT_DIR / "ca_counties_cache.gpkg"
+    if cache.exists():
+        log.info("Loading cached CA county boundaries ...")
+        return gpd.read_file(str(cache))
+
+    log.info("Downloading Census TIGER county boundaries (one-time, ~7 MB) ...")
+    url = "https://www2.census.gov/geo/tiger/TIGER2023/COUNTY/tl_2023_us_county.zip"
+    try:
+        all_counties = gpd.read_file(url, engine="pyogrio")
+    except Exception as exc:
+        raise RuntimeError(f"Could not download county boundaries.\n{exc}") from exc
+
+    # FIPS state code 06 = California
+    ca = all_counties[all_counties["STATEFP"] == "06"][["NAME", "geometry"]].copy()
+    ca = ca.rename(columns={"NAME": "county"}).to_crs("EPSG:4326")
+    ca.to_file(str(cache), driver="GPKG")
+    log.info(f"Cached {len(ca)} CA counties → {cache}")
+    return ca
+
+
+def _normalize_county(s: pd.Series) -> pd.Series:
+    """Title-case and strip common suffixes so DWR names match Census names."""
+    return s.str.strip().str.title().str.replace(r"\s+County$", "", regex=True)
+
+
+def build_geopackage(
+    county_monthly: pd.DataFrame,
+    county_annual: pd.DataFrame,
+    ca_counties: gpd.GeoDataFrame,
+    output_path: Path,
+) -> None:
+    """
+    Write two layers to a GeoPackage that are immediately usable in ArcGIS Pro.
+
+    Layer 1 — county_annual_eto
+        One row per county × year.
+        Columns: county, year, annual_eto_in, annual_precip_in, water_deficit_in
+        → Enable ArcGIS Pro time slider on the 'year' field.
+        → Symbolize with Graduated Colors on water_deficit_in.
+
+    Layer 2 — county_monthly_eto
+        One row per county × year with monthly ETo spread into columns
+        eto_mo01 … eto_mo12 (inches) and precip_mo01 … precip_mo12.
+        → Use for bar/line charts per county, or Join Field workflows.
+    """
+    # Normalise county name for joining
+    ca_counties = ca_counties.copy()
+    ca_counties["county_key"] = _normalize_county(ca_counties["county"])
+
+    # ── Layer 1: annual, time-aware ──────────────────────────────────────────
+    annual = county_annual.copy()
+    annual["county_key"] = _normalize_county(annual["county"])
+
+    annual_geo = ca_counties.merge(annual, on="county_key", how="inner", suffixes=("_census", ""))
+    annual_geo = annual_geo.drop(columns=["county_key", "county_census"], errors="ignore")
+
+    # ArcGIS Pro time slider needs a proper date column; add Jan 1 of each year
+    annual_geo["date"] = pd.to_datetime(annual_geo["year"].astype(str) + "-01-01")
+
+    # Round numeric fields for tidiness
+    for col in ["annual_eto_in", "annual_precip_in", "water_deficit_in"]:
+        if col in annual_geo.columns:
+            annual_geo[col] = annual_geo[col].round(2)
+
+    # ── Layer 2: monthly pivot ───────────────────────────────────────────────
+    monthly = county_monthly.copy()
+    monthly["county_key"] = _normalize_county(monthly["county"])
+
+    eto_wide = monthly.pivot_table(
+        index=["year", "county_key"], columns="month", values="eto_in"
+    ).reset_index()
+    eto_wide.columns = [
+        f"eto_mo{c:02d}" if isinstance(c, int) else c for c in eto_wide.columns
+    ]
+
+    precip_wide = monthly.pivot_table(
+        index=["year", "county_key"], columns="month", values="precip_in"
+    ).reset_index()
+    precip_wide.columns = [
+        f"pr_mo{c:02d}" if isinstance(c, int) else c for c in precip_wide.columns
+    ]
+
+    wide = eto_wide.merge(precip_wide, on=["year", "county_key"])
+    wide["county_key"] = wide["county_key"].astype(str)
+
+    monthly_geo = ca_counties.merge(wide, on="county_key", how="inner")
+    monthly_geo = monthly_geo.drop(columns=["county_key"], errors="ignore")
+    monthly_geo["date"] = pd.to_datetime(monthly_geo["year"].astype(str) + "-01-01")
+
+    # Round
+    num_cols = [c for c in monthly_geo.columns if c.startswith(("eto_mo", "pr_mo"))]
+    monthly_geo[num_cols] = monthly_geo[num_cols].round(2)
+
+    # ── Write GeoPackage ─────────────────────────────────────────────────────
+    if output_path.exists():
+        output_path.unlink()   # overwrite cleanly
+
+    annual_geo.to_file(str(output_path), layer="county_annual_eto",  driver="GPKG")
+    monthly_geo.to_file(str(output_path), layer="county_monthly_eto", driver="GPKG")
+
+    log.info(f"GeoPackage written → {output_path}")
+    log.info(f"  county_annual_eto  : {len(annual_geo):,} features  ({annual_geo['county'].nunique()} counties × {annual_geo['year'].nunique()} years)")
+    log.info(f"  county_monthly_eto : {len(monthly_geo):,} features  (monthly ETo as eto_mo01…eto_mo12)")
+
+    _print_arcgis_instructions(output_path)
+
+
+def _print_arcgis_instructions(gpkg_path: Path) -> None:
+    print()
+    print("=" * 70)
+    print("HOW TO USE IN ARCGIS PRO")
+    print("=" * 70)
+    print(f"GeoPackage: {gpkg_path}")
+    print()
+    print("1. ADD TO MAP")
+    print("   Catalog pane → navigate to the .gpkg file → expand it →")
+    print("   drag 'county_annual_eto' onto your map.")
+    print()
+    print("2. CHOROPLETH (graduated colors)")
+    print("   Symbology pane → Primary symbology = Graduated Colors")
+    print("   Field options:")
+    print("     water_deficit_in  → annual ETo minus precip (proxy for water stress)")
+    print("     annual_eto_in     → total reference ET demand")
+    print("     annual_precip_in  → total precipitation")
+    print()
+    print("3. YEAR ANIMATION (time slider)")
+    print("   Layer Properties → Time tab")
+    print("   ✓ Filter layer content based on attribute values")
+    print("   Start field: date   (or use 'year' as a range field)")
+    print("   Step interval: 1 Year")
+    print("   → Use the Time Slider toolbar to step through 2014–2024.")
+    print()
+    print("4. MONTHLY BREAKDOWN")
+    print("   Add 'county_monthly_eto' layer.")
+    print("   Fields eto_mo01 … eto_mo12 = monthly ETo (inches).")
+    print("   Right-click layer → Create Chart → Bar Chart → select month fields.")
+    print("=" * 70)
+
+
+# ============================================================
+# CACHE HELPER
+# ============================================================
+
+def _save_cache(cache_path: Path, existing: pd.DataFrame, new_results: list[pd.DataFrame]) -> pd.DataFrame:
+    if not new_results:
+        return existing if not existing.empty else pd.DataFrame()
+    combined = pd.concat([df for df in [existing] + new_results if not df.empty], ignore_index=True)
+    combined.to_csv(cache_path, index=False)
+    log.info(f"  Cache updated ({len(combined):,} records) → {cache_path}")
+    return combined
 
 
 # ============================================================
@@ -495,15 +589,15 @@ def main() -> None:
             "No CIMIS API key set.\n"
             "  1. Register free at https://cimis.water.ca.gov\n"
             "  2. Log in → account page → 'Get AppKey'\n"
-            "  3. Set CIMIS_APP_KEY in this script or export it as an env variable."
+            "  3. Paste the key into CIMIS_APP_KEY above, or:\n"
+            "     Windows: set CIMIS_APP_KEY=your-key\n"
+            "     Mac/Linux: export CIMIS_APP_KEY=your-key"
         )
         return
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    # ------------------------------------------------------------------ #
-    # Step 1 — Extract vineyard polygons from each year's DWR GDB         #
-    # ------------------------------------------------------------------ #
+    # ── Step 1: Extract vineyard polygons ────────────────────────────────────
     log.info("=" * 60)
     log.info("STEP 1 — Extracting vineyard polygons from DWR GDBs")
     log.info("=" * 60)
@@ -518,16 +612,10 @@ def main() -> None:
         log.error("No vineyard data extracted. Verify GDB_FOLDER path.")
         return
 
-    vineyards = gpd.GeoDataFrame(
-        pd.concat(all_gdfs, ignore_index=True),
-        geometry="geometry",
-        crs="EPSG:4326",
-    )
+    vineyards = gpd.GeoDataFrame(pd.concat(all_gdfs, ignore_index=True), geometry="geometry", crs="EPSG:4326")
     log.info(f"Total vineyard polygons across all years: {len(vineyards):,}")
 
-    # ------------------------------------------------------------------ #
-    # Step 2 — Assign zip codes via Census ZCTA spatial join              #
-    # ------------------------------------------------------------------ #
+    # ── Step 2: Assign zip codes ──────────────────────────────────────────────
     log.info("")
     log.info("=" * 60)
     log.info("STEP 2 — Assigning zip codes via Census ZCTA boundaries")
@@ -535,15 +623,10 @@ def main() -> None:
 
     zcta = get_ca_zcta()
     vine_zip = assign_zip_codes(vineyards, zcta)
-
-    zip_table_path = OUTPUT_DIR / "vineyard_zip_area.csv"
-    vine_zip.to_csv(zip_table_path, index=False)
-    log.info(f"Vineyard–zip area table saved → {zip_table_path}")
+    vine_zip.to_csv(OUTPUT_DIR / "vineyard_zip_area.csv", index=False)
     log.info(f"Unique zip codes with vineyards: {vine_zip['zip_code'].nunique():,}")
 
-    # ------------------------------------------------------------------ #
-    # Step 3 — Query CIMIS API                                            #
-    # ------------------------------------------------------------------ #
+    # ── Step 3: Query CIMIS API ───────────────────────────────────────────────
     log.info("")
     log.info("=" * 60)
     log.info("STEP 3 — Querying CIMIS API for monthly ETo by zip code")
@@ -551,44 +634,30 @@ def main() -> None:
 
     weights = compute_weights(vine_zip)
 
-    # Determine which (zip, year) pairs to query
     if MAX_ZIPS_PER_COUNTY is not None:
-        # Keep only the top-N zip codes per county by vineyard area
         top = (
-            vine_zip.groupby(["year", "county", "zip_code"])["area_m2"]
-            .sum()
-            .reset_index()
+            vine_zip.groupby(["year", "county", "zip_code"])["area_m2"].sum().reset_index()
             .sort_values("area_m2", ascending=False)
-            .groupby(["year", "county"])
-            .head(MAX_ZIPS_PER_COUNTY)
+            .groupby(["year", "county"]).head(MAX_ZIPS_PER_COUNTY)
         )
         query_pairs = top[["zip_code", "year"]].drop_duplicates()
-        log.info(
-            f"MAX_ZIPS_PER_COUNTY={MAX_ZIPS_PER_COUNTY}: "
-            f"reduced to {len(query_pairs):,} zip×year queries."
-        )
+        log.info(f"MAX_ZIPS_PER_COUNTY={MAX_ZIPS_PER_COUNTY} → {len(query_pairs):,} zip×year queries")
     else:
         query_pairs = vine_zip[["zip_code", "year"]].drop_duplicates()
         log.info(f"Total zip×year queries: {len(query_pairs):,}")
 
-    # Check for a resume cache (useful if the run is interrupted)
-    cache_path = OUTPUT_DIR / "cimis_daily_cache.csv"
+    cache_path = OUTPUT_DIR / "cimis_monthly_cache.csv"
     if cache_path.exists():
-        log.info(f"Resuming from existing cache: {cache_path}")
+        log.info(f"Resuming from cache: {cache_path}")
         cached = pd.read_csv(cache_path)
-        cached["date"] = pd.to_datetime(cached["date"])
-        already_done = set(
-            zip(cached["zip_code"].astype(str), cached["year"].astype(int))
-        )
+        already_done = set(zip(cached["zip_code"].astype(str), cached["year"].astype(int)))
     else:
         cached = pd.DataFrame()
         already_done: set[tuple] = set()
 
     new_results: list[pd.DataFrame] = []
     remaining = query_pairs[
-        ~query_pairs.apply(
-            lambda r: (str(r["zip_code"]), int(r["year"])) in already_done, axis=1
-        )
+        ~query_pairs.apply(lambda r: (str(r["zip_code"]), int(r["year"])) in already_done, axis=1)
     ]
     log.info(f"Remaining queries (not yet cached): {len(remaining):,}")
 
@@ -598,76 +667,46 @@ def main() -> None:
         monthly = query_year_monthly(zc, yr, CIMIS_APP_KEY)
         if not monthly.empty:
             new_results.append(monthly)
-        # Periodically save cache so we can resume if interrupted
         if i % 20 == 0 and new_results:
             _save_cache(cache_path, cached, new_results)
         time.sleep(API_DELAY_SECONDS)
 
-    # Final cache save
     all_eto = _save_cache(cache_path, cached, new_results)
 
     if all_eto.empty:
         log.error("No ETo data retrieved. Check your API key and zip codes.")
         return
 
-    # ------------------------------------------------------------------ #
-    # Step 4 — Aggregate to county × month                               #
-    # ------------------------------------------------------------------ #
+    # ── Step 4: County-level aggregation ─────────────────────────────────────
     log.info("")
     log.info("=" * 60)
     log.info("STEP 4 — Area-weighted aggregation to county level")
     log.info("=" * 60)
 
     county_monthly, county_annual = aggregate_to_county(all_eto, weights)
+    county_monthly.to_csv(OUTPUT_DIR / "county_vineyard_eto_monthly.csv", index=False)
+    county_annual.to_csv(OUTPUT_DIR / "county_vineyard_eto_annual.csv",  index=False)
+    log.info(f"CSVs written → {OUTPUT_DIR}")
 
-    monthly_path = OUTPUT_DIR / "county_vineyard_eto_monthly.csv"
-    annual_path  = OUTPUT_DIR / "county_vineyard_eto_annual.csv"
+    # ── Step 5: Build GeoPackage for ArcGIS Pro ───────────────────────────────
+    log.info("")
+    log.info("=" * 60)
+    log.info("STEP 5 — Building GeoPackage for ArcGIS Pro")
+    log.info("=" * 60)
 
-    county_monthly.to_csv(monthly_path, index=False)
-    county_annual.to_csv(annual_path, index=False)
+    ca_counties = get_ca_counties()
+    gpkg_path = OUTPUT_DIR / "vineyard_water_stress.gpkg"
+    build_geopackage(county_monthly, county_annual, ca_counties, gpkg_path)
 
-    log.info(f"County monthly ETo → {monthly_path}")
-    log.info(f"County annual  ETo → {annual_path}")
-
-    # ------------------------------------------------------------------ #
-    # Summary table                                                       #
-    # ------------------------------------------------------------------ #
+    # ── Console summary ───────────────────────────────────────────────────────
     print("\n" + "=" * 70)
-    print("SUMMARY — Annual vineyard ETo by county (inches)")
+    print("Annual water deficit by county (ETo − precip, inches) — top 10")
     print("=" * 70)
     pivot = county_annual.pivot_table(
-        index="county", columns="year", values="annual_eto_in"
-    ).round(1)
-    print(pivot.to_string())
-
-    print("\n" + "=" * 70)
-    print("SUMMARY — Annual water deficit (ETo − precip) by county (inches)")
-    print("=" * 70)
-    pivot_def = county_annual.pivot_table(
         index="county", columns="year", values="water_deficit_in"
     ).round(1)
-    print(pivot_def.to_string())
-
-    print(f"\nOutputs written to: {OUTPUT_DIR}")
-    print("Done.")
-
-
-def _save_cache(
-    cache_path: Path,
-    existing: pd.DataFrame,
-    new_results: list[pd.DataFrame],
-) -> pd.DataFrame:
-    """Append new_results to the existing cache DataFrame, write to disk, return combined."""
-    if not new_results:
-        return existing if not existing.empty else pd.DataFrame()
-
-    combined = pd.concat(
-        [df for df in [existing] + new_results if not df.empty],
-        ignore_index=True,
-    )
-    combined.to_csv(cache_path, index=False)
-    log.info(f"  Cache updated ({len(combined):,} records) → {cache_path}")
-    return combined
+    print(pivot.nlargest(10, pivot.columns[-1]).to_string())
+    print("\nDone.")
 
 
 if __name__ == "__main__":

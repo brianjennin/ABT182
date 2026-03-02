@@ -90,23 +90,35 @@ def find_gdb_for_year(folder, year):
 def find_polygon_feature_class(gdb_path):
     """
     Return the path to the main polygon feature class inside the GDB.
+    Searches both the top-level GDB and any feature datasets inside it.
     Prefers a feature class whose name contains 'i15', 'crop', or 'land'.
     """
+    def pick_best(fcs, workspace):
+        for fc in fcs:
+            lower = fc.lower()
+            if "i15" in lower or "crop" in lower or "land" in lower:
+                return os.path.join(workspace, fc)
+        return os.path.join(workspace, fcs[0]) if fcs else None
+
+    # Search top-level feature classes
     arcpy.env.workspace = gdb_path
-    fcs = arcpy.ListFeatureClasses(feature_type="Polygon")
+    fcs = arcpy.ListFeatureClasses(feature_type="Polygon") or arcpy.ListFeatureClasses()
+    if fcs:
+        result = pick_best(fcs, gdb_path)
+        if result:
+            return result
 
-    if not fcs:
-        fcs = arcpy.ListFeatureClasses()
+    # Search inside feature datasets
+    for ds in (arcpy.ListDatasets(feature_type="Feature") or []):
+        ds_path = os.path.join(gdb_path, ds)
+        arcpy.env.workspace = ds_path
+        fcs = arcpy.ListFeatureClasses(feature_type="Polygon") or arcpy.ListFeatureClasses()
+        if fcs:
+            result = pick_best(fcs, ds_path)
+            if result:
+                return result
 
-    if not fcs:
-        return None
-
-    for fc in fcs:
-        lower = fc.lower()
-        if "i15" in lower or "crop" in lower or "land" in lower:
-            return os.path.join(gdb_path, fc)
-
-    return os.path.join(gdb_path, fcs[0])
+    return None
 
 
 def build_where_clause():
@@ -135,7 +147,15 @@ def extract_vineyards_from_gdb(gdb_path, year, output_gdb):
     if fc_path is None:
         print("  ERROR: No polygon feature class found — skipping.")
         return -1
-    print(f"  Feature class: {os.path.basename(fc_path)}")
+    print(f"  Feature class: {fc_path}")
+
+    # Confirm the expected CLASS fields exist before running the query
+    field_names = {f.name for f in arcpy.ListFields(fc_path)}
+    missing = [f for f in ("CLASS1", "CLASS2", "CLASS3", "CLASS4") if f not in field_names]
+    if missing:
+        print(f"  ERROR: Expected fields not found: {missing}")
+        print(f"  Available fields: {sorted(field_names)}")
+        return -1
 
     where_clause = build_where_clause()
     output_fc = os.path.join(output_gdb, f"Vineyards_{year}")

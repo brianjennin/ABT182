@@ -1,0 +1,13 @@
+# Python dependencies for cimis_vineyard_eto.py
+# Install with:  pip install -r requirements.txt
+
+# Geospatial
+geopandas>=0.14
+pyogrio>=0.7        # fast GDB/vector I/O backend for geopandas
+fiona>=1.9          # fallback GDB reader (used by geopandas)
+shapely>=2.0
+
+# Data / HTTP
+pandas>=2.0
+numpy>=1.26
+requests>=2.31

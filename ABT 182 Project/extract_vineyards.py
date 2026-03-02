@@ -1,18 +1,20 @@
 """
 extract_vineyards.py
 --------------------
-Extracts vineyard polygons from the California DWR PROVISIONAL Statewide Crop
-Mapping Geodatabases (2014-2022) and saves a separate feature class per year
-into a single output GDB — one layer per year, intended for use in an ESRI
-app with a yearly time slider.
+Extracts vineyard polygons from the California DWR i15 Statewide Crop
+Mapping Geodatabases and saves a separate feature class per year into a
+single output GDB — one layer per year, intended for use in an ESRI app
+with a yearly time slider.
 
 Output layers inside the GDB:
   Vineyards_2014, Vineyards_2016, Vineyards_2018, Vineyards_2019,
-  Vineyards_2020, Vineyards_2021, Vineyards_2022
+  Vineyards_2020, Vineyards_2021, Vineyards_2022, Vineyards_2023,
+  Vineyards_2024
 
-Source: California Open Data - PROVISIONAL - 20XX Statewide Crop Mapping Geodatabase
-Available years with data: 2014, 2016, 2018, 2019, 2020, 2021, 2022
-(2015 and 2017 were never released by DWR)
+GDB naming expected in INPUT_FOLDER:
+  i15_Crop_Mapping_2014.gdb  (and same pattern for 2016-2022)
+  i15_Crop_Mapping_2023_Provisional_20241127.gdb
+  i15_Crop_Mapping_2024_Provisional_20251208.gdb
 
 HOW TO RUN IN ARCGIS PRO:
   1. Open the Python window (Analysis tab > Python)
@@ -42,33 +44,24 @@ OUTPUT_GDB = r"C:\Users\brian\ABT 182 Project\Grant\DWRraw\Data\output_gdb"
 # CONFIGURATION — no need to edit below this line
 # =============================================================================
 
-# Years the DWR dataset actually covers (2015 and 2017 were not released)
-TARGET_YEARS = [2014, 2016, 2018, 2019, 2020, 2021, 2022]
+# DWR i15 grape/vineyard code in the CLASS fields (right-justified, leading space)
+# G = Grapes in the DWR Standard Land Use Legend
+GRAPE_CODE = " G"
 
-# Common crop-type field names used across DWR dataset versions
-CROP_FIELD_CANDIDATES = [
-    "CLASS2",       # most common — Level 2 crop classification
-    "CROPTYP2",
-    "Crop_Type",
-    "CROP_TYPE",
-    "LANDUSE",
-    "LABEL",
-    "DWR_Stnd_C",
-]
+# Years and their exact GDB filenames
+GDB_NAMES = {
+    2014: "i15_Crop_Mapping_2014.gdb",
+    2016: "i15_Crop_Mapping_2016.gdb",
+    2018: "i15_Crop_Mapping_2018.gdb",
+    2019: "i15_Crop_Mapping_2019.gdb",
+    2020: "i15_Crop_Mapping_2020.gdb",
+    2021: "i15_Crop_Mapping_2021.gdb",
+    2022: "i15_Crop_Mapping_2022.gdb",
+    2023: "i15_Crop_Mapping_2023_Provisional_20241127.gdb",
+    2024: "i15_Crop_Mapping_2024_Provisional_20251208.gdb",
+}
 
-# All text values that indicate a vineyard in the crop-type field
-VINEYARD_VALUES = ["Vineyard", "VINEYARD", "vineyard", "Vineyards", "VINEYARDS"]
-
-# Common geodatabase naming patterns used by DWR / CA Open Data downloads
-GDB_NAME_PATTERNS = [
-    "i15_Crop_Mapping_{year}.gdb",
-    "Crop{year}.gdb",
-    "Crop_Mapping_{year}.gdb",
-    "Statewide_Crop_Mapping_{year}.gdb",
-    "{year}_Crop_Mapping.gdb",
-    "CA_Crop_Mapping_{year}.gdb",
-    "DWR_Crop_Mapping_{year}.gdb",
-]
+TARGET_YEARS = sorted(GDB_NAMES.keys())
 
 
 # =============================================================================
@@ -87,120 +80,68 @@ def create_output_gdb(gdb_path):
 
 
 def find_gdb_for_year(folder, year):
-    """
-    Search the input folder for a geodatabase matching the given year.
-    Tries known naming patterns first, then falls back to scanning all .gdb
-    directories in the folder for any that contain the year in their name.
-    """
-    # Try known patterns
-    for pattern in GDB_NAME_PATTERNS:
-        candidate = os.path.join(folder, pattern.format(year=year))
-        if arcpy.Exists(candidate):
-            return candidate
-
-    # Fallback: scan folder for any .gdb whose name contains the year
-    try:
-        for entry in os.listdir(folder):
-            if entry.endswith(".gdb") and str(year) in entry:
-                candidate = os.path.join(folder, entry)
-                if arcpy.Exists(candidate):
-                    return candidate
-    except Exception:
-        pass
-
+    """Return the full path to the GDB for the given year, or None if not found."""
+    name = GDB_NAMES[year]
+    candidate = os.path.join(folder, name)
+    if arcpy.Exists(candidate):
+        return candidate
     return None
 
 
 def find_polygon_feature_class(gdb_path):
     """
     Return the path to the main polygon feature class inside the GDB.
-    Prefers a feature class whose name contains the year or 'crop'.
+    Prefers a feature class whose name contains 'i15', 'crop', or 'land'.
     """
     arcpy.env.workspace = gdb_path
     fcs = arcpy.ListFeatureClasses(feature_type="Polygon")
 
     if not fcs:
-        # Try without type filter in case geometry type metadata is missing
         fcs = arcpy.ListFeatureClasses()
 
     if not fcs:
         return None
 
-    # Prefer a feature class with 'crop' or 'land' in the name
     for fc in fcs:
         lower = fc.lower()
-        if "crop" in lower or "land" in lower or "i15" in lower:
+        if "i15" in lower or "crop" in lower or "land" in lower:
             return os.path.join(gdb_path, fc)
 
-    # Default to first feature class found
     return os.path.join(gdb_path, fcs[0])
 
 
-def find_crop_field(fc_path):
+def build_where_clause():
     """
-    Find the field in the feature class that holds the crop-type classification.
-    Returns the field name, or None if not found.
+    Build a WHERE clause that selects any polygon where grapes/vineyard
+    is recorded in any crop position (CLASS1–CLASS4).
+
+    DWR stores crop codes right-justified in 2-char fields, so the grape
+    code ' G' has a leading space. Single-crop vineyard fields have the
+    crop in CLASS2; multi-crop fields may have it in CLASS1, CLASS3, or CLASS4.
     """
-    existing_fields = {f.name for f in arcpy.ListFields(fc_path)}
-
-    for candidate in CROP_FIELD_CANDIDATES:
-        if candidate in existing_fields:
-            return candidate
-
-    # Case-insensitive fallback
-    lower_map = {f.lower(): f for f in existing_fields}
-    for candidate in CROP_FIELD_CANDIDATES:
-        if candidate.lower() in lower_map:
-            return lower_map[candidate.lower()]
-
-    return None
-
-
-def list_unique_crop_values(fc_path, field_name, limit=30):
-    """Print unique values in the crop field — useful for diagnosing field values."""
-    values = set()
-    with arcpy.da.SearchCursor(fc_path, [field_name]) as cursor:
-        for row in cursor:
-            if row[0] is not None:
-                values.add(row[0])
-            if len(values) >= limit:
-                break
-    print(f"    Sample unique values in '{field_name}': {sorted(values)[:limit]}")
-
-
-def build_where_clause(field_name):
-    """Build a SQL WHERE clause that matches any of the vineyard values."""
-    quoted = [f"'{v}'" for v in VINEYARD_VALUES]
-    return f"{field_name} IN ({', '.join(quoted)})"
+    code = f"'{GRAPE_CODE}'"
+    return (
+        f"CLASS1 = {code} OR CLASS2 = {code} OR "
+        f"CLASS3 = {code} OR CLASS4 = {code}"
+    )
 
 
 def extract_vineyards_from_gdb(gdb_path, year, output_gdb):
     """
-    Extract vineyard polygons from a single year's geodatabase and save the
-    result as a feature class named Vineyards_<year> in the output GDB.
-    Returns the number of features extracted, or -1 on failure.
+    Extract vineyard polygons from a single year's GDB and save the result
+    as Vineyards_<year> in the output GDB.
+    Returns the feature count, or -1 on failure.
     """
-    print(f"\n  Finding feature class in {os.path.basename(gdb_path)} ...")
+    print(f"\n  Locating feature class in {os.path.basename(gdb_path)} ...")
     fc_path = find_polygon_feature_class(gdb_path)
     if fc_path is None:
         print("  ERROR: No polygon feature class found — skipping.")
         return -1
     print(f"  Feature class: {os.path.basename(fc_path)}")
 
-    crop_field = find_crop_field(fc_path)
-    if crop_field is None:
-        print("  ERROR: Could not identify the crop-type field.")
-        print("  Available fields:", [f.name for f in arcpy.ListFields(fc_path)])
-        return -1
-    print(f"  Crop field detected: {crop_field}")
-
-    # Uncomment the next line to inspect what values exist in your data:
-    # list_unique_crop_values(fc_path, crop_field)
-
-    where_clause = build_where_clause(crop_field)
+    where_clause = build_where_clause()
     output_fc = os.path.join(output_gdb, f"Vineyards_{year}")
 
-    # Overwrite if a previous run already created this layer
     if arcpy.Exists(output_fc):
         arcpy.management.Delete(output_fc)
 
@@ -224,7 +165,6 @@ def main():
     print(f"Output GDB   : {OUTPUT_GDB}")
     print("=" * 60)
 
-    # Create the output geodatabase
     create_output_gdb(OUTPUT_GDB)
 
     results = {}
@@ -234,8 +174,7 @@ def main():
         gdb_path = find_gdb_for_year(INPUT_FOLDER, year)
 
         if gdb_path is None:
-            print(f"  WARNING: No geodatabase found for {year} in {INPUT_FOLDER}")
-            print(f"  Make sure the .gdb folder for {year} is downloaded there.")
+            print(f"  WARNING: {GDB_NAMES[year]} not found in {INPUT_FOLDER}")
             results[year] = "NOT FOUND"
             continue
 

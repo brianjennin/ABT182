@@ -233,7 +233,26 @@ def extract_vineyards(year: int) -> gpd.GeoDataFrame | None:
         return None
     log.info(f"[{year}] {len(vineyards):,} vineyard polygons matched.")
 
-    vineyards = vineyards[[cfg["county_col"], "geometry"]].rename(columns={cfg["county_col"]: "county"})
+    # Resolve county column — older GDBs use different names
+    county_col = cfg["county_col"]
+    if county_col not in vineyards.columns:
+        _candidates = ["COUNTY", "County", "county", "CO_NAME", "COUNTY_NAME",
+                       "CNTY", "COUNTYNAME", "COUNTY_CD", "CO_CNTY"]
+        county_col = next((c for c in _candidates if c in vineyards.columns), None)
+        if county_col:
+            log.warning(
+                f"[{year}] Configured county_col '{cfg['county_col']}' not found; "
+                f"using '{county_col}' instead. Update YEAR_CONFIG to silence this."
+            )
+        else:
+            log.warning(
+                f"[{year}] No county column found. "
+                f"Available columns: {list(vineyards.columns)}\n"
+                f"       Update 'county_col' in YEAR_CONFIG for this year."
+            )
+            return None
+
+    vineyards = vineyards[[county_col, "geometry"]].rename(columns={county_col: "county"})
     vineyards["year"] = year
 
     # Area in m² using California Albers projection

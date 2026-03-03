@@ -70,7 +70,6 @@ import logging
 import os
 import time
 import warnings
-import xml.etree.ElementTree as ET
 from pathlib import Path
 
 import numpy as np
@@ -370,96 +369,106 @@ def assign_avas(vineyards: gpd.GeoDataFrame, avas: gpd.GeoDataFrame) -> pd.DataF
 
 _CIMIS_URL = "https://et.water.ca.gov/api/data"
 
+# CIMIS hard limit is 1,750 records/request; each zip contributes ~182 records
+# per half-year, so batch up to 9 zips per call (9 × 182 = 1,638 < 1,750).
+_BATCH_SIZE = 9
 
-def _fetch_daily_eto(
-    zip_code: str, start_date: str, end_date: str, app_key: str, max_retries: int = 4
+
+def _fetch_daily_eto_batch(
+    zip_codes: list[str], start_date: str, end_date: str, app_key: str, max_retries: int = 2
 ) -> pd.DataFrame:
-    """Single CIMIS API call for one zip code. Returns daily ETo/precip DataFrame."""
-    # Build URL manually so the comma in dataItems stays literal (not %2C).
-    # Some WAF rules (F5 BIG-IP) flag unnecessary percent-encoding of
-    # sub-delimiters as an evasion attempt; an unencoded comma is RFC-legal.
-    # prioritizeSCS is also omitted — it is undocumented and unknown parameter
-    # names alone can trip WAF signatures.
+    """
+    Batch CIMIS API call for up to _BATCH_SIZE zip codes at once.
+    Uses JSON format; returns daily DataFrame with columns:
+    zip_code, date, eto_in, precip_in.
+    """
+    targets = ",".join(zip_codes)
     url = (
         f"{_CIMIS_URL}?appKey={app_key}"
-        f"&targets={zip_code}"
+        f"&targets={targets}"
         f"&startDate={start_date}"
         f"&endDate={end_date}"
         f"&dataItems=day-asce-eto,day-precip"
         f"&unitOfMeasure=E"
     )
     wait = 2.0
+    resp = None
     for attempt in range(max_retries + 1):
         try:
-            resp = requests.get(
-                url, timeout=60, impersonate="chrome124"
-            )
+            resp = requests.get(url, timeout=60, impersonate="chrome124")
+            # WAF block returns 200 OK with an HTML rejection page
+            if "Request Rejected" in resp.text[:500]:
+                if attempt == max_retries:
+                    log.error(f"    WAF blocked zips {targets[:60]!r} — skipping batch")
+                    return pd.DataFrame()
+                log.warning(f"    WAF rejection, retry {attempt+1}/{max_retries} (wait {wait:.0f}s) ...")
+                time.sleep(wait)
+                wait *= 2
+                continue
+            # 404 = no station/spatial data for these zips — permanent, skip immediately
+            if resp.status_code == 404 or "404" in str(getattr(resp, 'status_code', '')):
+                log.debug(f"    No CIMIS data for zips {targets[:60]!r} (404), skipping")
+                return pd.DataFrame()
             resp.raise_for_status()
             break
         except Exception as exc:
-            # 404 means no CIMIS data for this zip — don't retry
-            if hasattr(exc, 'response') and exc.response is not None and exc.response.status_code == 404:
-                log.debug(f"    No CIMIS data for zip {zip_code} (404), skipping")
-                return pd.DataFrame()
-            # Also check the error message for 404
             if "404" in str(exc):
-                log.debug(f"    No CIMIS data for zip {zip_code} (404), skipping")
+                log.debug(f"    No CIMIS data for zips {targets[:60]!r} (404), skipping")
                 return pd.DataFrame()
             if attempt == max_retries:
-                log.error(f"    CIMIS API failed for zip {zip_code}: {exc}")
+                log.error(f"    CIMIS API failed for zips {targets[:60]!r}: {exc}")
                 return pd.DataFrame()
-            log.warning(f"    Retry {attempt + 1}/{max_retries} for zip {zip_code} (wait {wait:.0f}s) ...")
+            log.warning(f"    Retry {attempt+1}/{max_retries} (wait {wait:.0f}s): {exc}")
             time.sleep(wait)
             wait *= 2
 
     try:
-        root = ET.fromstring(resp.text)
-    except ET.ParseError:
-        log.error(
-            f"    Unparseable response for zip {zip_code}\n"
-            f"    URL: {resp.url}\n"
-            f"    HTTP status: {resp.status_code}\n"
-            f"    Body[:300]: {resp.text[:300]!r}"
-        )
+        data = resp.json()
+    except Exception:
+        log.error(f"    Unparseable JSON for zips {targets[:60]!r}: {resp.text[:300]!r}")
         return pd.DataFrame()
 
     records = []
-    for rec in root.findall(".//record"):
-        raw_date = rec.get("date", "")
-        if not raw_date:
-            continue
+    for provider in data.get("Data", {}).get("Providers", []):
+        for rec in provider.get("Records", []):
+            raw_date = rec.get("Date", "")
+            zip_code = str(rec.get("ZipCodes", "")).strip()
+            if not raw_date or not zip_code:
+                continue
+            day = rec.get("Day", {})
 
-        def _val(tag: str, _rec: ET.Element = rec) -> float | None:
-            el = _rec.find(tag)
-            if el is None or not (el.text or "").strip():
-                return None
-            try:
-                return float(el.text.strip())
-            except (TypeError, ValueError):
-                return None
+            def _val(key: str, _day: dict = day) -> float | None:
+                v = (_day.get(key) or {}).get("Value", "")
+                if not v:
+                    return None
+                try:
+                    return float(v)
+                except (TypeError, ValueError):
+                    return None
 
-        records.append({
-            "date":      pd.to_datetime(raw_date),
-            "eto_in":    _val("day-asce-eto"),
-            "precip_in": _val("day-precip"),
-        })
+            records.append({
+                "zip_code":  zip_code,
+                "date":      pd.to_datetime(raw_date),
+                "eto_in":    _val("DayAsceEto"),
+                "precip_in": _val("DayPrecip"),
+            })
 
     return pd.DataFrame(records)
 
 
-def query_year_monthly(zip_code: str, year: int, app_key: str) -> pd.DataFrame:
+def query_year_monthly_batch(zip_codes: list[str], year: int, app_key: str) -> pd.DataFrame:
     """
-    Query CIMIS for a full calendar year.  Splits into two half-year requests
-    to stay within API record limits.
+    Batch query for multiple zip codes for a full calendar year.
+    Splits into two half-year requests to stay within the 1,750-record limit.
     Returns DataFrame with columns: zip_code, year, month, eto_in, precip_in.
     """
     halves = [(f"{year}-01-01", f"{year}-06-30"), (f"{year}-07-01", f"{year}-12-31")]
     dfs = []
     for start, end in halves:
-        df = _fetch_daily_eto(zip_code, start, end, app_key)
+        df = _fetch_daily_eto_batch(zip_codes, start, end, app_key)
         if not df.empty:
             dfs.append(df)
-        time.sleep(0.3)
+        time.sleep(0.5)
 
     if not dfs:
         return pd.DataFrame()
@@ -467,11 +476,10 @@ def query_year_monthly(zip_code: str, year: int, app_key: str) -> pd.DataFrame:
     daily = pd.concat(dfs, ignore_index=True)
     monthly = (
         daily.assign(year=daily["date"].dt.year, month=daily["date"].dt.month)
-        .groupby(["year", "month"])
+        .groupby(["zip_code", "year", "month"])
         .agg(eto_in=("eto_in", "sum"), precip_in=("precip_in", "sum"))
         .reset_index()
     )
-    monthly["zip_code"] = zip_code
     return monthly
 
 
@@ -914,17 +922,35 @@ def main() -> None:
     remaining = query_pairs[
         ~query_pairs.apply(lambda r: (str(r["zip_code"]), int(r["year"])) in already_done, axis=1)
     ]
-    log.info(f"Remaining queries (not yet cached): {len(remaining):,}")
+    log.info(f"Remaining queries (not yet cached): {len(remaining):,} zip×year pairs")
 
-    for i, (_, row) in enumerate(remaining.iterrows(), 1):
-        zc, yr = str(row["zip_code"]), int(row["year"])
-        log.info(f"  [{i}/{len(remaining)}] zip={zc}, year={yr}")
-        monthly = query_year_monthly(zc, yr, CIMIS_APP_KEY)
-        if not monthly.empty:
-            new_results.append(monthly)
-        if i % 20 == 0 and new_results:
-            _save_cache(cache_path, cached, new_results)
-        time.sleep(API_DELAY_SECONDS)
+    # Group remaining work by year, then batch zip codes _BATCH_SIZE at a time.
+    # This reduces API calls from N to ceil(N / _BATCH_SIZE) — roughly 9× fewer.
+    year_to_zips: dict[int, list[str]] = (
+        remaining.groupby("year")["zip_code"]
+        .apply(lambda s: s.astype(str).unique().tolist())
+        .to_dict()
+    )
+    total_batches = sum(
+        (len(z) + _BATCH_SIZE - 1) // _BATCH_SIZE for z in year_to_zips.values()
+    )
+    log.info(f"Batching into {total_batches} API calls ({_BATCH_SIZE} zips/call × 2 half-years)")
+
+    batch_num = 0
+    for yr, zips in sorted(year_to_zips.items()):
+        for i in range(0, len(zips), _BATCH_SIZE):
+            batch = zips[i : i + _BATCH_SIZE]
+            batch_num += 1
+            log.info(
+                f"  [{batch_num}/{total_batches}] year={yr}, "
+                f"zips {i+1}–{i+len(batch)} of {len(zips)}: {','.join(batch)}"
+            )
+            monthly = query_year_monthly_batch(batch, yr, CIMIS_APP_KEY)
+            if not monthly.empty:
+                new_results.append(monthly)
+            if batch_num % 20 == 0 and new_results:
+                _save_cache(cache_path, cached, new_results)
+            time.sleep(API_DELAY_SECONDS)
 
     all_eto = _save_cache(cache_path, cached, new_results)
 

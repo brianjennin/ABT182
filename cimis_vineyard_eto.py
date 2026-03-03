@@ -397,6 +397,14 @@ def _fetch_daily_eto(
             resp.raise_for_status()
             break
         except Exception as exc:
+            # 404 means no CIMIS data for this zip — don't retry
+            if hasattr(exc, 'response') and exc.response is not None and exc.response.status_code == 404:
+                log.debug(f"    No CIMIS data for zip {zip_code} (404), skipping")
+                return pd.DataFrame()
+            # Also check the error message for 404
+            if "404" in str(exc):
+                log.debug(f"    No CIMIS data for zip {zip_code} (404), skipping")
+                return pd.DataFrame()
             if attempt == max_retries:
                 log.error(f"    CIMIS API failed for zip {zip_code}: {exc}")
                 return pd.DataFrame()

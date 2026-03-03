@@ -115,10 +115,12 @@ TARGET_YEARS = [2014, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
 MAX_ZIPS_PER_COUNTY = None
 
 # Seconds to pause between CIMIS API calls (be polite / avoid rate-limiting)
-API_DELAY_SECONDS = 1.5
+API_DELAY_SECONDS = 2.0
 
-# Number of API batches to run concurrently (3–5 is safe; higher risks WAF blocks)
-CONCURRENT_BATCHES = 2
+# Number of API batches to run concurrently.
+# Keep at 1 — CIMIS WAF blocks concurrent requests (each batch already fires
+# 2 sub-requests for the two half-years, so 2 workers = 4 simultaneous hits).
+CONCURRENT_BATCHES = 1
 
 
 # ============================================================
@@ -380,7 +382,7 @@ _BATCH_SIZE = 9
 
 
 def _fetch_daily_eto_batch(
-    zip_codes: list[str], start_date: str, end_date: str, app_key: str, max_retries: int = 2
+    zip_codes: list[str], start_date: str, end_date: str, app_key: str, max_retries: int = 3
 ) -> pd.DataFrame:
     """
     Batch CIMIS API call for up to _BATCH_SIZE zip codes at once.
@@ -396,11 +398,11 @@ def _fetch_daily_eto_batch(
         f"&dataItems=day-asce-eto,day-precip"
         f"&unitOfMeasure=E"
     )
-    wait = 2.0
+    wait = 5.0
     resp = None
     for attempt in range(max_retries + 1):
         try:
-            resp = requests.get(url, timeout=60, impersonate="chrome124")
+            resp = requests.get(url, timeout=90, impersonate="chrome124")
             # WAF block returns 200 OK with an HTML rejection page
             if "Request Rejected" in resp.text[:500]:
                 if attempt == max_retries:
@@ -408,12 +410,21 @@ def _fetch_daily_eto_batch(
                     return pd.DataFrame()
                 log.warning(f"    WAF rejection, retry {attempt+1}/{max_retries} (wait {wait:.0f}s) ...")
                 time.sleep(wait)
-                wait *= 2
+                wait *= 3
                 continue
             # 404 = no station/spatial data for these zips — permanent, skip immediately
             if resp.status_code == 404 or "404" in str(getattr(resp, 'status_code', '')):
                 log.debug(f"    No CIMIS data for zips {targets[:60]!r} (404), skipping")
                 return pd.DataFrame()
+            # 403 = WAF / rate-limit — back off longer before retrying
+            if resp.status_code == 403:
+                if attempt == max_retries:
+                    log.error(f"    403 Forbidden for zips {targets[:60]!r} — skipping batch")
+                    return pd.DataFrame()
+                log.warning(f"    403 rate-limit, retry {attempt+1}/{max_retries} (wait {wait:.0f}s) ...")
+                time.sleep(wait)
+                wait *= 3
+                continue
             resp.raise_for_status()
             break
         except Exception as exc:
@@ -425,7 +436,7 @@ def _fetch_daily_eto_batch(
                 return pd.DataFrame()
             log.warning(f"    Retry {attempt+1}/{max_retries} (wait {wait:.0f}s): {exc}")
             time.sleep(wait)
-            wait *= 2
+            wait *= 3
 
     try:
         root = ET.fromstring(resp.text)

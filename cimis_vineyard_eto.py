@@ -71,6 +71,7 @@ import os
 import time
 import warnings
 import xml.etree.ElementTree as ET
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 import numpy as np
@@ -114,7 +115,10 @@ TARGET_YEARS = [2014, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
 MAX_ZIPS_PER_COUNTY = None
 
 # Seconds to pause between CIMIS API calls (be polite / avoid rate-limiting)
-API_DELAY_SECONDS = 1.2
+API_DELAY_SECONDS = 0.3
+
+# Number of API batches to run concurrently (3–5 is safe; higher risks WAF blocks)
+CONCURRENT_BATCHES = 4
 
 
 # ============================================================
@@ -467,7 +471,7 @@ def query_year_monthly_batch(zip_codes: list[str], year: int, app_key: str) -> p
         df = _fetch_daily_eto_batch(zip_codes, start, end, app_key)
         if not df.empty:
             dfs.append(df)
-        time.sleep(0.5)
+        time.sleep(0.2)
 
     if not dfs:
         return pd.DataFrame()
@@ -930,26 +934,39 @@ def main() -> None:
         .apply(lambda s: s.astype(str).unique().tolist())
         .to_dict()
     )
-    total_batches = sum(
-        (len(z) + _BATCH_SIZE - 1) // _BATCH_SIZE for z in year_to_zips.values()
-    )
-    log.info(f"Batching into {total_batches} API calls ({_BATCH_SIZE} zips/call × 2 half-years)")
 
-    batch_num = 0
+    # Flatten to a list of (batch, year) work items for parallel execution.
+    work_items: list[tuple[list[str], int]] = []
     for yr, zips in sorted(year_to_zips.items()):
         for i in range(0, len(zips), _BATCH_SIZE):
-            batch = zips[i : i + _BATCH_SIZE]
+            work_items.append((zips[i : i + _BATCH_SIZE], yr))
+    total_batches = len(work_items)
+    log.info(
+        f"Batching into {total_batches} API calls "
+        f"({_BATCH_SIZE} zips/call × 2 half-years, {CONCURRENT_BATCHES} concurrent workers)"
+    )
+
+    def _run_batch(args: tuple[list[str], int]) -> pd.DataFrame:
+        batch, yr = args
+        result = query_year_monthly_batch(batch, yr, CIMIS_APP_KEY)
+        time.sleep(API_DELAY_SECONDS)
+        return result
+
+    batch_num = 0
+    with ThreadPoolExecutor(max_workers=CONCURRENT_BATCHES) as executor:
+        futures = {executor.submit(_run_batch, item): item for item in work_items}
+        for future in as_completed(futures):
             batch_num += 1
+            batch, yr = futures[future]
+            monthly = future.result()
             log.info(
                 f"  [{batch_num}/{total_batches}] year={yr}, "
-                f"zips {i+1}–{i+len(batch)} of {len(zips)}: {','.join(batch)}"
+                f"zips {','.join(batch[:4])}{'...' if len(batch) > 4 else ''}"
             )
-            monthly = query_year_monthly_batch(batch, yr, CIMIS_APP_KEY)
             if not monthly.empty:
                 new_results.append(monthly)
             if batch_num % 20 == 0 and new_results:
                 _save_cache(cache_path, cached, new_results)
-            time.sleep(API_DELAY_SECONDS)
 
     all_eto = _save_cache(cache_path, cached, new_results)
 

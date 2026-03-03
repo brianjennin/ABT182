@@ -70,6 +70,7 @@ import logging
 import os
 import time
 import warnings
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 import numpy as np
@@ -423,35 +424,33 @@ def _fetch_daily_eto_batch(
             wait *= 2
 
     try:
-        data = resp.json()
-    except Exception:
-        log.error(f"    Unparseable JSON for zips {targets[:60]!r}: {resp.text[:300]!r}")
+        root = ET.fromstring(resp.text)
+    except ET.ParseError:
+        log.error(f"    Unparseable XML for zips {targets[:60]!r}: {resp.text[:300]!r}")
         return pd.DataFrame()
 
     records = []
-    for provider in data.get("Data", {}).get("Providers", []):
-        for rec in provider.get("Records", []):
-            raw_date = rec.get("Date", "")
-            zip_code = str(rec.get("ZipCodes", "")).strip()
-            if not raw_date or not zip_code:
-                continue
-            day = rec.get("Day", {})
+    for rec in root.findall(".//record"):
+        raw_date = rec.get("date", "")
+        zip_code = rec.get("zip-code", "").strip()
+        if not raw_date or not zip_code:
+            continue
 
-            def _val(key: str, _day: dict = day) -> float | None:
-                v = (_day.get(key) or {}).get("Value", "")
-                if not v:
-                    return None
-                try:
-                    return float(v)
-                except (TypeError, ValueError):
-                    return None
+        def _val(tag: str, _rec: ET.Element = rec) -> float | None:
+            el = _rec.find(tag)
+            if el is None or not (el.text or "").strip():
+                return None
+            try:
+                return float(el.text.strip())
+            except (TypeError, ValueError):
+                return None
 
-            records.append({
-                "zip_code":  zip_code,
-                "date":      pd.to_datetime(raw_date),
-                "eto_in":    _val("DayAsceEto"),
-                "precip_in": _val("DayPrecip"),
-            })
+        records.append({
+            "zip_code":  zip_code,
+            "date":      pd.to_datetime(raw_date),
+            "eto_in":    _val("day-asce-eto"),
+            "precip_in": _val("day-precip"),
+        })
 
     return pd.DataFrame(records)
 

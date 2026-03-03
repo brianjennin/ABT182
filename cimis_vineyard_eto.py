@@ -801,7 +801,7 @@ def _save_cache(cache_path: Path, existing: pd.DataFrame, new_results: list[pd.D
 # ============================================================
 
 def main() -> None:
-    if CIMIS_APP_KEY == "ef985ad9-17bc-4032-995c-1a6441c088c1":
+    if CIMIS_APP_KEY in ("YOUR-APP-KEY-HERE", "ef985ad9-17bc-4032-995c-1a6441c088c1"):
         log.error(
             "No CIMIS API key set.\n"
             "  1. Register free at https://cimis.water.ca.gov\n"
@@ -814,55 +814,64 @@ def main() -> None:
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    # ── Step 1: Extract vineyard polygons ────────────────────────────────────
-    log.info("=" * 60)
-    log.info("STEP 1 — Extracting vineyard polygons from DWR GDBs")
-    log.info("=" * 60)
+    _vine_zip_cache = OUTPUT_DIR / "vineyard_zip_area.csv"
+    _vine_ava_cache = OUTPUT_DIR / "vineyard_ava_zip_area.csv"
 
-    all_gdfs: list[gpd.GeoDataFrame] = []
-    for year in TARGET_YEARS:
-        gdf = extract_vineyards(year)
-        if gdf is not None:
-            all_gdfs.append(gdf)
+    if _vine_zip_cache.exists() and _vine_ava_cache.exists():
+        # ── Steps 1–2: Load from cache ────────────────────────────────────────
+        log.info("Loading cached vineyard–zip and vineyard–AVA tables (delete CSVs to re-extract) ...")
+        vine_zip = pd.read_csv(_vine_zip_cache, dtype={"zip_code": str})
+        vine_ava = pd.read_csv(_vine_ava_cache, dtype={"zip_code": str})
+        ca_avas  = load_ca_avas()
+        log.info(f"vineyard_zip_area.csv      → {vine_zip.shape[0]:,} rows")
+        log.info(f"vineyard_ava_zip_area.csv  → {vine_ava.shape[0]:,} rows  ({vine_ava['ava_id'].nunique()} AVAs)")
+    else:
+        # ── Step 1: Extract vineyard polygons ─────────────────────────────────
+        log.info("=" * 60)
+        log.info("STEP 1 — Extracting vineyard polygons from DWR GDBs")
+        log.info("=" * 60)
 
-    if not all_gdfs:
-        log.error("No vineyard data extracted. Verify GDB_FOLDER path.")
-        return
+        all_gdfs: list[gpd.GeoDataFrame] = []
+        for year in TARGET_YEARS:
+            gdf = extract_vineyards(year)
+            if gdf is not None:
+                all_gdfs.append(gdf)
 
-    vineyards = gpd.GeoDataFrame(pd.concat(all_gdfs, ignore_index=True), geometry="geometry", crs="EPSG:4326")
-    vineyards["_poly_id"] = range(len(vineyards))
-    log.info(f"Total vineyard polygons across all years: {len(vineyards):,}")
+        if not all_gdfs:
+            log.error("No vineyard data extracted. Verify GDB_FOLDER path.")
+            return
 
-    # ── Step 2a: Assign zip codes ─────────────────────────────────────────────
-    log.info("")
-    log.info("=" * 60)
-    log.info("STEP 2a — Assigning zip codes via Census ZCTA boundaries")
-    log.info("=" * 60)
+        vineyards = gpd.GeoDataFrame(pd.concat(all_gdfs, ignore_index=True), geometry="geometry", crs="EPSG:4326")
+        vineyards["_poly_id"] = range(len(vineyards))
+        log.info(f"Total vineyard polygons across all years: {len(vineyards):,}")
 
-    zcta = get_ca_zcta()
-    vine_zip = assign_zip_codes(vineyards, zcta)
-    log.info(f"Unique zip codes with vineyards: {vine_zip['zip_code'].nunique():,}")
+        # ── Step 2a: Assign zip codes ─────────────────────────────────────────
+        log.info("")
+        log.info("=" * 60)
+        log.info("STEP 2a — Assigning zip codes via Census ZCTA boundaries")
+        log.info("=" * 60)
 
-    # ── Step 2b: Assign AVAs ──────────────────────────────────────────────────
-    log.info("")
-    log.info("=" * 60)
-    log.info("STEP 2b — Assigning AVAs from CA_avas.geojson")
-    log.info("=" * 60)
+        zcta = get_ca_zcta()
+        vine_zip = assign_zip_codes(vineyards, zcta)
+        log.info(f"Unique zip codes with vineyards: {vine_zip['zip_code'].nunique():,}")
 
-    ca_avas = load_ca_avas()
-    ava_assignments = assign_avas(vineyards, ca_avas)
+        # ── Step 2b: Assign AVAs ──────────────────────────────────────────────
+        log.info("")
+        log.info("=" * 60)
+        log.info("STEP 2b — Assigning AVAs from CA_avas.geojson")
+        log.info("=" * 60)
 
-    # Merge AVA assignments into vine_zip to produce vine_ava:
-    # year, county, zip_code, area_m2, ava_id, ava_name
-    # A polygon in nested AVAs (e.g. Napa Valley ⊂ North Coast) appears once per AVA.
-    vine_ava = vine_zip.merge(ava_assignments, on="_poly_id", how="inner")
-    vine_ava = vine_ava.drop(columns=["_poly_id"])
+        ca_avas = load_ca_avas()
+        ava_assignments = assign_avas(vineyards, ca_avas)
 
-    vine_zip = vine_zip.drop(columns=["_poly_id"])
-    vine_zip.to_csv(OUTPUT_DIR / "vineyard_zip_area.csv", index=False)
-    vine_ava.to_csv(OUTPUT_DIR / "vineyard_ava_zip_area.csv", index=False)
-    log.info(f"vineyard_zip_area.csv      → {vine_zip.shape[0]:,} rows")
-    log.info(f"vineyard_ava_zip_area.csv  → {vine_ava.shape[0]:,} rows  ({vine_ava['ava_id'].nunique()} AVAs)")
+        vine_ava = vine_zip.merge(ava_assignments, on="_poly_id", how="inner")
+        vine_ava = vine_ava.drop(columns=["_poly_id"])
+
+        vine_zip = vine_zip.drop(columns=["_poly_id"])
+        vine_zip.to_csv(_vine_zip_cache, index=False)
+        vine_ava.to_csv(_vine_ava_cache, index=False)
+        log.info(f"vineyard_zip_area.csv      → {vine_zip.shape[0]:,} rows")
+        log.info(f"vineyard_ava_zip_area.csv  → {vine_ava.shape[0]:,} rows  ({vine_ava['ava_id'].nunique()} AVAs)")
 
     # ── Step 3: Query CIMIS API ───────────────────────────────────────────────
     log.info("")

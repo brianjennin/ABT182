@@ -801,7 +801,7 @@ def _save_cache(cache_path: Path, existing: pd.DataFrame, new_results: list[pd.D
 # ============================================================
 
 def main() -> None:
-    if CIMIS_APP_KEY in ("YOUR-APP-KEY-HERE", "ef985ad9-17bc-4032-995c-1a6441c088c1"):
+    if CIMIS_APP_KEY in ("YOUR-APP-KEY-HERE",):
         log.error(
             "No CIMIS API key set.\n"
             "  1. Register free at https://cimis.water.ca.gov\n"

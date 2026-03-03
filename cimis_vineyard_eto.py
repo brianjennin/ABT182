@@ -103,7 +103,7 @@ OUTPUT_DIR = Path(r"C:\Users\brian\ABT 182 Project\WaterStressOutput")
 AVA_GEOJSON = Path(__file__).parent / "CA_avas.geojson"
 
 # CIMIS Web API key — register free at https://cimis.water.ca.gov
-CIMIS_APP_KEY = os.getenv("CIMIS_APP_KEY", "YOUR-APP-KEY-HERE")
+CIMIS_APP_KEY = os.getenv("CIMIS_APP_KEY", "ef985ad9-17bc-4032-995c-1a6441c088c1")
 
 # Years to process
 TARGET_YEARS = [2014, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024]

@@ -115,10 +115,10 @@ TARGET_YEARS = [2014, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
 MAX_ZIPS_PER_COUNTY = None
 
 # Seconds to pause between CIMIS API calls (be polite / avoid rate-limiting)
-API_DELAY_SECONDS = 0.3
+API_DELAY_SECONDS = 1.5
 
 # Number of API batches to run concurrently (3–5 is safe; higher risks WAF blocks)
-CONCURRENT_BATCHES = 4
+CONCURRENT_BATCHES = 2
 
 
 # ============================================================

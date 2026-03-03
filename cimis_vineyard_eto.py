@@ -396,7 +396,7 @@ def _fetch_daily_eto(
             )
             resp.raise_for_status()
             break
-        except requests.RequestException as exc:
+        except Exception as exc:
             if attempt == max_retries:
                 log.error(f"    CIMIS API failed for zip {zip_code}: {exc}")
                 return pd.DataFrame()

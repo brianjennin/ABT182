@@ -1,0 +1,3073 @@
+year,ava_id,month,eto_in,precip_in,ava_name
+2023,adelaida_district,1,1.44,0.0,Adelaida District
+2023,adelaida_district,2,2.13,0.0,Adelaida District
+2023,adelaida_district,3,2.68,0.0,Adelaida District
+2023,adelaida_district,4,4.57,0.0,Adelaida District
+2023,adelaida_district,5,5.3,0.0,Adelaida District
+2023,adelaida_district,6,5.86,0.0,Adelaida District
+2023,adelaida_district,7,7.51,0.0,Adelaida District
+2023,adelaida_district,8,6.59,0.0,Adelaida District
+2023,adelaida_district,9,4.59,0.0,Adelaida District
+2023,adelaida_district,10,3.89,0.0,Adelaida District
+2023,adelaida_district,11,2.48,0.0,Adelaida District
+2023,adelaida_district,12,1.57,0.0,Adelaida District
+2024,adelaida_district,1,1.54,0.0,Adelaida District
+2024,adelaida_district,2,1.9200000000000002,0.0,Adelaida District
+2024,adelaida_district,3,3.19,0.0,Adelaida District
+2024,adelaida_district,4,4.25,0.0,Adelaida District
+2024,adelaida_district,5,5.78,0.0,Adelaida District
+2024,adelaida_district,6,6.93,0.0,Adelaida District
+2024,adelaida_district,7,7.55,0.0,Adelaida District
+2024,adelaida_district,8,6.88,0.0,Adelaida District
+2024,adelaida_district,9,5.3100000000000005,0.0,Adelaida District
+2024,adelaida_district,10,4.11,0.0,Adelaida District
+2024,adelaida_district,11,2.13,0.0,Adelaida District
+2024,adelaida_district,12,1.6600000000000001,0.0,Adelaida District
+2021,alexander_valley,1,0.27852705303451425,0.0,Alexander Valley
+2021,alexander_valley,2,0.48375751316520893,0.0,Alexander Valley
+2021,alexander_valley,3,0.7549549069093412,0.0,Alexander Valley
+2021,alexander_valley,4,-46753.51447407711,0.0,Alexander Valley
+2021,alexander_valley,5,1.5245691323994464,0.0,Alexander Valley
+2021,alexander_valley,6,1.6369572415186364,0.0,Alexander Valley
+2021,alexander_valley,7,1.6638326589167036,0.0,Alexander Valley
+2021,alexander_valley,8,1.4952504952379186,0.0,Alexander Valley
+2021,alexander_valley,9,1.177631925988034,0.0,Alexander Valley
+2021,alexander_valley,10,0.6743286547151398,0.0,Alexander Valley
+2021,alexander_valley,11,0.3347211075941092,0.0,Alexander Valley
+2021,alexander_valley,12,0.16858216367878495,0.0,Alexander Valley
+2024,alexander_valley,1,0.9776199942086478,0.0,Alexander Valley
+2024,alexander_valley,2,1.525334933766235,0.0,Alexander Valley
+2024,alexander_valley,3,2.660531657915234,0.0,Alexander Valley
+2024,alexander_valley,4,4.085433588179627,0.0,Alexander Valley
+2024,alexander_valley,5,5.790047181298848,0.0,Alexander Valley
+2024,alexander_valley,6,6.65280335992038,0.0,Alexander Valley
+2024,alexander_valley,7,6.855830296168985,0.0,Alexander Valley
+2024,alexander_valley,8,5.820193429090205,0.0,Alexander Valley
+2024,alexander_valley,9,4.5896160676966655,0.0,Alexander Valley
+2024,alexander_valley,10,3.394913057457749,0.0,Alexander Valley
+2024,alexander_valley,11,1.3952157814876374,0.0,Alexander Valley
+2024,alexander_valley,12,0.8176655270148285,0.0,Alexander Valley
+2023,alisos_canyon,1,1.56,0.0,Alisos Canyon
+2023,alisos_canyon,2,2.0,0.0,Alisos Canyon
+2023,alisos_canyon,3,2.63,0.0,Alisos Canyon
+2023,alisos_canyon,4,4.01,0.0,Alisos Canyon
+2023,alisos_canyon,5,4.29,0.0,Alisos Canyon
+2023,alisos_canyon,6,4.62,0.0,Alisos Canyon
+2023,alisos_canyon,7,6.04,0.0,Alisos Canyon
+2023,alisos_canyon,8,5.38,0.0,Alisos Canyon
+2023,alisos_canyon,9,3.95,0.0,Alisos Canyon
+2023,alisos_canyon,10,3.37,0.0,Alisos Canyon
+2023,alisos_canyon,11,2.38,0.0,Alisos Canyon
+2023,alisos_canyon,12,1.62,0.0,Alisos Canyon
+2024,alisos_canyon,1,1.72,0.0,Alisos Canyon
+2024,alisos_canyon,2,2.06,0.0,Alisos Canyon
+2024,alisos_canyon,3,3.05,0.0,Alisos Canyon
+2024,alisos_canyon,4,3.89,0.0,Alisos Canyon
+2024,alisos_canyon,5,4.75,0.0,Alisos Canyon
+2024,alisos_canyon,6,5.46,0.0,Alisos Canyon
+2024,alisos_canyon,7,5.86,0.0,Alisos Canyon
+2024,alisos_canyon,8,5.65,0.0,Alisos Canyon
+2024,alisos_canyon,9,4.22,0.0,Alisos Canyon
+2024,alisos_canyon,10,3.19,0.0,Alisos Canyon
+2024,alisos_canyon,11,2.0,0.0,Alisos Canyon
+2024,alisos_canyon,12,1.76,0.0,Alisos Canyon
+2023,alta_mesa,1,0.4115376133713354,0.0,Alta Mesa
+2023,alta_mesa,2,0.4822311911283746,0.0,Alta Mesa
+2023,alta_mesa,3,0.6766385299602323,0.0,Alta Mesa
+2023,alta_mesa,4,1.2775339408950654,0.0,Alta Mesa
+2023,alta_mesa,5,1.5072880686054428,0.0,Alta Mesa
+2023,alta_mesa,6,1.8127853153412194,0.0,Alta Mesa
+2023,alta_mesa,7,2.2318972406150945,0.0,Alta Mesa
+2023,alta_mesa,8,1.9516477002211177,0.0,Alta Mesa
+2023,alta_mesa,9,1.3583266011888246,0.0,Alta Mesa
+2023,alta_mesa,10,0.9392146759149494,0.0,Alta Mesa
+2023,alta_mesa,11,0.5100036681043543,0.0,Alta Mesa
+2023,alta_mesa,12,0.2751999991256169,0.0,Alta Mesa
+2024,alta_mesa,1,0.28733059563837776,0.0,Alta Mesa
+2024,alta_mesa,2,0.46472600685859367,0.0,Alta Mesa
+2024,alta_mesa,3,0.8145197754618362,0.0,Alta Mesa
+2024,alta_mesa,4,1.161815017146484,0.0,Alta Mesa
+2024,alta_mesa,5,1.8089334890624829,0.0,Alta Mesa
+2024,alta_mesa,6,2.1437360961541576,0.0,Alta Mesa
+2024,alta_mesa,7,2.3086388727814007,0.0,Alta Mesa
+2024,alta_mesa,8,1.9613436310967527,0.0,Alta Mesa
+2024,alta_mesa,9,1.5290984741798888,0.0,Alta Mesa
+2024,alta_mesa,10,1.064372467321295,0.0,Alta Mesa
+2024,alta_mesa,11,0.4572304261028099,0.0,Alta Mesa
+2024,alta_mesa,12,0.2598467995338373,0.0,Alta Mesa
+2021,anderson_valley,1,1.1396675790027504,0.0,Anderson Valley
+2021,anderson_valley,2,1.8372103249056184,0.0,Anderson Valley
+2021,anderson_valley,3,2.987096097902306,0.0,Anderson Valley
+2021,anderson_valley,4,-158569.5325684965,0.0,Anderson Valley
+2021,anderson_valley,5,6.1585114216511,0.0,Anderson Valley
+2021,anderson_valley,6,6.830647881627421,0.0,Anderson Valley
+2021,anderson_valley,7,7.18320302426562,0.0,Anderson Valley
+2021,anderson_valley,8,6.536756514175535,0.0,Anderson Valley
+2021,anderson_valley,9,4.9082184021673445,0.0,Anderson Valley
+2021,anderson_valley,10,2.778187622129282,0.0,Anderson Valley
+2021,anderson_valley,11,1.4553949416338945,0.0,Anderson Valley
+2021,anderson_valley,12,0.795623395640519,0.0,Anderson Valley
+2024,anderson_valley,1,1.0781064953122932,0.0,Anderson Valley
+2024,anderson_valley,2,1.6359466429815153,0.0,Anderson Valley
+2024,anderson_valley,3,2.4958177476774477,0.0,Anderson Valley
+2024,anderson_valley,4,3.9195933726079675,0.0,Anderson Valley
+2024,anderson_valley,5,5.613874379667712,0.0,Anderson Valley
+2024,anderson_valley,6,6.519382416582275,0.0,Anderson Valley
+2024,anderson_valley,7,6.747959496636441,0.0,Anderson Valley
+2024,anderson_valley,8,5.743021994181246,0.0,Anderson Valley
+2024,anderson_valley,9,4.646295051346211,0.0,Anderson Valley
+2024,anderson_valley,10,3.253206499827369,0.0,Anderson Valley
+2024,anderson_valley,11,1.2731358192018758,0.0,Anderson Valley
+2024,anderson_valley,12,0.8914532705398611,0.0,Anderson Valley
+2021,antelope_valley_of_the_california_high_desert,1,1.646636457004287,0.0,Antelope Valley of the California High Desert
+2021,antelope_valley_of_the_california_high_desert,2,2.1239723244896958,0.0,Antelope Valley of the California High Desert
+2021,antelope_valley_of_the_california_high_desert,3,2.5050872523356094,0.0,Antelope Valley of the California High Desert
+2021,antelope_valley_of_the_california_high_desert,4,-419195.2783590631,0.0,Antelope Valley of the California High Desert
+2021,antelope_valley_of_the_california_high_desert,5,4.513067176857233,0.0,Antelope Valley of the California High Desert
+2021,antelope_valley_of_the_california_high_desert,6,5.184715849737598,0.0,Antelope Valley of the California High Desert
+2021,antelope_valley_of_the_california_high_desert,7,5.397473778169694,0.0,Antelope Valley of the California High Desert
+2021,antelope_valley_of_the_california_high_desert,8,5.112924863526202,0.0,Antelope Valley of the California High Desert
+2021,antelope_valley_of_the_california_high_desert,9,3.9241169518012673,0.0,Antelope Valley of the California High Desert
+2021,antelope_valley_of_the_california_high_desert,10,2.445783537250527,0.0,Antelope Valley of the California High Desert
+2021,antelope_valley_of_the_california_high_desert,11,1.8903537580799696,0.0,Antelope Valley of the California High Desert
+2021,antelope_valley_of_the_california_high_desert,12,0.9852590555713419,0.0,Antelope Valley of the California High Desert
+2023,antelope_valley_of_the_california_high_desert,1,0.4931838513526796,0.0,Antelope Valley of the California High Desert
+2023,antelope_valley_of_the_california_high_desert,2,0.6454906289763012,0.0,Antelope Valley of the California High Desert
+2023,antelope_valley_of_the_california_high_desert,3,0.8002149744987105,0.0,Antelope Valley of the California High Desert
+2023,antelope_valley_of_the_california_high_desert,4,1.3804312702077453,0.0,Antelope Valley of the California High Desert
+2023,antelope_valley_of_the_california_high_desert,5,1.6850448254549886,0.0,Antelope Valley of the California High Desert
+2023,antelope_valley_of_the_california_high_desert,6,1.8470218746737608,0.0,Antelope Valley of the California High Desert
+2023,antelope_valley_of_the_california_high_desert,7,2.46350168886461,0.0,Antelope Valley of the California High Desert
+2023,antelope_valley_of_the_california_high_desert,8,2.023504331285259,0.0,Antelope Valley of the California High Desert
+2023,antelope_valley_of_the_california_high_desert,9,1.4771339861592512,0.0,Antelope Valley of the California High Desert
+2023,antelope_valley_of_the_california_high_desert,10,1.1483447519241314,0.0,Antelope Valley of the California High Desert
+2023,antelope_valley_of_the_california_high_desert,11,0.7180176659399307,0.0,Antelope Valley of the California High Desert
+2023,antelope_valley_of_the_california_high_desert,12,0.4931838513526796,0.0,Antelope Valley of the California High Desert
+2024,antelope_valley_of_the_california_high_desert,1,0.22585959289094656,0.0,Antelope Valley of the California High Desert
+2024,antelope_valley_of_the_california_high_desert,2,0.25369063277324333,0.0,Antelope Valley of the California High Desert
+2024,antelope_valley_of_the_california_high_desert,3,0.41532474901273586,0.0,Antelope Valley of the California High Desert
+2024,antelope_valley_of_the_california_high_desert,4,0.5887335359716617,0.0,Antelope Valley of the California High Desert
+2024,antelope_valley_of_the_california_high_desert,5,0.8135227042517508,0.0,Antelope Valley of the California High Desert
+2024,antelope_valley_of_the_california_high_desert,6,0.9730159712695281,0.0,Antelope Valley of the California High Desert
+2024,antelope_valley_of_the_california_high_desert,7,1.050086543251273,0.0,Antelope Valley of the California High Desert
+2024,antelope_valley_of_the_california_high_desert,8,0.9430440821655163,0.0,Antelope Valley of the California High Desert
+2024,antelope_valley_of_the_california_high_desert,9,0.713973215441997,0.0,Antelope Valley of the California High Desert
+2024,antelope_valley_of_the_california_high_desert,10,0.5223672100984925,0.0,Antelope Valley of the California High Desert
+2024,antelope_valley_of_the_california_high_desert,11,0.2932963433749733,0.0,Antelope Valley of the California High Desert
+2024,antelope_valley_of_the_california_high_desert,12,0.2558314819949585,0.0,Antelope Valley of the California High Desert
+2023,arroyo_grande_valley,1,1.4823004871325867,0.0,Arroyo Grande Valley
+2023,arroyo_grande_valley,2,2.013834145220978,0.0,Arroyo Grande Valley
+2023,arroyo_grande_valley,3,2.572300487132587,0.0,Arroyo Grande Valley
+2023,arroyo_grande_valley,4,4.23773073529287,0.0,Arroyo Grande Valley
+2023,arroyo_grande_valley,5,4.682362931983501,0.0,Arroyo Grande Valley
+2023,arroyo_grande_valley,6,4.970860496320567,0.0,Arroyo Grande Valley
+2023,arroyo_grande_valley,7,6.695523915436655,0.0,Arroyo Grande Valley
+2023,arroyo_grande_valley,8,5.8447258639670014,0.0,Arroyo Grande Valley
+2023,arroyo_grande_valley,9,4.09082927389511,0.0,Arroyo Grande Valley
+2023,arroyo_grande_valley,10,3.5584975643370655,0.0,Arroyo Grande Valley
+2023,arroyo_grande_valley,11,2.376932683823217,0.0,Arroyo Grande Valley
+2023,arroyo_grande_valley,12,1.6007668290441956,0.0,Arroyo Grande Valley
+2024,arroyo_grande_valley,1,1.582562730163364,0.0,Arroyo Grande Valley
+2024,arroyo_grande_valley,2,1.9259797037145159,0.0,Arroyo Grande Valley
+2024,arroyo_grande_valley,3,2.9817084867755757,0.0,Arroyo Grande Valley
+2024,arroyo_grande_valley,4,3.9097490793465446,0.0,Arroyo Grande Valley
+2024,arroyo_grande_valley,5,5.123267534325118,0.0,Arroyo Grande Valley
+2024,arroyo_grande_valley,6,6.057036909957147,0.0,Arroyo Grande Valley
+2024,arroyo_grande_valley,7,6.635328423181571,0.0,Arroyo Grande Valley
+2024,arroyo_grande_valley,8,6.2324132909373295,0.0,Arroyo Grande Valley
+2024,arroyo_grande_valley,9,4.6201014814274215,0.0,Arroyo Grande Valley
+2024,arroyo_grande_valley,10,3.521206645468665,0.0,Arroyo Grande Valley
+2024,arroyo_grande_valley,11,1.98,0.0,Arroyo Grande Valley
+2024,arroyo_grande_valley,12,1.6942712169389398,0.0,Arroyo Grande Valley
+2023,arroyo_seco,1,1.4545855825206813,0.0,Arroyo Seco
+2023,arroyo_seco,2,2.028729757313867,0.0,Arroyo Seco
+2023,arroyo_seco,3,2.6741441747931853,0.0,Arroyo Seco
+2023,arroyo_seco,4,4.222432524379556,0.0,Arroyo Seco
+2023,arroyo_seco,5,4.731162281693424,0.0,Arroyo Seco
+2023,arroyo_seco,6,5.353648786569334,0.0,Arroyo Seco
+2023,arroyo_seco,7,6.394423641031616,0.0,Arroyo Seco
+2023,arroyo_seco,8,5.762378543883201,0.0,Arroyo Seco
+2023,arroyo_seco,9,4.169504611776149,0.0,Arroyo Seco
+2023,arroyo_seco,10,3.8445316020243263,0.0,Arroyo Seco
+2023,arroyo_seco,11,2.444144174793186,0.0,Arroyo Seco
+2023,arroyo_seco,12,1.460828834958637,0.0,Arroyo Seco
+2024,arroyo_seco,1,1.4,0.0,Arroyo Seco
+2024,arroyo_seco,2,1.9043715216541552,0.0,Arroyo Seco
+2024,arroyo_seco,3,3.1031966031015417,0.0,Arroyo Seco
+2024,arroyo_seco,4,4.161939646409852,0.0,Arroyo Seco
+2024,arroyo_seco,5,5.288414890752009,0.0,Arroyo Seco
+2024,arroyo_seco,6,6.166065053646781,0.0,Arroyo Seco
+2024,arroyo_seco,7,6.499343694887398,0.0,Arroyo Seco
+2024,arroyo_seco,8,5.964972173233242,0.0,Arroyo Seco
+2024,arroyo_seco,9,4.798496928891085,0.0,Arroyo Seco
+2024,arroyo_seco,10,3.969753885582774,0.0,Arroyo Seco
+2024,arroyo_seco,11,2.119917961860925,0.0,Arroyo Seco
+2024,arroyo_seco,12,1.5522677989661533,0.0,Arroyo Seco
+2024,atlas_peak,1,1.03,0.0,Atlas Peak
+2024,atlas_peak,2,1.65,0.0,Atlas Peak
+2024,atlas_peak,3,3.02,0.0,Atlas Peak
+2024,atlas_peak,4,4.4,0.0,Atlas Peak
+2024,atlas_peak,5,6.44,0.0,Atlas Peak
+2024,atlas_peak,6,7.22,0.0,Atlas Peak
+2024,atlas_peak,7,7.640000000000001,0.0,Atlas Peak
+2024,atlas_peak,8,6.54,0.0,Atlas Peak
+2024,atlas_peak,9,5.12,0.0,Atlas Peak
+2024,atlas_peak,10,3.77,0.0,Atlas Peak
+2024,atlas_peak,11,1.67,0.0,Atlas Peak
+2024,atlas_peak,12,0.86,0.0,Atlas Peak
+2023,ballard_canyon,1,1.6087013555046725,0.0,Ballard Canyon
+2023,ballard_canyon,2,2.0296289587156213,0.0,Ballard Canyon
+2023,ballard_canyon,3,2.638515834862483,0.0,Ballard Canyon
+2023,ballard_canyon,4,4.003524892201605,0.0,Ballard Canyon
+2023,ballard_canyon,5,4.255009057339122,0.0,Ballard Canyon
+2023,ballard_canyon,6,4.588162908256348,0.0,Ballard Canyon
+2023,ballard_canyon,7,5.984285089448608,0.0,Ballard Canyon
+2023,ballard_canyon,8,5.231687800457952,0.0,Ballard Canyon
+2023,ballard_canyon,9,3.808533949540727,0.0,Ballard Canyon
+2023,ballard_canyon,10,3.34649322247664,0.0,Ballard Canyon
+2023,ballard_canyon,11,2.403153850917225,0.0,Ballard Canyon
+2023,ballard_canyon,12,1.6516696857797077,0.0,Ballard Canyon
+2023,ben_lomond_mountain,1,1.3801950457287886,0.0,Ben Lomond Mountain
+2023,ben_lomond_mountain,2,1.6494148628136345,0.0,Ben Lomond Mountain
+2023,ben_lomond_mountain,3,2.3394148628136344,0.0,Ben Lomond Mountain
+2023,ben_lomond_mountain,4,3.459414862813634,0.0,Ben Lomond Mountain
+2023,ben_lomond_mountain,5,3.7380495427121145,0.0,Ben Lomond Mountain
+2023,ben_lomond_mountain,6,4.058829725627269,0.0,Ben Lomond Mountain
+2023,ben_lomond_mountain,7,4.499609908542422,0.0,Ben Lomond Mountain
+2023,ben_lomond_mountain,8,4.161950457287886,0.0,Ben Lomond Mountain
+2023,ben_lomond_mountain,9,3.0905851371863653,0.0,Ben Lomond Mountain
+2023,ben_lomond_mountain,10,2.828439634169692,0.0,Ben Lomond Mountain
+2023,ben_lomond_mountain,11,1.8988297256272686,0.0,Ben Lomond Mountain
+2023,ben_lomond_mountain,12,1.1398049542712114,0.0,Ben Lomond Mountain
+2024,ben_lomond_mountain,1,1.18,0.0,Ben Lomond Mountain
+2024,ben_lomond_mountain,2,1.74,0.0,Ben Lomond Mountain
+2024,ben_lomond_mountain,3,2.5786350773437454,0.0,Ben Lomond Mountain
+2024,ben_lomond_mountain,4,3.3486350773437454,0.0,Ben Lomond Mountain
+2024,ben_lomond_mountain,5,3.85941503314732,0.0,Ben Lomond Mountain
+2024,ben_lomond_mountain,6,4.26,0.0,Ben Lomond Mountain
+2024,ben_lomond_mountain,7,4.54941503314732,0.0,Ben Lomond Mountain
+2024,ben_lomond_mountain,8,4.299220044196426,0.0,Ben Lomond Mountain
+2024,ben_lomond_mountain,9,3.2594150331473197,0.0,Ben Lomond Mountain
+2024,ben_lomond_mountain,10,2.8194150331473193,0.0,Ben Lomond Mountain
+2024,ben_lomond_mountain,11,1.689220044196426,0.0,Ben Lomond Mountain
+2024,ben_lomond_mountain,12,1.2794150331473195,0.0,Ben Lomond Mountain
+2024,benmore_valley,1,0.96,0.0,Benmore Valley
+2024,benmore_valley,2,1.56,0.0,Benmore Valley
+2024,benmore_valley,3,2.72,0.0,Benmore Valley
+2024,benmore_valley,4,4.2700000000000005,0.0,Benmore Valley
+2024,benmore_valley,5,6.3,0.0,Benmore Valley
+2024,benmore_valley,6,7.03,0.0,Benmore Valley
+2024,benmore_valley,7,7.23,0.0,Benmore Valley
+2024,benmore_valley,8,6.0200000000000005,0.0,Benmore Valley
+2024,benmore_valley,9,4.8100000000000005,0.0,Benmore Valley
+2024,benmore_valley,10,3.5,0.0,Benmore Valley
+2024,benmore_valley,11,1.45,0.0,Benmore Valley
+2024,benmore_valley,12,0.83,0.0,Benmore Valley
+2024,bennett_valley,1,1.01,0.0,Bennett Valley
+2024,bennett_valley,2,1.51,0.0,Bennett Valley
+2024,bennett_valley,3,2.79,0.0,Bennett Valley
+2024,bennett_valley,4,4.09,0.0,Bennett Valley
+2024,bennett_valley,5,5.69,0.0,Bennett Valley
+2024,bennett_valley,6,6.58,0.0,Bennett Valley
+2024,bennett_valley,7,6.88,0.0,Bennett Valley
+2024,bennett_valley,8,5.9,0.0,Bennett Valley
+2024,bennett_valley,9,4.66,0.0,Bennett Valley
+2024,bennett_valley,10,3.47,0.0,Bennett Valley
+2024,bennett_valley,11,1.51,0.0,Bennett Valley
+2024,bennett_valley,12,0.83,0.0,Bennett Valley
+2020,big_valley_district_lake_county,1,0.6274707730687974,0.0,Big Valley District-Lake County
+2020,big_valley_district_lake_county,2,1.4798838987471634,0.0,Big Valley District-Lake County
+2020,big_valley_district_lake_county,3,1.7699411429016076,0.0,Big Valley District-Lake County
+2020,big_valley_district_lake_county,4,2.6105151973899967,0.0,Big Valley District-Lake County
+2020,big_valley_district_lake_county,5,3.119595258559021,0.0,Big Valley District-Lake County
+2020,big_valley_district_lake_county,6,3.942410706262444,0.0,Big Valley District-Lake County
+2020,big_valley_district_lake_county,7,4.072640489352194,0.0,Big Valley District-Lake County
+2020,big_valley_district_lake_county,8,3.6405143909180224,0.0,Big Valley District-Lake County
+2020,big_valley_district_lake_county,9,2.8413770855945537,0.0,Big Valley District-Lake County
+2020,big_valley_district_lake_county,10,2.3026993464505865,0.0,Big Valley District-Lake County
+2020,big_valley_district_lake_county,11,1.0477578003129917,0.0,Big Valley District-Lake County
+2020,big_valley_district_lake_county,12,0.7636200917535364,0.0,Big Valley District-Lake County
+2023,big_valley_district_lake_county,1,1.2482807791676187,0.0,Big Valley District-Lake County
+2023,big_valley_district_lake_county,2,1.6704679652793644,0.0,Big Valley District-Lake County
+2023,big_valley_district_lake_county,3,2.3443743722234913,0.0,Big Valley District-Lake County
+2023,big_valley_district_lake_county,4,4.422187186111746,0.0,Big Valley District-Lake County
+2023,big_valley_district_lake_county,5,5.163123116670474,0.0,Big Valley District-Lake County
+2023,big_valley_district_lake_county,6,6.075310302782221,0.0,Big Valley District-Lake County
+2023,big_valley_district_lake_county,7,6.999216709726348,0.0,Big Valley District-Lake County
+2023,big_valley_district_lake_county,8,5.924374372223492,0.0,Big Valley District-Lake County
+2023,big_valley_district_lake_county,9,4.220000000000001,0.0,Big Valley District-Lake County
+2023,big_valley_district_lake_county,10,3.122187186111746,0.0,Big Valley District-Lake County
+2023,big_valley_district_lake_county,11,1.6604679652793641,0.0,Big Valley District-Lake County
+2023,big_valley_district_lake_county,12,0.8582807791676185,0.0,Big Valley District-Lake County
+2024,big_valley_district_lake_county,1,0.9480154294036554,0.0,Big Valley District-Lake County
+2024,big_valley_district_lake_county,2,1.5480154294036554,0.0,Big Valley District-Lake County
+2024,big_valley_district_lake_county,3,2.7279897137308966,0.0,Big Valley District-Lake County
+2024,big_valley_district_lake_county,4,4.2700000000000005,0.0,Big Valley District-Lake County
+2024,big_valley_district_lake_county,5,6.264046288210967,0.0,Big Valley District-Lake County
+2024,big_valley_district_lake_county,6,6.990051431345519,0.0,Big Valley District-Lake County
+2024,big_valley_district_lake_county,7,7.2140205725382085,0.0,Big Valley District-Lake County
+2024,big_valley_district_lake_county,8,5.996030858807311,0.0,Big Valley District-Lake County
+2024,big_valley_district_lake_county,9,4.782036001941863,0.0,Big Valley District-Lake County
+2024,big_valley_district_lake_county,10,3.4960051431345516,0.0,Big Valley District-Lake County
+2024,big_valley_district_lake_county,11,1.4420102862691035,0.0,Big Valley District-Lake County
+2024,big_valley_district_lake_county,12,0.8220102862691037,0.0,Big Valley District-Lake County
+2024,calistoga,1,0.95,0.0,Calistoga
+2024,calistoga,2,1.53,0.0,Calistoga
+2024,calistoga,3,2.8200000000000003,0.0,Calistoga
+2024,calistoga,4,4.22,0.0,Calistoga
+2024,calistoga,5,6.1,0.0,Calistoga
+2024,calistoga,6,6.88,0.0,Calistoga
+2024,calistoga,7,7.22,0.0,Calistoga
+2024,calistoga,8,6.14,0.0,Calistoga
+2024,calistoga,9,4.82,0.0,Calistoga
+2024,calistoga,10,3.58,0.0,Calistoga
+2024,calistoga,11,1.51,0.0,Calistoga
+2024,calistoga,12,0.85,0.0,Calistoga
+2023,capay_valley,1,1.3915374170164676,0.0,Capay Valley
+2023,capay_valley,2,1.8729754519350963,0.0,Capay Valley
+2023,capay_valley,3,2.592751086980252,0.0,Capay Valley
+2023,capay_valley,4,4.897837668698509,0.0,Capay Valley
+2023,capay_valley,5,5.619948798481667,0.0,Capay Valley
+2023,capay_valley,6,6.739823815624662,0.0,Capay Valley
+2023,capay_valley,7,7.520563154919595,0.0,Capay Valley
+2023,capay_valley,8,6.620688137776599,0.0,Capay Valley
+2023,capay_valley,9,4.751063086347614,0.0,Capay Valley
+2023,capay_valley,10,3.4777382866006694,0.0,Capay Valley
+2023,capay_valley,11,1.9313130520616237,0.0,Capay Valley
+2023,capay_valley,12,0.8982126172695228,0.0,Capay Valley
+2024,capay_valley,1,0.9966214187204396,0.0,Capay Valley
+2024,capay_valley,2,1.675077320059264,0.0,Capay Valley
+2024,capay_valley,3,3.127202186634858,0.0,Capay Valley
+2024,capay_valley,4,4.624675860947079,0.0,Capay Valley
+2024,capay_valley,5,6.966800727522672,0.0,Capay Valley
+2024,capay_valley,6,7.621878047581936,0.0,Capay Valley
+2024,capay_valley,7,7.9758373967759155,0.0,Capay Valley
+2024,capay_valley,8,6.70357678636164,0.0,Capay Valley
+2024,capay_valley,9,5.3044043732697155,0.0,Capay Valley
+2024,capay_valley,10,3.8938236053552973,0.0,Capay Valley
+2024,capay_valley,11,1.6569118026776486,0.0,Capay Valley
+2024,capay_valley,12,0.8818344826183848,0.0,Capay Valley
+2023,carmel_valley,1,1.4,0.0,Carmel Valley
+2023,carmel_valley,2,1.83,0.0,Carmel Valley
+2023,carmel_valley,3,2.43,0.0,Carmel Valley
+2023,carmel_valley,4,3.6,0.0,Carmel Valley
+2023,carmel_valley,5,3.98,0.0,Carmel Valley
+2023,carmel_valley,6,4.46,0.0,Carmel Valley
+2023,carmel_valley,7,4.9,0.0,Carmel Valley
+2023,carmel_valley,8,4.66,0.0,Carmel Valley
+2023,carmel_valley,9,3.49,0.0,Carmel Valley
+2023,carmel_valley,10,3.3000000000000003,0.0,Carmel Valley
+2023,carmel_valley,11,2.18,0.0,Carmel Valley
+2023,carmel_valley,12,1.33,0.0,Carmel Valley
+2016,central_coast,1,0.000584473529080733,0.0,Central Coast
+2016,central_coast,2,0.0012278148956228348,0.0,Central Coast
+2016,central_coast,3,0.0013749844892762568,0.0,Central Coast
+2016,central_coast,4,0.0017870593515058385,0.0,Central Coast
+2016,central_coast,5,0.001917409563027441,0.0,Central Coast
+2016,central_coast,6,0.0023210747341911126,0.0,Central Coast
+2016,central_coast,7,0.002245387514597924,0.0,Central Coast
+2016,central_coast,8,0.0019846870915547193,0.0,Central Coast
+2016,central_coast,9,0.0017996738881047032,0.0,Central Coast
+2016,central_coast,10,0.0013245263428807979,0.0,Central Coast
+2016,central_coast,11,0.0008409691065909828,0.0,Central Coast
+2016,central_coast,12,0.0006265219844102821,0.0,Central Coast
+2020,central_coast,1,0.0893200361677124,0.0,Central Coast
+2020,central_coast,2,0.16736793156465946,0.0,Central Coast
+2020,central_coast,3,0.17919379943559915,0.0,Central Coast
+2020,central_coast,4,0.2621478001157065,0.0,Central Coast
+2020,central_coast,5,0.37599505028070146,0.0,Central Coast
+2020,central_coast,6,0.4315260765664666,0.0,Central Coast
+2020,central_coast,7,0.443438407229171,0.0,Central Coast
+2020,central_coast,8,0.4238796612949833,0.0,Central Coast
+2020,central_coast,9,0.3150665543915363,0.0,Central Coast
+2020,central_coast,10,0.23667612024604892,0.0,Central Coast
+2020,central_coast,11,0.1397096688068532,0.0,Central Coast
+2020,central_coast,12,0.10860191855181295,0.0,Central Coast
+2021,central_coast,1,0.02727527917406096,0.0,Central Coast
+2021,central_coast,2,0.042116239901123544,0.0,Central Coast
+2021,central_coast,3,0.06758653736513635,0.0,Central Coast
+2021,central_coast,4,-6091.305068784372,0.0,Central Coast
+2021,central_coast,5,0.12695038027338668,0.0,Central Coast
+2021,central_coast,6,0.1351730747302727,0.0,Central Coast
+2021,central_coast,7,0.13657694939364348,0.0,Central Coast
+2021,central_coast,8,0.12313986332995168,0.0,Central Coast
+2021,central_coast,9,0.09847177995929361,0.0,Central Coast
+2021,central_coast,10,0.06096827109495979,0.0,Central Coast
+2021,central_coast,11,0.029882474977463845,0.0,Central Coast
+2021,central_coast,12,0.016846495960449414,0.0,Central Coast
+2022,central_coast,1,3.4900939105466054e-05,0.0,Central Coast
+2022,central_coast,2,6.063082851898482e-05,0.0,Central Coast
+2022,central_coast,3,8.865348035549042e-05,0.0,Central Coast
+2022,central_coast,4,0.00011412861838867732,0.0,Central Coast
+2022,central_coast,5,0.0001480105519728159,0.0,Central Coast
+2022,central_coast,6,0.00016304088341239617,0.0,Central Coast
+2022,central_coast,7,0.00015590784476310384,0.0,Central Coast
+2022,central_coast,8,0.0001490295574941434,0.0,Central Coast
+2022,central_coast,9,0.00012406392222162022,0.0,Central Coast
+2022,central_coast,10,7.871817652254752e-05,0.0,Central Coast
+2022,central_coast,11,4.35624860367496e-05,0.0,Central Coast
+2022,central_coast,12,2.0634861806881388e-05,0.0,Central Coast
+2023,central_coast,1,1.3064886541280423,0.0,Central Coast
+2023,central_coast,2,1.8638928577197587,0.0,Central Coast
+2023,central_coast,3,2.407868624440503,0.0,Central Coast
+2023,central_coast,4,4.055492788128815,0.0,Central Coast
+2023,central_coast,5,4.647578665875639,0.0,Central Coast
+2023,central_coast,6,5.173975649326649,0.0,Central Coast
+2023,central_coast,7,6.543542592576992,0.0,Central Coast
+2023,central_coast,8,5.7383271919170715,0.0,Central Coast
+2023,central_coast,9,4.066212740648134,0.0,Central Coast
+2023,central_coast,10,3.510286967902407,0.0,Central Coast
+2023,central_coast,11,2.2229468052599364,0.0,Central Coast
+2023,central_coast,12,1.376340572343332,0.0,Central Coast
+2024,central_coast,1,1.3655572294143736,0.0,Central Coast
+2024,central_coast,2,1.7555987132156439,0.0,Central Coast
+2024,central_coast,3,2.887620023243698,0.0,Central Coast
+2024,central_coast,4,3.888371649355628,0.0,Central Coast
+2024,central_coast,5,5.174732236221589,0.0,Central Coast
+2024,central_coast,6,6.129128296948297,0.0,Central Coast
+2024,central_coast,7,6.624245459998935,0.0,Central Coast
+2024,central_coast,8,6.044851080096008,0.0,Central Coast
+2024,central_coast,9,4.689342497026409,0.0,Central Coast
+2024,central_coast,10,3.670365140213088,0.0,Central Coast
+2024,central_coast,11,1.9299719027558402,0.0,Central Coast
+2024,central_coast,12,1.4494958341417459,0.0,Central Coast
+2024,chalk_hill,1,1.015329344665419,0.0,Chalk Hill
+2024,chalk_hill,2,1.5495330622976615,0.0,Chalk Hill
+2024,chalk_hill,3,2.767562594390906,0.0,Chalk Hill
+2024,chalk_hill,4,4.12608462218982,0.0,Chalk Hill
+2024,chalk_hill,5,5.66604470659797,0.0,Chalk Hill
+2024,chalk_hill,6,6.571112733442723,0.0,Chalk Hill
+2024,chalk_hill,7,6.827500767548072,0.0,Chalk Hill
+2024,chalk_hill,8,5.872919411153629,0.0,Chalk Hill
+2024,chalk_hill,9,4.619432073607364,0.0,Chalk Hill
+2024,chalk_hill,10,3.4455502967983276,0.0,Chalk Hill
+2024,chalk_hill,11,1.4519719319048203,0.0,Chalk Hill
+2024,chalk_hill,12,0.8588132998683762,0.0,Chalk Hill
+2023,chalone,1,1.45,0.0,Chalone
+2023,chalone,2,2.07,0.0,Chalone
+2023,chalone,3,2.72,0.0,Chalone
+2023,chalone,4,4.36,0.0,Chalone
+2023,chalone,5,4.91,0.0,Chalone
+2023,chalone,6,5.5600000000000005,0.0,Chalone
+2023,chalone,7,6.72,0.0,Chalone
+2023,chalone,8,6.01,0.0,Chalone
+2023,chalone,9,4.33,0.0,Chalone
+2023,chalone,10,3.95,0.0,Chalone
+2023,chalone,11,2.49,0.0,Chalone
+2023,chalone,12,1.47,0.0,Chalone
+2024,chalone,1,1.4,0.0,Chalone
+2024,chalone,2,1.94,0.0,Chalone
+2024,chalone,3,3.17,0.0,Chalone
+2024,chalone,4,4.3,0.0,Chalone
+2024,chalone,5,5.5200000000000005,0.0,Chalone
+2024,chalone,6,6.46,0.0,Chalone
+2024,chalone,7,6.82,0.0,Chalone
+2024,chalone,8,6.25,0.0,Chalone
+2024,chalone,9,4.99,0.0,Chalone
+2024,chalone,10,4.09,0.0,Chalone
+2024,chalone,11,2.16,0.0,Chalone
+2024,chalone,12,1.53,0.0,Chalone
+2024,chiles_valley,1,0.99,0.0,Chiles Valley
+2024,chiles_valley,2,1.61,0.0,Chiles Valley
+2024,chiles_valley,3,2.98,0.0,Chiles Valley
+2024,chiles_valley,4,4.38,0.0,Chiles Valley
+2024,chiles_valley,5,6.36,0.0,Chiles Valley
+2024,chiles_valley,6,7.14,0.0,Chiles Valley
+2024,chiles_valley,7,7.55,0.0,Chiles Valley
+2024,chiles_valley,8,6.41,0.0,Chiles Valley
+2024,chiles_valley,9,5.07,0.0,Chiles Valley
+2024,chiles_valley,10,3.73,0.0,Chiles Valley
+2024,chiles_valley,11,1.63,0.0,Chiles Valley
+2024,chiles_valley,12,0.85,0.0,Chiles Valley
+2023,cienega_valley,1,1.34,0.0,Cienega Valley
+2023,cienega_valley,2,1.84,0.0,Cienega Valley
+2023,cienega_valley,3,2.59,0.0,Cienega Valley
+2023,cienega_valley,4,4.45,0.0,Cienega Valley
+2023,cienega_valley,5,5.0200000000000005,0.0,Cienega Valley
+2023,cienega_valley,6,5.81,0.0,Cienega Valley
+2023,cienega_valley,7,7.09,0.0,Cienega Valley
+2023,cienega_valley,8,6.15,0.0,Cienega Valley
+2023,cienega_valley,9,4.44,0.0,Cienega Valley
+2023,cienega_valley,10,3.67,0.0,Cienega Valley
+2023,cienega_valley,11,2.2,0.0,Cienega Valley
+2023,cienega_valley,12,1.24,0.0,Cienega Valley
+2024,cienega_valley,1,1.21,0.0,Cienega Valley
+2024,cienega_valley,2,1.79,0.0,Cienega Valley
+2024,cienega_valley,3,3.0500000000000003,0.0,Cienega Valley
+2024,cienega_valley,4,4.28,0.0,Cienega Valley
+2024,cienega_valley,5,5.82,0.0,Cienega Valley
+2024,cienega_valley,6,6.84,0.0,Cienega Valley
+2024,cienega_valley,7,7.24,0.0,Cienega Valley
+2024,cienega_valley,8,6.42,0.0,Cienega Valley
+2024,cienega_valley,9,4.98,0.0,Cienega Valley
+2024,cienega_valley,10,3.92,0.0,Cienega Valley
+2024,cienega_valley,11,2.0100000000000002,0.0,Cienega Valley
+2024,cienega_valley,12,1.18,0.0,Cienega Valley
+2023,clarksburg,1,1.0956495134201745,0.0,Clarksburg
+2023,clarksburg,2,1.328984898626194,0.0,Clarksburg
+2023,clarksburg,3,1.8883291286961075,0.0,Clarksburg
+2023,clarksburg,4,3.54094819119642,0.0,Clarksburg
+2023,clarksburg,5,4.118968747827453,0.0,Clarksburg
+2023,clarksburg,6,4.969397414869253,0.0,Clarksburg
+2023,clarksburg,7,5.952000826581291,0.0,Clarksburg
+2023,clarksburg,8,5.267272717229903,0.0,Clarksburg
+2023,clarksburg,9,3.682949142206189,0.0,Clarksburg
+2023,clarksburg,10,2.6220395414793187,0.0,Clarksburg
+2023,clarksburg,11,1.425890047484354,0.0,Clarksburg
+2023,clarksburg,12,0.7404477139315195,0.0,Clarksburg
+2024,clarksburg,1,0.7651235521527897,0.0,Clarksburg
+2024,clarksburg,2,1.2430563573613351,0.0,Clarksburg
+2024,clarksburg,3,2.214138076423439,0.0,Clarksburg
+2024,clarksburg,4,3.112299253990958,0.0,Clarksburg
+2024,clarksburg,5,4.897356830795566,0.0,Clarksburg
+2024,clarksburg,6,5.661215058201288,0.0,Clarksburg
+2024,clarksburg,7,6.102558926675048,0.0,Clarksburg
+2024,clarksburg,8,5.189454994959456,0.0,Clarksburg
+2024,clarksburg,9,4.051432719315351,0.0,Clarksburg
+2024,clarksburg,10,2.865728107201364,0.0,Clarksburg
+2024,clarksburg,11,1.2336636132179957,0.0,Clarksburg
+2024,clarksburg,12,0.6401406333034194,0.0,Clarksburg
+2020,clear_lake,1,0.3633646685703604,0.0,Clear Lake
+2020,clear_lake,2,0.9032523060434903,0.0,Clear Lake
+2020,clear_lake,3,1.0753685314600907,0.0,Clear Lake
+2020,clear_lake,4,1.5786290647359467,0.0,Clear Lake
+2020,clear_lake,5,1.9045449270750687,0.0,Clear Lake
+2020,clear_lake,6,2.3869977383768717,0.0,Clear Lake
+2020,clear_lake,7,2.445256103465984,0.0,Clear Lake
+2020,clear_lake,8,2.180894843855407,0.0,Clear Lake
+2020,clear_lake,9,1.7205828229149194,0.0,Clear Lake
+2020,clear_lake,10,1.3929182265662612,0.0,Clear Lake
+2020,clear_lake,11,0.6329301632944042,0.0,Clear Lake
+2020,clear_lake,12,0.4672739927374516,0.0,Clear Lake
+2023,clear_lake,1,1.2080458649333186,0.0,Clear Lake
+2023,clear_lake,2,1.6485176653043117,0.0,Clear Lake
+2023,clear_lake,3,2.3179945324293416,0.0,Clear Lake
+2023,clear_lake,4,4.381621524700532,0.0,Clear Lake
+2023,clear_lake,5,5.079706114196567,0.0,Clear Lake
+2023,clear_lake,6,5.980110190006536,0.0,Clear Lake
+2023,clear_lake,7,6.854285990422283,0.0,Clear Lake
+2023,clear_lake,8,5.849724251486633,0.0,Clear Lake
+2023,clear_lake,9,4.16876548270636,0.0,Clear Lake
+2023,clear_lake,10,3.0795801139114696,0.0,Clear Lake
+2023,clear_lake,11,1.6493848204353625,0.0,Clear Lake
+2023,clear_lake,12,0.8351919316483664,0.0,Clear Lake
+2024,clear_lake,1,0.9345169390915752,0.0,Clear Lake
+2024,clear_lake,2,1.5410985509421817,0.0,Clear Lake
+2024,clear_lake,3,2.766725055512373,0.0,Clear Lake
+2024,clear_lake,4,4.30075418648041,0.0,Clear Lake
+2024,clear_lake,5,6.318648929394403,0.0,Clear Lake
+2024,clear_lake,6,7.0226732197147355,0.0,Clear Lake
+2024,clear_lake,7,7.2760911184991315,0.0,Clear Lake
+2024,clear_lake,8,6.0327953381065,0.0,Clear Lake
+2024,clear_lake,9,4.803703825409225,0.0,Clear Lake
+2024,clear_lake,10,3.526410782047104,0.0,Clear Lake
+2024,clear_lake,11,1.465559222507891,0.0,Clear Lake
+2024,clear_lake,12,0.8045032245480979,0.0,Clear Lake
+2023,clements_hills,1,0.7979336330403115,0.0,Clements Hills
+2023,clements_hills,2,0.9988456907338961,0.0,Clements Hills
+2023,clements_hills,3,1.4290447847936212,0.0,Clements Hills
+2023,clements_hills,4,2.6268976673097595,0.0,Clements Hills
+2023,clements_hills,5,3.1406991725501596,0.0,Clements Hills
+2023,clements_hills,6,3.755048872175739,0.0,Clements Hills
+2023,clements_hills,7,4.640394648219409,0.0,Clements Hills
+2023,clements_hills,8,4.046800463621018,0.0,Clements Hills
+2023,clements_hills,9,2.781341939903238,0.0,Clements Hills
+2023,clements_hills,10,1.9333219604773109,0.0,Clements Hills
+2023,clements_hills,11,1.007414167604735,0.0,Clements Hills
+2023,clements_hills,12,0.5669329013000031,0.0,Clements Hills
+2021,cole_ranch,1,1.21,0.0,Cole Ranch
+2021,cole_ranch,2,2.04,0.0,Cole Ranch
+2021,cole_ranch,3,3.18,0.0,Cole Ranch
+2021,cole_ranch,4,-177112.02,0.0,Cole Ranch
+2021,cole_ranch,5,6.48,0.0,Cole Ranch
+2021,cole_ranch,6,7.12,0.0,Cole Ranch
+2021,cole_ranch,7,7.3,0.0,Cole Ranch
+2021,cole_ranch,8,6.62,0.0,Cole Ranch
+2021,cole_ranch,9,5.04,0.0,Cole Ranch
+2021,cole_ranch,10,2.83,0.0,Cole Ranch
+2021,cole_ranch,11,1.48,0.0,Cole Ranch
+2021,cole_ranch,12,0.77,0.0,Cole Ranch
+2024,cole_ranch,1,1.05,0.0,Cole Ranch
+2024,cole_ranch,2,1.6400000000000001,0.0,Cole Ranch
+2024,cole_ranch,3,2.61,0.0,Cole Ranch
+2024,cole_ranch,4,4.09,0.0,Cole Ranch
+2024,cole_ranch,5,5.97,0.0,Cole Ranch
+2024,cole_ranch,6,6.8100000000000005,0.0,Cole Ranch
+2024,cole_ranch,7,7.04,0.0,Cole Ranch
+2024,cole_ranch,8,5.91,0.0,Cole Ranch
+2024,cole_ranch,9,4.76,0.0,Cole Ranch
+2024,cole_ranch,10,3.38,0.0,Cole Ranch
+2024,cole_ranch,11,1.37,0.0,Cole Ranch
+2024,cole_ranch,12,0.89,0.0,Cole Ranch
+2024,comptche,1,1.2,0.0,Comptche
+2024,comptche,2,1.79,0.0,Comptche
+2024,comptche,3,2.58,0.0,Comptche
+2024,comptche,4,3.93,0.0,Comptche
+2024,comptche,5,5.72,0.0,Comptche
+2024,comptche,6,6.66,0.0,Comptche
+2024,comptche,7,6.91,0.0,Comptche
+2024,comptche,8,5.93,0.0,Comptche
+2024,comptche,9,4.88,0.0,Comptche
+2024,comptche,10,3.3,0.0,Comptche
+2024,comptche,11,1.31,0.0,Comptche
+2024,comptche,12,0.95,0.0,Comptche
+2023,contra_costa,1,1.1123808361758554,0.0,Contra Costa
+2023,contra_costa,2,1.4514122911934302,0.0,Contra Costa
+2023,contra_costa,3,2.1626865128871575,0.0,Contra Costa
+2023,contra_costa,4,3.8599722389334152,0.0,Contra Costa
+2023,contra_costa,5,4.363434998271024,0.0,Contra Costa
+2023,contra_costa,6,5.222741498078064,0.0,Contra Costa
+2023,contra_costa,7,6.208703863515112,0.0,Contra Costa
+2023,contra_costa,8,5.534893977246986,0.0,Contra Costa
+2023,contra_costa,9,3.9080245636948305,0.0,Contra Costa
+2023,contra_costa,10,2.860001262596973,0.0,Contra Costa
+2023,contra_costa,11,1.5454136834110574,0.0,Contra Costa
+2023,contra_costa,12,0.8344893582432402,0.0,Contra Costa
+2024,contra_costa,1,0.026195620834604416,0.0,Contra Costa
+2024,contra_costa,2,0.0408274090485276,0.0,Contra Costa
+2024,contra_costa,3,0.07197895814913825,0.0,Contra Costa
+2024,contra_costa,4,0.09817457898374267,0.0,Contra Costa
+2024,contra_costa,5,0.13569803585493279,0.0,Contra Costa
+2024,contra_costa,6,0.15410576941438453,0.0,Contra Costa
+2024,contra_costa,7,0.16991754054878538,0.0,Contra Costa
+2024,contra_costa,8,0.14631788213923186,0.0,Contra Costa
+2024,contra_costa,9,0.11445834328633459,0.0,Contra Costa
+2024,contra_costa,10,0.08661074636306143,0.0,Contra Costa
+2024,contra_costa,11,0.040355415880336525,0.0,Contra Costa
+2024,contra_costa,12,0.02241967548907585,0.0,Contra Costa
+2024,coombsville,1,1.0407881997492667,0.0,Coombsville
+2024,coombsville,2,1.65647291984956,0.0,Coombsville
+2024,coombsville,3,3.02647291984956,0.0,Coombsville
+2024,coombsville,4,4.369793040702054,0.0,Coombsville
+2024,coombsville,5,6.329960362557482,0.0,Coombsville
+2024,coombsville,6,7.120748562306748,0.0,Coombsville
+2024,coombsville,7,7.551536762056015,0.0,Coombsville
+2024,coombsville,8,6.481743721353961,0.0,Coombsville
+2024,coombsville,9,5.074689561053081,0.0,Coombsville
+2024,coombsville,10,3.7635270801504404,0.0,Coombsville
+2024,coombsville,11,1.67647291984956,0.0,Coombsville
+2024,coombsville,12,0.8729458396991199,0.0,Coombsville
+2024,covelo,1,1.2,0.0,Covelo
+2024,covelo,2,1.82,0.0,Covelo
+2024,covelo,3,2.72,0.0,Covelo
+2024,covelo,4,4.03,0.0,Covelo
+2024,covelo,5,6.22,0.0,Covelo
+2024,covelo,6,6.93,0.0,Covelo
+2024,covelo,7,7.39,0.0,Covelo
+2024,covelo,8,6.09,0.0,Covelo
+2024,covelo,9,5.22,0.0,Covelo
+2024,covelo,10,3.42,0.0,Covelo
+2024,covelo,11,1.47,0.0,Covelo
+2024,covelo,12,0.97,0.0,Covelo
+2020,creston_district,1,0.014637916352401173,0.0,Creston District
+2020,creston_district,2,0.02592498438316834,0.0,Creston District
+2020,creston_district,3,0.027512228324994975,0.0,Creston District
+2020,creston_district,4,0.039504738107685095,0.0,Creston District
+2020,creston_district,5,0.055818078620903266,0.0,Creston District
+2020,creston_district,6,0.06375429833003643,0.0,Creston District
+2020,creston_district,7,0.06578244336681491,0.0,Creston District
+2020,creston_district,8,0.06375429833003643,0.0,Creston District
+2020,creston_district,9,0.047881858911770096,0.0,Creston District
+2020,creston_district,10,0.0366829710999933,0.0,Creston District
+2020,creston_district,11,0.02204505474759213,0.0,Creston District
+2020,creston_district,12,0.017547863579083334,0.0,Creston District
+2023,creston_district,1,1.448536209513792,0.0,Creston District
+2023,creston_district,2,2.117195685729312,0.0,Creston District
+2023,creston_district,3,2.68358371861107,0.0,Creston District
+2023,creston_district,4,4.622491172451658,0.0,Creston District
+2023,creston_district,5,5.37827089752949,0.0,Creston District
+2023,creston_district,6,5.925209938454119,0.0,Creston District
+2023,creston_district,7,7.662786979911455,0.0,Creston District
+2023,creston_district,8,6.676636010506826,0.0,Creston District
+2023,creston_district,9,4.665286016796019,0.0,Creston District
+2023,creston_district,10,3.9069013224911275,0.0,Creston District
+2023,creston_district,11,2.5047531458590933,0.0,Creston District
+2023,creston_district,12,1.5950953389320062,0.0,Creston District
+2024,creston_district,1,1.5605812176652962,0.0,Creston District
+2024,creston_district,2,1.9289879517727806,0.0,Creston District
+2024,creston_district,3,3.1983870139379356,0.0,Creston District
+2024,creston_district,4,4.321074997817152,0.0,Creston District
+2024,creston_district,5,5.90199801927961,0.0,Creston District
+2024,creston_district,6,7.064278071269091,0.0,Creston District
+2024,creston_district,7,7.7297627859618325,0.0,Creston District
+2024,creston_district,8,7.026128881947969,0.0,Creston District
+2024,creston_district,9,5.38980540480357,0.0,Creston District
+2024,creston_district,10,4.134903497027445,0.0,Creston District
+2024,creston_district,11,2.1344081276242695,0.0,Creston District
+2024,creston_district,12,1.6640647345757869,0.0,Creston District
+2024,crystal_springs_of_napa_valley,1,0.9826517094512056,0.0,Crystal Springs of Napa Valley 
+2024,crystal_springs_of_napa_valley,2,1.5924551163134308,0.0,Crystal Springs of Napa Valley 
+2024,crystal_springs_of_napa_valley,3,2.9514962259185786,0.0,Crystal Springs of Napa Valley 
+2024,crystal_springs_of_napa_valley,4,4.347689109404221,0.0,Crystal Springs of Napa Valley 
+2024,crystal_springs_of_napa_valley,5,6.313396629074418,0.0,Crystal Springs of Napa Valley 
+2024,crystal_springs_of_napa_valley,6,7.096967328966761,0.0,Crystal Springs of Napa Valley 
+2024,crystal_springs_of_napa_valley,7,7.491617429709743,0.0,Crystal Springs of Napa Valley 
+2024,crystal_springs_of_napa_valley,8,6.364633492913969,0.0,Crystal Springs of Napa Valley 
+2024,crystal_springs_of_napa_valley,9,5.026077594185316,0.0,Crystal Springs of Napa Valley 
+2024,crystal_springs_of_napa_valley,10,3.7045524592747334,0.0,Crystal Springs of Napa Valley 
+2024,crystal_springs_of_napa_valley,11,1.608330396598874,0.0,Crystal Springs of Napa Valley 
+2024,crystal_springs_of_napa_valley,12,0.8490411860746224,0.0,Crystal Springs of Napa Valley 
+2024,cucamonga_valley,1,2.1421891166582805,0.0,Cucamonga Valley
+2024,cucamonga_valley,2,2.2780697180523393,0.0,Cucamonga Valley
+2024,cucamonga_valley,3,3.4430068923680137,0.0,Cucamonga Valley
+2024,cucamonga_valley,4,4.73538888074367,0.0,Cucamonga Valley
+2024,cucamonga_valley,5,5.784132209328947,0.0,Cucamonga Valley
+2024,cucamonga_valley,6,7.30894736055071,0.0,Cucamonga Valley
+2024,cucamonga_valley,7,8.391647291839957,0.0,Cucamonga Valley
+2024,cucamonga_valley,8,7.775218250269003,0.0,Cucamonga Valley
+2024,cucamonga_valley,9,5.619953451821653,0.0,Cucamonga Valley
+2024,cucamonga_valley,10,4.297040058047269,0.0,Cucamonga Valley
+2024,cucamonga_valley,11,2.6030416122327265,0.0,Cucamonga Valley
+2024,cucamonga_valley,12,2.29641101789289,0.0,Cucamonga Valley
+2024,diamond_mountain_district,1,0.95,0.0,Diamond Mountain District
+2024,diamond_mountain_district,2,1.53,0.0,Diamond Mountain District
+2024,diamond_mountain_district,3,2.8200000000000003,0.0,Diamond Mountain District
+2024,diamond_mountain_district,4,4.22,0.0,Diamond Mountain District
+2024,diamond_mountain_district,5,6.1,0.0,Diamond Mountain District
+2024,diamond_mountain_district,6,6.88,0.0,Diamond Mountain District
+2024,diamond_mountain_district,7,7.22,0.0,Diamond Mountain District
+2024,diamond_mountain_district,8,6.14,0.0,Diamond Mountain District
+2024,diamond_mountain_district,9,4.82,0.0,Diamond Mountain District
+2024,diamond_mountain_district,10,3.58,0.0,Diamond Mountain District
+2024,diamond_mountain_district,11,1.51,0.0,Diamond Mountain District
+2024,diamond_mountain_district,12,0.85,0.0,Diamond Mountain District
+2024,dos_rios,1,1.2,0.0,Dos Rios
+2024,dos_rios,2,1.82,0.0,Dos Rios
+2024,dos_rios,3,2.72,0.0,Dos Rios
+2024,dos_rios,4,4.03,0.0,Dos Rios
+2024,dos_rios,5,6.22,0.0,Dos Rios
+2024,dos_rios,6,6.93,0.0,Dos Rios
+2024,dos_rios,7,7.39,0.0,Dos Rios
+2024,dos_rios,8,6.09,0.0,Dos Rios
+2024,dos_rios,9,5.22,0.0,Dos Rios
+2024,dos_rios,10,3.42,0.0,Dos Rios
+2024,dos_rios,11,1.47,0.0,Dos Rios
+2024,dos_rios,12,0.97,0.0,Dos Rios
+2021,dry_creek_valley,1,0.0163118219449975,0.0,Dry Creek Valley
+2021,dry_creek_valley,2,0.028331059167627237,0.0,Dry Creek Valley
+2021,dry_creek_valley,3,0.04421362264038796,0.0,Dry Creek Valley
+2021,dry_creek_valley,4,-2738.1002853949194,0.0,Dry Creek Valley
+2021,dry_creek_valley,5,0.08928576222524948,0.0,Dry Creek Valley
+2021,dry_creek_valley,6,0.09586772546621339,0.0,Dry Creek Valley
+2021,dry_creek_valley,7,0.09744167319774824,0.0,Dry Creek Valley
+2021,dry_creek_valley,8,0.08756872833630237,0.0,Dry Creek Valley
+2021,dry_creek_valley,9,0.06896752787270874,0.0,Dry Creek Valley
+2021,dry_creek_valley,10,0.03949177944578343,0.0,Dry Creek Valley
+2021,dry_creek_valley,11,0.019602803565479453,0.0,Dry Creek Valley
+2021,dry_creek_valley,12,0.009872944861445857,0.0,Dry Creek Valley
+2024,dry_creek_valley,1,0.9877653370260919,0.0,Dry Creek Valley
+2024,dry_creek_valley,2,1.5361021171650013,0.0,Dry Creek Valley
+2024,dry_creek_valley,3,2.692720191888101,0.0,Dry Creek Valley
+2024,dry_creek_valley,4,4.095457441251758,0.0,Dry Creek Valley
+2024,dry_creek_valley,5,5.708383744696589,0.0,Dry Creek Valley
+2024,dry_creek_valley,6,6.58446694992707,0.0,Dry Creek Valley
+2024,dry_creek_valley,7,6.817979709231034,0.0,Dry Creek Valley
+2024,dry_creek_valley,8,5.82849220992141,0.0,Dry Creek Valley
+2024,dry_creek_valley,9,4.584037547520508,0.0,Dry Creek Valley
+2024,dry_creek_valley,10,3.4004669778847325,0.0,Dry Creek Valley
+2024,dry_creek_valley,11,1.4073934202308607,0.0,Dry Creek Valley
+2024,dry_creek_valley,12,0.8277653370260919,0.0,Dry Creek Valley
+2023,dunnigan_hills,1,1.5697076866184636,0.0,Dunnigan Hills
+2023,dunnigan_hills,2,1.9698273286507266,0.0,Dunnigan Hills
+2023,dunnigan_hills,3,2.7328597277623476,0.0,Dunnigan Hills
+2023,dunnigan_hills,4,5.132965786396369,0.0,Dunnigan Hills
+2023,dunnigan_hills,5,5.965466588061927,0.0,Dunnigan Hills
+2023,dunnigan_hills,6,7.145227303997403,0.0,Dunnigan Hills
+2023,dunnigan_hills,7,8.105478867184214,0.0,Dunnigan Hills
+2023,dunnigan_hills,8,7.145545479899466,0.0,Dunnigan Hills
+2023,dunnigan_hills,9,5.079454819155696,0.0,Dunnigan Hills
+2023,dunnigan_hills,10,3.6797607159354744,0.0,Dunnigan Hills
+2023,dunnigan_hills,11,2.0563299448082955,0.0,Dunnigan Hills
+2023,dunnigan_hills,12,0.9995880445862009,0.0,Dunnigan Hills
+2024,dunnigan_hills,1,1.0663520142544152,0.0,Dunnigan Hills
+2024,dunnigan_hills,2,1.836073120267032,0.0,Dunnigan Hills
+2024,dunnigan_hills,3,3.336009435461668,0.0,Dunnigan Hills
+2024,dunnigan_hills,4,4.862533891378116,0.0,Dunnigan Hills
+2024,dunnigan_hills,5,7.375538005476127,0.0,Dunnigan Hills
+2024,dunnigan_hills,6,8.119803787888433,0.0,Dunnigan Hills
+2024,dunnigan_hills,7,8.586602638729602,0.0,Dunnigan Hills
+2024,dunnigan_hills,8,7.216559048260361,0.0,Dunnigan Hills
+2024,dunnigan_hills,9,5.690336982464411,0.0,Dunnigan Hills
+2024,dunnigan_hills,10,4.116415150426944,0.0,Dunnigan Hills
+2024,dunnigan_hills,11,1.8297649707982746,0.0,Dunnigan Hills
+2024,dunnigan_hills,12,0.9399133676943562,0.0,Dunnigan Hills
+2021,eagle_peak_mendocino_county,1,1.2739096743927976,0.0,Eagle Peak Mendocino County
+2021,eagle_peak_mendocino_county,2,2.0765198139387415,0.0,Eagle Peak Mendocino County
+2021,eagle_peak_mendocino_county,3,3.289559441816224,0.0,Eagle Peak Mendocino County
+2021,eagle_peak_mendocino_county,4,-181314.52845904723,0.0,Eagle Peak Mendocino County
+2021,eagle_peak_mendocino_county,5,6.689988930147764,0.0,Eagle Peak Mendocino County
+2021,eagle_peak_mendocino_county,6,7.311729023178393,0.0,Eagle Peak Mendocino County
+2021,eagle_peak_mendocino_county,7,7.528248837117134,0.0,Eagle Peak Mendocino County
+2021,eagle_peak_mendocino_county,8,6.866508744086506,0.0,Eagle Peak Mendocino County
+2021,eagle_peak_mendocino_county,9,5.15868939530091,0.0,Eagle Peak Mendocino County
+2021,eagle_peak_mendocino_county,10,2.857389860454056,0.0,Eagle Peak Mendocino County
+2021,eagle_peak_mendocino_county,11,1.5165198139387415,0.0,Eagle Peak Mendocino County
+2021,eagle_peak_mendocino_county,12,0.7882599069693709,0.0,Eagle Peak Mendocino County
+2024,eagle_peak_mendocino_county,1,1.077386284529664,0.0,Eagle Peak Mendocino County
+2024,eagle_peak_mendocino_county,2,1.694772569059328,0.0,Eagle Peak Mendocino County
+2024,eagle_peak_mendocino_county,3,2.65564380754944,0.0,Eagle Peak Mendocino County
+2024,eagle_peak_mendocino_county,4,4.144772569059328,0.0,Eagle Peak Mendocino County
+2024,eagle_peak_mendocino_county,5,6.088673899628544,0.0,Eagle Peak Mendocino County
+2024,eagle_peak_mendocino_county,6,6.9195451381186555,0.0,Eagle Peak Mendocino County
+2024,eagle_peak_mendocino_county,7,7.1769314226483205,0.0,Eagle Peak Mendocino County
+2024,eagle_peak_mendocino_county,8,5.983030092079105,0.0,Eagle Peak Mendocino County
+2024,eagle_peak_mendocino_county,9,4.924317707177984,0.0,Eagle Peak Mendocino County
+2024,eagle_peak_mendocino_county,10,3.4439013305692163,0.0,Eagle Peak Mendocino County
+2024,eagle_peak_mendocino_county,11,1.41564380754944,0.0,Eagle Peak Mendocino County
+2024,eagle_peak_mendocino_county,12,0.899128761509888,0.0,Eagle Peak Mendocino County
+2023,edna_valley,1,1.4713173744392598,0.0,Edna Valley
+2023,edna_valley,2,2.03604787668222,0.0,Edna Valley
+2023,edna_valley,3,2.57868262556074,0.0,Edna Valley
+2023,edna_valley,4,4.1805389955140795,0.0,Edna Valley
+2023,edna_valley,5,4.62185636995334,0.0,Edna Valley
+2023,edna_valley,6,4.887125867710379,0.0,Edna Valley
+2023,edna_valley,7,6.548982237663719,0.0,Edna Valley
+2023,edna_valley,8,5.72371273990668,0.0,Edna Valley
+2023,edna_valley,9,3.98844324214964,0.0,Edna Valley
+2023,edna_valley,10,3.5005389955140798,0.0,Edna Valley
+2023,edna_valley,11,2.35395212331778,0.0,Edna Valley
+2023,edna_valley,12,1.56526949775704,0.0,Edna Valley
+2024,edna_valley,1,1.562479051648975,0.0,Edna Valley
+2024,edna_valley,2,1.95504189670205,0.0,Edna Valley
+2024,edna_valley,3,2.953718577473463,0.0,Edna Valley
+2024,edna_valley,4,3.8148743098938507,0.0,Edna Valley
+2024,edna_valley,5,4.949748619787701,0.0,Edna Valley
+2024,edna_valley,6,5.838425300559114,0.0,Edna Valley
+2024,edna_valley,7,6.400904352208089,0.0,Edna Valley
+2024,edna_valley,8,6.094790516489752,0.0,Edna Valley
+2024,edna_valley,9,4.536113835718338,0.0,Edna Valley
+2024,edna_valley,10,3.478676680771413,0.0,Edna Valley
+2024,edna_valley,11,1.997520948351025,0.0,Edna Valley
+2024,edna_valley,12,1.69,0.0,Edna Valley
+2018,el_dorado,1,0.10466918814852877,0.0,El Dorado
+2018,el_dorado,2,0.1938953813243238,0.0,El Dorado
+2018,el_dorado,3,0.2453720312334363,0.0,El Dorado
+2018,el_dorado,4,0.37492160017136944,0.0,El Dorado
+2018,el_dorado,5,0.522487996577492,0.0,El Dorado
+2018,el_dorado,6,0.6709123371487664,0.0,El Dorado
+2018,el_dorado,7,0.742121702856372,0.0,El Dorado
+2018,el_dorado,8,0.6408842913684508,0.0,El Dorado
+2018,el_dorado,9,0.501897336613847,0.0,El Dorado
+2018,el_dorado,10,0.3337402802440794,0.0,El Dorado
+2018,el_dorado,11,0.18188416301219754,0.0,El Dorado
+2018,el_dorado,12,0.10895890897428814,0.0,El Dorado
+2024,el_dorado,1,0.7330080235402731,0.0,El Dorado
+2024,el_dorado,2,1.062549351883786,0.0,El Dorado
+2024,el_dorado,3,1.6665904985808166,0.0,El Dorado
+2024,el_dorado,4,2.4786474100875076,0.0,El Dorado
+2024,el_dorado,5,3.791805333543559,0.0,El Dorado
+2024,el_dorado,6,4.632047441574584,0.0,El Dorado
+2024,el_dorado,7,5.081197109906766,0.0,El Dorado
+2024,el_dorado,8,4.372462379024507,0.0,El Dorado
+2024,el_dorado,9,3.4422126708248943,0.0,El Dorado
+2024,el_dorado,10,2.464598370239409,0.0,El Dorado
+2024,el_dorado,11,1.0160613107263017,0.0,El Dorado
+2024,el_dorado,12,0.6742161617421469,0.0,El Dorado
+2023,el_pomar_district,1,1.4571213564453216,0.0,El Pomar District
+2023,el_pomar_district,2,2.1242928811848927,0.0,El Pomar District
+2023,el_pomar_district,3,2.657171524739571,0.0,El Pomar District
+2023,el_pomar_district,4,4.4901003365884975,0.0,El Pomar District
+2023,el_pomar_district,5,5.174443386067639,0.0,El Pomar District
+2023,el_pomar_district,6,5.717322029622318,0.0,El Pomar District
+2023,el_pomar_district,7,7.310250841471245,0.0,El Pomar District
+2023,el_pomar_district,8,6.407372197916567,0.0,El Pomar District
+2023,el_pomar_district,9,4.464443386067639,0.0,El Pomar District
+2023,el_pomar_district,10,3.821514574218712,0.0,El Pomar District
+2023,el_pomar_district,11,2.4571715247395707,0.0,El Pomar District
+2023,el_pomar_district,12,1.5642928811848926,0.0,El Pomar District
+2024,el_pomar_district,1,1.523179675029466,0.0,El Pomar District
+2024,el_pomar_district,2,1.914393225009822,0.0,El Pomar District
+2024,el_pomar_district,3,3.16196612504911,0.0,El Pomar District
+2024,el_pomar_district,4,4.149078050176796,0.0,El Pomar District
+2024,el_pomar_district,5,5.61179675029466,0.0,El Pomar District
+2024,el_pomar_district,6,6.722549325363413,0.0,El Pomar District
+2024,el_pomar_district,7,7.331335775383058,0.0,El Pomar District
+2024,el_pomar_district,8,6.728617075265194,0.0,El Pomar District
+2024,el_pomar_district,9,5.164223850255372,0.0,El Pomar District
+2024,el_pomar_district,10,4.014684825166974,0.0,El Pomar District
+2024,el_pomar_district,11,2.1075729000392878,0.0,El Pomar District
+2024,el_pomar_district,12,1.654393225009822,0.0,El Pomar District
+2024,fort_ross_seaview,1,0.9543705693994607,0.0,Fort Ross-Seaview
+2024,fort_ross_seaview,2,1.4899999999999998,0.0,Fort Ross-Seaview
+2024,fort_ross_seaview,3,2.44,0.0,Fort Ross-Seaview
+2024,fort_ross_seaview,4,3.821258861201078,0.0,Fort Ross-Seaview
+2024,fort_ross_seaview,5,5.18202835584345,0.0,Fort Ross-Seaview
+2024,fort_ross_seaview,6,6.081643608522263,0.0,Fort Ross-Seaview
+2024,fort_ross_seaview,7,6.283776583603234,0.0,Fort Ross-Seaview
+2024,fort_ross_seaview,8,5.485140064041833,0.0,Fort Ross-Seaview
+2024,fort_ross_seaview,9,4.26426595016194,0.0,Fort Ross-Seaview
+2024,fort_ross_seaview,10,3.1282517722402154,0.0,Fort Ross-Seaview
+2024,fort_ross_seaview,11,1.2882517722402156,0.0,Fort Ross-Seaview
+2024,fort_ross_seaview,12,0.7934964555195687,0.0,Fort Ross-Seaview
+2024,fountaingrove_district,1,0.9987294281790035,0.0,Fountaingrove District
+2024,fountaingrove_district,2,1.521453240840731,0.0,Fountaingrove District
+2024,fountaingrove_district,3,2.8140794674381997,0.0,Fountaingrove District
+2024,fountaingrove_district,4,4.127557702409348,0.0,Fountaingrove District
+2024,fountaingrove_district,5,5.795990091791871,0.0,Fountaingrove District
+2024,fountaingrove_district,6,6.6456758508679865,0.0,Fountaingrove District
+2024,fountaingrove_district,7,6.988069458287808,0.0,Fountaingrove District
+2024,fountaingrove_district,8,5.970237318196268,0.0,Fountaingrove District
+2024,fountaingrove_district,9,4.705361510281197,0.0,Fountaingrove District
+2024,fountaingrove_district,10,3.4955747261092855,0.0,Fountaingrove District
+2024,fountaingrove_district,11,1.5250970201894152,0.0,Fountaingrove District
+2024,fountaingrove_district,12,0.8360567259993665,0.0,Fountaingrove District
+2023,gabilan_mountains,1,1.4266743333625782,0.0,Gabilan Mountains
+2023,gabilan_mountains,2,2.0202980780666775,0.0,Gabilan Mountains
+2023,gabilan_mountains,3,2.6894363995338595,0.0,Gabilan Mountains
+2023,gabilan_mountains,4,4.374950976296942,0.0,Gabilan Mountains
+2023,gabilan_mountains,5,4.925368371055097,0.0,Gabilan Mountains
+2023,gabilan_mountains,6,5.60045688634151,0.0,Gabilan Mountains
+2023,gabilan_mountains,7,6.781717737334487,0.0,Gabilan Mountains
+2023,gabilan_mountains,8,6.025426084936447,0.0,Gabilan Mountains
+2023,gabilan_mountains,9,4.345936749310977,0.0,Gabilan Mountains
+2023,gabilan_mountains,10,3.8873186477978043,0.0,Gabilan Mountains
+2023,gabilan_mountains,11,2.4254048156510866,0.0,Gabilan Mountains
+2023,gabilan_mountains,12,1.4202980780666776,0.0,Gabilan Mountains
+2024,gabilan_mountains,1,1.2877744044198842,0.0,Gabilan Mountains
+2024,gabilan_mountains,2,1.8016149276455091,0.0,Gabilan Mountains
+2024,gabilan_mountains,3,2.962790133188769,0.0,Gabilan Mountains
+2024,gabilan_mountains,4,4.0405128244197535,0.0,Gabilan Mountains
+2024,gabilan_mountains,5,5.236129227576841,0.0,Gabilan Mountains
+2024,gabilan_mountains,6,6.132160245134314,0.0,Gabilan Mountains
+2024,gabilan_mountains,7,6.4767364454965115,0.0,Gabilan Mountains
+2024,gabilan_mountains,8,5.902935539958095,0.0,Gabilan Mountains
+2024,gabilan_mountains,9,4.69087128405506,0.0,Gabilan Mountains
+2024,gabilan_mountains,10,3.82035945119655,0.0,Gabilan Mountains
+2024,gabilan_mountains,11,2.008493544478587,0.0,Gabilan Mountains
+2024,gabilan_mountains,12,1.3858306412798742,0.0,Gabilan Mountains
+2024,green_valley_of_russian_river_valley,1,1.0109805982346376,0.0,Green Valley of Russian River Valley
+2024,green_valley_of_russian_river_valley,2,1.5509805982346376,0.0,Green Valley of Russian River Valley
+2024,green_valley_of_russian_river_valley,3,2.669019401765363,0.0,Green Valley of Russian River Valley
+2024,green_valley_of_russian_river_valley,4,3.937844785877101,0.0,Green Valley of Russian River Valley
+2024,green_valley_of_russian_river_valley,5,5.175689571754202,0.0,Green Valley of Russian River Valley
+2024,green_valley_of_russian_river_valley,6,6.112747777050289,0.0,Green Valley of Russian River Valley
+2024,green_valley_of_russian_river_valley,7,6.361767178815651,0.0,Green Valley of Russian River Valley
+2024,green_valley_of_russian_river_valley,8,5.578825384111739,0.0,Green Valley of Russian River Valley
+2024,green_valley_of_russian_river_valley,9,4.33392239293855,0.0,Green Valley of Russian River Valley
+2024,green_valley_of_russian_river_valley,10,3.282941794703913,0.0,Green Valley of Russian River Valley
+2024,green_valley_of_russian_river_valley,11,1.4470582052960874,0.0,Green Valley of Russian River Valley
+2024,green_valley_of_russian_river_valley,12,0.8890194017653624,0.0,Green Valley of Russian River Valley
+2020,guenoc_valley,1,0.98,0.0,Guenoc Valley
+2020,guenoc_valley,2,2.54,0.0,Guenoc Valley
+2020,guenoc_valley,3,2.96,0.0,Guenoc Valley
+2020,guenoc_valley,4,4.4,0.0,Guenoc Valley
+2020,guenoc_valley,5,5.44,0.0,Guenoc Valley
+2020,guenoc_valley,6,6.8,0.0,Guenoc Valley
+2020,guenoc_valley,7,6.83,0.0,Guenoc Valley
+2020,guenoc_valley,8,6.24,0.0,Guenoc Valley
+2020,guenoc_valley,9,4.87,0.0,Guenoc Valley
+2020,guenoc_valley,10,3.88,0.0,Guenoc Valley
+2020,guenoc_valley,11,1.72,0.0,Guenoc Valley
+2020,guenoc_valley,12,1.23,0.0,Guenoc Valley
+2023,guenoc_valley,1,1.29,0.0,Guenoc Valley
+2023,guenoc_valley,2,1.71,0.0,Guenoc Valley
+2023,guenoc_valley,3,2.4,0.0,Guenoc Valley
+2023,guenoc_valley,4,4.51,0.0,Guenoc Valley
+2023,guenoc_valley,5,5.15,0.0,Guenoc Valley
+2023,guenoc_valley,6,6.1,0.0,Guenoc Valley
+2023,guenoc_valley,7,7.0,0.0,Guenoc Valley
+2023,guenoc_valley,8,6.07,0.0,Guenoc Valley
+2023,guenoc_valley,9,4.32,0.0,Guenoc Valley
+2023,guenoc_valley,10,3.16,0.0,Guenoc Valley
+2023,guenoc_valley,11,1.71,0.0,Guenoc Valley
+2023,guenoc_valley,12,0.85,0.0,Guenoc Valley
+2024,guenoc_valley,1,0.94,0.0,Guenoc Valley
+2024,guenoc_valley,2,1.52,0.0,Guenoc Valley
+2024,guenoc_valley,3,2.81,0.0,Guenoc Valley
+2024,guenoc_valley,4,4.32,0.0,Guenoc Valley
+2024,guenoc_valley,5,6.3,0.0,Guenoc Valley
+2024,guenoc_valley,6,7.03,0.0,Guenoc Valley
+2024,guenoc_valley,7,7.34,0.0,Guenoc Valley
+2024,guenoc_valley,8,6.15,0.0,Guenoc Valley
+2024,guenoc_valley,9,4.86,0.0,Guenoc Valley
+2024,guenoc_valley,10,3.6100000000000003,0.0,Guenoc Valley
+2024,guenoc_valley,11,1.51,0.0,Guenoc Valley
+2024,guenoc_valley,12,0.81,0.0,Guenoc Valley
+2023,hames_valley,1,1.47,0.0,Hames Valley
+2023,hames_valley,2,2.15,0.0,Hames Valley
+2023,hames_valley,3,2.72,0.0,Hames Valley
+2023,hames_valley,4,4.58,0.0,Hames Valley
+2023,hames_valley,5,5.21,0.0,Hames Valley
+2023,hames_valley,6,5.83,0.0,Hames Valley
+2023,hames_valley,7,7.37,0.0,Hames Valley
+2023,hames_valley,8,6.47,0.0,Hames Valley
+2023,hames_valley,9,4.53,0.0,Hames Valley
+2023,hames_valley,10,3.99,0.0,Hames Valley
+2023,hames_valley,11,2.54,0.0,Hames Valley
+2023,hames_valley,12,1.58,0.0,Hames Valley
+2024,hames_valley,1,1.53,0.0,Hames Valley
+2024,hames_valley,2,1.94,0.0,Hames Valley
+2024,hames_valley,3,3.25,0.0,Hames Valley
+2024,hames_valley,4,4.28,0.0,Hames Valley
+2024,hames_valley,5,5.66,0.0,Hames Valley
+2024,hames_valley,6,6.83,0.0,Hames Valley
+2024,hames_valley,7,7.390000000000001,0.0,Hames Valley
+2024,hames_valley,8,6.73,0.0,Hames Valley
+2024,hames_valley,9,5.28,0.0,Hames Valley
+2024,hames_valley,10,4.2299999999999995,0.0,Hames Valley
+2024,hames_valley,11,2.19,0.0,Hames Valley
+2024,hames_valley,12,1.6800000000000002,0.0,Hames Valley
+2023,happy_canyon_of_santa_barbara,1,1.61,0.0,Happy Canyon of Santa Barbara
+2023,happy_canyon_of_santa_barbara,2,2.04,0.0,Happy Canyon of Santa Barbara
+2023,happy_canyon_of_santa_barbara,3,2.63,0.0,Happy Canyon of Santa Barbara
+2023,happy_canyon_of_santa_barbara,4,4.0600000000000005,0.0,Happy Canyon of Santa Barbara
+2023,happy_canyon_of_santa_barbara,5,4.3100000000000005,0.0,Happy Canyon of Santa Barbara
+2023,happy_canyon_of_santa_barbara,6,4.67,0.0,Happy Canyon of Santa Barbara
+2023,happy_canyon_of_santa_barbara,7,6.36,0.0,Happy Canyon of Santa Barbara
+2023,happy_canyon_of_santa_barbara,8,5.54,0.0,Happy Canyon of Santa Barbara
+2023,happy_canyon_of_santa_barbara,9,4.0600000000000005,0.0,Happy Canyon of Santa Barbara
+2023,happy_canyon_of_santa_barbara,10,3.56,0.0,Happy Canyon of Santa Barbara
+2023,happy_canyon_of_santa_barbara,11,2.54,0.0,Happy Canyon of Santa Barbara
+2023,happy_canyon_of_santa_barbara,12,1.76,0.0,Happy Canyon of Santa Barbara
+2024,happy_canyon_of_santa_barbara,1,1.78,0.0,Happy Canyon of Santa Barbara
+2024,happy_canyon_of_santa_barbara,2,2.08,0.0,Happy Canyon of Santa Barbara
+2024,happy_canyon_of_santa_barbara,3,3.1,0.0,Happy Canyon of Santa Barbara
+2024,happy_canyon_of_santa_barbara,4,3.95,0.0,Happy Canyon of Santa Barbara
+2024,happy_canyon_of_santa_barbara,5,4.96,0.0,Happy Canyon of Santa Barbara
+2024,happy_canyon_of_santa_barbara,6,5.71,0.0,Happy Canyon of Santa Barbara
+2024,happy_canyon_of_santa_barbara,7,6.16,0.0,Happy Canyon of Santa Barbara
+2024,happy_canyon_of_santa_barbara,8,5.84,0.0,Happy Canyon of Santa Barbara
+2024,happy_canyon_of_santa_barbara,9,4.42,0.0,Happy Canyon of Santa Barbara
+2024,happy_canyon_of_santa_barbara,10,3.33,0.0,Happy Canyon of Santa Barbara
+2024,happy_canyon_of_santa_barbara,11,2.1,0.0,Happy Canyon of Santa Barbara
+2024,happy_canyon_of_santa_barbara,12,1.82,0.0,Happy Canyon of Santa Barbara
+2020,high_valley,1,0.9641971955507802,0.0,High Valley
+2020,high_valley,2,2.62370420667383,0.0,High Valley
+2020,high_valley,3,3.110556310010745,0.0,High Valley
+2020,high_valley,4,4.5284577122353555,0.0,High Valley
+2020,high_valley,5,5.542161918909185,0.0,High Valley
+2020,high_valley,6,6.8463591144599665,0.0,High Valley
+2020,high_valley,7,6.925309815572271,0.0,High Valley
+2020,high_valley,8,6.150556310010746,0.0,High Valley
+2020,high_valley,9,4.9326549077861355,0.0,High Valley
+2020,high_valley,10,3.9837042066738304,0.0,High Valley
+2020,high_valley,11,1.8147535055615251,0.0,High Valley
+2020,high_valley,12,1.360556310010745,0.0,High Valley
+2023,high_valley,1,1.0508054187501443,0.0,High Valley
+2023,high_valley,2,1.4950483600103681,0.0,High Valley
+2023,high_valley,3,2.1016108375002887,0.0,High Valley
+2023,high_valley,4,3.946927670427372,0.0,High Valley
+2023,high_valley,5,4.613292082317708,0.0,High Valley
+2023,high_valley,6,5.390717229523099,0.0,High Valley
+2023,high_valley,7,6.048538507927661,0.0,High Valley
+2023,high_valley,8,5.2113114263218545,0.0,High Valley
+2023,high_valley,9,3.6991767993399396,0.0,High Valley
+2023,high_valley,10,2.759432115904851,0.0,High Valley
+2023,high_valley,11,1.5035914934961416,0.0,High Valley
+2023,high_valley,12,0.7347094797765238,0.0,High Valley
+2024,high_valley,1,0.92,0.0,High Valley
+2024,high_valley,2,1.5685622806946755,0.0,High Valley
+2024,high_valley,3,2.84706052625208,0.0,High Valley
+2024,high_valley,4,4.388498245557405,0.0,High Valley
+2024,high_valley,5,6.571245613893511,0.0,High Valley
+2024,high_valley,6,7.2069964911148094,0.0,High Valley
+2024,high_valley,7,7.464121052504161,0.0,High Valley
+2024,high_valley,8,6.1584342104201335,0.0,High Valley
+2024,high_valley,9,4.902747368336107,0.0,High Valley
+2024,high_valley,10,3.63706052625208,0.0,High Valley
+2024,high_valley,11,1.5228114034733777,0.0,High Valley
+2024,high_valley,12,0.77,0.0,High Valley
+2024,howell_mountain,1,0.9616066478894018,0.0,Howell Mountain
+2024,howell_mountain,2,1.5465793645430566,0.0,Howell Mountain
+2024,howell_mountain,3,2.9073922436222994,0.0,Howell Mountain
+2024,howell_mountain,4,4.277059169436757,0.0,Howell Mountain
+2024,howell_mountain,5,6.275880877998582,0.0,Howell Mountain
+2024,howell_mountain,6,7.04241171812624,0.0,Howell Mountain
+2024,howell_mountain,7,7.420307841682912,0.0,Howell Mountain
+2024,howell_mountain,8,6.28524918340199,0.0,Howell Mountain
+2024,howell_mountain,9,4.944178673664094,0.0,Howell Mountain
+2024,howell_mountain,10,3.657616458601862,0.0,Howell Mountain
+2024,howell_mountain,11,1.5715569660120434,0.0,Howell Mountain
+2024,howell_mountain,12,0.8225035078076514,0.0,Howell Mountain
+2024,inwood_valley,1,0.75,0.0,Inwood Valley
+2024,inwood_valley,2,1.45,0.0,Inwood Valley
+2024,inwood_valley,3,2.54,0.0,Inwood Valley
+2024,inwood_valley,4,3.94,0.0,Inwood Valley
+2024,inwood_valley,5,6.24,0.0,Inwood Valley
+2024,inwood_valley,6,7.28,0.0,Inwood Valley
+2024,inwood_valley,7,8.05,0.0,Inwood Valley
+2024,inwood_valley,8,6.29,0.0,Inwood Valley
+2024,inwood_valley,9,5.07,0.0,Inwood Valley
+2024,inwood_valley,10,3.38,0.0,Inwood Valley
+2024,inwood_valley,11,1.26,0.0,Inwood Valley
+2024,inwood_valley,12,0.7,0.0,Inwood Valley
+2023,jahant,1,1.0581690896465668,0.0,Jahant
+2023,jahant,2,1.3174555553215535,0.0,Jahant
+2023,jahant,3,1.8780749405647676,0.0,Jahant
+2023,jahant,4,3.461824703876848,0.0,Jahant
+2023,jahant,5,4.127560223853164,0.0,Jahant
+2023,jahant,6,4.982504786349066,0.0,Jahant
+2023,jahant,7,6.131774526097655,0.0,Jahant
+2023,jahant,8,5.346907386757155,0.0,Jahant
+2023,jahant,9,3.679064715658593,0.0,Jahant
+2023,jahant,10,2.5788491721187854,0.0,Jahant
+2023,jahant,11,1.3524942668992543,0.0,Jahant
+2023,jahant,12,0.749828427762799,0.0,Jahant
+2020,kelsey_bench_lake_county,1,0.028693685754847712,0.0,Kelsey Bench-Lake County
+2020,kelsey_bench_lake_county,2,0.06767378715765969,0.0,Kelsey Bench-Lake County
+2020,kelsey_bench_lake_county,3,0.080937849440561,0.0,Kelsey Bench-Lake County
+2020,kelsey_bench_lake_county,4,0.1193765605461117,0.0,Kelsey Bench-Lake County
+2020,kelsey_bench_lake_county,5,0.14265634332834665,0.0,Kelsey Bench-Lake County
+2020,kelsey_bench_lake_county,6,0.18028296898800542,0.0,Kelsey Bench-Lake County
+2020,kelsey_bench_lake_county,7,0.18623826225787946,0.0,Kelsey Bench-Lake County
+2020,kelsey_bench_lake_county,8,0.16647751640784286,0.0,Kelsey Bench-Lake County
+2020,kelsey_bench_lake_county,9,0.1299336713427066,0.0,Kelsey Bench-Lake County
+2020,kelsey_bench_lake_county,10,0.10530041281731849,0.0,Kelsey Bench-Lake County
+2020,kelsey_bench_lake_county,11,0.04791304130762306,0.0,Kelsey Bench-Lake County
+2020,kelsey_bench_lake_county,12,0.0349196741733524,0.0,Kelsey Bench-Lake County
+2023,kelsey_bench_lake_county,1,1.2308321683588006,0.0,Kelsey Bench-Lake County
+2023,kelsey_bench_lake_county,2,1.6413869472646678,0.0,Kelsey Bench-Lake County
+2023,kelsey_bench_lake_county,3,2.321109557811734,0.0,Kelsey Bench-Lake County
+2023,kelsey_bench_lake_county,4,4.410554778905867,0.0,Kelsey Bench-Lake County
+2023,kelsey_bench_lake_county,5,5.093328673435202,0.0,Kelsey Bench-Lake County
+2023,kelsey_bench_lake_county,6,5.99388345234107,0.0,Kelsey Bench-Lake County
+2023,kelsey_bench_lake_county,7,6.923606062888136,0.0,Kelsey Bench-Lake County
+2023,kelsey_bench_lake_county,8,5.901109557811734,0.0,Kelsey Bench-Lake County
+2023,kelsey_bench_lake_county,9,4.219999999999999,0.0,Kelsey Bench-Lake County
+2023,kelsey_bench_lake_county,10,3.110554778905867,0.0,Kelsey Bench-Lake County
+2023,kelsey_bench_lake_county,11,1.6313869472646678,0.0,Kelsey Bench-Lake County
+2023,kelsey_bench_lake_county,12,0.8408321683588005,0.0,Kelsey Bench-Lake County
+2024,kelsey_bench_lake_county,1,0.930790626571135,0.0,Kelsey Bench-Lake County
+2024,kelsey_bench_lake_county,2,1.5307906265711348,0.0,Kelsey Bench-Lake County
+2024,kelsey_bench_lake_county,3,2.7394729156192428,0.0,Kelsey Bench-Lake County
+2024,kelsey_bench_lake_county,4,4.27,0.0,Kelsey Bench-Lake County
+2024,kelsey_bench_lake_county,5,6.212371879713404,0.0,Kelsey Bench-Lake County
+2024,kelsey_bench_lake_county,6,6.9326354219037825,0.0,Kelsey Bench-Lake County
+2024,kelsey_bench_lake_county,7,7.191054168761513,0.0,Kelsey Bench-Lake County
+2024,kelsey_bench_lake_county,8,5.96158125314227,0.0,Kelsey Bench-Lake County
+2024,kelsey_bench_lake_county,9,4.741844795332648,0.0,Kelsey Bench-Lake County
+2024,kelsey_bench_lake_county,10,3.490263542190378,0.0,Kelsey Bench-Lake County
+2024,kelsey_bench_lake_county,11,1.4305270843807565,0.0,Kelsey Bench-Lake County
+2024,kelsey_bench_lake_county,12,0.8105270843807566,0.0,Kelsey Bench-Lake County
+2024,knights_valley,1,0.9536139345192348,0.0,Knights Valley
+2024,knights_valley,2,1.5306317774483862,0.0,Knights Valley
+2024,knights_valley,3,2.810322651505534,0.0,Knights Valley
+2024,knights_valley,4,4.209546348130041,0.0,Knights Valley
+2024,knights_valley,5,6.063761554974116,0.0,Knights Valley
+2024,knights_valley,6,6.852485869922006,0.0,Knights Valley
+2024,knights_valley,7,7.184304967336961,0.0,Knights Valley
+2024,knights_valley,8,6.113738690070787,0.0,Knights Valley
+2024,knights_valley,9,4.799868999635575,0.0,Knights Valley
+2024,knights_valley,10,3.564979380064231,0.0,Knights Valley
+2024,knights_valley,11,1.5021296187651514,0.0,Knights Valley
+2024,knights_valley,12,0.8482706630779318,0.0,Knights Valley
+2021,leona_valley,1,2.93,0.0,Leona Valley
+2021,leona_valley,2,3.73,0.0,Leona Valley
+2021,leona_valley,3,4.38,0.0,Leona Valley
+2021,leona_valley,4,-690749.88,0.0,Leona Valley
+2021,leona_valley,5,7.59,0.0,Leona Valley
+2021,leona_valley,6,8.75,0.0,Leona Valley
+2021,leona_valley,7,9.22,0.0,Leona Valley
+2021,leona_valley,8,8.7,0.0,Leona Valley
+2021,leona_valley,9,6.69,0.0,Leona Valley
+2021,leona_valley,10,4.28,0.0,Leona Valley
+2021,leona_valley,11,3.29,0.0,Leona Valley
+2021,leona_valley,12,1.6800000000000002,0.0,Leona Valley
+2023,lime_kiln_valley,1,1.34,0.0,Lime Kiln Valley
+2023,lime_kiln_valley,2,1.84,0.0,Lime Kiln Valley
+2023,lime_kiln_valley,3,2.59,0.0,Lime Kiln Valley
+2023,lime_kiln_valley,4,4.45,0.0,Lime Kiln Valley
+2023,lime_kiln_valley,5,5.0200000000000005,0.0,Lime Kiln Valley
+2023,lime_kiln_valley,6,5.81,0.0,Lime Kiln Valley
+2023,lime_kiln_valley,7,7.09,0.0,Lime Kiln Valley
+2023,lime_kiln_valley,8,6.15,0.0,Lime Kiln Valley
+2023,lime_kiln_valley,9,4.44,0.0,Lime Kiln Valley
+2023,lime_kiln_valley,10,3.67,0.0,Lime Kiln Valley
+2023,lime_kiln_valley,11,2.2,0.0,Lime Kiln Valley
+2023,lime_kiln_valley,12,1.24,0.0,Lime Kiln Valley
+2024,lime_kiln_valley,1,1.21,0.0,Lime Kiln Valley
+2024,lime_kiln_valley,2,1.79,0.0,Lime Kiln Valley
+2024,lime_kiln_valley,3,3.0500000000000003,0.0,Lime Kiln Valley
+2024,lime_kiln_valley,4,4.28,0.0,Lime Kiln Valley
+2024,lime_kiln_valley,5,5.82,0.0,Lime Kiln Valley
+2024,lime_kiln_valley,6,6.84,0.0,Lime Kiln Valley
+2024,lime_kiln_valley,7,7.24,0.0,Lime Kiln Valley
+2024,lime_kiln_valley,8,6.42,0.0,Lime Kiln Valley
+2024,lime_kiln_valley,9,4.98,0.0,Lime Kiln Valley
+2024,lime_kiln_valley,10,3.92,0.0,Lime Kiln Valley
+2024,lime_kiln_valley,11,2.0100000000000002,0.0,Lime Kiln Valley
+2024,lime_kiln_valley,12,1.18,0.0,Lime Kiln Valley
+2021,livermore_valley,1,1.2187022524944253,0.0,Livermore Valley
+2021,livermore_valley,2,1.88181965458698,0.0,Livermore Valley
+2021,livermore_valley,3,3.019872493313392,0.0,Livermore Valley
+2021,livermore_valley,4,-272169.0641765467,0.0,Livermore Valley
+2021,livermore_valley,5,5.672342101683611,0.0,Livermore Valley
+2021,livermore_valley,6,6.039744986626784,0.0,Livermore Valley
+2021,livermore_valley,7,6.10247230844635,0.0,Livermore Valley
+2021,livermore_valley,8,5.502082228173361,0.0,Livermore Valley
+2021,livermore_valley,9,4.399873573343844,0.0,Livermore Valley
+2021,livermore_valley,10,2.724157976164009,0.0,Livermore Valley
+2021,livermore_valley,11,1.3351958501593335,0.0,Livermore Valley
+2021,livermore_valley,12,0.752727861834792,0.0,Livermore Valley
+2023,lodi,1,0.9069566173371911,0.0,Lodi
+2023,lodi,2,1.1392455110638895,0.0,Lodi
+2023,lodi,3,1.634640406473413,0.0,Lodi
+2023,lodi,4,3.016681014429657,0.0,Lodi
+2023,lodi,5,3.5719365564141032,0.0,Lodi
+2023,lodi,6,4.293661760310451,0.0,Lodi
+2023,lodi,7,5.264653109358776,0.0,Lodi
+2023,lodi,8,4.611714479584821,0.0,Lodi
+2023,lodi,9,3.19696013280738,0.0,Lodi
+2023,lodi,10,2.2323802549139904,0.0,Lodi
+2023,lodi,11,1.1770975946060311,0.0,Lodi
+2023,lodi,12,0.6421806697787705,0.0,Lodi
+2024,lodi,1,0.08519818262618956,0.0,Lodi
+2024,lodi,2,0.13721072020639652,0.0,Lodi
+2024,lodi,3,0.24003479080853354,0.0,Lodi
+2024,lodi,4,0.34275997388535423,0.0,Lodi
+2024,lodi,5,0.5328954284963797,0.0,Lodi
+2024,lodi,6,0.6347656744270602,0.0,Lodi
+2024,lodi,7,0.6838809021933694,0.0,Lodi
+2024,lodi,8,0.5804409880459837,0.0,Lodi
+2024,lodi,9,0.45171755521720225,0.0,Lodi
+2024,lodi,10,0.31350306678226236,0.0,Lodi
+2024,lodi,11,0.13494259924854696,0.0,Lodi
+2024,lodi,12,0.07634062948167518,0.0,Lodi
+2020,long_valley-lake_county,1,0.96,0.0,Long Valley-Lake County
+2020,long_valley-lake_county,2,2.6300000000000003,0.0,Long Valley-Lake County
+2020,long_valley-lake_county,3,3.12,0.0,Long Valley-Lake County
+2020,long_valley-lake_county,4,4.54,0.0,Long Valley-Lake County
+2020,long_valley-lake_county,5,5.56,0.0,Long Valley-Lake County
+2020,long_valley-lake_county,6,6.86,0.0,Long Valley-Lake County
+2020,long_valley-lake_county,7,6.94,0.0,Long Valley-Lake County
+2020,long_valley-lake_county,8,6.16,0.0,Long Valley-Lake County
+2020,long_valley-lake_county,9,4.94,0.0,Long Valley-Lake County
+2020,long_valley-lake_county,10,3.99,0.0,Long Valley-Lake County
+2020,long_valley-lake_county,11,1.82,0.0,Long Valley-Lake County
+2020,long_valley-lake_county,12,1.37,0.0,Long Valley-Lake County
+2023,long_valley-lake_county,1,1.23,0.0,Long Valley-Lake County
+2023,long_valley-lake_county,2,1.75,0.0,Long Valley-Lake County
+2023,long_valley-lake_county,3,2.46,0.0,Long Valley-Lake County
+2023,long_valley-lake_county,4,4.62,0.0,Long Valley-Lake County
+2023,long_valley-lake_county,5,5.4,0.0,Long Valley-Lake County
+2023,long_valley-lake_county,6,6.3100000000000005,0.0,Long Valley-Lake County
+2023,long_valley-lake_county,7,7.08,0.0,Long Valley-Lake County
+2023,long_valley-lake_county,8,6.1000000000000005,0.0,Long Valley-Lake County
+2023,long_valley-lake_county,9,4.33,0.0,Long Valley-Lake County
+2023,long_valley-lake_county,10,3.23,0.0,Long Valley-Lake County
+2023,long_valley-lake_county,11,1.76,0.0,Long Valley-Lake County
+2023,long_valley-lake_county,12,0.86,0.0,Long Valley-Lake County
+2024,long_valley-lake_county,1,0.92,0.0,Long Valley-Lake County
+2024,long_valley-lake_county,2,1.57,0.0,Long Valley-Lake County
+2024,long_valley-lake_county,3,2.86,0.0,Long Valley-Lake County
+2024,long_valley-lake_county,4,4.4,0.0,Long Valley-Lake County
+2024,long_valley-lake_county,5,6.6,0.0,Long Valley-Lake County
+2024,long_valley-lake_county,6,7.23,0.0,Long Valley-Lake County
+2024,long_valley-lake_county,7,7.49,0.0,Long Valley-Lake County
+2024,long_valley-lake_county,8,6.18,0.0,Long Valley-Lake County
+2024,long_valley-lake_county,9,4.92,0.0,Long Valley-Lake County
+2024,long_valley-lake_county,10,3.65,0.0,Long Valley-Lake County
+2024,long_valley-lake_county,11,1.53,0.0,Long Valley-Lake County
+2024,long_valley-lake_county,12,0.77,0.0,Long Valley-Lake County
+2024,los_carneros,1,1.070556597834275,0.0,Los Carneros
+2024,los_carneros,2,1.6662412861166822,0.0,Los Carneros
+2024,los_carneros,3,2.9757625041727462,0.0,Los Carneros
+2024,los_carneros,4,4.182535705827509,0.0,Los Carneros
+2024,los_carneros,5,5.80807049004901,0.0,Los Carneros
+2024,los_carneros,6,6.622905220723655,0.0,Los Carneros
+2024,los_carneros,7,7.089046921450228,0.0,Los Carneros
+2024,los_carneros,8,6.145758905144115,0.0,Los Carneros
+2024,los_carneros,9,4.804153178921858,0.0,Los Carneros
+2024,los_carneros,10,3.6428772416413744,0.0,Los Carneros
+2024,los_carneros,11,1.647966151474602,0.0,Los Carneros
+2024,los_carneros,12,0.9097849379795895,0.0,Los Carneros
+2023,los_olivos_district,1,1.6086398166633722,0.0,Los Olivos District
+2023,los_olivos_district,2,2.0378538765587635,0.0,Los Olivos District
+2023,los_olivos_district,3,2.630203004388911,0.0,Los Olivos District
+2023,los_olivos_district,4,4.0531469284147885,0.0,Los Olivos District
+2023,los_olivos_district,5,4.304701423656649,0.0,Los Olivos District
+2023,los_olivos_district,6,4.662732227153287,0.0,Los Olivos District
+2023,los_olivos_district,7,6.306419531102811,0.0,Los Olivos District
+2023,los_olivos_district,8,5.496001661844957,0.0,Los Olivos District
+2023,los_olivos_district,9,4.023243357240634,0.0,Los Olivos District
+2023,los_olivos_district,10,3.528135924806162,0.0,Los Olivos District
+2023,los_olivos_district,11,2.5186983075581497,0.0,Los Olivos District
+2023,los_olivos_district,12,1.7424163112086042,0.0,Los Olivos District
+2024,los_olivos_district,1,1.464811262572389,0.0,Los Olivos District
+2024,los_olivos_district,2,1.7116895652531288,0.0,Los Olivos District
+2024,los_olivos_district,3,2.5510757943676436,0.0,Los Olivos District
+2024,los_olivos_district,4,3.2505643186297397,0.0,Los Olivos District
+2024,los_olivos_district,5,4.08172127098823,0.0,Los Olivos District
+2024,los_olivos_district,6,4.698917027690079,0.0,Los Olivos District
+2024,los_olivos_district,7,5.069234481711189,0.0,Los Olivos District
+2024,los_olivos_district,8,4.8058976255184,0.0,Los Olivos District
+2024,los_olivos_district,9,3.6373403261628985,0.0,Los Olivos District
+2024,los_olivos_district,10,2.740349159756211,0.0,Los Olivos District
+2024,los_olivos_district,11,1.7281481187651782,0.0,Los Olivos District
+2024,los_olivos_district,12,1.4977283695964876,0.0,Los Olivos District
+2024,madera,1,0.15914459655423072,0.0,Madera
+2024,madera,2,0.2512831890634662,0.0,Madera
+2024,madera,3,0.4551237550072691,0.0,Madera
+2024,madera,4,0.6617109746811631,0.0,Madera
+2024,madera,5,0.9904198977507159,0.0,Madera
+2024,madera,6,1.1798013987565907,0.0,Madera
+2024,madera,7,1.2537285894160715,0.0,Madera
+2024,madera,8,1.0808175197115957,0.0,Madera
+2024,madera,9,0.7998382178267164,0.0,Madera
+2024,madera,10,0.5604619357074765,0.0,Madera
+2024,madera,11,0.2592266611095819,0.0,Madera
+2024,madera,12,0.1340120080899904,0.0,Madera
+2024,malibu_coast,1,1.9174334088555738,0.0,Malibu Coast
+2024,malibu_coast,2,2.0437812510230335,0.0,Malibu Coast
+2024,malibu_coast,3,3.216259095168067,0.0,Malibu Coast
+2024,malibu_coast,4,3.8863612848284546,0.0,Malibu Coast
+2024,malibu_coast,5,3.9836684467723846,0.0,Malibu Coast
+2024,malibu_coast,6,4.901937984763667,0.0,Malibu Coast
+2024,malibu_coast,7,5.5115159833544025,0.0,Malibu Coast
+2024,malibu_coast,8,5.387658789156723,0.0,Malibu Coast
+2024,malibu_coast,9,4.195942321481954,0.0,Malibu Coast
+2024,malibu_coast,10,3.169132912338019,0.0,Malibu Coast
+2024,malibu_coast,11,2.5884861876719683,0.0,Malibu Coast
+2024,malibu_coast,12,1.83256134563906,0.0,Malibu Coast
+2024,malibu_newton_canyon,1,1.8900000000000001,0.0,Malibu-Newton Canyon
+2024,malibu_newton_canyon,2,2.0300000000000002,0.0,Malibu-Newton Canyon
+2024,malibu_newton_canyon,3,3.21,0.0,Malibu-Newton Canyon
+2024,malibu_newton_canyon,4,3.8400000000000003,0.0,Malibu-Newton Canyon
+2024,malibu_newton_canyon,5,3.86,0.0,Malibu-Newton Canyon
+2024,malibu_newton_canyon,6,4.72,0.0,Malibu-Newton Canyon
+2024,malibu_newton_canyon,7,5.3,0.0,Malibu-Newton Canyon
+2024,malibu_newton_canyon,8,5.26,0.0,Malibu-Newton Canyon
+2024,malibu_newton_canyon,9,4.07,0.0,Malibu-Newton Canyon
+2024,malibu_newton_canyon,10,3.08,0.0,Malibu-Newton Canyon
+2024,malibu_newton_canyon,11,2.58,0.0,Malibu-Newton Canyon
+2024,malibu_newton_canyon,12,1.81,0.0,Malibu-Newton Canyon
+2024,manton_valley,1,0.77,0.0,Manton Valley
+2024,manton_valley,2,1.49,0.0,Manton Valley
+2024,manton_valley,3,2.58,0.0,Manton Valley
+2024,manton_valley,4,3.99,0.0,Manton Valley
+2024,manton_valley,5,6.28,0.0,Manton Valley
+2024,manton_valley,6,7.32,0.0,Manton Valley
+2024,manton_valley,7,7.94,0.0,Manton Valley
+2024,manton_valley,8,6.24,0.0,Manton Valley
+2024,manton_valley,9,5.0600000000000005,0.0,Manton Valley
+2024,manton_valley,10,3.42,0.0,Manton Valley
+2024,manton_valley,11,1.31,0.0,Manton Valley
+2024,manton_valley,12,0.72,0.0,Manton Valley
+2021,mcdowell_valley,1,1.18,0.0,McDowell Valley
+2021,mcdowell_valley,2,1.98,0.0,McDowell Valley
+2021,mcdowell_valley,3,3.14,0.0,McDowell Valley
+2021,mcdowell_valley,4,-193837.43999999997,0.0,McDowell Valley
+2021,mcdowell_valley,5,6.37,0.0,McDowell Valley
+2021,mcdowell_valley,6,6.87,0.0,McDowell Valley
+2021,mcdowell_valley,7,6.98,0.0,McDowell Valley
+2021,mcdowell_valley,8,6.29,0.0,McDowell Valley
+2021,mcdowell_valley,9,4.91,0.0,McDowell Valley
+2021,mcdowell_valley,10,2.75,0.0,McDowell Valley
+2021,mcdowell_valley,11,1.4,0.0,McDowell Valley
+2021,mcdowell_valley,12,0.72,0.0,McDowell Valley
+2024,mcdowell_valley,1,0.97,0.0,McDowell Valley
+2024,mcdowell_valley,2,1.53,0.0,McDowell Valley
+2024,mcdowell_valley,3,2.62,0.0,McDowell Valley
+2024,mcdowell_valley,4,4.11,0.0,McDowell Valley
+2024,mcdowell_valley,5,5.89,0.0,McDowell Valley
+2024,mcdowell_valley,6,6.75,0.0,McDowell Valley
+2024,mcdowell_valley,7,6.94,0.0,McDowell Valley
+2024,mcdowell_valley,8,5.84,0.0,McDowell Valley
+2024,mcdowell_valley,9,4.62,0.0,McDowell Valley
+2024,mcdowell_valley,10,3.37,0.0,McDowell Valley
+2024,mcdowell_valley,11,1.36,0.0,McDowell Valley
+2024,mcdowell_valley,12,0.83,0.0,McDowell Valley
+2021,mendocino,1,1.205497338732065,0.0,Mendocino
+2021,mendocino,2,2.015230522915433,0.0,Mendocino
+2021,mendocino,3,3.175997549685262,0.0,Mendocino
+2021,mendocino,4,-179222.40877262634,0.0,Mendocino
+2021,mendocino,5,6.469512726995336,0.0,Mendocino
+2021,mendocino,6,7.07530513905073,0.0,Mendocino
+2021,mendocino,7,7.264685887525775,0.0,Mendocino
+2021,mendocino,8,6.583310979335046,0.0,Mendocino
+2021,mendocino,9,5.0233092394609455,0.0,Mendocino
+2021,mendocino,10,2.8106567947564685,0.0,Mendocino
+2021,mendocino,11,1.4620243632541126,0.0,Mendocino
+2021,mendocino,12,0.7583176028860141,0.0,Mendocino
+2024,mendocino,1,1.0337641763126655,0.0,Mendocino
+2024,mendocino,2,1.6200600169328112,0.0,Mendocino
+2024,mendocino,3,2.608974115356678,0.0,Mendocino
+2024,mendocino,4,4.08257250129647,0.0,Mendocino
+2024,mendocino,5,5.948278155191102,0.0,Mendocino
+2024,mendocino,6,6.793737998691285,0.0,Mendocino
+2024,mendocino,7,7.019232383098487,0.0,Mendocino
+2024,mendocino,8,5.890651995668976,0.0,Mendocino
+2024,mendocino,9,4.753034243221083,0.0,Mendocino
+2024,mendocino,10,3.3749661002579137,0.0,Mendocino
+2024,mendocino,11,1.368697253050419,0.0,Mendocino
+2024,mendocino,12,0.8728134312920279,0.0,Mendocino
+2021,mendocino_ridge,1,0.6024897117428683,0.0,Mendocino Ridge
+2021,mendocino_ridge,2,0.9580135945655475,0.0,Mendocino Ridge
+2021,mendocino_ridge,3,1.5689906211748643,0.0,Mendocino Ridge
+2021,mendocino_ridge,4,-81028.60383040628,0.0,Mendocino Ridge
+2021,mendocino_ridge,5,3.2480525570441268,0.0,Mendocino Ridge
+2021,mendocino_ridge,6,3.6132686362815236,0.0,Mendocino Ridge
+2021,mendocino_ridge,7,3.8340122506031498,0.0,Mendocino Ridge
+2021,mendocino_ridge,8,3.503900129040298,0.0,Mendocino Ridge
+2021,mendocino_ridge,9,2.6073203526334203,0.0,Mendocino Ridge
+2021,mendocino_ridge,10,1.4748798378339414,0.0,Mendocino Ridge
+2021,mendocino_ridge,11,0.7798456985641875,0.0,Mendocino Ridge
+2021,mendocino_ridge,12,0.43200158895183133,0.0,Mendocino Ridge
+2024,mendocino_ridge,1,1.0722562015620019,0.0,Mendocino Ridge
+2024,mendocino_ridge,2,1.6108766501744003,0.0,Mendocino Ridge
+2024,mendocino_ridge,3,2.4421574913998225,0.0,Mendocino Ridge
+2024,mendocino_ridge,4,3.8205404494563338,0.0,Mendocino Ridge
+2024,mendocino_ridge,5,5.401785666135475,0.0,Mendocino Ridge
+2024,mendocino_ridge,6,6.35563660040216,0.0,Mendocino Ridge
+2024,mendocino_ridge,7,6.542525574308984,0.0,Mendocino Ridge
+2024,mendocino_ridge,8,5.634926830360828,0.0,Mendocino Ridge
+2024,mendocino_ridge,9,4.541043658667949,0.0,Mendocino Ridge
+2024,mendocino_ridge,10,3.14477065372646,0.0,Mendocino Ridge
+2024,mendocino_ridge,11,1.2260417684614424,0.0,Mendocino Ridge
+2024,mendocino_ridge,12,0.8875036514710721,0.0,Mendocino Ridge
+2023,merritt_island,1,1.59,0.0,Merritt Island
+2023,merritt_island,2,1.92,0.0,Merritt Island
+2023,merritt_island,3,2.73,0.0,Merritt Island
+2023,merritt_island,4,5.12,0.0,Merritt Island
+2023,merritt_island,5,5.96,0.0,Merritt Island
+2023,merritt_island,6,7.19,0.0,Merritt Island
+2023,merritt_island,7,8.59,0.0,Merritt Island
+2023,merritt_island,8,7.61,0.0,Merritt Island
+2023,merritt_island,9,5.32,0.0,Merritt Island
+2023,merritt_island,10,3.79,0.0,Merritt Island
+2023,merritt_island,11,2.06,0.0,Merritt Island
+2023,merritt_island,12,1.07,0.0,Merritt Island
+2024,merritt_island,1,1.14,0.0,Merritt Island
+2024,merritt_island,2,1.85,0.0,Merritt Island
+2024,merritt_island,3,3.3,0.0,Merritt Island
+2024,merritt_island,4,4.64,0.0,Merritt Island
+2024,merritt_island,5,7.32,0.0,Merritt Island
+2024,merritt_island,6,8.44,0.0,Merritt Island
+2024,merritt_island,7,9.1,0.0,Merritt Island
+2024,merritt_island,8,7.73,0.0,Merritt Island
+2024,merritt_island,9,6.04,0.0,Merritt Island
+2024,merritt_island,10,4.28,0.0,Merritt Island
+2024,merritt_island,11,1.84,0.0,Merritt Island
+2024,merritt_island,12,0.96,0.0,Merritt Island
+2023,mokelumne_river,1,1.358382359877233,0.0,Mokelumne River
+2023,mokelumne_river,2,1.7274080552590827,0.0,Mokelumne River
+2023,mokelumne_river,3,2.488321066452403,0.0,Mokelumne River
+2023,mokelumne_river,4,4.580043854771055,0.0,Mokelumne River
+2023,mokelumne_river,5,5.4140646473408225,0.0,Mokelumne River
+2023,mokelumne_river,6,6.509050733737748,0.0,Mokelumne River
+2023,mokelumne_river,7,7.965890048323434,0.0,Mokelumne River
+2023,mokelumne_river,8,6.986533310308999,0.0,Mokelumne River
+2023,mokelumne_river,9,4.849802991178054,0.0,Mokelumne River
+2023,mokelumne_river,10,3.390038686053611,0.0,Mokelumne River
+2023,mokelumne_river,11,1.7842702034722406,0.0,Mokelumne River
+2023,mokelumne_river,12,0.9695112887480546,0.0,Mokelumne River
+2023,monterey,1,1.4452099648309886,0.0,Monterey
+2023,monterey,2,2.0776927450221843,0.0,Monterey
+2023,monterey,3,2.6906959703608173,0.0,Monterey
+2023,monterey,4,4.460697564142565,0.0,Monterey
+2023,monterey,5,5.05787262040125,0.0,Monterey
+2023,monterey,6,5.728815181720715,0.0,Monterey
+2023,monterey,7,7.031116799389377,0.0,Monterey
+2023,monterey,8,6.22355046339927,0.0,Monterey
+2023,monterey,9,4.447620004281308,0.0,Monterey
+2023,monterey,10,3.9949435029252776,0.0,Monterey
+2023,monterey,11,2.4937509233194413,0.0,Monterey
+2023,monterey,12,1.4881232570684633,0.0,Monterey
+2024,monterey,1,1.2318848866757786,0.0,Monterey
+2024,monterey,2,1.6451918985901248,0.0,Monterey
+2024,monterey,3,2.7626059763334925,0.0,Monterey
+2024,monterey,4,3.7414726448870317,0.0,Monterey
+2024,monterey,5,4.909651361173196,0.0,Monterey
+2024,monterey,6,5.81056028685097,0.0,Monterey
+2024,monterey,7,6.1939689768726796,0.0,Monterey
+2024,monterey,8,5.621455925371374,0.0,Monterey
+2024,monterey,9,4.470300923623439,0.0,Monterey
+2024,monterey,10,3.6331056994853843,0.0,Monterey
+2024,monterey,11,1.8642631634974167,0.0,Monterey
+2024,monterey,12,1.334160021269835,0.0,Monterey
+2024,moon_mountain_district_sonoma_county,1,1.0426000012866605,0.0,Moon Mountain District Sonoma County
+2024,moon_mountain_district_sonoma_county,2,1.6112878734257123,0.0,Moon Mountain District Sonoma County
+2024,moon_mountain_district_sonoma_county,3,2.898722531862208,0.0,Moon Mountain District Sonoma County
+2024,moon_mountain_district_sonoma_county,4,4.111243137033638,0.0,Moon Mountain District Sonoma County
+2024,moon_mountain_district_sonoma_county,5,5.718788619406686,0.0,Moon Mountain District Sonoma County
+2024,moon_mountain_district_sonoma_county,6,6.51767916987665,0.0,Moon Mountain District Sonoma County
+2024,moon_mountain_district_sonoma_county,7,6.981601201802302,0.0,Moon Mountain District Sonoma County
+2024,moon_mountain_district_sonoma_county,8,6.01775856599188,0.0,Moon Mountain District Sonoma County
+2024,moon_mountain_district_sonoma_county,9,4.704624471928815,0.0,Moon Mountain District Sonoma County
+2024,moon_mountain_district_sonoma_county,10,3.5475664525620365,0.0,Moon Mountain District Sonoma County
+2024,moon_mountain_district_sonoma_county,11,1.5924507974929678,0.0,Moon Mountain District Sonoma County
+2024,moon_mountain_district_sonoma_county,12,0.8863431210844872,0.0,Moon Mountain District Sonoma County
+2023,mt__harlan,1,1.34,0.0,Mt. Harlan
+2023,mt__harlan,2,1.84,0.0,Mt. Harlan
+2023,mt__harlan,3,2.59,0.0,Mt. Harlan
+2023,mt__harlan,4,4.45,0.0,Mt. Harlan
+2023,mt__harlan,5,5.0200000000000005,0.0,Mt. Harlan
+2023,mt__harlan,6,5.81,0.0,Mt. Harlan
+2023,mt__harlan,7,7.09,0.0,Mt. Harlan
+2023,mt__harlan,8,6.15,0.0,Mt. Harlan
+2023,mt__harlan,9,4.44,0.0,Mt. Harlan
+2023,mt__harlan,10,3.67,0.0,Mt. Harlan
+2023,mt__harlan,11,2.2,0.0,Mt. Harlan
+2023,mt__harlan,12,1.24,0.0,Mt. Harlan
+2024,mt__harlan,1,1.21,0.0,Mt. Harlan
+2024,mt__harlan,2,1.79,0.0,Mt. Harlan
+2024,mt__harlan,3,3.0500000000000003,0.0,Mt. Harlan
+2024,mt__harlan,4,4.28,0.0,Mt. Harlan
+2024,mt__harlan,5,5.82,0.0,Mt. Harlan
+2024,mt__harlan,6,6.84,0.0,Mt. Harlan
+2024,mt__harlan,7,7.24,0.0,Mt. Harlan
+2024,mt__harlan,8,6.42,0.0,Mt. Harlan
+2024,mt__harlan,9,4.98,0.0,Mt. Harlan
+2024,mt__harlan,10,3.92,0.0,Mt. Harlan
+2024,mt__harlan,11,2.0100000000000002,0.0,Mt. Harlan
+2024,mt__harlan,12,1.18,0.0,Mt. Harlan
+2024,mt__veeder,1,1.0314609220256674,0.0,Mt. Veeder
+2024,mt__veeder,2,1.6508765532154004,0.0,Mt. Veeder
+2024,mt__veeder,3,3.0208765532154,0.0,Mt. Veeder
+2024,mt__veeder,4,4.395909418328131,0.0,Mt. Veeder
+2024,mt__veeder,5,6.425098595338192,0.0,Mt. Veeder
+2024,mt__veeder,6,7.206559517363859,0.0,Mt. Veeder
+2024,mt__veeder,7,7.628020439389527,0.0,Mt. Veeder
+2024,mt__veeder,8,6.532111021061396,0.0,Mt. Veeder
+2024,mt__veeder,9,5.113864127492197,0.0,Mt. Veeder
+2024,mt__veeder,10,3.7691234467845995,0.0,Mt. Veeder
+2024,mt__veeder,11,1.6708765532154002,0.0,Mt. Veeder
+2024,mt__veeder,12,0.8617531064308009,0.0,Mt. Veeder
+2024,napa_valley,1,1.0155915258571797,0.0,Napa Valley
+2024,napa_valley,2,1.6296988625874347,0.0,Napa Valley
+2024,napa_valley,3,2.988164858240037,0.0,Napa Valley
+2024,napa_valley,4,4.346298432587551,0.0,Napa Valley
+2024,napa_valley,5,6.2967835748938406,0.0,Napa Valley
+2024,napa_valley,6,7.080941570672295,0.0,Napa Valley
+2024,napa_valley,7,7.495630820952276,0.0,Napa Valley
+2024,napa_valley,8,6.405589935278236,0.0,Napa Valley
+2024,napa_valley,9,5.0343954760722385,0.0,Napa Valley
+2024,napa_valley,10,3.727611544956764,0.0,Napa Valley
+2024,napa_valley,11,1.642392509579069,0.0,Napa Valley
+2024,napa_valley,12,0.8638439380734383,0.0,Napa Valley
+2016,north_coast,1,2.281313194929114e-05,0.0,North Coast
+2016,north_coast,2,4.618521047337452e-05,0.0,North Coast
+2016,north_coast,3,6.0568148808831746e-05,0.0,North Coast
+2016,north_coast,4,9.468572451239026e-05,0.0,North Coast
+2016,north_coast,5,0.0001113753895738236,0.0,North Coast
+2016,north_coast,6,0.00013433040237672907,0.0,North Coast
+2016,north_coast,7,0.00013913173167424598,0.0,North Coast
+2016,north_coast,8,0.00011751990601877488,0.0,North Coast
+2016,north_coast,9,0.00010166437239969738,0.0,North Coast
+2016,north_coast,10,5.549163464375126e-05,0.0,North Coast
+2016,north_coast,11,3.033825369396208e-05,0.0,North Coast
+2016,north_coast,12,1.980557779490845e-05,0.0,North Coast
+2020,north_coast,1,0.04255183505515355,0.0,North Coast
+2020,north_coast,2,0.10818639334920924,0.0,North Coast
+2020,north_coast,3,0.1278689629617853,0.0,North Coast
+2020,north_coast,4,0.18831047747190552,0.0,North Coast
+2020,north_coast,5,0.22934324737516054,0.0,North Coast
+2020,north_coast,6,0.2867580516961857,0.0,North Coast
+2020,north_coast,7,0.2915222687272342,0.0,North Coast
+2020,north_coast,8,0.2619466042007406,0.0,North Coast
+2020,north_coast,9,0.20624266002079222,0.0,North Coast
+2020,north_coast,10,0.16606119470907799,0.0,North Coast
+2020,north_coast,11,0.07488726690827585,0.0,North Coast
+2020,north_coast,12,0.05483918849805732,0.0,North Coast
+2021,north_coast,1,0.179162093675923,0.0,North Coast
+2021,north_coast,2,0.30143408358843804,0.0,North Coast
+2021,north_coast,3,0.47431507558395053,0.0,North Coast
+2021,north_coast,4,-27226.368177687455,0.0,North Coast
+2021,north_coast,5,0.964740133015496,0.0,North Coast
+2021,north_coast,6,1.0517246526269641,0.0,North Coast
+2021,north_coast,7,1.0780751381017268,0.0,North Coast
+2021,north_coast,8,0.9756083174082725,0.0,North Coast
+2021,north_coast,9,0.7484430884871318,0.0,North Coast
+2021,north_coast,10,0.42047723898165384,0.0,North Coast
+2021,north_coast,11,0.21695960295095856,0.0,North Coast
+2021,north_coast,12,0.11200338319449465,0.0,North Coast
+2023,north_coast,1,0.10900110504409806,0.0,North Coast
+2023,north_coast,2,0.14838155923706445,0.0,North Coast
+2023,north_coast,3,0.20857593494955184,0.0,North Coast
+2023,north_coast,4,0.3937632883278853,0.0,North Coast
+2023,north_coast,5,0.4555223623055639,0.0,North Coast
+2023,north_coast,6,0.5366290996289406,0.0,North Coast
+2023,north_coast,7,0.6145528240882282,0.0,North Coast
+2023,north_coast,8,0.5260898157099146,0.0,North Coast
+2023,north_coast,9,0.37476785025232257,0.0,North Coast
+2023,north_coast,10,0.2765210874570902,0.0,North Coast
+2023,north_coast,11,0.14850788704940085,0.0,North Coast
+2023,north_coast,12,0.07482391538905693,0.0,North Coast
+2024,north_coast,1,0.9834520592911689,0.0,North Coast
+2024,north_coast,2,1.5506894547753878,0.0,North Coast
+2024,north_coast,3,2.74405450059133,0.0,North Coast
+2024,north_coast,4,4.084628813850381,0.0,North Coast
+2024,north_coast,5,5.810213960134603,0.0,North Coast
+2024,north_coast,6,6.609841384133995,0.0,North Coast
+2024,north_coast,7,6.927079899262508,0.0,North Coast
+2024,north_coast,8,5.9070933461096775,0.0,North Coast
+2024,north_coast,9,4.658009068482427,0.0,North Coast
+2024,north_coast,10,3.4457283555070926,0.0,North Coast
+2024,north_coast,11,1.4771167067476445,0.0,North Coast
+2024,north_coast,12,0.8348399499326562,0.0,North Coast
+2021,northern_sonoma,1,0.09455489502996182,0.0,Northern Sonoma
+2021,northern_sonoma,2,0.1642269229467758,0.0,Northern Sonoma
+2021,northern_sonoma,3,0.2562935312654228,0.0,Northern Sonoma
+2021,northern_sonoma,4,-15871.972238295833,0.0,Northern Sonoma
+2021,northern_sonoma,5,0.5175636359534752,0.0,Northern Sonoma
+2021,northern_sonoma,6,0.5557173655269686,0.0,Northern Sonoma
+2021,northern_sonoma,7,0.5648410834684562,0.0,Northern Sonoma
+2021,northern_sonoma,8,0.507610489108216,0.0,Northern Sonoma
+2021,northern_sonoma,9,0.3997847316179088,0.0,Northern Sonoma
+2021,northern_sonoma,10,0.22892237744096022,0.0,Northern Sonoma
+2021,northern_sonoma,11,0.1136317598167085,0.0,Northern Sonoma
+2021,northern_sonoma,12,0.057230594360240056,0.0,Northern Sonoma
+2024,northern_sonoma,1,0.9946842534546128,0.0,Northern Sonoma
+2024,northern_sonoma,2,1.538931924876814,0.0,Northern Sonoma
+2024,northern_sonoma,3,2.7010904289133446,0.0,Northern Sonoma
+2024,northern_sonoma,4,4.0781809379938325,0.0,Northern Sonoma
+2024,northern_sonoma,5,5.648556051430643,0.0,Northern Sonoma
+2024,northern_sonoma,6,6.5312209347048675,0.0,Northern Sonoma
+2024,northern_sonoma,7,6.772714056616066,0.0,Northern Sonoma
+2024,northern_sonoma,8,5.808091872400681,0.0,Northern Sonoma
+2024,northern_sonoma,9,4.558231351958797,0.0,Northern Sonoma
+2024,northern_sonoma,10,3.3998302584629023,0.0,Northern Sonoma
+2024,northern_sonoma,11,1.4261796787126242,0.0,Northern Sonoma
+2024,northern_sonoma,12,0.8424786302176703,0.0,Northern Sonoma
+2024,oak_knoll_district_of_napa_valley,1,1.03,0.0,Oak Knoll District of Napa Valley
+2024,oak_knoll_district_of_napa_valley,2,1.65,0.0,Oak Knoll District of Napa Valley
+2024,oak_knoll_district_of_napa_valley,3,3.02,0.0,Oak Knoll District of Napa Valley
+2024,oak_knoll_district_of_napa_valley,4,4.4,0.0,Oak Knoll District of Napa Valley
+2024,oak_knoll_district_of_napa_valley,5,6.44,0.0,Oak Knoll District of Napa Valley
+2024,oak_knoll_district_of_napa_valley,6,7.22,0.0,Oak Knoll District of Napa Valley
+2024,oak_knoll_district_of_napa_valley,7,7.640000000000001,0.0,Oak Knoll District of Napa Valley
+2024,oak_knoll_district_of_napa_valley,8,6.54,0.0,Oak Knoll District of Napa Valley
+2024,oak_knoll_district_of_napa_valley,9,5.12,0.0,Oak Knoll District of Napa Valley
+2024,oak_knoll_district_of_napa_valley,10,3.77,0.0,Oak Knoll District of Napa Valley
+2024,oak_knoll_district_of_napa_valley,11,1.67,0.0,Oak Knoll District of Napa Valley
+2024,oak_knoll_district_of_napa_valley,12,0.86,0.0,Oak Knoll District of Napa Valley
+2024,oakville,1,0.9911884050595243,0.0,Oakville
+2024,oakville,2,1.5920621931710486,0.0,Oakville
+2024,oakville,3,2.907614932186814,0.0,Oakville
+2024,oakville,4,4.227142716406439,0.0,Oakville
+2024,oakville,5,6.170504648546496,0.0,Oakville
+2024,oakville,6,6.932409630029669,0.0,Oakville
+2024,oakville,7,7.340819650168472,0.0,Oakville
+2024,oakville,8,6.27803281892241,0.0,Oakville
+2024,oakville,9,4.928484495900407,0.0,Oakville
+2024,oakville,10,3.629354062084526,0.0,Oakville
+2024,oakville,11,1.6084844983709325,0.0,Oakville
+2024,oakville,12,0.8346543812761809,0.0,Oakville
+2023,pacheco_pass,1,1.34,0.0,Pacheco Pass
+2023,pacheco_pass,2,1.84,0.0,Pacheco Pass
+2023,pacheco_pass,3,2.59,0.0,Pacheco Pass
+2023,pacheco_pass,4,4.45,0.0,Pacheco Pass
+2023,pacheco_pass,5,5.0200000000000005,0.0,Pacheco Pass
+2023,pacheco_pass,6,5.81,0.0,Pacheco Pass
+2023,pacheco_pass,7,7.09,0.0,Pacheco Pass
+2023,pacheco_pass,8,6.15,0.0,Pacheco Pass
+2023,pacheco_pass,9,4.44,0.0,Pacheco Pass
+2023,pacheco_pass,10,3.67,0.0,Pacheco Pass
+2023,pacheco_pass,11,2.2,0.0,Pacheco Pass
+2023,pacheco_pass,12,1.24,0.0,Pacheco Pass
+2024,pacheco_pass,1,1.21,0.0,Pacheco Pass
+2024,pacheco_pass,2,1.79,0.0,Pacheco Pass
+2024,pacheco_pass,3,3.0500000000000003,0.0,Pacheco Pass
+2024,pacheco_pass,4,4.28,0.0,Pacheco Pass
+2024,pacheco_pass,5,5.82,0.0,Pacheco Pass
+2024,pacheco_pass,6,6.84,0.0,Pacheco Pass
+2024,pacheco_pass,7,7.24,0.0,Pacheco Pass
+2024,pacheco_pass,8,6.42,0.0,Pacheco Pass
+2024,pacheco_pass,9,4.98,0.0,Pacheco Pass
+2024,pacheco_pass,10,3.92,0.0,Pacheco Pass
+2024,pacheco_pass,11,2.0100000000000002,0.0,Pacheco Pass
+2024,pacheco_pass,12,1.18,0.0,Pacheco Pass
+2023,paicines,1,1.3060902435415005,0.0,Paicines
+2023,paicines,2,1.9243609741660013,0.0,Paicines
+2023,paicines,3,2.626090243541501,0.0,Paicines
+2023,paicines,4,4.813082922498005,0.0,Paicines
+2023,paicines,5,5.657443896664005,0.0,Paicines
+2023,paicines,6,6.487443896664004,0.0,Paicines
+2023,paicines,7,8.186617062703508,0.0,Paicines
+2023,paicines,8,6.9422560885375075,0.0,Paicines
+2023,paicines,9,4.991353653122504,0.0,Paicines
+2023,paicines,10,4.029173166039504,0.0,Paicines
+2023,paicines,11,2.328721948332002,0.0,Paicines
+2023,paicines,12,1.3365414612490019,0.0,Paicines
+2024,paicines,1,1.2985548086812033,0.0,Paicines
+2024,paicines,2,1.82830262291702,0.0,Paicines
+2024,paicines,3,3.2185548086812035,0.0,Paicines
+2024,paicines,4,4.606857431598223,0.0,Paicines
+2024,paicines,5,6.573714863196446,0.0,Paicines
+2024,paicines,6,7.7803201090304865,0.0,Paicines
+2024,paicines,7,8.310824480558853,0.0,Paicines
+2024,paicines,8,7.300320109030487,0.0,Paicines
+2024,paicines,9,5.716168797571976,0.0,Paicines
+2024,paicines,10,4.411765300349283,0.0,Paicines
+2024,paicines,11,2.108554808681203,0.0,Paicines
+2024,paicines,12,1.2505043715283666,0.0,Paicines
+2021,palos_verdes_peninsula,1,2.12,0.0,Palos Verdes Peninsula
+2021,palos_verdes_peninsula,2,2.5700000000000003,0.0,Palos Verdes Peninsula
+2021,palos_verdes_peninsula,3,3.5700000000000003,0.0,Palos Verdes Peninsula
+2021,palos_verdes_peninsula,4,-516597.8,0.0,Palos Verdes Peninsula
+2021,palos_verdes_peninsula,5,4.0600000000000005,0.0,Palos Verdes Peninsula
+2021,palos_verdes_peninsula,6,4.19,0.0,Palos Verdes Peninsula
+2021,palos_verdes_peninsula,7,4.49,0.0,Palos Verdes Peninsula
+2021,palos_verdes_peninsula,8,4.14,0.0,Palos Verdes Peninsula
+2021,palos_verdes_peninsula,9,3.45,0.0,Palos Verdes Peninsula
+2021,palos_verdes_peninsula,10,3.2,0.0,Palos Verdes Peninsula
+2021,palos_verdes_peninsula,11,2.34,0.0,Palos Verdes Peninsula
+2021,palos_verdes_peninsula,12,1.19,0.0,Palos Verdes Peninsula
+2024,palos_verdes_peninsula,1,1.76,0.0,Palos Verdes Peninsula
+2024,palos_verdes_peninsula,2,1.9,0.0,Palos Verdes Peninsula
+2024,palos_verdes_peninsula,3,3.06,0.0,Palos Verdes Peninsula
+2024,palos_verdes_peninsula,4,3.59,0.0,Palos Verdes Peninsula
+2024,palos_verdes_peninsula,5,3.7800000000000002,0.0,Palos Verdes Peninsula
+2024,palos_verdes_peninsula,6,4.2,0.0,Palos Verdes Peninsula
+2024,palos_verdes_peninsula,7,4.39,0.0,Palos Verdes Peninsula
+2024,palos_verdes_peninsula,8,4.59,0.0,Palos Verdes Peninsula
+2024,palos_verdes_peninsula,9,3.65,0.0,Palos Verdes Peninsula
+2024,palos_verdes_peninsula,10,2.59,0.0,Palos Verdes Peninsula
+2024,palos_verdes_peninsula,11,2.43,0.0,Palos Verdes Peninsula
+2024,palos_verdes_peninsula,12,1.49,0.0,Palos Verdes Peninsula
+2020,paso_robles,1,0.27359501790504315,0.0,Paso Robles
+2020,paso_robles,2,0.5126796858373438,0.0,Paso Robles
+2020,paso_robles,3,0.5489073566387311,0.0,Paso Robles
+2020,paso_robles,4,0.8030209779489794,0.0,Paso Robles
+2020,paso_robles,5,1.1517717876645193,0.0,Paso Robles
+2020,paso_robles,6,1.3218814527525744,0.0,Paso Robles
+2020,paso_robles,7,1.3583690864042304,0.0,Paso Robles
+2020,paso_robles,8,1.2984454887999521,0.0,Paso Robles
+2020,paso_robles,9,0.9651190891981425,0.0,Paso Robles
+2020,paso_robles,10,0.7249835449440075,0.0,Paso Robles
+2020,paso_robles,11,0.42795256308634216,0.0,Paso Robles
+2020,paso_robles,12,0.332659955094999,0.0,Paso Robles
+2023,paso_robles,1,1.4430494203105717,0.0,Paso Robles
+2023,paso_robles,2,2.1084361649118333,0.0,Paso Robles
+2023,paso_robles,3,2.6888369628547775,0.0,Paso Robles
+2023,paso_robles,4,4.698412178915431,0.0,Paso Robles
+2023,paso_robles,5,5.540344503081701,0.0,Paso Robles
+2023,paso_robles,6,6.093746233108165,0.0,Paso Robles
+2023,paso_robles,7,7.887560103779094,0.0,Paso Robles
+2023,paso_robles,8,6.859138901980357,0.0,Paso Robles
+2023,paso_robles,9,4.781155773167271,0.0,Paso Robles
+2023,paso_robles,10,3.962332645888364,0.0,Paso Robles
+2023,paso_robles,11,2.4977815162013286,0.0,Paso Robles
+2023,paso_robles,12,1.5760870434149319,0.0,Paso Robles
+2024,paso_robles,1,1.521225834203202,0.0,Paso Robles
+2024,paso_robles,2,1.9228140380399823,0.0,Paso Robles
+2024,paso_robles,3,3.230706589900654,0.0,Paso Robles
+2024,paso_robles,4,4.399620206831671,0.0,Paso Robles
+2024,paso_robles,5,6.059622320574887,0.0,Paso Robles
+2024,paso_robles,6,7.271048147599515,0.0,Paso Robles
+2024,paso_robles,7,7.95327805075648,0.0,Paso Robles
+2024,paso_robles,8,7.187781669967834,0.0,Paso Robles
+2024,paso_robles,9,5.5388851141703395,0.0,Paso Robles
+2024,paso_robles,10,4.232995608319949,0.0,Paso Robles
+2024,paso_robles,11,2.161862030653047,0.0,Paso Robles
+2024,paso_robles,12,1.6190414219923124,0.0,Paso Robles
+2020,paso_robles_estrella_district,1,0.061403452904102165,0.0,Paso Robles Estrella District
+2020,paso_robles_estrella_district,2,0.11662794199395506,0.0,Paso Robles Estrella District
+2020,paso_robles_estrella_district,3,0.12512401723854782,0.0,Paso Robles Estrella District
+2020,paso_robles_estrella_district,4,0.1838241734739159,0.0,Paso Robles Estrella District
+2020,paso_robles_estrella_district,5,0.26453688829754707,0.0,Paso Robles Estrella District
+2020,paso_robles_estrella_district,6,0.30392778261338615,0.0,Paso Robles Estrella District
+2020,paso_robles_estrella_district,7,0.31203767261958837,0.0,Paso Robles Estrella District
+2020,paso_robles_estrella_district,8,0.2973626335607463,0.0,Paso Robles Estrella District
+2020,paso_robles_estrella_district,9,0.22051177112102097,0.0,Paso Robles Estrella District
+2020,paso_robles_estrella_district,10,0.16490109679277754,0.0,Paso Robles Estrella District
+2020,paso_robles_estrella_district,11,0.0969324948360355,0.0,Paso Robles Estrella District
+2020,paso_robles_estrella_district,12,0.07491993624777246,0.0,Paso Robles Estrella District
+2023,paso_robles_estrella_district,1,1.4233755526088032,0.0,Paso Robles Estrella District
+2023,paso_robles_estrella_district,2,2.100937938230376,0.0,Paso Robles Estrella District
+2023,paso_robles_estrella_district,3,2.6687142934924637,0.0,Paso Robles Estrella District
+2023,paso_robles_estrella_district,4,4.756020532545727,0.0,Paso Robles Estrella District
+2023,paso_robles_estrella_district,5,5.632482749264735,0.0,Paso Robles Estrella District
+2023,paso_robles_estrella_district,6,6.2126566334033155,0.0,Paso Robles Estrella District
+2023,paso_robles_estrella_district,7,8.063845593099241,0.0,Paso Robles Estrella District
+2023,paso_robles_estrella_district,8,6.98964710662008,0.0,Paso Robles Estrella District
+2023,paso_robles_estrella_district,9,4.842395437450632,0.0,Paso Robles Estrella District
+2023,paso_robles_estrella_district,10,4.002546754146057,0.0,Paso Robles Estrella District
+2023,paso_robles_estrella_district,11,2.493408294539092,0.0,Paso Robles Estrella District
+2023,paso_robles_estrella_district,12,1.5427272423666536,0.0,Paso Robles Estrella District
+2024,paso_robles_estrella_district,1,1.4964861421777922,0.0,Paso Robles Estrella District
+2024,paso_robles_estrella_district,2,1.9012027701548635,0.0,Paso Robles Estrella District
+2024,paso_robles_estrella_district,3,3.241709947543348,0.0,Paso Robles Estrella District
+2024,paso_robles_estrella_district,4,4.45340489072053,0.0,Paso Robles Estrella District
+2024,paso_robles_estrella_district,5,6.175218516405167,0.0,Paso Robles Estrella District
+2024,paso_robles_estrella_district,6,7.42565885035684,0.0,Paso Robles Estrella District
+2024,paso_robles_estrella_district,7,8.131815613503683,0.0,Paso Robles Estrella District
+2024,paso_robles_estrella_district,8,7.301756497653602,0.0,Paso Robles Estrella District
+2024,paso_robles_estrella_district,9,5.638106514331436,0.0,Paso Robles Estrella District
+2024,paso_robles_estrella_district,10,4.311336006221191,0.0,Paso Robles Estrella District
+2024,paso_robles_estrella_district,11,2.1785225793184604,0.0,Paso Robles Estrella District
+2024,paso_robles_estrella_district,12,1.587008323932443,0.0,Paso Robles Estrella District
+2023,paso_robles_geneseo_district,1,1.44,0.0,Paso Robles Geneseo District
+2023,paso_robles_geneseo_district,2,2.13,0.0,Paso Robles Geneseo District
+2023,paso_robles_geneseo_district,3,2.68,0.0,Paso Robles Geneseo District
+2023,paso_robles_geneseo_district,4,4.57,0.0,Paso Robles Geneseo District
+2023,paso_robles_geneseo_district,5,5.3,0.0,Paso Robles Geneseo District
+2023,paso_robles_geneseo_district,6,5.86,0.0,Paso Robles Geneseo District
+2023,paso_robles_geneseo_district,7,7.51,0.0,Paso Robles Geneseo District
+2023,paso_robles_geneseo_district,8,6.59,0.0,Paso Robles Geneseo District
+2023,paso_robles_geneseo_district,9,4.59,0.0,Paso Robles Geneseo District
+2023,paso_robles_geneseo_district,10,3.89,0.0,Paso Robles Geneseo District
+2023,paso_robles_geneseo_district,11,2.48,0.0,Paso Robles Geneseo District
+2023,paso_robles_geneseo_district,12,1.57,0.0,Paso Robles Geneseo District
+2024,paso_robles_geneseo_district,1,1.54,0.0,Paso Robles Geneseo District
+2024,paso_robles_geneseo_district,2,1.9200000000000002,0.0,Paso Robles Geneseo District
+2024,paso_robles_geneseo_district,3,3.19,0.0,Paso Robles Geneseo District
+2024,paso_robles_geneseo_district,4,4.25,0.0,Paso Robles Geneseo District
+2024,paso_robles_geneseo_district,5,5.78,0.0,Paso Robles Geneseo District
+2024,paso_robles_geneseo_district,6,6.93,0.0,Paso Robles Geneseo District
+2024,paso_robles_geneseo_district,7,7.55,0.0,Paso Robles Geneseo District
+2024,paso_robles_geneseo_district,8,6.88,0.0,Paso Robles Geneseo District
+2024,paso_robles_geneseo_district,9,5.3100000000000005,0.0,Paso Robles Geneseo District
+2024,paso_robles_geneseo_district,10,4.11,0.0,Paso Robles Geneseo District
+2024,paso_robles_geneseo_district,11,2.13,0.0,Paso Robles Geneseo District
+2024,paso_robles_geneseo_district,12,1.6600000000000001,0.0,Paso Robles Geneseo District
+2020,paso_robles_highlands_district,1,1.6034725433752675,0.0,Paso Robles Highlands District
+2020,paso_robles_highlands_district,2,3.004602807571123,0.0,Paso Robles Highlands District
+2020,paso_robles_highlands_district,3,3.2169042113566846,0.0,Paso Robles Highlands District
+2020,paso_robles_highlands_district,4,4.706109826498931,0.0,Paso Robles Highlands District
+2020,paso_robles_highlands_district,5,6.749918249212301,0.0,Paso Robles Highlands District
+2020,paso_robles_highlands_district,6,7.746822460568985,0.0,Paso Robles Highlands District
+2020,paso_robles_highlands_district,7,7.960671758676203,0.0,Paso Robles Highlands District
+2020,paso_robles_highlands_district,8,7.6095414944803474,0.0,Paso Robles Highlands District
+2020,paso_robles_highlands_district,9,5.6561098264989305,0.0,Paso Robles Highlands District
+2020,paso_robles_highlands_district,10,4.248828860410295,0.0,Paso Robles Highlands District
+2020,paso_robles_highlands_district,11,2.508075350946391,0.0,Paso Robles Highlands District
+2020,paso_robles_highlands_district,12,1.9496232452680482,0.0,Paso Robles Highlands District
+2023,paso_robles_highlands_district,1,1.471530339430227,0.0,Paso Robles Highlands District
+2023,paso_robles_highlands_district,2,2.0864303450149277,0.0,Paso Robles Highlands District
+2023,paso_robles_highlands_district,3,2.776677904430316,0.0,Paso Robles Highlands District
+2023,paso_robles_highlands_district,4,4.933798809031458,0.0,Paso Robles Highlands District
+2023,paso_robles_highlands_district,5,5.999902898402153,0.0,Paso Robles Highlands District
+2023,paso_robles_highlands_district,6,6.504293927862236,0.0,Paso Robles Highlands District
+2023,paso_robles_highlands_district,7,8.526904571370762,0.0,Paso Robles Highlands District
+2023,paso_robles_highlands_district,8,7.355633374612186,0.0,Paso Robles Highlands District
+2023,paso_robles_highlands_district,9,5.189025994210823,0.0,Paso Robles Highlands District
+2023,paso_robles_highlands_district,10,4.106488148768829,0.0,Paso Robles Highlands District
+2023,paso_robles_highlands_district,11,2.5592989941763142,0.0,Paso Robles Highlands District
+2023,paso_robles_highlands_district,12,1.655415803822061,0.0,Paso Robles Highlands District
+2024,paso_robles_highlands_district,1,1.5369487450451613,0.0,Paso Robles Highlands District
+2024,paso_robles_highlands_district,2,1.9816205296468015,0.0,Paso Robles Highlands District
+2024,paso_robles_highlands_district,3,3.3407874153942974,0.0,Paso Robles Highlands District
+2024,paso_robles_highlands_district,4,4.73940261317669,0.0,Paso Robles Highlands District
+2024,paso_robles_highlands_district,5,6.6388280757824845,0.0,Paso Robles Highlands District
+2024,paso_robles_highlands_district,6,7.9595975060207405,0.0,Paso Robles Highlands District
+2024,paso_robles_highlands_district,7,8.739666278540273,0.0,Paso Robles Highlands District
+2024,paso_robles_highlands_district,8,7.818798665911891,0.0,Paso Robles Highlands District
+2024,paso_robles_highlands_district,9,6.025605001644923,0.0,Paso Robles Highlands District
+2024,paso_robles_highlands_district,10,4.465418365410793,0.0,Paso Robles Highlands District
+2024,paso_robles_highlands_district,11,2.228490773626306,0.0,Paso Robles Highlands District
+2024,paso_robles_highlands_district,12,1.5907725983428889,0.0,Paso Robles Highlands District
+2023,paso_robles_willow_creek_district,1,1.4431405472140708,0.0,Paso Robles Willow Creek District
+2023,paso_robles_willow_creek_district,2,2.128953150928643,0.0,Paso Robles Willow Creek District
+2023,paso_robles_willow_creek_district,3,2.675812603714572,0.0,Paso Robles Willow Creek District
+2023,paso_robles_willow_creek_district,4,4.555344113001003,0.0,Paso Robles Willow Creek District
+2023,paso_robles_willow_creek_district,5,5.276969320430146,0.0,Paso Robles Willow Creek District
+2023,paso_robles_willow_creek_district,6,5.833828773216076,0.0,Paso Robles Willow Creek District
+2023,paso_robles_willow_creek_district,7,7.473360282502505,0.0,Paso Robles Willow Creek District
+2023,paso_robles_willow_creek_district,8,6.556500829716577,0.0,Paso Robles Willow Creek District
+2023,paso_robles_willow_creek_district,9,4.566969320430146,0.0,Paso Robles Willow Creek District
+2023,paso_robles_willow_creek_district,10,3.877437811143716,0.0,Paso Robles Willow Creek District
+2023,paso_robles_willow_creek_district,11,2.475812603714572,0.0,Paso Robles Willow Creek District
+2023,paso_robles_willow_creek_district,12,1.568953150928643,0.0,Paso Robles Willow Creek District
+2024,paso_robles_willow_creek_district,1,1.5369386483274914,0.0,Paso Robles Willow Creek District
+2024,paso_robles_willow_creek_district,2,1.9189795494424975,0.0,Paso Robles Willow Creek District
+2024,paso_robles_willow_creek_district,3,3.1848977472124855,0.0,Paso Robles Willow Creek District
+2024,paso_robles_willow_creek_district,4,4.231631889964948,0.0,Paso Robles Willow Creek District
+2024,paso_robles_willow_creek_district,5,5.749386483274914,0.0,Paso Robles Willow Creek District
+2024,paso_robles_willow_creek_district,6,6.892243329372392,0.0,Paso Robles Willow Creek District
+2024,paso_robles_willow_creek_district,7,7.510202428257387,0.0,Paso Robles Willow Creek District
+2024,paso_robles_willow_creek_district,8,6.852447834947421,0.0,Paso Robles Willow Creek District
+2024,paso_robles_willow_creek_district,9,5.2834682855049255,0.0,Paso Robles Willow Creek District
+2024,paso_robles_willow_creek_district,10,4.092652340522451,0.0,Paso Robles Willow Creek District
+2024,paso_robles_willow_creek_district,11,2.1259181977699884,0.0,Paso Robles Willow Creek District
+2024,paso_robles_willow_creek_district,12,1.6589795494424973,0.0,Paso Robles Willow Creek District
+2023,paulsell_valley,1,1.1315209934192767,0.0,Paulsell Valley
+2023,paulsell_valley,2,1.5931815587343414,0.0,Paulsell Valley
+2023,paulsell_valley,3,2.3264071624700327,0.0,Paulsell Valley
+2023,paulsell_valley,4,4.245466767309126,0.0,Paulsell Valley
+2023,paulsell_valley,5,5.2864660812548605,0.0,Paulsell Valley
+2023,paulsell_valley,6,6.173578540095574,0.0,Paulsell Valley
+2023,paulsell_valley,7,7.43182988477781,0.0,Paulsell Valley
+2023,paulsell_valley,8,6.436091410568846,0.0,Paulsell Valley
+2023,paulsell_valley,9,4.480823133940335,0.0,Paulsell Valley
+2023,paulsell_valley,10,2.978163254679536,0.0,Paulsell Valley
+2023,paulsell_valley,11,1.529816383102862,0.0,Paulsell Valley
+2023,paulsell_valley,12,0.9595298024195466,0.0,Paulsell Valley
+2024,paulsell_valley,1,1.106260190700501,0.0,Paulsell Valley
+2024,paulsell_valley,2,1.71,0.0,Paulsell Valley
+2024,paulsell_valley,3,3.080934952324875,0.0,Paulsell Valley
+2024,paulsell_valley,4,4.3518699046497495,0.0,Paulsell Valley
+2024,paulsell_valley,5,6.64186990464975,0.0,Paulsell Valley
+2024,paulsell_valley,6,8.13560971394925,0.0,Paulsell Valley
+2024,paulsell_valley,7,8.640284475573623,0.0,Paulsell Valley
+2024,paulsell_valley,8,7.321219427898498,0.0,Paulsell Valley
+2024,paulsell_valley,9,5.459349523248749,0.0,Paulsell Valley
+2024,paulsell_valley,10,3.74186990464975,0.0,Paulsell Valley
+2024,paulsell_valley,11,1.6709349523248749,0.0,Paulsell Valley
+2024,paulsell_valley,12,0.94,0.0,Paulsell Valley
+2024,petaluma_gap,1,1.0542514991296006,0.0,Petaluma Gap
+2024,petaluma_gap,2,1.6120435477458046,0.0,Petaluma Gap
+2024,petaluma_gap,3,2.827283340556352,0.0,Petaluma Gap
+2024,petaluma_gap,4,4.014668769854852,0.0,Petaluma Gap
+2024,petaluma_gap,5,5.400395770438844,0.0,Petaluma Gap
+2024,petaluma_gap,6,6.195676870006715,0.0,Petaluma Gap
+2024,petaluma_gap,7,6.641359228034117,0.0,Petaluma Gap
+2024,petaluma_gap,8,5.757529111194783,0.0,Petaluma Gap
+2024,petaluma_gap,9,4.518869222586997,0.0,Petaluma Gap
+2024,petaluma_gap,10,3.4464861488783827,0.0,Petaluma Gap
+2024,petaluma_gap,11,1.5517085279103182,0.0,Petaluma Gap
+2024,petaluma_gap,12,0.8949902270394813,0.0,Petaluma Gap
+2021,pine_mountain_cloverdale_peak,1,1.1549506221502197,0.0,Pine Mountain-Cloverdale Peak
+2021,pine_mountain_cloverdale_peak,2,1.9799999999999995,0.0,Pine Mountain-Cloverdale Peak
+2021,pine_mountain_cloverdale_peak,3,3.108688277687774,0.0,Pine Mountain-Cloverdale Peak
+2021,pine_mountain_cloverdale_peak,4,-192286.13829210756,0.0,Pine Mountain-Cloverdale Peak
+2021,pine_mountain_cloverdale_peak,5,6.288589521988214,0.0,Pine Mountain-Cloverdale Peak
+2021,pine_mountain_cloverdale_peak,6,6.7635401441384335,0.0,Pine Mountain-Cloverdale Peak
+2021,pine_mountain_cloverdale_peak,7,6.873540144138435,0.0,Pine Mountain-Cloverdale Peak
+2021,pine_mountain_cloverdale_peak,8,6.1835401441384334,0.0,Pine Mountain-Cloverdale Peak
+2021,pine_mountain_cloverdale_peak,9,4.8536388998379945,0.0,Pine Mountain-Cloverdale Peak
+2021,pine_mountain_cloverdale_peak,10,2.756262344462445,0.0,Pine Mountain-Cloverdale Peak
+2021,pine_mountain_cloverdale_peak,11,1.3812129666126647,0.0,Pine Mountain-Cloverdale Peak
+2021,pine_mountain_cloverdale_peak,12,0.701212966612665,0.0,Pine Mountain-Cloverdale Peak
+2024,pine_mountain_cloverdale_peak,1,0.9640713894096924,0.0,Pine Mountain-Cloverdale Peak
+2024,pine_mountain_cloverdale_peak,2,1.5240713894096927,0.0,Pine Mountain-Cloverdale Peak
+2024,pine_mountain_cloverdale_peak,3,2.608142778819385,0.0,Pine Mountain-Cloverdale Peak
+2024,pine_mountain_cloverdale_peak,4,4.092214168229077,0.0,Pine Mountain-Cloverdale Peak
+2024,pine_mountain_cloverdale_peak,5,5.84257111527754,0.0,Pine Mountain-Cloverdale Peak
+2024,pine_mountain_cloverdale_peak,6,6.696642504687232,0.0,Pine Mountain-Cloverdale Peak
+2024,pine_mountain_cloverdale_peak,7,6.862928062326002,0.0,Pine Mountain-Cloverdale Peak
+2024,pine_mountain_cloverdale_peak,8,5.810356947048462,0.0,Pine Mountain-Cloverdale Peak
+2024,pine_mountain_cloverdale_peak,9,4.584428336458155,0.0,Pine Mountain-Cloverdale Peak
+2024,pine_mountain_cloverdale_peak,10,3.364071389409693,0.0,Pine Mountain-Cloverdale Peak
+2024,pine_mountain_cloverdale_peak,11,1.3659286105903077,0.0,Pine Mountain-Cloverdale Peak
+2024,pine_mountain_cloverdale_peak,12,0.8122141682290774,0.0,Pine Mountain-Cloverdale Peak
+2021,potter_valley,1,1.25,0.0,Potter Valley
+2021,potter_valley,2,2.17,0.0,Potter Valley
+2021,potter_valley,3,3.35,0.0,Potter Valley
+2021,potter_valley,4,-180970.64,0.0,Potter Valley
+2021,potter_valley,5,6.79,0.0,Potter Valley
+2021,potter_valley,6,7.41,0.0,Potter Valley
+2021,potter_valley,7,7.54,0.0,Potter Valley
+2021,potter_valley,8,6.8,0.0,Potter Valley
+2021,potter_valley,9,5.2,0.0,Potter Valley
+2021,potter_valley,10,2.86,0.0,Potter Valley
+2021,potter_valley,11,1.48,0.0,Potter Valley
+2021,potter_valley,12,0.72,0.0,Potter Valley
+2024,potter_valley,1,1.01,0.0,Potter Valley
+2024,potter_valley,2,1.6400000000000001,0.0,Potter Valley
+2024,potter_valley,3,2.68,0.0,Potter Valley
+2024,potter_valley,4,4.15,0.0,Potter Valley
+2024,potter_valley,5,6.29,0.0,Potter Valley
+2024,potter_valley,6,7.0600000000000005,0.0,Potter Valley
+2024,potter_valley,7,7.31,0.0,Potter Valley
+2024,potter_valley,8,6.03,0.0,Potter Valley
+2024,potter_valley,9,4.95,0.0,Potter Valley
+2024,potter_valley,10,3.45,0.0,Potter Valley
+2024,potter_valley,11,1.45,0.0,Potter Valley
+2024,potter_valley,12,0.86,0.0,Potter Valley
+2023,ramona_valley,1,2.08,0.0,Ramona Valley
+2023,ramona_valley,2,2.74,0.0,Ramona Valley
+2023,ramona_valley,3,3.21,0.0,Ramona Valley
+2023,ramona_valley,4,5.0,0.0,Ramona Valley
+2023,ramona_valley,5,5.38,0.0,Ramona Valley
+2023,ramona_valley,6,6.08,0.0,Ramona Valley
+2023,ramona_valley,7,7.49,0.0,Ramona Valley
+2023,ramona_valley,8,6.69,0.0,Ramona Valley
+2023,ramona_valley,9,4.8100000000000005,0.0,Ramona Valley
+2023,ramona_valley,10,4.47,0.0,Ramona Valley
+2023,ramona_valley,11,3.27,0.0,Ramona Valley
+2023,ramona_valley,12,2.5900000000000003,0.0,Ramona Valley
+2024,ramona_valley,1,2.54,0.0,Ramona Valley
+2024,ramona_valley,2,2.72,0.0,Ramona Valley
+2024,ramona_valley,3,3.66,0.0,Ramona Valley
+2024,ramona_valley,4,4.95,0.0,Ramona Valley
+2024,ramona_valley,5,5.87,0.0,Ramona Valley
+2024,ramona_valley,6,6.92,0.0,Ramona Valley
+2024,ramona_valley,7,7.36,0.0,Ramona Valley
+2024,ramona_valley,8,6.99,0.0,Ramona Valley
+2024,ramona_valley,9,5.59,0.0,Ramona Valley
+2024,ramona_valley,10,4.13,0.0,Ramona Valley
+2024,ramona_valley,11,2.74,0.0,Ramona Valley
+2024,ramona_valley,12,2.25,0.0,Ramona Valley
+2020,red_hills_lake_county,1,0.013145197336031826,0.0,Red Hills Lake County
+2020,red_hills_lake_county,2,0.03407020534032739,0.0,Red Hills Lake County
+2020,red_hills_lake_county,3,0.03970386134148388,0.0,Red Hills Lake County
+2020,red_hills_lake_county,4,0.059019253345449024,0.0,Red Hills Lake County
+2020,red_hills_lake_county,5,0.07296925868164607,0.0,Red Hills Lake County
+2020,red_hills_lake_county,6,0.09121157335205757,0.0,Red Hills Lake County
+2020,red_hills_lake_county,7,0.09161397735214018,0.0,Red Hills Lake County
+2020,red_hills_lake_county,8,0.08370003201718225,0.0,Red Hills Lake County
+2020,red_hills_lake_county,9,0.06532358268007653,0.0,Red Hills Lake County
+2020,red_hills_lake_county,10,0.052044250677350495,0.0,Red Hills Lake County
+2020,red_hills_lake_county,11,0.023071162671402797,0.0,Red Hills Lake County
+2020,red_hills_lake_county,12,0.016498564003386885,0.0,Red Hills Lake County
+2023,red_hills_lake_county,1,1.2308019267385861,0.0,Red Hills Lake County
+2023,red_hills_lake_county,2,1.6867079302885537,0.0,Red Hills Lake County
+2023,red_hills_lake_county,3,2.379324952679586,0.0,Red Hills Lake County
+2023,red_hills_lake_county,4,4.502881242751384,0.0,Red Hills Lake County
+2023,red_hills_lake_county,5,5.18234662492566,0.0,Red Hills Lake County
+2023,red_hills_lake_county,6,6.112142755721884,0.0,Red Hills Lake County
+2023,red_hills_lake_county,7,7.008452811193655,0.0,Red Hills Lake County
+2023,red_hills_lake_county,8,6.006300191881002,0.0,Red Hills Lake County
+2023,red_hills_lake_county,9,4.287914506882181,0.0,Red Hills Lake County
+2023,red_hills_lake_county,10,3.156440621375692,0.0,Red Hills Lake County
+2023,red_hills_lake_county,11,1.6934860753244527,0.0,Red Hills Lake County
+2023,red_hills_lake_county,12,0.848455899746165,0.0,Red Hills Lake County
+2024,red_hills_lake_county,1,0.9343049483689645,0.0,Red Hills Lake County
+2024,red_hills_lake_county,2,1.5382096352180579,0.0,Red Hills Lake County
+2024,red_hills_lake_county,3,2.799335333619137,0.0,Red Hills Lake County
+2024,red_hills_lake_county,4,4.337411548330571,0.0,Red Hills Lake County
+2024,red_hills_lake_county,5,6.348861204016859,0.0,Red Hills Lake County
+2024,red_hills_lake_county,6,7.052308513074119,0.0,Red Hills Lake County
+2024,red_hills_lake_county,7,7.329661727056601,0.0,Red Hills Lake County
+2024,red_hills_lake_county,8,6.075166241909051,0.0,Red Hills Lake County
+2024,red_hills_lake_county,9,4.829203131188642,0.0,Red Hills Lake County
+2024,red_hills_lake_county,10,3.5500024361522557,0.0,Red Hills Lake County
+2024,red_hills_lake_county,11,1.481125698401079,0.0,Red Hills Lake County
+2024,red_hills_lake_county,12,0.8016569442753185,0.0,Red Hills Lake County
+2021,redwood_valley,1,1.2797912202975592,0.0,Redwood Valley
+2021,redwood_valley,2,2.0806263391073228,0.0,Redwood Valley
+2021,redwood_valley,3,3.300347966170735,0.0,Redwood Valley
+2021,redwood_valley,4,-181709.8296884298,0.0,Redwood Valley
+2021,redwood_valley,5,6.710556745873176,0.0,Redwood Valley
+2021,redwood_valley,6,7.330556745873176,0.0,Redwood Valley
+2021,redwood_valley,7,7.549930406765854,0.0,Redwood Valley
+2021,redwood_valley,8,6.889373660892677,0.0,Redwood Valley
+2021,redwood_valley,9,5.170208779702441,0.0,Redwood Valley
+2021,redwood_valley,10,2.86,0.0,Redwood Valley
+2021,redwood_valley,11,1.5197216270634122,0.0,Redwood Valley
+2021,redwood_valley,12,0.7895128473609713,0.0,Redwood Valley
+2024,redwood_valley,1,1.0795240803341433,0.0,Redwood Valley
+2024,redwood_valley,2,1.699592068857837,0.0,Redwood Valley
+2024,redwood_valley,3,2.6601359770473882,0.0,Redwood Valley
+2024,redwood_valley,4,4.150000000000001,0.0,Redwood Valley
+2024,redwood_valley,5,6.101291781950183,0.0,Redwood Valley
+2024,redwood_valley,6,6.93088385080802,0.0,Redwood Valley
+2024,redwood_valley,7,7.190815862284326,0.0,Redwood Valley
+2024,redwood_valley,8,5.9902719540947755,0.0,Redwood Valley
+2024,redwood_valley,9,4.940067988523695,0.0,Redwood Valley
+2024,redwood_valley,10,3.45,0.0,Redwood Valley
+2024,redwood_valley,11,1.4202039655710814,0.0,Redwood Valley
+2024,redwood_valley,12,0.8997280459052247,0.0,Redwood Valley
+2023,river_junction,1,1.29,0.0,River Junction
+2023,river_junction,2,1.81,0.0,River Junction
+2023,river_junction,3,2.66,0.0,River Junction
+2023,river_junction,4,4.88,0.0,River Junction
+2023,river_junction,5,5.77,0.0,River Junction
+2023,river_junction,6,6.87,0.0,River Junction
+2023,river_junction,7,8.200000000000001,0.0,River Junction
+2023,river_junction,8,7.13,0.0,River Junction
+2023,river_junction,9,5.0200000000000005,0.0,River Junction
+2023,river_junction,10,3.56,0.0,River Junction
+2023,river_junction,11,1.84,0.0,River Junction
+2023,river_junction,12,1.07,0.0,River Junction
+2021,rockpile,1,0.29340460070560187,0.0,Rockpile
+2021,rockpile,2,0.5095974643834137,0.0,Rockpile
+2021,rockpile,3,0.7952808913862366,0.0,Rockpile
+2021,rockpile,4,-49250.857668573815,0.0,Rockpile
+2021,rockpile,5,1.6060041301780312,0.0,Rockpile
+2021,rockpile,6,1.7243954602873093,0.0,Rockpile
+2021,rockpile,7,1.7527064305308322,0.0,Rockpile
+2021,rockpile,8,1.5751194353669153,0.0,Rockpile
+2021,rockpile,9,1.2405352415798254,0.0,Rockpile
+2021,rockpile,10,0.7103479806556677,0.0,Rockpile
+2021,rockpile,11,0.35260026576024084,0.0,Rockpile
+2021,rockpile,12,0.17758699516391693,0.0,Rockpile
+2024,rockpile,1,0.975276017426147,0.0,Rockpile
+2024,rockpile,2,1.52,0.0,Rockpile
+2024,rockpile,3,2.653466060991515,0.0,Rockpile
+2024,rockpile,4,4.08,0.0,Rockpile
+2024,rockpile,5,5.832914026139219,0.0,Rockpile
+2024,rockpile,6,6.690552034852294,0.0,Rockpile
+2024,rockpile,7,6.8863800871307355,0.0,Rockpile
+2024,rockpile,8,5.820552034852294,0.0,Rockpile
+2024,rockpile,9,4.598190043565368,0.0,Rockpile
+2024,rockpile,10,3.398190043565368,0.0,Rockpile
+2024,rockpile,11,1.3929140261392206,0.0,Rockpile
+2024,rockpile,12,0.8152760174261471,0.0,Rockpile
+2024,russian_river_valley,1,1.014100291983715,0.0,Russian River Valley
+2024,russian_river_valley,2,1.55082169682256,0.0,Russian River Valley
+2024,russian_river_valley,3,2.721098761700006,0.0,Russian River Valley
+2024,russian_river_valley,4,4.052567590799361,0.0,Russian River Valley
+2024,russian_river_valley,5,5.4782785715798905,0.0,Russian River Valley
+2024,russian_river_valley,6,6.388387386635151,0.0,Russian River Valley
+2024,russian_river_valley,7,6.650246917647052,0.0,Russian River Valley
+2024,russian_river_valley,8,5.757927759065025,0.0,Russian River Valley
+2024,russian_river_valley,9,4.4994337905405075,0.0,Russian River Valley
+2024,russian_river_valley,10,3.384422666480577,0.0,Russian River Valley
+2024,russian_river_valley,11,1.446224697769797,0.0,Russian River Valley
+2024,russian_river_valley,12,0.8647002805566157,0.0,Russian River Valley
+2024,rutherford,1,1.0113963948281912,0.0,Rutherford
+2024,rutherford,2,1.6330396997798662,0.0,Rutherford
+2024,rutherford,3,2.9964664799731673,0.0,Rutherford
+2024,rutherford,4,4.384124977607398,0.0,Rutherford
+2024,rutherford,5,6.378143215381263,0.0,Rutherford
+2024,rutherford,6,7.161429825284611,0.0,Rutherford
+2024,rutherford,7,7.578422228943334,0.0,Rutherford
+2024,rutherford,8,6.458175318819851,0.0,Rutherford
+2024,rutherford,9,5.086885663825191,0.0,Rutherford
+2024,rutherford,10,3.7497530898765166,0.0,Rutherford
+2024,rutherford,11,1.653039699779866,0.0,Rutherford
+2024,rutherford,12,0.8602790135620719,0.0,Rutherford
+2024,saddle_rock_malibu,1,1.9060572383921004,0.0,Saddle Rock-Malibu
+2024,saddle_rock_malibu,2,2.0400357739950628,0.0,Saddle Rock-Malibu
+2024,saddle_rock_malibu,3,3.214014309598025,0.0,Saddle Rock-Malibu
+2024,saddle_rock_malibu,4,3.8701073219851883,0.0,Saddle Rock-Malibu
+2024,saddle_rock_malibu,5,3.9382790371614878,0.0,Saddle Rock-Malibu
+2024,saddle_rock_malibu,6,4.82437204954865,0.0,Saddle Rock-Malibu
+2024,saddle_rock_malibu,7,5.434479371533838,0.0,Saddle Rock-Malibu
+2024,saddle_rock_malibu,8,5.346307656357538,0.0,Saddle Rock-Malibu
+2024,saddle_rock_malibu,9,4.148279037161488,0.0,Saddle Rock-Malibu
+2024,saddle_rock_malibu,10,3.1362003343723504,0.0,Saddle Rock-Malibu
+2024,saddle_rock_malibu,11,2.586021464397038,0.0,Saddle Rock-Malibu
+2024,saddle_rock_malibu,12,1.8240500835930877,0.0,Saddle Rock-Malibu
+2023,salado_creek,1,1.24,0.0,Salado Creek
+2023,salado_creek,2,1.76,0.0,Salado Creek
+2023,salado_creek,3,2.65,0.0,Salado Creek
+2023,salado_creek,4,4.7,0.0,Salado Creek
+2023,salado_creek,5,5.48,0.0,Salado Creek
+2023,salado_creek,6,6.51,0.0,Salado Creek
+2023,salado_creek,7,7.74,0.0,Salado Creek
+2023,salado_creek,8,6.68,0.0,Salado Creek
+2023,salado_creek,9,4.7700000000000005,0.0,Salado Creek
+2023,salado_creek,10,3.5,0.0,Salado Creek
+2023,salado_creek,11,1.8800000000000001,0.0,Salado Creek
+2023,salado_creek,12,1.07,0.0,Salado Creek
+2024,salado_creek,1,1.07,0.0,Salado Creek
+2024,salado_creek,2,1.73,0.0,Salado Creek
+2024,salado_creek,3,3.11,0.0,Salado Creek
+2024,salado_creek,4,4.38,0.0,Salado Creek
+2024,salado_creek,5,6.43,0.0,Salado Creek
+2024,salado_creek,6,7.65,0.0,Salado Creek
+2024,salado_creek,7,8.13,0.0,Salado Creek
+2024,salado_creek,8,7.0,0.0,Salado Creek
+2024,salado_creek,9,5.29,0.0,Salado Creek
+2024,salado_creek,10,3.83,0.0,Salado Creek
+2024,salado_creek,11,1.8,0.0,Salado Creek
+2024,salado_creek,12,0.89,0.0,Salado Creek
+2023,san_antonio_valley,1,1.4625264179774238,0.0,San Antonio Valley
+2023,san_antonio_valley,2,2.153629789958024,0.0,San Antonio Valley
+2023,san_antonio_valley,3,2.722092273132203,0.0,San Antonio Valley
+2023,san_antonio_valley,4,4.572613667990627,0.0,San Antonio Valley
+2023,san_antonio_valley,5,5.192707058635994,0.0,San Antonio Valley
+2023,san_antonio_valley,6,5.8527219981874605,0.0,San Antonio Valley
+2023,san_antonio_valley,7,7.362360163803976,0.0,San Antonio Valley
+2023,san_antonio_valley,8,6.477988836248836,0.0,San Antonio Valley
+2023,san_antonio_valley,9,4.535468558903577,0.0,San Antonio Valley
+2023,san_antonio_valley,10,4.029674185351613,0.0,San Antonio Valley
+2023,san_antonio_valley,11,2.5423062752387313,0.0,San Antonio Valley
+2023,san_antonio_valley,12,1.5805547563063822,0.0,San Antonio Valley
+2024,san_antonio_valley,1,1.5296120584285073,0.0,San Antonio Valley
+2024,san_antonio_valley,2,1.9346350031406905,0.0,San Antonio Valley
+2024,san_antonio_valley,3,3.2571911730385033,0.0,San Antonio Valley
+2024,san_antonio_valley,4,4.326241151500506,0.0,San Antonio Valley
+2024,san_antonio_valley,5,5.700270569015617,0.0,San Antonio Valley
+2024,san_antonio_valley,6,6.845990878202112,0.0,San Antonio Valley
+2024,san_antonio_valley,7,7.395980001787343,0.0,San Antonio Valley
+2024,san_antonio_valley,8,6.733765884036657,0.0,San Antonio Valley
+2024,san_antonio_valley,9,5.293388818879934,0.0,San Antonio Valley
+2024,san_antonio_valley,10,4.256938515974818,0.0,San Antonio Valley
+2024,san_antonio_valley,11,2.1975223487708604,0.0,San Antonio Valley
+2024,san_antonio_valley,12,1.6559947190797182,0.0,San Antonio Valley
+2023,san_benito,1,1.3093676817942712,0.0,San Benito
+2023,san_benito,2,1.9072831677227329,0.0,San Benito
+2023,san_benito,3,2.6197625492406136,0.0,San Benito
+2023,san_benito,4,4.746755723441024,0.0,San Benito
+2023,san_benito,5,5.547967817089544,0.0,San Benito
+2023,san_benito,6,6.372479169916025,0.0,San Benito
+2023,san_benito,7,7.996253119010904,0.0,San Benito
+2023,san_benito,8,6.799157510742521,0.0,San Benito
+2023,san_benito,9,4.895066076815828,0.0,San Benito
+2023,san_benito,10,3.9620069198551557,0.0,San Benito
+2023,san_benito,11,2.3000549826189847,0.0,San Benito
+2023,san_benito,12,1.3150412369642384,0.0,San Benito
+2024,san_benito,1,1.2798677281707092,0.0,San Benito
+2024,san_benito,2,1.8193679980531914,0.0,San Benito
+2024,san_benito,3,3.1898011030355455,0.0,San Benito
+2024,san_benito,4,4.554069163385991,0.0,San Benito
+2024,san_benito,5,6.455555045353028,0.0,San Benito
+2024,san_benito,6,7.630449431898562,0.0,San Benito
+2024,san_benito,7,8.13767390770791,0.0,San Benito
+2024,san_benito,8,7.157999400749934,0.0,San Benito
+2024,san_benito,9,5.594044503497032,0.0,San Benito
+2024,san_benito,10,4.3258815168360885,0.0,San Benito
+2024,san_benito,11,2.0886094000288136,0.0,San Benito
+2024,san_benito,12,1.2347744446607218,0.0,San Benito
+2023,san_bernabe,1,1.4300000000000002,0.0,San Bernabe
+2023,san_bernabe,2,2.14,0.0,San Bernabe
+2023,san_bernabe,3,2.69,0.0,San Bernabe
+2023,san_bernabe,4,4.77,0.0,San Bernabe
+2023,san_bernabe,5,5.5,0.0,San Bernabe
+2023,san_bernabe,6,6.24,0.0,San Bernabe
+2023,san_bernabe,7,7.9,0.0,San Bernabe
+2023,san_bernabe,8,6.86,0.0,San Bernabe
+2023,san_bernabe,9,4.83,0.0,San Bernabe
+2023,san_bernabe,10,4.22,0.0,San Bernabe
+2023,san_bernabe,11,2.5700000000000003,0.0,San Bernabe
+2023,san_bernabe,12,1.53,0.0,San Bernabe
+2024,san_bernabe,1,1.46,0.0,San Bernabe
+2024,san_bernabe,2,1.9300000000000002,0.0,San Bernabe
+2024,san_bernabe,3,3.35,0.0,San Bernabe
+2024,san_bernabe,4,4.6,0.0,San Bernabe
+2024,san_bernabe,5,6.22,0.0,San Bernabe
+2024,san_bernabe,6,7.44,0.0,San Bernabe
+2024,san_bernabe,7,7.99,0.0,San Bernabe
+2024,san_bernabe,8,7.17,0.0,San Bernabe
+2024,san_bernabe,9,5.66,0.0,San Bernabe
+2024,san_bernabe,10,4.54,0.0,San Bernabe
+2024,san_bernabe,11,2.23,0.0,San Bernabe
+2024,san_bernabe,12,1.54,0.0,San Bernabe
+2021,san_francisco_bay,1,0.6183211452989138,0.0,San Francisco Bay
+2021,san_francisco_bay,2,0.9547605920056756,0.0,San Francisco Bay
+2021,san_francisco_bay,3,1.5321634262186319,0.0,San Francisco Bay
+2021,san_francisco_bay,4,-138087.77913729646,0.0,San Francisco Bay
+2021,san_francisco_bay,5,2.8779212130456795,0.0,San Francisco Bay
+2021,san_francisco_bay,6,3.0643268524372638,0.0,San Francisco Bay
+2021,san_francisco_bay,7,3.0961522055041195,0.0,San Francisco Bay
+2021,san_francisco_bay,8,2.791538111864213,0.0,San Francisco Bay
+2021,san_francisco_bay,9,2.2323211936894607,0.0,San Francisco Bay
+2021,san_francisco_bay,10,1.3821296189034542,0.0,San Francisco Bay
+2021,san_francisco_bay,11,0.6774253724230745,0.0,San Francisco Bay
+2021,san_francisco_bay,12,0.3819042368022702,0.0,San Francisco Bay
+2023,san_francisco_bay,1,0.5594060558333712,0.0,San Francisco Bay
+2023,san_francisco_bay,2,0.7265104843825204,0.0,San Francisco Bay
+2023,san_francisco_bay,3,1.0393393599696614,0.0,San Francisco Bay
+2023,san_francisco_bay,4,1.6935209890260943,0.0,San Francisco Bay
+2023,san_francisco_bay,5,1.8536289470337695,0.0,San Francisco Bay
+2023,san_francisco_bay,6,2.1188680451963293,0.0,San Francisco Bay
+2023,san_francisco_bay,7,2.5083464339406425,0.0,San Francisco Bay
+2023,san_francisco_bay,8,2.2213284919099836,0.0,San Francisco Bay
+2023,san_francisco_bay,9,1.619869658259237,0.0,San Francisco Bay
+2023,san_francisco_bay,10,1.3744988613398712,0.0,San Francisco Bay
+2023,san_francisco_bay,11,0.8374932655618412,0.0,San Francisco Bay
+2023,san_francisco_bay,12,0.4845620853293403,0.0,San Francisco Bay
+2024,san_francisco_bay,1,0.5505205747385357,0.0,San Francisco Bay
+2024,san_francisco_bay,2,0.8266691465175078,0.0,San Francisco Bay
+2024,san_francisco_bay,3,1.3253764951134333,0.0,San Francisco Bay
+2024,san_francisco_bay,4,1.808011411911195,0.0,San Francisco Bay
+2024,san_francisco_bay,5,2.3314862848985984,0.0,San Francisco Bay
+2024,san_francisco_bay,6,2.6708769836444075,0.0,San Francisco Bay
+2024,san_francisco_bay,7,2.8572683803237027,0.0,San Francisco Bay
+2024,san_francisco_bay,8,2.571364581959369,0.0,San Francisco Bay
+2024,san_francisco_bay,9,1.9904256045326343,0.0,San Francisco Bay
+2024,san_francisco_bay,10,1.6022300824552955,0.0,San Francisco Bay
+2024,san_francisco_bay,11,0.8556457439788375,0.0,San Francisco Bay
+2024,san_francisco_bay,12,0.5505224658879437,0.0,San Francisco Bay
+2020,san_juan_creek,1,1.5797329834575753,0.0,San Juan Creek
+2020,san_juan_creek,2,3.0004991258125013,0.0,San Juan Creek
+2020,san_juan_creek,3,3.2190785323286444,0.0,San Juan Creek
+2020,san_juan_creek,4,4.7292635228038105,0.0,San Juan Creek
+2020,san_juan_creek,5,6.805767884707165,0.0,San Juan Creek
+2020,san_juan_creek,6,7.819181496736552,0.0,San Juan Creek
+2020,san_juan_creek,7,8.027825475683779,0.0,San Juan Creek
+2020,san_juan_creek,8,7.650279228064988,0.0,San Juan Creek
+2020,san_juan_creek,9,5.673129141850789,0.0,San Juan Creek
+2020,san_juan_creek,10,4.242427571926948,0.0,San Juan Creek
+2020,san_juan_creek,11,2.493792319797808,0.0,San Juan Creek
+2020,san_juan_creek,12,1.9274729483696205,0.0,San Juan Creek
+2023,san_juan_creek,1,1.47,0.0,San Juan Creek
+2023,san_juan_creek,2,2.09,0.0,San Juan Creek
+2023,san_juan_creek,3,2.82,0.0,San Juan Creek
+2023,san_juan_creek,4,5.05,0.0,San Juan Creek
+2023,san_juan_creek,5,6.19,0.0,San Juan Creek
+2023,san_juan_creek,6,6.7,0.0,San Juan Creek
+2023,san_juan_creek,7,8.77,0.0,San Juan Creek
+2023,san_juan_creek,8,7.5600000000000005,0.0,San Juan Creek
+2023,san_juan_creek,9,5.32,0.0,San Juan Creek
+2023,san_juan_creek,10,4.16,0.0,San Juan Creek
+2023,san_juan_creek,11,2.57,0.0,San Juan Creek
+2023,san_juan_creek,12,1.6600000000000001,0.0,San Juan Creek
+2024,san_juan_creek,1,1.53,0.0,San Juan Creek
+2024,san_juan_creek,2,1.98,0.0,San Juan Creek
+2024,san_juan_creek,3,3.38,0.0,San Juan Creek
+2024,san_juan_creek,4,4.84,0.0,San Juan Creek
+2024,san_juan_creek,5,6.8,0.0,San Juan Creek
+2024,san_juan_creek,6,8.17,0.0,San Juan Creek
+2024,san_juan_creek,7,8.98,0.0,San Juan Creek
+2024,san_juan_creek,8,8.01,0.0,San Juan Creek
+2024,san_juan_creek,9,6.18,0.0,San Juan Creek
+2024,san_juan_creek,10,4.5600000000000005,0.0,San Juan Creek
+2024,san_juan_creek,11,2.25,0.0,San Juan Creek
+2024,san_juan_creek,12,1.57,0.0,San Juan Creek
+2023,san_lucas,1,1.4333968602089726,0.0,San Lucas
+2023,san_lucas,2,2.1428644675809525,0.0,San Lucas
+2023,san_lucas,3,2.6948290939994486,0.0,San Lucas
+2023,san_lucas,4,4.748224165302956,0.0,San Lucas
+2023,san_lucas,5,5.465671568590091,0.0,San Lucas
+2023,san_lucas,6,6.19851039963771,0.0,San Lucas
+2023,san_lucas,7,7.843130895691159,0.0,San Lucas
+2023,san_lucas,8,6.821577371659514,0.0,San Lucas
+2023,san_lucas,9,4.798700980264627,0.0,San Lucas
+2023,san_lucas,10,4.1993188916920134,0.0,San Lucas
+2023,san_lucas,11,2.566603139791028,0.0,San Lucas
+2023,san_lucas,12,1.536793720417945,0.0,San Lucas
+2024,san_lucas,1,1.4702057296722888,0.0,San Lucas
+2024,san_lucas,2,1.9291691671586784,0.0,San Lucas
+2024,san_lucas,3,3.3389045035922837,0.0,San Lucas
+2024,san_lucas,4,4.57123302010506,0.0,San Lucas
+2024,san_lucas,5,6.163514883437777,0.0,San Lucas
+2024,san_lucas,6,7.374051585765653,0.0,San Lucas
+2024,san_lucas,7,7.9265146173425665,0.0,San Lucas
+2024,san_lucas,8,7.124769456337724,0.0,San Lucas
+2024,san_lucas,9,5.620019655909132,0.0,San Lucas
+2024,san_lucas,10,4.5069904550572915,0.0,San Lucas
+2024,san_lucas,11,2.227696044915316,0.0,San Lucas
+2024,san_lucas,12,1.552786629037414,0.0,San Lucas
+2016,san_luis_obispo_coast,1,0.017944255350080478,0.0,San Luis Obispo Coast
+2016,san_luis_obispo_coast,2,0.03769584577139208,0.0,San Luis Obispo Coast
+2016,san_luis_obispo_coast,3,0.0422141834494699,0.0,San Luis Obispo Coast
+2016,san_luis_obispo_coast,4,0.05486552894808779,0.0,San Luis Obispo Coast
+2016,san_luis_obispo_coast,5,0.05886748517724244,0.0,San Luis Obispo Coast
+2016,san_luis_obispo_coast,6,0.07126063995139874,0.0,San Luis Obispo Coast
+2016,san_luis_obispo_coast,7,0.06893692343124443,0.0,San Luis Obispo Coast
+2016,san_luis_obispo_coast,8,0.060933010972935145,0.0,San Luis Obispo Coast
+2016,san_luis_obispo_coast,9,0.05525281503478018,0.0,San Luis Obispo Coast
+2016,san_luis_obispo_coast,10,0.04066503910270036,0.0,San Luis Obispo Coast
+2016,san_luis_obispo_coast,11,0.025819072446158962,0.0,San Luis Obispo Coast
+2016,san_luis_obispo_coast,12,0.019235208972388427,0.0,San Luis Obispo Coast
+2023,san_luis_obispo_coast,1,1.4764730293412431,0.0,San Luis Obispo Coast
+2023,san_luis_obispo_coast,2,2.034854870665156,0.0,San Luis Obispo Coast
+2023,san_luis_obispo_coast,3,2.5794167336193787,0.0,San Luis Obispo Coast
+2023,san_luis_obispo_coast,4,4.179923266556804,0.0,San Luis Obispo Coast
+2023,san_luis_obispo_coast,5,4.615698933605399,0.0,San Luis Obispo Coast
+2023,san_luis_obispo_coast,6,4.887170954747204,0.0,San Luis Obispo Coast
+2023,san_luis_obispo_coast,7,6.522105818359526,0.0,San Luis Obispo Coast
+2023,san_luis_obispo_coast,8,5.712606459910959,0.0,San Luis Obispo Coast
+2023,san_luis_obispo_coast,9,3.9908711505830157,0.0,San Luis Obispo Coast
+2023,san_luis_obispo_coast,10,3.508697385592667,0.0,San Luis Obispo Coast
+2023,san_luis_obispo_coast,11,2.358423730862613,0.0,San Luis Obispo Coast
+2023,san_luis_obispo_coast,12,1.5746922934982748,0.0,San Luis Obispo Coast
+2024,san_luis_obispo_coast,1,1.5655634899891302,0.0,San Luis Obispo Coast
+2024,san_luis_obispo_coast,2,1.9462929636963588,0.0,San Luis Obispo Coast
+2024,san_luis_obispo_coast,3,2.9626184848093504,0.0,San Luis Obispo Coast
+2024,san_luis_obispo_coast,4,3.8220241711098923,0.0,San Luis Obispo Coast
+2024,san_luis_obispo_coast,5,4.941502507952798,0.0,San Luis Obispo Coast
+2024,san_luis_obispo_coast,6,5.8317602416895875,0.0,San Luis Obispo Coast
+2024,san_luis_obispo_coast,7,6.391775526090731,0.0,San Luis Obispo Coast
+2024,san_luis_obispo_coast,8,6.074595405937817,0.0,San Luis Obispo Coast
+2024,san_luis_obispo_coast,9,4.526156575224044,0.0,San Luis Obispo Coast
+2024,san_luis_obispo_coast,10,3.4829954391787634,0.0,San Luis Obispo Coast
+2024,san_luis_obispo_coast,11,1.9945281157333183,0.0,San Luis Obispo Coast
+2024,san_luis_obispo_coast,12,1.6928082606077435,0.0,San Luis Obispo Coast
+2023,san_luis_rey,1,1.9667393762270948,0.0,San Luis Rey
+2023,san_luis_rey,2,2.5856050558385277,0.0,San Luis Rey
+2023,san_luis_rey,3,2.878910485757468,0.0,San Luis Rey
+2023,san_luis_rey,4,4.365662856790355,0.0,San Luis Rey
+2023,san_luis_rey,5,4.5202681125028406,0.0,San Luis Rey
+2023,san_luis_rey,6,5.221452655133781,0.0,San Luis Rey
+2023,san_luis_rey,7,6.973238912571048,0.0,San Luis Rey
+2023,san_luis_rey,8,6.2336769850092955,0.0,San Luis Rey
+2023,san_luis_rey,9,4.229496543302735,0.0,San Luis Rey
+2023,san_luis_rey,10,4.2640498395675595,0.0,San Luis Rey
+2023,san_luis_rey,11,3.271575153094096,0.0,San Luis Rey
+2023,san_luis_rey,12,2.6417624649802063,0.0,San Luis Rey
+2024,san_luis_rey,1,2.452340973986375,0.0,San Luis Rey
+2024,san_luis_rey,2,2.65224680757014,0.0,San Luis Rey
+2024,san_luis_rey,3,3.4720733055577857,0.0,San Luis Rey
+2024,san_luis_rey,4,4.474725284651399,0.0,San Luis Rey
+2024,san_luis_rey,5,4.856795302243221,0.0,San Luis Rey
+2024,san_luis_rey,6,6.135360258576005,0.0,San Luis Rey
+2024,san_luis_rey,7,6.899437368456138,0.0,San Luis Rey
+2024,san_luis_rey,8,6.533369003250287,0.0,San Luis Rey
+2024,san_luis_rey,9,5.063615149629917,0.0,San Luis Rey
+2024,san_luis_rey,10,3.877594645131186,0.0,San Luis Rey
+2024,san_luis_rey,11,2.629533846044411,0.0,San Luis Rey
+2024,san_luis_rey,12,2.122060818768857,0.0,San Luis Rey
+2023,san_miguel_district,1,1.4131920099314135,0.0,San Miguel District
+2023,san_miguel_district,2,2.0897880148971204,0.0,San Miguel District
+2023,san_miguel_district,3,2.6531920099314137,0.0,San Miguel District
+2023,san_miguel_district,4,4.811271910617278,0.0,San Miguel District
+2023,san_miguel_district,5,5.728927841097384,0.0,San Miguel District
+2023,san_miguel_district,6,6.322437828683117,0.0,San Miguel District
+2023,san_miguel_district,7,8.240517729368982,0.0,San Miguel District
+2023,san_miguel_district,8,7.112755806337436,0.0,San Miguel District
+2023,san_miguel_district,9,4.9116958808230375,0.0,San Miguel District
+2023,san_miguel_district,10,4.037443945377226,0.0,San Miguel District
+2023,san_miguel_district,11,2.493403995034293,0.0,San Miguel District
+2023,san_miguel_district,12,1.523086017379974,0.0,San Miguel District
+2024,san_miguel_district,1,1.4751703372500455,0.0,San Miguel District
+2024,san_miguel_district,2,1.887585168625023,0.0,San Miguel District
+2024,san_miguel_district,3,3.2548296627499544,0.0,San Miguel District
+2024,san_miguel_district,4,4.515801617274814,0.0,San Miguel District
+2024,san_miguel_district,5,6.3051202682746315,0.0,San Miguel District
+2024,san_miguel_district,6,7.591262560049537,0.0,San Miguel District
+2024,san_miguel_district,7,8.327955952999455,0.0,San Miguel District
+2024,san_miguel_district,8,7.43753509964961,0.0,San Miguel District
+2024,san_miguel_district,9,5.744358740424696,0.0,San Miguel District
+2024,san_miguel_district,10,4.38228458354981,0.0,San Miguel District
+2024,san_miguel_district,11,2.1948296627499544,0.0,San Miguel District
+2024,san_miguel_district,12,1.556272539600073,0.0,San Miguel District
+2023,san_pasqual_valley,1,2.059789347029517,0.0,San Pasqual Valley
+2023,san_pasqual_valley,2,2.7023420102721376,0.0,San Pasqual Valley
+2023,san_pasqual_valley,3,3.05,0.0,San Pasqual Valley
+2023,san_pasqual_valley,4,4.663184622154071,0.0,San Pasqual Valley
+2023,san_pasqual_valley,5,4.870842611881933,0.0,San Pasqual Valley
+2023,san_pasqual_valley,6,5.5831846221540715,0.0,San Pasqual Valley
+2023,san_pasqual_valley,7,7.093605928095037,0.0,San Pasqual Valley
+2023,san_pasqual_valley,8,6.365947938367175,0.0,San Pasqual Valley
+2023,san_pasqual_valley,9,4.477868642698346,0.0,San Pasqual Valley
+2023,san_pasqual_valley,10,4.350210652970484,0.0,San Pasqual Valley
+2023,san_pasqual_valley,11,3.337447336757379,0.0,San Pasqual Valley
+2023,san_pasqual_valley,12,2.6972366837868957,0.0,San Pasqual Valley
+2024,san_pasqual_valley,1,2.5549250241593056,0.0,San Pasqual Valley
+2024,san_pasqual_valley,2,2.734925024159306,0.0,San Pasqual Valley
+2024,san_pasqual_valley,3,3.565074975840695,0.0,San Pasqual Valley
+2024,san_pasqual_valley,4,4.695374879203474,0.0,San Pasqual Valley
+2024,san_pasqual_valley,5,5.29806231880521,0.0,San Pasqual Valley
+2024,san_pasqual_valley,6,6.418362222167989,0.0,San Pasqual Valley
+2024,san_pasqual_valley,7,7.010749758406947,0.0,San Pasqual Valley
+2024,san_pasqual_valley,8,6.65806231880521,0.0,San Pasqual Valley
+2024,san_pasqual_valley,9,5.312987342964515,0.0,San Pasqual Valley
+2024,san_pasqual_valley,10,3.965224927522084,0.0,San Pasqual Valley
+2024,san_pasqual_valley,11,2.727462512079653,0.0,San Pasqual Valley
+2024,san_pasqual_valley,12,2.177462512079653,0.0,San Pasqual Valley
+2023,san_ysidro_district,1,1.37,0.0,San Ysidro District
+2023,san_ysidro_district,2,1.81,0.0,San Ysidro District
+2023,san_ysidro_district,3,2.61,0.0,San Ysidro District
+2023,san_ysidro_district,4,4.29,0.0,San Ysidro District
+2023,san_ysidro_district,5,4.66,0.0,San Ysidro District
+2023,san_ysidro_district,6,5.37,0.0,San Ysidro District
+2023,san_ysidro_district,7,6.47,0.0,San Ysidro District
+2023,san_ysidro_district,8,5.68,0.0,San Ysidro District
+2023,san_ysidro_district,9,4.13,0.0,San Ysidro District
+2023,san_ysidro_district,10,3.5100000000000002,0.0,San Ysidro District
+2023,san_ysidro_district,11,2.11,0.0,San Ysidro District
+2023,san_ysidro_district,12,1.23,0.0,San Ysidro District
+2024,san_ysidro_district,1,1.19,0.0,San Ysidro District
+2024,san_ysidro_district,2,1.8,0.0,San Ysidro District
+2024,san_ysidro_district,3,2.99,0.0,San Ysidro District
+2024,san_ysidro_district,4,4.07,0.0,San Ysidro District
+2024,san_ysidro_district,5,5.37,0.0,San Ysidro District
+2024,san_ysidro_district,6,6.24,0.0,San Ysidro District
+2024,san_ysidro_district,7,6.63,0.0,San Ysidro District
+2024,san_ysidro_district,8,5.94,0.0,San Ysidro District
+2024,san_ysidro_district,9,4.61,0.0,San Ysidro District
+2024,san_ysidro_district,10,3.69,0.0,San Ysidro District
+2024,san_ysidro_district,11,1.91,0.0,San Ysidro District
+2024,san_ysidro_district,12,1.18,0.0,San Ysidro District
+2023,santa_clara_valley,1,1.3214590326329414,0.0,Santa Clara Valley
+2023,santa_clara_valley,2,1.7638216315901085,0.0,Santa Clara Valley
+2023,santa_clara_valley,3,2.5298496403793864,0.0,Santa Clara Valley
+2023,santa_clara_valley,4,4.2311604374771825,0.0,Santa Clara Valley
+2023,santa_clara_valley,5,4.649422408982992,0.0,Santa Clara Valley
+2023,santa_clara_valley,6,5.366988535043785,0.0,Santa Clara Valley
+2023,santa_clara_valley,7,6.465720881480967,0.0,Santa Clara Valley
+2023,santa_clara_valley,8,5.658342674430873,0.0,Santa Clara Valley
+2023,santa_clara_valley,9,4.105722848416598,0.0,Santa Clara Valley
+2023,santa_clara_valley,10,3.4412071542729232,0.0,Santa Clara Valley
+2023,santa_clara_valley,11,2.0616305658535907,0.0,Santa Clara Valley
+2023,santa_clara_valley,12,1.1800524745092666,0.0,Santa Clara Valley
+2024,santa_clara_valley,1,1.1865952725090005,0.0,Santa Clara Valley
+2024,santa_clara_valley,2,1.785345465787002,0.0,Santa Clara Valley
+2024,santa_clara_valley,3,2.9771019152951266,0.0,Santa Clara Valley
+2024,santa_clara_valley,4,4.090263282627274,0.0,Santa Clara Valley
+2024,santa_clara_valley,5,5.46094866853001,0.0,Santa Clara Valley
+2024,santa_clara_valley,6,6.349121683491198,0.0,Santa Clara Valley
+2024,santa_clara_valley,7,6.742140806558755,0.0,Santa Clara Valley
+2024,santa_clara_valley,8,6.015940197883898,0.0,Santa Clara Valley
+2024,santa_clara_valley,9,4.664461184974112,0.0,Santa Clara Valley
+2024,santa_clara_valley,10,3.700936740831339,0.0,Santa Clara Valley
+2024,santa_clara_valley,11,1.9159418770683874,0.0,Santa Clara Valley
+2024,santa_clara_valley,12,1.1643337935233218,0.0,Santa Clara Valley
+2023,santa_cruz_mountains,1,1.0694015095666738,0.0,Santa Cruz Mountains
+2023,santa_cruz_mountains,2,1.3320656257046082,0.0,Santa Cruz Mountains
+2023,santa_cruz_mountains,3,1.8947660322868547,0.0,Santa Cruz Mountains
+2023,santa_cruz_mountains,4,2.9380433725013324,0.0,Santa Cruz Mountains
+2023,santa_cruz_mountains,5,3.193447871276239,0.0,Santa Cruz Mountains
+2023,santa_cruz_mountains,6,3.5760422740679867,0.0,Santa Cruz Mountains
+2023,santa_cruz_mountains,7,4.097516189174189,0.0,Santa Cruz Mountains
+2023,santa_cruz_mountains,8,3.7059771474083982,0.0,Santa Cruz Mountains
+2023,santa_cruz_mountains,9,2.73182233499064,0.0,Santa Cruz Mountains
+2023,santa_cruz_mountains,10,2.3905965163216276,0.0,Santa Cruz Mountains
+2023,santa_cruz_mountains,11,1.5079983226902316,0.0,Santa Cruz Mountains
+2023,santa_cruz_mountains,12,0.8934525147827715,0.0,Santa Cruz Mountains
+2024,santa_cruz_mountains,1,1.174172782951814,0.0,Santa Cruz Mountains
+2024,santa_cruz_mountains,2,1.7564587072626745,0.0,Santa Cruz Mountains
+2024,santa_cruz_mountains,3,2.675638178965025,0.0,Santa Cruz Mountains
+2024,santa_cruz_mountains,4,3.6199949107360854,0.0,Santa Cruz Mountains
+2024,santa_cruz_mountains,5,4.438910505426816,0.0,Santa Cruz Mountains
+2024,santa_cruz_mountains,6,4.9833536056641705,0.0,Santa Cruz Mountains
+2024,santa_cruz_mountains,7,5.3784068107203575,0.0,Santa Cruz Mountains
+2024,santa_cruz_mountains,8,4.911204811698081,0.0,Santa Cruz Mountains
+2024,santa_cruz_mountains,9,3.7907264996606065,0.0,Santa Cruz Mountains
+2024,santa_cruz_mountains,10,3.1228190396510436,0.0,Santa Cruz Mountains
+2024,santa_cruz_mountains,11,1.7466550833906,0.0,Santa Cruz Mountains
+2024,santa_cruz_mountains,12,1.2072599479330697,0.0,Santa Cruz Mountains
+2023,santa_lucia_highlands,1,1.4470965843473944,0.0,Santa Lucia Highlands
+2023,santa_lucia_highlands,2,2.0264487652109158,0.0,Santa Lucia Highlands
+2023,santa_lucia_highlands,3,2.6880624278213383,0.0,Santa Lucia Highlands
+2023,santa_lucia_highlands,4,4.261283867811409,0.0,Santa Lucia Highlands
+2023,santa_lucia_highlands,5,4.761925801717114,0.0,Santa Lucia Highlands
+2023,santa_lucia_highlands,6,5.379988229538452,0.0,Santa Lucia Highlands
+2023,santa_lucia_highlands,7,6.4528857599602825,0.0,Santa Lucia Highlands
+2023,santa_lucia_highlands,8,5.79805065735979,0.0,Santa Lucia Highlands
+2023,santa_lucia_highlands,9,4.199346295632747,0.0,Santa Lucia Highlands
+2023,santa_lucia_highlands,10,3.851283867811409,0.0,Santa Lucia Highlands
+2023,santa_lucia_highlands,11,2.431931686947888,0.0,Santa Lucia Highlands
+2023,santa_lucia_highlands,12,1.4438692591265494,0.0,Santa Lucia Highlands
+2024,santa_lucia_highlands,1,0.983812260131605,0.0,Santa Lucia Highlands
+2024,santa_lucia_highlands,2,1.3632827033252242,0.0,Santa Lucia Highlands
+2024,santa_lucia_highlands,3,2.227632046155134,0.0,Santa Lucia Highlands
+2024,santa_lucia_highlands,4,3.0217090846899297,0.0,Santa Lucia Highlands
+2024,santa_lucia_highlands,5,3.8790311970903293,0.0,Santa Lucia Highlands
+2024,santa_lucia_highlands,6,4.539590857464407,0.0,Santa Lucia Highlands
+2024,santa_lucia_highlands,7,4.792571152926819,0.0,Santa Lucia Highlands
+2024,santa_lucia_highlands,8,4.392019018444666,0.0,Santa Lucia Highlands
+2024,santa_lucia_highlands,9,3.506587984326221,0.0,Santa Lucia Highlands
+2024,santa_lucia_highlands,10,2.8741372456701892,0.0,Santa Lucia Highlands
+2024,santa_lucia_highlands,11,1.5178817727744767,0.0,Santa Lucia Highlands
+2024,santa_lucia_highlands,12,1.0751662557152541,0.0,Santa Lucia Highlands
+2020,santa_margarita_ranch,1,1.475301546029687,0.0,Santa Margarita Ranch
+2020,santa_margarita_ranch,2,2.6128834610405294,0.0,Santa Margarita Ranch
+2020,santa_margarita_ranch,3,2.7728559178389296,0.0,Santa Margarita Ranch
+2020,santa_margarita_ranch,4,3.9815367025379502,0.0,Santa Margarita Ranch
+2020,santa_margarita_ranch,5,5.625698064077059,0.0,Santa Margarita Ranch
+2020,santa_margarita_ranch,6,6.425560348069058,0.0,Santa Margarita Ranch
+2020,santa_margarita_ranch,7,6.629969598422568,0.0,Santa Margarita Ranch
+2020,santa_margarita_ranch,8,6.425560348069058,0.0,Santa Margarita Ranch
+2020,santa_margarita_ranch,9,4.825835780085059,0.0,Santa Margarita Ranch
+2020,santa_margarita_ranch,10,3.6971412237852395,0.0,Santa Margarita Ranch
+2020,santa_margarita_ranch,11,2.2218396777555522,0.0,Santa Margarita Ranch
+2020,santa_margarita_ranch,12,1.7685843834934196,0.0,Santa Margarita Ranch
+2023,santa_margarita_ranch,1,1.4976800200547302,0.0,Santa Margarita Ranch
+2023,santa_margarita_ranch,2,2.0469599398358094,0.0,Santa Margarita Ranch
+2023,santa_margarita_ranch,3,2.6253600401094603,0.0,Santa Margarita Ranch
+2023,santa_margarita_ranch,4,4.586800200547303,0.0,Santa Margarita Ranch
+2023,santa_margarita_ranch,5,5.4808405113956224,0.0,Santa Margarita Ranch
+2023,santa_margarita_ranch,6,5.928960441204067,0.0,Santa Margarita Ranch
+2023,santa_margarita_ranch,7,7.912120932544958,0.0,Santa Margarita Ranch
+2023,santa_margarita_ranch,8,6.79112068186083,0.0,Santa Margarita Ranch
+2023,santa_margarita_ranch,9,4.876920631724005,0.0,Santa Margarita Ranch
+2023,santa_margarita_ranch,10,3.9598402607114944,0.0,Santa Margarita Ranch
+2023,santa_margarita_ranch,11,2.544920130355747,0.0,Santa Margarita Ranch
+2023,santa_margarita_ranch,12,1.6737601403831122,0.0,Santa Margarita Ranch
+2024,santa_margarita_ranch,1,1.567756087054069,0.0,Santa Margarita Ranch
+2024,santa_margarita_ranch,2,2.0076584787973784,0.0,Santa Margarita Ranch
+2024,santa_margarita_ranch,3,3.2042926093784816,0.0,Santa Margarita Ranch
+2024,santa_margarita_ranch,4,4.43175587166248,0.0,Santa Margarita Ranch
+2024,santa_margarita_ranch,5,6.172487395108683,0.0,Santa Margarita Ranch
+2024,santa_margarita_ranch,6,7.3156580480142,0.0,Santa Margarita Ranch
+2024,santa_margarita_ranch,7,8.00770674444675,0.0,Santa Margarita Ranch
+2024,santa_margarita_ranch,8,7.240243482162753,0.0,Santa Margarita Ranch
+2024,santa_margarita_ranch,9,5.539316742203168,0.0,Santa Margarita Ranch
+2024,santa_margarita_ranch,10,4.1374632622839975,0.0,Santa Margarita Ranch
+2024,santa_margarita_ranch,11,2.1599023917433096,0.0,Santa Margarita Ranch
+2024,santa_margarita_ranch,12,1.6611219564729658,0.0,Santa Margarita Ranch
+2023,santa_maria_valley,1,0.19695125502872368,0.0,Santa Maria Valley
+2023,santa_maria_valley,2,0.2545019464332208,0.0,Santa Maria Valley
+2023,santa_maria_valley,3,0.3350729143995169,0.0,Santa Maria Valley
+2023,santa_maria_valley,4,0.5115617013733083,0.0,Santa Maria Valley
+2023,santa_maria_valley,5,0.5448132119625733,0.0,Santa Maria Valley
+2023,santa_maria_valley,6,0.5691123927778055,0.0,Santa Maria Valley
+2023,santa_maria_valley,7,0.7443222754981635,0.0,Santa Maria Valley
+2023,santa_maria_valley,8,0.6624724032784342,0.0,Santa Maria Valley
+2023,santa_maria_valley,9,0.4808679992909098,0.0,Santa Maria Valley
+2023,santa_maria_valley,10,0.4220384036329793,0.0,Santa Maria Valley
+2023,santa_maria_valley,11,0.29798469104995207,0.0,Santa Maria Valley
+2023,santa_maria_valley,12,0.20206687204245677,0.0,Santa Maria Valley
+2024,santa_maria_valley,1,1.7220145868363175,0.0,Santa Maria Valley
+2024,santa_maria_valley,2,2.057338195612106,0.0,Santa Maria Valley
+2024,santa_maria_valley,3,3.072014586836318,0.0,Santa Maria Valley
+2024,santa_maria_valley,4,4.02406564076343,0.0,Santa Maria Valley
+2024,santa_maria_valley,5,5.2161896288721294,0.0,Santa Maria Valley
+2024,santa_maria_valley,6,6.068924367441611,0.0,Santa Maria Valley
+2024,santa_maria_valley,7,6.606946247696087,0.0,Santa Maria Valley
+2024,santa_maria_valley,8,6.2495351179023935,0.0,Santa Maria Valley
+2024,santa_maria_valley,9,4.6568368464237055,0.0,Santa Maria Valley
+2024,santa_maria_valley,10,3.5074475968844876,0.0,Santa Maria Valley
+2024,santa_maria_valley,11,2.042698271478688,0.0,Santa Maria Valley
+2024,santa_maria_valley,12,1.7920145868363178,0.0,Santa Maria Valley
+2023,santa_ynez_valley,1,1.053557852868166,0.0,Santa Ynez Valley
+2023,santa_ynez_valley,2,1.3421000519773647,0.0,Santa Ynez Valley
+2023,santa_ynez_valley,3,1.7332778239425395,0.0,Santa Ynez Valley
+2023,santa_ynez_valley,4,2.678655552309973,0.0,Santa Ynez Valley
+2023,santa_ynez_valley,5,2.855384722831401,0.0,Santa Ynez Valley
+2023,santa_ynez_valley,6,3.100333982170521,0.0,Santa Ynez Valley
+2023,santa_ynez_valley,7,4.156570922685167,0.0,Santa Ynez Valley
+2023,santa_ynez_valley,8,3.6256170304335864,0.0,Santa Ynez Valley
+2023,santa_ynez_valley,9,2.652389835667362,0.0,Santa Ynez Valley
+2023,santa_ynez_valley,10,2.320886539738895,0.0,Santa Ynez Valley
+2023,santa_ynez_valley,11,1.6510089071809975,0.0,Santa Ynez Valley
+2023,santa_ynez_valley,12,1.13794278747591,0.0,Santa Ynez Valley
+2024,santa_ynez_valley,1,1.316156090995971,0.0,Santa Ynez Valley
+2024,santa_ynez_valley,2,1.5777446876203984,0.0,Santa Ynez Valley
+2024,santa_ynez_valley,3,2.3486274449058286,0.0,Santa Ynez Valley
+2024,santa_ynez_valley,4,2.9373698099975485,0.0,Santa Ynez Valley
+2024,santa_ynez_valley,5,3.531170169474677,0.0,Santa Ynez Valley
+2024,santa_ynez_valley,6,3.96960845122971,0.0,Santa Ynez Valley
+2024,santa_ynez_valley,7,4.279275836958401,0.0,Santa Ynez Valley
+2024,santa_ynez_valley,8,4.142617044598992,0.0,Santa Ynez Valley
+2024,santa_ynez_valley,9,3.085441545033499,0.0,Santa Ynez Valley
+2024,santa_ynez_valley,10,2.3446373845919757,0.0,Santa Ynez Valley
+2024,santa_ynez_valley,11,1.5273569055548417,0.0,Santa Ynez Valley
+2024,santa_ynez_valley,12,1.3391048379883448,0.0,Santa Ynez Valley
+2018,sierra_foothills,1,0.029591898099323638,0.0,Sierra Foothills
+2018,sierra_foothills,2,0.05481777844628806,0.0,Sierra Foothills
+2018,sierra_foothills,3,0.06937117095415214,0.0,Sierra Foothills
+2018,sierra_foothills,4,0.10599720876561008,0.0,Sierra Foothills
+2018,sierra_foothills,5,0.14771693395482047,0.0,Sierra Foothills
+2018,sierra_foothills,6,0.18967921568582857,0.0,Sierra Foothills
+2018,sierra_foothills,7,0.20981140865504058,0.0,Sierra Foothills
+2018,sierra_foothills,8,0.1811897367229079,0.0,Sierra Foothills
+2018,sierra_foothills,9,0.14189557695167482,0.0,Sierra Foothills
+2018,sierra_foothills,10,0.09435449475931883,0.0,Sierra Foothills
+2018,sierra_foothills,11,0.05142198686111977,0.0,Sierra Foothills
+2018,sierra_foothills,12,0.030804680808312314,0.0,Sierra Foothills
+2023,sierra_foothills,1,0.055049066452073504,0.0,Sierra Foothills
+2023,sierra_foothills,2,0.06549245130117895,0.0,Sierra Foothills
+2023,sierra_foothills,3,0.09227038626354885,0.0,Sierra Foothills
+2023,sierra_foothills,4,0.17323745306549188,0.0,Sierra Foothills
+2023,sierra_foothills,5,0.2107253584633662,0.0,Sierra Foothills
+2023,sierra_foothills,6,0.24878832396929662,0.0,Sierra Foothills
+2023,sierra_foothills,7,0.32408956124773824,0.0,Sierra Foothills
+2023,sierra_foothills,8,0.27852642517832854,0.0,Sierra Foothills
+2023,sierra_foothills,9,0.18913388717142776,0.0,Sierra Foothills
+2023,sierra_foothills,10,0.1306010898733616,0.0,Sierra Foothills
+2023,sierra_foothills,11,0.06753371274910584,0.0,Sierra Foothills
+2023,sierra_foothills,12,0.042944094317847806,0.0,Sierra Foothills
+2024,sierra_foothills,1,0.4028991384875467,0.0,Sierra Foothills
+2024,sierra_foothills,2,0.599012199346245,0.0,Sierra Foothills
+2024,sierra_foothills,3,0.9587634131319567,0.0,Sierra Foothills
+2024,sierra_foothills,4,1.4165584252906713,0.0,Sierra Foothills
+2024,sierra_foothills,5,2.168472425106477,0.0,Sierra Foothills
+2024,sierra_foothills,6,2.619821294345954,0.0,Sierra Foothills
+2024,sierra_foothills,7,2.8517530377454667,0.0,Sierra Foothills
+2024,sierra_foothills,8,2.441748756868922,0.0,Sierra Foothills
+2024,sierra_foothills,9,1.9173169320553525,0.0,Sierra Foothills
+2024,sierra_foothills,10,1.3658859031378374,0.0,Sierra Foothills
+2024,sierra_foothills,11,0.5724923287080661,0.0,Sierra Foothills
+2024,sierra_foothills,12,0.3652396541474468,0.0,Sierra Foothills
+2023,sloughhouse,1,1.3873635672263753,0.0,Sloughhouse
+2023,sloughhouse,2,1.6194323942288205,0.0,Sloughhouse
+2023,sloughhouse,3,2.2753471346052754,0.0,Sloughhouse
+2023,sloughhouse,4,4.2884475152568715,0.0,Sloughhouse
+2023,sloughhouse,5,5.0715383906955225,0.0,Sloughhouse
+2023,sloughhouse,6,6.096618344522446,0.0,Sloughhouse
+2023,sloughhouse,7,7.524690825173455,0.0,Sloughhouse
+2023,sloughhouse,8,6.576559990288965,0.0,Sloughhouse
+2023,sloughhouse,9,4.564666055709458,0.0,Sloughhouse
+2023,sloughhouse,10,3.1649543208500193,0.0,Sloughhouse
+2023,sloughhouse,11,1.7160284536490862,0.0,Sloughhouse
+2023,sloughhouse,12,0.9331461646073119,0.0,Sloughhouse
+2024,sloughhouse,1,0.998985414731333,0.0,Sloughhouse
+2024,sloughhouse,2,1.6084751112374758,0.0,Sloughhouse
+2024,sloughhouse,3,2.802192618483868,0.0,Sloughhouse
+2024,sloughhouse,4,4.0085515796782305,0.0,Sloughhouse
+2024,sloughhouse,5,6.23714688554879,0.0,Sloughhouse
+2024,sloughhouse,6,7.404293403010342,0.0,Sloughhouse
+2024,sloughhouse,7,7.985211664975639,0.0,Sloughhouse
+2024,sloughhouse,8,6.7815129560792675,0.0,Sloughhouse
+2024,sloughhouse,9,5.29600619170123,0.0,Sloughhouse
+2024,sloughhouse,10,3.6848708281657636,0.0,Sloughhouse
+2024,sloughhouse,11,1.5812232917806013,0.0,Sloughhouse
+2024,sloughhouse,12,0.9012789536377865,0.0,Sloughhouse
+2024,solano_county_green_valley,1,0.03019842659042077,0.0,Solano County Green Valley
+2024,solano_county_green_valley,2,0.0476525630601135,0.0,Solano County Green Valley
+2024,solano_county_green_valley,3,0.08505428406659794,0.0,Solano County Green Valley
+2024,solano_county_green_valley,4,0.11830025829458411,0.0,Solano County Green Valley
+2024,solano_county_green_valley,5,0.16401347285806508,0.0,Solano County Green Valley
+2024,solano_county_green_valley,6,0.18645450546195574,0.0,Solano County Green Valley
+2024,solano_county_green_valley,7,0.2000299449383834,0.0,Solano County Green Valley
+2024,solano_county_green_valley,8,0.17398726512646093,0.0,Solano County Green Valley
+2024,solano_county_green_valley,9,0.13686259390520972,0.0,Solano County Green Valley
+2024,solano_county_green_valley,10,0.10389366946245676,0.0,Solano County Green Valley
+2024,solano_county_green_valley,11,0.047375513274880286,0.0,Solano County Green Valley
+2024,solano_county_green_valley,12,0.025211530456222844,0.0,Solano County Green Valley
+2024,sonoma_coast,1,1.0309975092432189,0.0,Sonoma Coast
+2024,sonoma_coast,2,1.5831956720057236,0.0,Sonoma Coast
+2024,sonoma_coast,3,2.771620411478569,0.0,Sonoma Coast
+2024,sonoma_coast,4,4.047154804887604,0.0,Sonoma Coast
+2024,sonoma_coast,5,5.489032551522966,0.0,Sonoma Coast
+2024,sonoma_coast,6,6.362057200166112,0.0,Sonoma Coast
+2024,sonoma_coast,7,6.6938966096501105,0.0,Sonoma Coast
+2024,sonoma_coast,8,5.804871135221622,0.0,Sonoma Coast
+2024,sonoma_coast,9,4.536213183319368,0.0,Sonoma Coast
+2024,sonoma_coast,10,3.423185865594618,0.0,Sonoma Coast
+2024,sonoma_coast,11,1.4921967409069474,0.0,Sonoma Coast
+2024,sonoma_coast,12,0.877234369814981,0.0,Sonoma Coast
+2024,sonoma_mountain,1,1.0117026031457637,0.0,Sonoma Mountain
+2024,sonoma_mountain,2,1.547933365018539,0.0,Sonoma Mountain
+2024,sonoma_mountain,3,2.8543073163599217,0.0,Sonoma Mountain
+2024,sonoma_mountain,4,4.103754510052614,0.0,Sonoma Mountain
+2024,sonoma_mountain,5,5.762670249784283,0.0,Sonoma Mountain
+2024,sonoma_mountain,6,6.589781769379164,0.0,Sonoma Mountain
+2024,sonoma_mountain,7,6.995636383087884,0.0,Sonoma Mountain
+2024,sonoma_mountain,8,6.004152010562956,0.0,Sonoma Mountain
+2024,sonoma_mountain,9,4.707998901588665,0.0,Sonoma Mountain
+2024,sonoma_mountain,10,3.5129661333036015,0.0,Sonoma Mountain
+2024,sonoma_mountain,11,1.5667206433562137,0.0,Sonoma Mountain
+2024,sonoma_mountain,12,0.8592116232509887,0.0,Sonoma Mountain
+2024,sonoma_valley,1,1.0527752486479345,0.0,Sonoma Valley
+2024,sonoma_valley,2,1.6266739942744755,0.0,Sonoma Valley
+2024,sonoma_valley,3,2.9007615476869795,0.0,Sonoma Valley
+2024,sonoma_valley,4,4.103717385737005,0.0,Sonoma Valley
+2024,sonoma_valley,5,5.678180084945111,0.0,Sonoma Valley
+2024,sonoma_valley,6,6.488128123039362,0.0,Sonoma Valley
+2024,sonoma_valley,7,6.9441521676951785,0.0,Sonoma Valley
+2024,sonoma_valley,8,6.00454152942595,0.0,Sonoma Valley
+2024,sonoma_valley,9,4.693615581974397,0.0,Sonoma Valley
+2024,sonoma_valley,10,3.546603575869187,0.0,Sonoma Valley
+2024,sonoma_valley,11,1.5953345142802156,0.0,Sonoma Valley
+2024,sonoma_valley,12,0.8937141740005665,0.0,Sonoma Valley
+2023,south_coast,1,1.9957403415884714,0.0,South Coast
+2023,south_coast,2,2.6177751909204403,0.0,South Coast
+2023,south_coast,3,3.022987307881412,0.0,South Coast
+2023,south_coast,4,4.890586344841233,0.0,South Coast
+2023,south_coast,5,5.220385256050039,0.0,South Coast
+2023,south_coast,6,5.91331280228686,0.0,South Coast
+2023,south_coast,7,7.722480800604805,0.0,South Coast
+2023,south_coast,8,6.85570388319156,0.0,South Coast
+2023,south_coast,9,4.74859451774909,0.0,South Coast
+2023,south_coast,10,4.547935041854441,0.0,South Coast
+2023,south_coast,11,3.272373588408711,0.0,South Coast
+2023,south_coast,12,2.579170328537558,0.0,South Coast
+2024,south_coast,1,2.47122940441914,0.0,South Coast
+2024,south_coast,2,2.6708288246531593,0.0,South Coast
+2024,south_coast,3,3.6034585908684056,0.0,South Coast
+2024,south_coast,4,4.858215796938995,0.0,South Coast
+2024,south_coast,5,5.622810023979722,0.0,South Coast
+2024,south_coast,6,6.911679046538951,0.0,South Coast
+2024,south_coast,7,7.6351765592509855,0.0,South Coast
+2024,south_coast,8,7.1511707515266805,0.0,South Coast
+2024,south_coast,9,5.560808945760032,0.0,South Coast
+2024,south_coast,10,4.206182563909035,0.0,South Coast
+2024,south_coast,11,2.689900378010734,0.0,South Coast
+2024,south_coast,12,2.219962688892992,0.0,South Coast
+2024,spring_mountain_district,1,0.9877888559069982,0.0,Spring Mountain District
+2024,spring_mountain_district,2,1.6054963060825522,0.0,Spring Mountain District
+2024,spring_mountain_district,3,2.970998426860208,0.0,Spring Mountain District
+2024,spring_mountain_district,4,4.370940279909177,0.0,Spring Mountain District
+2024,spring_mountain_district,5,6.345162387787237,0.0,Spring Mountain District
+2024,spring_mountain_district,6,7.125226349433371,0.0,Spring Mountain District
+2024,spring_mountain_district,7,7.531272534191623,0.0,Spring Mountain District
+2024,spring_mountain_district,8,6.394699729538085,0.0,Spring Mountain District
+2024,spring_mountain_district,9,5.05586926323072,0.0,Spring Mountain District
+2024,spring_mountain_district,10,3.721513417365288,0.0,Spring Mountain District
+2024,spring_mountain_district,11,1.6232619032091375,0.0,Spring Mountain District
+2024,spring_mountain_district,12,0.8499883706097937,0.0,Spring Mountain District
+2024,st__helena,1,0.9870754470558902,0.0,St. Helena
+2024,st__helena,2,1.6041508941117806,0.0,St. Helena
+2024,st__helena,3,2.9683017882235614,0.0,St. Helena
+2024,st__helena,4,4.368301788223562,0.0,St. Helena
+2024,st__helena,5,6.340990405863287,0.0,St. Helena
+2024,st__helena,6,7.120990405863287,0.0,St. Helena
+2024,st__helena,7,7.525872438211095,0.0,St. Helena
+2024,st__helena,8,6.390259267627259,0.0,St. Helena
+2024,st__helena,9,5.051721544099314,0.0,St. Helena
+2024,st__helena,10,3.7190329264595885,0.0,St. Helena
+2024,st__helena,11,1.6212263411676706,0.0,St. Helena
+2024,st__helena,12,0.8500000000000001,0.0,St. Helena
+2023,sta__rita_hills,1,0.19057929018817668,0.0,Sta. Rita Hills
+2023,sta__rita_hills,2,0.24626804381459194,0.0,Sta. Rita Hills
+2023,sta__rita_hills,3,0.32423229889157335,0.0,Sta. Rita Hills
+2023,sta__rita_hills,4,0.4776857533288065,0.0,Sta. Rita Hills
+2023,sta__rita_hills,5,0.51481158907975,0.0,Sta. Rita Hills
+2023,sta__rita_hills,6,0.5519374248306935,0.0,Sta. Rita Hills
+2023,sta__rita_hills,7,0.7066284071262915,0.0,Sta. Rita Hills
+2023,sta__rita_hills,8,0.6249515684742157,0.0,Sta. Rita Hills
+2023,sta__rita_hills,9,0.46036036331169955,0.0,Sta. Rita Hills
+2023,sta__rita_hills,10,0.4009590261101899,0.0,Sta. Rita Hills
+2023,sta__rita_hills,11,0.2846314074239002,0.0,Sta. Rita Hills
+2023,sta__rita_hills,12,0.1967669294800006,0.0,Sta. Rita Hills
+2024,sta__rita_hills,1,1.6203997749862593,0.0,Sta. Rita Hills
+2024,sta__rita_hills,2,1.9951998874931296,0.0,Sta. Rita Hills
+2024,sta__rita_hills,3,2.966499859366412,0.0,Sta. Rita Hills
+2024,sta__rita_hills,4,3.6394995780992363,0.0,Sta. Rita Hills
+2024,sta__rita_hills,5,4.172899071818319,0.0,Sta. Rita Hills
+2024,sta__rita_hills,6,4.556698340523662,0.0,Sta. Rita Hills
+2024,sta__rita_hills,7,4.907998312396944,0.0,Sta. Rita Hills
+2024,sta__rita_hills,8,4.871098678044273,0.0,Sta. Rita Hills
+2024,sta__rita_hills,9,3.5606989030580136,0.0,Sta. Rita Hills
+2024,sta__rita_hills,10,2.7337992687053427,0.0,Sta. Rita Hills
+2024,sta__rita_hills,11,1.8468996343526713,0.0,Sta. Rita Hills
+2024,sta__rita_hills,12,1.6403997749862593,0.0,Sta. Rita Hills
+2024,stags_leap_district,1,1.03,0.0,Stags Leap District
+2024,stags_leap_district,2,1.65,0.0,Stags Leap District
+2024,stags_leap_district,3,3.02,0.0,Stags Leap District
+2024,stags_leap_district,4,4.4,0.0,Stags Leap District
+2024,stags_leap_district,5,6.44,0.0,Stags Leap District
+2024,stags_leap_district,6,7.22,0.0,Stags Leap District
+2024,stags_leap_district,7,7.640000000000001,0.0,Stags Leap District
+2024,stags_leap_district,8,6.54,0.0,Stags Leap District
+2024,stags_leap_district,9,5.12,0.0,Stags Leap District
+2024,stags_leap_district,10,3.77,0.0,Stags Leap District
+2024,stags_leap_district,11,1.67,0.0,Stags Leap District
+2024,stags_leap_district,12,0.86,0.0,Stags Leap District
+2024,tehachapi_mountains,1,1.84,0.0,Tehachapi Mountains
+2024,tehachapi_mountains,2,2.2,0.0,Tehachapi Mountains
+2024,tehachapi_mountains,3,3.59,0.0,Tehachapi Mountains
+2024,tehachapi_mountains,4,5.2700000000000005,0.0,Tehachapi Mountains
+2024,tehachapi_mountains,5,7.59,0.0,Tehachapi Mountains
+2024,tehachapi_mountains,6,9.07,0.0,Tehachapi Mountains
+2024,tehachapi_mountains,7,9.73,0.0,Tehachapi Mountains
+2024,tehachapi_mountains,8,8.65,0.0,Tehachapi Mountains
+2024,tehachapi_mountains,9,6.5200000000000005,0.0,Tehachapi Mountains
+2024,tehachapi_mountains,10,4.69,0.0,Tehachapi Mountains
+2024,tehachapi_mountains,11,2.46,0.0,Tehachapi Mountains
+2024,tehachapi_mountains,12,2.04,0.0,Tehachapi Mountains
+2023,temecula_valley,1,1.9862813119869573,0.0,Temecula Valley
+2023,temecula_valley,2,2.606662773315868,0.0,Temecula Valley
+2023,temecula_valley,3,3.018442554801479,0.0,Temecula Valley
+2023,temecula_valley,4,4.967851117391971,0.0,Temecula Valley
+2023,temecula_valley,5,5.319668431903805,0.0,Temecula Valley
+2023,temecula_valley,6,6.010306314014271,0.0,Temecula Valley
+2023,temecula_valley,7,7.920548820640129,0.0,Temecula Valley
+2023,temecula_valley,8,7.016149685076303,0.0,Temecula Valley
+2023,temecula_valley,9,4.83035089920379,0.0,Temecula Valley
+2023,temecula_valley,10,4.62486459232048,0.0,Temecula Valley
+2023,temecula_valley,11,3.278013879220525,0.0,Temecula Valley
+2023,temecula_valley,12,2.573410127558132,0.0,Temecula Valley
+2024,temecula_valley,1,2.4602487206030106,0.0,Temecula Valley
+2024,temecula_valley,2,2.6659205414250424,0.0,Temecula Valley
+2024,temecula_valley,3,3.619320240973143,0.0,Temecula Valley
+2024,temecula_valley,4,4.911459188709017,0.0,Temecula Valley
+2024,temecula_valley,5,5.708447124643466,0.0,Temecula Valley
+2024,temecula_valley,6,7.053868490699837,0.0,Temecula Valley
+2024,temecula_valley,7,7.828580221039292,0.0,Temecula Valley
+2024,temecula_valley,8,7.301659753339996,0.0,Temecula Valley
+2024,temecula_valley,9,5.647820408005985,0.0,Temecula Valley
+2024,temecula_valley,10,4.282076810352381,0.0,Temecula Valley
+2024,temecula_valley,11,2.686831644891897,0.0,Temecula Valley
+2024,temecula_valley,12,2.2332823547583365,0.0,Temecula Valley
+2023,templeton_gap_district,1,1.4614695780325415,0.0,Templeton Gap District
+2023,templeton_gap_district,2,2.122080224563548,0.0,Templeton Gap District
+2023,templeton_gap_district,3,2.649694747220281,0.0,Templeton Gap District
+2023,templeton_gap_district,4,4.471029834929108,0.0,Templeton Gap District
+2023,templeton_gap_district,5,5.143624976957209,0.0,Templeton Gap District
+2023,templeton_gap_district,6,5.681697449269306,0.0,Templeton Gap District
+2023,templeton_gap_district,7,7.2616586880120435,0.0,Templeton Gap District
+2023,templeton_gap_district,8,6.362212366733859,0.0,Templeton Gap District
+2023,templeton_gap_district,9,4.433624976957209,0.0,Templeton Gap District
+2023,templeton_gap_district,10,3.8041216878698343,0.0,Templeton Gap District
+2023,templeton_gap_district,11,2.451526545841732,0.0,Templeton Gap District
+2023,templeton_gap_district,12,1.5625381742189113,0.0,Templeton Gap District
+2024,templeton_gap_district,1,1.5187782108212176,0.0,Templeton Gap District
+2024,templeton_gap_district,2,1.9124410111542391,0.0,Templeton Gap District
+2024,templeton_gap_district,3,3.150022289733444,0.0,Templeton Gap District
+2024,templeton_gap_district,4,4.113210612097052,0.0,Templeton Gap District
+2024,templeton_gap_district,5,5.55323033462717,0.0,Templeton Gap District
+2024,templeton_gap_district,6,6.647770852329465,0.0,Templeton Gap District
+2024,templeton_gap_district,7,7.250833902939819,0.0,Templeton Gap District
+2024,templeton_gap_district,8,6.6729969464474514,0.0,Templeton Gap District
+2024,templeton_gap_district,9,5.110919729632838,0.0,Templeton Gap District
+2024,templeton_gap_district,10,3.9793144235843116,0.0,Templeton Gap District
+2024,templeton_gap_district,11,2.0994002502773306,0.0,Templeton Gap District
+2024,templeton_gap_district,12,1.6531685998334895,0.0,Templeton Gap District
+2024,tracy_hills,1,0.4913690690360534,0.0,Tracy Hills
+2024,tracy_hills,2,0.7817235189209939,0.0,Tracy Hills
+2024,tracy_hills,3,1.407102334057789,0.0,Tracy Hills
+2024,tracy_hills,4,1.9788772507542873,0.0,Tracy Hills
+2024,tracy_hills,5,2.9884173380465424,0.0,Tracy Hills
+2024,tracy_hills,6,3.5333903055228926,0.0,Tracy Hills
+2024,tracy_hills,7,3.7969428061876846,0.0,Tracy Hills
+2024,tracy_hills,8,3.2162339064178034,0.0,Tracy Hills
+2024,tracy_hills,9,2.4568453451802665,0.0,Tracy Hills
+2024,tracy_hills,10,1.7421266993096436,0.0,Tracy Hills
+2024,tracy_hills,11,0.8129924596778337,0.0,Tracy Hills
+2024,tracy_hills,12,0.39309525522884264,0.0,Tracy Hills
+2016,trinity_lakes,1,0.17654394099982124,0.0,Trinity Lakes
+2016,trinity_lakes,2,0.39512215366626663,0.0,Trinity Lakes
+2016,trinity_lakes,3,0.5506489588327759,0.0,Trinity Lakes
+2016,trinity_lakes,4,0.8911265593324311,0.0,Trinity Lakes
+2016,trinity_lakes,5,1.1748578930821438,0.0,Trinity Lakes
+2016,trinity_lakes,6,1.4901149305818246,0.0,Trinity Lakes
+2016,trinity_lakes,7,1.6204211727483593,0.0,Trinity Lakes
+2016,trinity_lakes,8,1.433368663831882,0.0,Trinity Lakes
+2016,trinity_lakes,9,1.0886876361655644,0.0,Trinity Lakes
+2016,trinity_lakes,10,0.5065129735828205,0.0,Trinity Lakes
+2016,trinity_lakes,11,0.2311884941664326,0.0,Trinity Lakes
+2016,trinity_lakes,12,0.1597302323331716,0.0,Trinity Lakes
+2023,trinity_lakes,1,1.023331539277365,0.0,Trinity Lakes
+2023,trinity_lakes,2,1.4358643756394016,0.0,Trinity Lakes
+2023,trinity_lakes,3,1.8518260044005133,0.0,Trinity Lakes
+2023,trinity_lakes,4,3.7643601247520677,0.0,Trinity Lakes
+2023,trinity_lakes,5,5.106334658884126,0.0,Trinity Lakes
+2023,trinity_lakes,6,6.147319917895935,0.0,Trinity Lakes
+2023,trinity_lakes,7,7.557279241482021,0.0,Trinity Lakes
+2023,trinity_lakes,8,6.328543009614059,0.0,Trinity Lakes
+2023,trinity_lakes,9,4.129995983891558,0.0,Trinity Lakes
+2023,trinity_lakes,10,2.931636798255053,0.0,Trinity Lakes
+2023,trinity_lakes,11,1.4094770740859763,0.0,Trinity Lakes
+2023,trinity_lakes,12,0.7484918150741682,0.0,Trinity Lakes
+2024,trinity_lakes,1,0.8755188617422469,0.0,Trinity Lakes
+2024,trinity_lakes,2,1.411521537829596,0.0,Trinity Lakes
+2024,trinity_lakes,3,2.289513568857955,0.0,Trinity Lakes
+2024,trinity_lakes,4,3.484513132725131,0.0,Trinity Lakes
+2024,trinity_lakes,5,5.705769398450746,0.0,Trinity Lakes
+2024,trinity_lakes,6,6.704760663064128,0.0,Trinity Lakes
+2024,trinity_lakes,7,7.890227171777069,0.0,Trinity Lakes
+2024,trinity_lakes,8,6.213238252968884,0.0,Trinity Lakes
+2024,trinity_lakes,9,5.003514771405756,0.0,Trinity Lakes
+2024,trinity_lakes,10,3.0522697520130313,0.0,Trinity Lakes
+2024,trinity_lakes,11,1.0755179894765994,0.0,Trinity Lakes
+2024,trinity_lakes,12,0.6587653546745192,0.0,Trinity Lakes
+2020,upper_lake_valley,1,0.9624834237457867,0.0,Upper Lake Valley
+2020,upper_lake_valley,2,2.265349963374131,0.0,Upper Lake Valley
+2020,upper_lake_valley,3,2.7029820940482514,0.0,Upper Lake Valley
+2020,upper_lake_valley,4,3.971467757614388,0.0,Upper Lake Valley
+2020,upper_lake_valley,5,4.767664621817532,0.0,Upper Lake Valley
+2020,upper_lake_valley,6,5.99561479050298,0.0,Upper Lake Valley
+2020,upper_lake_valley,7,6.206664463649804,0.0,Upper Lake Valley
+2020,upper_lake_valley,8,5.530416430438094,0.0,Upper Lake Valley
+2020,upper_lake_valley,9,4.3540269591531775,0.0,Upper Lake Valley
+2020,upper_lake_valley,10,3.542950892240213,0.0,Upper Lake Valley
+2020,upper_lake_valley,11,1.6147369889477305,0.0,Upper Lake Valley
+2020,upper_lake_valley,12,1.2209044718302973,0.0,Upper Lake Valley
+2023,upper_lake_valley,1,1.01994077640464,0.0,Upper Lake Valley
+2023,upper_lake_valley,2,1.47695806546718,0.0,Upper Lake Valley
+2023,upper_lake_valley,3,2.008348836839847,0.0,Upper Lake Valley
+2023,upper_lake_valley,4,3.8444783904721924,0.0,Upper Lake Valley
+2023,upper_lake_valley,5,4.553225752120715,0.0,Upper Lake Valley
+2023,upper_lake_valley,6,5.370787465310423,0.0,Upper Lake Valley
+2023,upper_lake_valley,7,6.134200361788175,0.0,Upper Lake Valley
+2023,upper_lake_valley,8,5.19120172122784,0.0,Upper Lake Valley
+2023,upper_lake_valley,9,3.667719658982425,0.0,Upper Lake Valley
+2023,upper_lake_valley,10,2.7354312100072624,0.0,Upper Lake Valley
+2023,upper_lake_valley,11,1.4885244748970792,0.0,Upper Lake Valley
+2023,upper_lake_valley,12,0.7738647290042885,0.0,Upper Lake Valley
+2024,upper_lake_valley,1,0.8513202632238479,0.0,Upper Lake Valley
+2024,upper_lake_valley,2,1.4301422403178867,0.0,Upper Lake Valley
+2024,upper_lake_valley,3,2.4738534807684633,0.0,Upper Lake Valley
+2024,upper_lake_valley,4,3.85309365542514,0.0,Upper Lake Valley
+2024,upper_lake_valley,5,5.778148977741028,0.0,Upper Lake Valley
+2024,upper_lake_valley,6,6.454576105867725,0.0,Upper Lake Valley
+2024,upper_lake_valley,7,6.659688511052114,0.0,Upper Lake Valley
+2024,upper_lake_valley,8,5.507227285587921,0.0,Upper Lake Valley
+2024,upper_lake_valley,9,4.438243366382063,0.0,Upper Lake Valley
+2024,upper_lake_valley,10,3.189574486246714,0.0,Upper Lake Valley
+2024,upper_lake_valley,11,1.3306444731040372,0.0,Upper Lake Valley
+2024,upper_lake_valley,12,0.7608881828191543,0.0,Upper Lake Valley
+2024,west_sonoma_coast,1,0.9737503846507058,0.0,West Sonoma Coast
+2024,west_sonoma_coast,2,1.5108492043814123,0.0,West Sonoma Coast
+2024,west_sonoma_coast,3,2.4834311653871755,0.0,West Sonoma Coast
+2024,west_sonoma_coast,4,3.8062289969976404,0.0,West Sonoma Coast
+2024,west_sonoma_coast,5,5.0964626992962,0.0,West Sonoma Coast
+2024,west_sonoma_coast,6,6.020593047575184,0.0,West Sonoma Coast
+2024,west_sonoma_coast,7,6.206746589380853,0.0,West Sonoma Coast
+2024,west_sonoma_coast,8,5.4332539976820255,0.0,West Sonoma Coast
+2024,west_sonoma_coast,9,4.237901934989207,0.0,West Sonoma Coast
+2024,west_sonoma_coast,10,3.133020165408821,0.0,West Sonoma Coast
+2024,west_sonoma_coast,11,1.2885117411392175,0.0,West Sonoma Coast
+2024,west_sonoma_coast,12,0.813275648968739,0.0,West Sonoma Coast
+2024,wild_horse_valley,1,0.7504102125051256,0.0,Wild Horse Valley
+2024,wild_horse_valley,2,1.2021134472169488,0.0,Wild Horse Valley
+2024,wild_horse_valley,3,2.2002318852092033,0.0,Wild Horse Valley
+2024,wild_horse_valley,4,3.2056358592451972,0.0,Wild Horse Valley
+2024,wild_horse_valley,5,4.69188521216797,0.0,Wild Horse Valley
+2024,wild_horse_valley,6,5.260157023579619,0.0,Wild Horse Valley
+2024,wild_horse_valley,7,5.566149537416661,0.0,Wild Horse Valley
+2024,wild_horse_valley,8,4.764740572605361,0.0,Wild Horse Valley
+2024,wild_horse_valley,9,3.730194454394411,0.0,Wild Horse Valley
+2024,wild_horse_valley,10,2.7466470884896346,0.0,Wild Horse Valley
+2024,wild_horse_valley,11,1.216684519304427,0.0,Wild Horse Valley
+2024,wild_horse_valley,12,0.6265560997615612,0.0,Wild Horse Valley
+2016,willow_creek,1,0.09296818031993176,0.0,Willow Creek
+2016,willow_creek,2,0.20123492195833328,0.0,Willow Creek
+2016,willow_creek,3,0.2989103519147173,0.0,Willow Creek
+2016,willow_creek,4,0.47543221328167634,0.0,Willow Creek
+2016,willow_creek,5,0.6519540746486354,0.0,Willow Creek
+2016,willow_creek,6,0.8567194338343079,0.0,Willow Creek
+2016,willow_creek,7,0.9438035521086743,0.0,Willow Creek
+2016,willow_creek,8,0.8743716199710038,0.0,Willow Creek
+2016,willow_creek,9,0.626064201648148,0.0,Willow Creek
+2016,willow_creek,10,0.2824349781871344,0.0,Willow Creek
+2016,willow_creek,11,0.1412174890935672,0.0,Willow Creek
+2016,willow_creek,12,0.07413918177412279,0.0,Willow Creek
+2023,willow_creek,1,0.1141148935021692,0.0,Willow Creek
+2023,willow_creek,2,0.15886583213047084,0.0,Willow Creek
+2023,willow_creek,3,0.21480450541584792,0.0,Willow Creek
+2023,willow_creek,4,0.4016396741890073,0.0,Willow Creek
+2023,willow_creek,5,0.5549116389909404,0.0,Willow Creek
+2023,willow_creek,6,0.651126157041789,0.0,Willow Creek
+2023,willow_creek,7,0.7630035036125431,0.0,Willow Creek
+2023,willow_creek,8,0.6410571958504211,0.0,Willow Creek
+2023,willow_creek,9,0.4497469332144316,0.0,Willow Creek
+2023,willow_creek,10,0.33115694584943217,0.0,Willow Creek
+2023,willow_creek,11,0.18347884837603676,0.0,Willow Creek
+2023,willow_creek,12,0.12530262815924462,0.0,Willow Creek
+2024,willow_creek,1,1.3026901003457243,0.0,Willow Creek
+2024,willow_creek,2,1.7612183166090458,0.0,Willow Creek
+2024,willow_creek,3,2.3348732664361838,0.0,Willow Creek
+2024,willow_creek,4,3.2158381159175975,0.0,Willow Creek
+2024,willow_creek,5,5.061676231835195,0.0,Willow Creek
+2024,willow_creek,6,5.5987326643618385,0.0,Willow Creek
+2024,willow_creek,7,6.604824247407068,0.0,Willow Creek
+2024,willow_creek,8,5.5250777145347,0.0,Willow Creek
+2024,willow_creek,9,4.755584648789966,0.0,Willow Creek
+2024,willow_creek,10,2.5780212820080575,0.0,Willow Creek
+2024,willow_creek,11,1.054873266436184,0.0,Willow Creek
+2024,willow_creek,12,0.7412183166090459,0.0,Willow Creek
+2023,winters_highlands,1,1.5,0.0,Winters Highlands
+2023,winters_highlands,2,1.9,0.0,Winters Highlands
+2023,winters_highlands,3,2.66,0.0,Winters Highlands
+2023,winters_highlands,4,5.05,0.0,Winters Highlands
+2023,winters_highlands,5,5.71,0.0,Winters Highlands
+2023,winters_highlands,6,6.9,0.0,Winters Highlands
+2023,winters_highlands,7,7.94,0.0,Winters Highlands
+2023,winters_highlands,8,7.0,0.0,Winters Highlands
+2023,winters_highlands,9,4.99,0.0,Winters Highlands
+2023,winters_highlands,10,3.63,0.0,Winters Highlands
+2023,winters_highlands,11,1.95,0.0,Winters Highlands
+2023,winters_highlands,12,0.97,0.0,Winters Highlands
+2024,winters_highlands,1,1.04,0.0,Winters Highlands
+2024,winters_highlands,2,1.72,0.0,Winters Highlands
+2024,winters_highlands,3,3.23,0.0,Winters Highlands
+2024,winters_highlands,4,4.68,0.0,Winters Highlands
+2024,winters_highlands,5,7.0600000000000005,0.0,Winters Highlands
+2024,winters_highlands,6,7.9,0.0,Winters Highlands
+2024,winters_highlands,7,8.36,0.0,Winters Highlands
+2024,winters_highlands,8,7.11,0.0,Winters Highlands
+2024,winters_highlands,9,5.61,0.0,Winters Highlands
+2024,winters_highlands,10,4.0600000000000005,0.0,Winters Highlands
+2024,winters_highlands,11,1.75,0.0,Winters Highlands
+2024,winters_highlands,12,0.91,0.0,Winters Highlands
+2023,york_mountain,1,1.47,0.0,York Mountain
+2023,york_mountain,2,2.12,0.0,York Mountain
+2023,york_mountain,3,2.64,0.0,York Mountain
+2023,york_mountain,4,4.43,0.0,York Mountain
+2023,york_mountain,5,5.08,0.0,York Mountain
+2023,york_mountain,6,5.61,0.0,York Mountain
+2023,york_mountain,7,7.16,0.0,York Mountain
+2023,york_mountain,8,6.2700000000000005,0.0,York Mountain
+2023,york_mountain,9,4.37,0.0,York Mountain
+2023,york_mountain,10,3.77,0.0,York Mountain
+2023,york_mountain,11,2.44,0.0,York Mountain
+2023,york_mountain,12,1.56,0.0,York Mountain
+2024,york_mountain,1,1.51,0.0,York Mountain
+2024,york_mountain,2,1.9100000000000001,0.0,York Mountain
+2024,york_mountain,3,3.14,0.0,York Mountain
+2024,york_mountain,4,4.07,0.0,York Mountain
+2024,york_mountain,5,5.48,0.0,York Mountain
+2024,york_mountain,6,6.56,0.0,York Mountain
+2024,york_mountain,7,7.16,0.0,York Mountain
+2024,york_mountain,8,6.61,0.0,York Mountain
+2024,york_mountain,9,5.05,0.0,York Mountain
+2024,york_mountain,10,3.94,0.0,York Mountain
+2024,york_mountain,11,2.09,0.0,York Mountain
+2024,york_mountain,12,1.6500000000000001,0.0,York Mountain
+2021,yorkville_highlands,1,1.1341060512001628,0.0,Yorkville Highlands
+2021,yorkville_highlands,2,1.9421215480602365,0.0,Yorkville Highlands
+2021,yorkville_highlands,3,3.054722125728798,0.0,Yorkville Highlands
+2021,yorkville_highlands,4,-185370.3130344912,0.0,Yorkville Highlands
+2021,yorkville_highlands,5,6.198915036330138,0.0,Yorkville Highlands
+2021,yorkville_highlands,6,6.680931525801707,0.0,Yorkville Highlands
+2021,yorkville_highlands,7,6.822829169540454,0.0,Yorkville Highlands
+2021,yorkville_highlands,8,6.146784388676156,0.0,Yorkville Highlands
+2021,yorkville_highlands,9,4.804745012466694,0.0,Yorkville Highlands
+2021,yorkville_highlands,10,2.745524665330585,0.0,Yorkville Highlands
+2021,yorkville_highlands,11,1.373553949334809,0.0,Yorkville Highlands
+2021,yorkville_highlands,12,0.7035219630031677,0.0,Yorkville Highlands
+2024,yorkville_highlands,1,0.962641834095274,0.0,Yorkville Highlands
+2024,yorkville_highlands,2,1.5142144628832848,0.0,Yorkville Highlands
+2024,yorkville_highlands,3,2.5694673405395934,0.0,Yorkville Highlands
+2024,yorkville_highlands,4,4.0352544322108885,0.0,Yorkville Highlands
+2024,yorkville_highlands,5,5.746860960642299,0.0,Yorkville Highlands
+2024,yorkville_highlands,6,6.6163575371615515,0.0,Yorkville Highlands
+2024,yorkville_highlands,7,6.770604345133657,0.0,Yorkville Highlands
+2024,yorkville_highlands,8,5.763179157219421,0.0,Yorkville Highlands
+2024,yorkville_highlands,9,4.542141519723688,0.0,Yorkville Highlands
+2024,yorkville_highlands,10,3.324718663641322,0.0,Yorkville Highlands
+2024,yorkville_highlands,11,1.3462897378747525,0.0,Yorkville Highlands
+2024,yorkville_highlands,12,0.8079255022858225,0.0,Yorkville Highlands
+2024,yountville,1,1.03,0.0,Yountville
+2024,yountville,2,1.6644034757914614,0.0,Yountville
+2024,yountville,3,3.0248011585971537,0.0,Yountville
+2024,yountville,4,4.37599420701423,0.0,Yountville
+2024,yountville,5,6.348777986654075,0.0,Yountville
+2024,yountville,6,7.1671872554313065,0.0,Yountville
+2024,yountville,7,7.6015907312227675,0.0,Yountville
+2024,yountville,8,6.487187255431306,0.0,Yountville
+2024,yountville,9,5.124801158597153,0.0,Yountville
+2024,yountville,10,3.7748011585971533,0.0,Yountville
+2024,yountville,11,1.6748011585971536,0.0,Yountville
+2024,yountville,12,0.8840057929857694,0.0,Yountville

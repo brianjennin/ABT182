@@ -1,0 +1,257 @@
+year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
+2023,adelaida_district,48.61,0.0,Adelaida District,48.61
+2024,adelaida_district,51.25,0.0,Adelaida District,51.25
+2021,alexander_valley,-46743.32136122395,0.0,Alexander Valley,-46743.32136122395
+2024,alexander_valley,44.565204874205044,0.0,Alexander Valley,44.565204874205044
+2023,alisos_canyon,41.85,0.0,Alisos Canyon,41.85
+2024,alisos_canyon,43.61,0.0,Alisos Canyon,43.61
+2023,alta_mesa,13.434304544471628,0.0,Alta Mesa,13.434304544471628
+2024,alta_mesa,14.261591651337916,0.0,Alta Mesa,14.261591651337916
+2021,anderson_valley,-158526.9220512914,0.0,Anderson Valley,-158526.9220512914
+2024,anderson_valley,43.81779318656221,0.0,Anderson Valley,43.81779318656221
+2021,antelope_valley_of_the_california_high_desert,-419159.54896805825,0.0,Antelope Valley of the California High Desert,-419159.54896805825
+2023,antelope_valley_of_the_california_high_desert,15.175073700690048,0.0,Antelope Valley of the California High Desert,15.175073700690048
+2024,antelope_valley_of_the_california_high_desert,7.048746062497077,0.0,Antelope Valley of the California High Desert,7.048746062497077
+2023,arroyo_grande_valley,44.12666541358634,0.0,Arroyo Grande Valley,44.12666541358634
+2024,arroyo_grande_valley,46.263625502236195,0.0,Arroyo Grande Valley,46.263625502236195
+2023,arroyo_seco,44.540514515737165,0.0,Arroyo Seco,44.540514515737165
+2024,arroyo_seco,46.92874015898592,0.0,Arroyo Seco,46.92874015898592
+2024,atlas_peak,49.36,0.0,Atlas Peak,49.36
+2023,ballard_canyon,41.549366605500715,0.0,Ballard Canyon,41.549366605500715
+2023,ben_lomond_mountain,34.24453871959392,0.0,Ben Lomond Mountain,34.24453871959392
+2024,ben_lomond_mountain,34.86278540881694,0.0,Ben Lomond Mountain,34.86278540881694
+2024,benmore_valley,46.68,0.0,Benmore Valley,46.68
+2024,bennett_valley,44.92,0.0,Bennett Valley,44.92
+2020,big_valley_district_lake_county,28.218426181310914,0.0,Big Valley District-Lake County,28.218426181310914
+2023,big_valley_district_lake_county,43.708270734743486,0.0,Big Valley District-Lake County,43.708270734743486
+2024,big_valley_district_lake_county,46.50023144105484,0.0,Big Valley District-Lake County,46.50023144105484
+2024,calistoga,46.62,0.0,Calistoga,46.62
+2023,capay_valley,48.31445257371228,0.0,Capay Valley,48.31445257371228
+2024,capay_valley,51.42864400852485,0.0,Capay Valley,51.42864400852485
+2023,carmel_valley,37.56,0.0,Carmel Valley,37.56
+2016,central_coast,0.018034582490843627,0.0,Central Coast,0.018034582490843627
+2020,central_coast,3.172923024651251,0.0,Central Coast,3.172923024651251
+2021,central_coast,-6090.440081438213,0.0,Central Coast,-6090.440081438213
+2022,central_coast,0.0011812821505988765,0.0,Central Coast,0.0011812821505988765
+2023,central_coast,42.91295411026728,0.0,Central Coast,42.91295411026728
+2024,central_coast,45.60928006263126,0.0,Central Coast,45.60928006263126
+2024,chalk_hill,44.77185484446509,0.0,Chalk Hill,44.77185484446509
+2023,chalone,46.04,0.0,Chalone,46.04
+2024,chalone,48.63,0.0,Chalone,48.63
+2024,chiles_valley,48.7,0.0,Chiles Valley,48.7
+2023,cienega_valley,45.84,0.0,Cienega Valley,45.84
+2024,cienega_valley,48.74,0.0,Cienega Valley,48.74
+2023,clarksburg,36.632877883548176,0.0,Clarksburg,36.632877883548176
+2024,clarksburg,37.97616812359801,0.0,Clarksburg,37.97616812359801
+2020,clear_lake,17.052013389096256,0.0,Clear Lake,17.052013389096256
+2023,clear_lake,43.05292848218108,0.0,Clear Lake,43.05292848218108
+2024,clear_lake,46.79348039225363,0.0,Clear Lake,46.79348039225363
+2023,clements_hills,27.724675901729203,0.0,Clements Hills,27.724675901729203
+2021,cole_ranch,-177067.94999999998,0.0,Cole Ranch,-177067.94999999998
+2024,cole_ranch,45.52,0.0,Cole Ranch,45.52
+2024,comptche,45.160000000000004,0.0,Comptche,45.160000000000004
+2023,contra_costa,39.06415508424715,0.0,Contra Costa,39.06415508424715
+2024,contra_costa,1.1070599759921558,0.0,Contra Costa,1.1070599759921558
+2024,coombsville,48.965151889176845,0.0,Coombsville,48.965151889176845
+2024,covelo,47.48,0.0,Covelo,47.48
+2020,creston_district,0.4808467341544795,0.0,Creston District,0.4808467341544795
+2023,creston_district,49.18674643678597,0.0,Creston District,49.18674643678597
+2024,creston_district,52.05438070368274,0.0,Creston District,52.05438070368274
+2024,crystal_springs_of_napa_valley,48.32890867788587,0.0,Crystal Springs of Napa Valley ,48.32890867788587
+2024,cucamonga_valley,56.67504585980546,0.0,Cucamonga Valley,56.67504585980546
+2024,diamond_mountain_district,46.62,0.0,Diamond Mountain District,46.62
+2024,dos_rios,47.48,0.0,Dos Rios,47.48
+2021,dry_creek_valley,-2737.503329946195,0.0,Dry Creek Valley,-2737.503329946195
+2024,dry_creek_valley,44.471030983769246,0.0,Dry Creek Valley,44.471030983769246
+2023,dunnigan_hills,51.582212293056585,0.0,Dunnigan Hills,51.582212293056585
+2024,dunnigan_hills,54.97590241309974,0.0,Dunnigan Hills,54.97590241309974
+2021,eagle_peak_mendocino_county,-181269.1711356059,0.0,Eagle Peak Mendocino County,-181269.1711356059
+2024,eagle_peak_mendocino_county,46.42374738947891,0.0,Eagle Peak Mendocino County,46.42374738947891
+2023,edna_valley,43.45646794616896,0.0,Edna Valley,43.45646794616896
+2024,edna_valley,45.27229408960377,0.0,Edna Valley,45.27229408960377
+2018,el_dorado,4.621745217673151,0.0,El Dorado,4.621745217673151
+2024,el_dorado,31.415396061674553,0.0,El Dorado,31.415396061674553
+2023,el_pomar_district,47.64549692024687,0.0,El Pomar District,47.64549692024687
+2024,el_pomar_district,50.08379080204298,0.0,El Pomar District,50.08379080204298
+2024,fort_ross_seaview,41.21248399277326,0.0,Fort Ross-Seaview,41.21248399277326
+2024,fountaingrove_district,45.423882540590476,0.0,Fountaingrove District,45.423882540590476
+2023,gabilan_mountains,45.923287157754146,0.0,Gabilan Mountains,45.923287157754146
+2024,gabilan_mountains,45.74620866884975,0.0,Gabilan Mountains,45.74620866884975
+2024,green_valley_of_russian_river_valley,42.35079709054753,0.0,Green Valley of Russian River Valley,42.35079709054753
+2020,guenoc_valley,47.89,0.0,Guenoc Valley,47.89
+2023,guenoc_valley,44.27,0.0,Guenoc Valley,44.27
+2024,guenoc_valley,47.2,0.0,Guenoc Valley,47.2
+2023,hames_valley,48.44,0.0,Hames Valley,48.44
+2024,hames_valley,50.99,0.0,Hames Valley,50.99
+2023,happy_canyon_of_santa_barbara,43.14,0.0,Happy Canyon of Santa Barbara,43.14
+2024,happy_canyon_of_santa_barbara,45.25,0.0,Happy Canyon of Santa Barbara,45.25
+2020,high_valley,48.78297151345512,0.0,High Valley,48.78297151345512
+2023,high_valley,38.55516142129595,0.0,High Valley,38.55516142129595
+2024,high_valley,47.957537718498344,0.0,High Valley,47.957537718498344
+2024,howell_mountain,47.71234265278689,0.0,Howell Mountain,47.71234265278689
+2024,inwood_valley,46.95,0.0,Inwood Valley,46.95
+2023,jahant,36.66450779490621,0.0,Jahant,36.66450779490621
+2020,kelsey_bench_lake_county,1.290403773522255,0.0,Kelsey Bench-Lake County,1.290403773522255
+2023,kelsey_bench_lake_county,43.31858509334654,0.0,Kelsey Bench-Lake County,43.31858509334654
+2024,kelsey_bench_lake_county,46.24185939856702,0.0,Kelsey Bench-Lake County,46.24185939856702
+2024,knights_valley,46.433654455449954,0.0,Knights Valley,46.433654455449954
+2021,leona_valley,-690688.64,0.0,Leona Valley,-690688.64
+2023,lime_kiln_valley,45.84,0.0,Lime Kiln Valley,45.84
+2024,lime_kiln_valley,48.74,0.0,Lime Kiln Valley,48.74
+2021,livermore_valley,-272130.4151852599,0.0,Livermore Valley,-272130.4151852599
+2023,lodi,31.688108107078474,0.0,Lodi,31.688108107078474
+2024,lodi,4.213690511418954,0.0,Lodi,4.213690511418954
+2020,long_valley-lake_county,48.89,0.0,Long Valley-Lake County,48.89
+2023,long_valley-lake_county,45.13,0.0,Long Valley-Lake County,45.13
+2024,long_valley-lake_county,48.12,0.0,Long Valley-Lake County,48.12
+2024,los_carneros,46.565659141335644,0.0,Los Carneros,46.565659141335644
+2023,los_olivos_district,42.91219237059709,0.0,Los Olivos District,42.91219237059709
+2024,los_olivos_district,37.237477321011575,0.0,Los Olivos District,37.237477321011575
+2024,madera,7.785568743674868,0.0,Madera,7.785568743674868
+2024,malibu_coast,42.634739011053306,0.0,Malibu Coast,42.634739011053306
+2024,malibu_newton_canyon,41.65,0.0,Malibu-Newton Canyon,41.65
+2024,manton_valley,47.120000000000005,0.0,Manton Valley,47.120000000000005
+2021,mcdowell_valley,-193794.84999999998,0.0,McDowell Valley,-193794.84999999998
+2024,mcdowell_valley,44.83,0.0,McDowell Valley,44.83
+2021,mendocino,-179178.56492448176,0.0,Mendocino,-179178.56492448176
+2024,mendocino,45.36678237036992,0.0,Mendocino,45.36678237036992
+2021,mendocino_ridge,-81005.98105542785,0.0,Mendocino Ridge,-81005.98105542785
+2024,mendocino_ridge,42.680065196126925,0.0,Mendocino Ridge,42.680065196126925
+2023,merritt_island,52.95,0.0,Merritt Island,52.95
+2024,merritt_island,56.64,0.0,Merritt Island,56.64
+2023,mokelumne_river,48.02331724552273,0.0,Mokelumne River,48.02331724552273
+2023,monterey,47.14008899686166,0.0,Monterey,47.14008899686166
+2024,monterey,43.218621764630726,0.0,Monterey,43.218621764630726
+2024,moon_mountain_district_sonoma_county,45.630665943754046,0.0,Moon Mountain District Sonoma County,45.630665943754046
+2023,mt__harlan,45.84,0.0,Mt. Harlan,45.84
+2024,mt__harlan,48.74,0.0,Mt. Harlan,48.74
+2024,mt__veeder,49.30653025386057,0.0,Mt. Veeder,49.30653025386057
+2024,napa_valley,48.52694304975036,0.0,Napa Valley,48.52694304975036
+2016,north_coast,0.0009339094839197804,0.0,North Coast,0.0009339094839197804
+2020,north_coast,2.038518150973578,0.0,North Coast,2.038518150973578
+2021,north_coast,-27219.845234879842,0.0,North Coast,-27219.845234879842
+2023,north_coast,3.8671367294391175,0.0,North Coast,3.8671367294391175
+2024,north_coast,45.03274749881887,0.0,North Coast,45.03274749881887
+2021,northern_sonoma,-15868.511860909299,0.0,Northern Sonoma,-15868.511860909299
+2024,northern_sonoma,44.30019037974286,0.0,Northern Sonoma,44.30019037974286
+2024,oak_knoll_district_of_napa_valley,49.36,0.0,Oak Knoll District of Napa Valley,49.36
+2024,oakville,47.44075243212292,0.0,Oakville,47.44075243212292
+2023,pacheco_pass,45.84,0.0,Pacheco Pass,45.84
+2024,pacheco_pass,48.74,0.0,Pacheco Pass,48.74
+2023,paicines,50.62917555705904,0.0,Paicines,50.62917555705904
+2024,paicines,54.404442511824755,0.0,Paicines,54.404442511824755
+2021,palos_verdes_peninsula,-516562.48,0.0,Palos Verdes Peninsula,-516562.48
+2024,palos_verdes_peninsula,37.43,0.0,Palos Verdes Peninsula,37.43
+2020,paso_robles,9.719386006274865,0.0,Paso Robles,9.719386006274865
+2023,paso_robles,50.136881447613824,0.0,Paso Robles,50.136881447613824
+2024,paso_robles,53.098881033009874,0.0,Paso Robles,53.098881033009874
+2020,paso_robles_estrella_district,2.222109861699395,0.0,Paso Robles Estrella District,2.222109861699395
+2023,paso_robles_estrella_district,50.72875812776718,0.0,Paso Robles Estrella District,50.72875812776718
+2024,paso_robles_estrella_district,53.842226652319354,0.0,Paso Robles Estrella District,53.842226652319354
+2023,paso_robles_geneseo_district,48.61,0.0,Paso Robles Geneseo District,48.61
+2024,paso_robles_geneseo_district,51.25,0.0,Paso Robles Geneseo District,51.25
+2020,paso_robles_highlands_district,56.96068063486351,0.0,Paso Robles Highlands District,56.96068063486351
+2023,paso_robles_highlands_district,53.16540111113229,0.0,Paso Robles Highlands District,53.16540111113229
+2024,paso_robles_highlands_district,57.06593656854325,0.0,Paso Robles Highlands District,57.06593656854325
+2023,paso_robles_willow_creek_district,48.43308250694067,0.0,Paso Robles Willow Creek District,48.43308250694067
+2024,paso_robles_willow_creek_district,51.0377462840394,0.0,Paso Robles Willow Creek District,51.0377462840394
+2023,paulsell_valley,44.57287497277215,0.0,Paulsell Valley,44.57287497277215
+2024,paulsell_valley,52.80020294996962,0.0,Paulsell Valley,52.80020294996962
+2024,petaluma_gap,43.91526226337625,0.0,Petaluma Gap,43.91526226337625
+2021,pine_mountain_cloverdale_peak,-192244.0931160758,0.0,Pine Mountain-Cloverdale Peak,-192244.0931160758
+2024,pine_mountain_cloverdale_peak,44.52764085989432,0.0,Pine Mountain-Cloverdale Peak,44.52764085989432
+2021,potter_valley,-180925.07000000004,0.0,Potter Valley,-180925.07000000004
+2024,potter_valley,46.88,0.0,Potter Valley,46.88
+2023,ramona_valley,53.81,0.0,Ramona Valley,53.81
+2024,ramona_valley,55.72,0.0,Ramona Valley,55.72
+2020,red_hills_lake_county,0.6423709187985349,0.0,Red Hills Lake County,0.6423709187985349
+2023,red_hills_lake_county,44.0952555395088,0.0,Red Hills Lake County,44.0952555395088
+2024,red_hills_lake_county,47.07724736161066,0.0,Red Hills Lake County,47.07724736161066
+2021,redwood_valley,-181664.3490620907,0.0,Redwood Valley,-181664.3490620907
+2024,redwood_valley,46.512515575376675,0.0,Redwood Valley,46.512515575376675
+2023,river_junction,50.1,0.0,River Junction,50.1
+2021,rockpile,-49240.12008967782,0.0,Rockpile,-49240.12008967782
+2024,rockpile,44.663710392088305,0.0,Rockpile,44.663710392088305
+2024,russian_river_valley,43.80821041158026,0.0,Russian River Valley,43.80821041158026
+2024,rutherford,48.95115560766133,0.0,Rutherford,48.95115560766133
+2024,saddle_rock_malibu,42.26820367809585,0.0,Saddle Rock-Malibu,42.26820367809585
+2023,salado_creek,47.980000000000004,0.0,Salado Creek,47.980000000000004
+2024,salado_creek,51.31,0.0,Salado Creek,51.31
+2023,san_antonio_valley,48.48464398173485,0.0,San Antonio Valley,48.48464398173485
+2024,san_antonio_valley,51.12753112185527,0.0,San Antonio Valley,51.12753112185527
+2023,san_benito,49.771195955211844,0.0,San Benito,49.771195955211844
+2024,san_benito,53.46809364337753,0.0,San Benito,53.46809364337753
+2023,san_bernabe,50.68,0.0,San Bernabe,50.68
+2024,san_bernabe,54.13,0.0,San Bernabe,54.13
+2021,san_francisco_bay,-138068.17017332828,0.0,San Francisco Bay,-138068.17017332828
+2023,san_francisco_bay,17.037372677782663,0.0,San Francisco Bay,17.037372677782663
+2024,san_francisco_bay,19.94039775596146,0.0,San Francisco Bay,19.94039775596146
+2020,san_juan_creek,57.16845023154018,0.0,San Juan Creek,57.16845023154018
+2023,san_juan_creek,54.36,0.0,San Juan Creek,54.36
+2024,san_juan_creek,58.25,0.0,San Juan Creek,58.25
+2023,san_lucas,50.44962155483642,0.0,San Lucas,50.44962155483642
+2024,san_lucas,53.80585574833118,0.0,San Lucas,53.80585574833118
+2016,san_luis_obispo_coast,0.553690008607879,0.0,San Luis Obispo Coast,0.553690008607879
+2023,san_luis_obispo_coast,43.440934627342244,0.0,San Luis Obispo Coast,43.440934627342244
+2024,san_luis_obispo_coast,45.232621182019535,0.0,San Luis Obispo Coast,45.232621182019535
+2023,san_luis_rey,49.15243844077501,0.0,San Luis Rey,49.15243844077501
+2024,san_luis_rey,51.169152763865725,0.0,San Luis Rey,51.169152763865725
+2023,san_miguel_district,51.337712989478675,0.0,San Miguel District,51.337712989478675
+2024,san_miguel_district,54.6730061931976,0.0,San Miguel District,54.6730061931976
+2023,san_pasqual_valley,51.25166039616705,0.0,San Pasqual Valley,51.25166039616705
+2024,san_pasqual_valley,53.11867381619404,0.0,San Pasqual Valley,53.11867381619404
+2023,san_ysidro_district,43.24,0.0,San Ysidro District,43.24
+2024,san_ysidro_district,45.620000000000005,0.0,San Ysidro District,45.620000000000005
+2023,santa_clara_valley,42.775378285070616,0.0,Santa Clara Valley,42.775378285070616
+2024,santa_clara_valley,46.053130889079426,0.0,Santa Clara Valley,46.053130889079426
+2023,santa_cruz_mountains,29.331129710771553,0.0,Santa Cruz Mountains,29.331129710771553
+2024,santa_cruz_mountains,38.80560088406035,0.0,Santa Cruz Mountains,38.80560088406035
+2023,santa_lucia_highlands,44.74217320328529,0.0,Santa Lucia Highlands,44.74217320328529
+2024,santa_lucia_highlands,34.173421578714255,0.0,Santa Lucia Highlands,34.173421578714255
+2020,santa_margarita_ranch,48.46276705120411,0.0,Santa Margarita Ranch,48.46276705120411
+2023,santa_margarita_ranch,49.92528393072714,0.0,Santa Margarita Ranch,49.92528393072714
+2024,santa_margarita_ranch,53.44536306932823,0.0,Santa Margarita Ranch,53.44536306932823
+2023,santa_maria_valley,5.221766066768044,0.0,Santa Maria Valley,5.221766066768044
+2024,santa_maria_valley,47.01602567358359,0.0,Santa Maria Valley,47.01602567358359
+2023,santa_ynez_valley,28.307726009281883,0.0,Santa Ynez Valley,28.307726009281883
+2024,santa_ynez_valley,32.39911020895019,0.0,Santa Ynez Valley,32.39911020895019
+2018,sierra_foothills,1.3066520906643972,0.0,Sierra Foothills,1.3066520906643972
+2023,sierra_foothills,1.878391810052766,0.0,Sierra Foothills,1.878391810052766
+2024,sierra_foothills,17.67996350837194,0.0,Sierra Foothills,17.67996350837194
+2023,sloughhouse,45.21879315681361,0.0,Sloughhouse,45.21879315681361
+2024,sloughhouse,49.28974889903033,0.0,Sloughhouse,49.28974889903033
+2024,solano_county_green_valley,1.3190340274953511,0.0,Solano County Green Valley,1.3190340274953511
+2024,sonoma_coast,44.11165605381184,0.0,Sonoma Coast,44.11165605381184
+2024,sonoma_mountain,45.516835508890594,0.0,Sonoma Mountain,45.516835508890594
+2024,sonoma_valley,45.528197927576365,0.0,Sonoma Valley,45.528197927576365
+2023,south_coast,53.38704540391462,0.0,South Coast,53.38704540391462
+2024,south_coast,55.60142357474883,0.0,South Coast,55.60142357474883
+2024,spring_mountain_district,48.58221782412419,0.0,Spring Mountain District,48.58221782412419
+2024,st__helena,48.547923246906294,0.0,St. Helena,48.547923246906294
+2023,sta__rita_hills,4.979812102059889,0.0,Sta. Rita Hills,4.979812102059889
+2024,sta__rita_hills,38.51209108383052,0.0,Sta. Rita Hills,38.51209108383052
+2024,stags_leap_district,49.36,0.0,Stags Leap District,49.36
+2024,tehachapi_mountains,63.650000000000006,0.0,Tehachapi Mountains,63.650000000000006
+2023,temecula_valley,54.15255050743371,0.0,Temecula Valley,54.15255050743371
+2024,temecula_valley,56.3995154994414,0.0,Temecula Valley,56.3995154994414
+2023,templeton_gap_district,47.40527925060558,0.0,Templeton Gap District,47.40527925060558
+2024,templeton_gap_district,49.66208716347783,0.0,Templeton Gap District,49.66208716347783
+2024,tracy_hills,23.599116288340632,0.0,Tracy Hills,23.599116288340632
+2016,trinity_lakes,9.718323609323495,0.0,Trinity Lakes,9.718323609323495
+2023,trinity_lakes,42.43446054325224,0.0,Trinity Lakes,42.43446054325224
+2024,trinity_lakes,44.36513045498566,0.0,Trinity Lakes,44.36513045498566
+2020,upper_lake_valley,43.135262857362385,0.0,Upper Lake Valley,43.135262857362385
+2023,upper_lake_valley,38.26468144252207,0.0,Upper Lake Valley,38.26468144252207
+2024,upper_lake_valley,42.72740102853609,0.0,Upper Lake Valley,42.72740102853609
+2024,west_sonoma_coast,41.004025575857185,0.0,West Sonoma Coast,41.004025575857185
+2024,wild_horse_valley,35.96140591189612,0.0,Wild Horse Valley,35.96140591189612
+2016,willow_creek,5.519250198740252,0.0,Willow Creek,5.519250198740252
+2023,willow_creek,4.589208756332334,0.0,Willow Creek,4.589208756332334
+2024,willow_creek,40.534628171290606,0.0,Willow Creek,40.534628171290606
+2023,winters_highlands,50.2,0.0,Winters Highlands,50.2
+2024,winters_highlands,53.43,0.0,Winters Highlands,53.43
+2023,york_mountain,46.92,0.0,York Mountain,46.92
+2024,york_mountain,49.17,0.0,York Mountain,49.17
+2021,yorkville_highlands,-185328.70527905572,0.0,Yorkville Highlands,-185328.70527905572
+2024,yorkville_highlands,43.99965549341155,0.0,Yorkville Highlands,43.99965549341155
+2024,yountville,49.15835133891953,0.0,Yountville,49.15835133891953

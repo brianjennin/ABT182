@@ -1031,7 +1031,7 @@ def main() -> None:
     print("=" * 70)
     pivot = county_annual.pivot_table(
         index="county", columns="year", values="water_deficit_in"
-    ).round(1)
+    ).apply(pd.to_numeric, errors="coerce").round(1)
     print(pivot.nlargest(10, pivot.columns[-1]).to_string())
 
     print("\n" + "=" * 70)
@@ -1039,7 +1039,7 @@ def main() -> None:
     print("=" * 70)
     ava_pivot = ava_annual.pivot_table(
         index="ava_name", columns="year", values="water_deficit_in"
-    ).round(1)
+    ).apply(pd.to_numeric, errors="coerce").round(1)
     print(ava_pivot.nlargest(10, ava_pivot.columns[-1]).to_string())
 
     print("\nDone.")

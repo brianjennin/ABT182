@@ -3,7 +3,6 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2016,adelaida_district,51.25,0.0,Adelaida District,51.25
 2018,adelaida_district,52.730000000000004,0.0,Adelaida District,52.730000000000004
 2019,adelaida_district,51.03,0.0,Adelaida District,51.03
-2020,adelaida_district,51.410000000000004,0.0,Adelaida District,51.410000000000004
 2021,adelaida_district,48.03,0.0,Adelaida District,48.03
 2022,adelaida_district,55.660000000000004,0.0,Adelaida District,55.660000000000004
 2023,adelaida_district,48.61,0.0,Adelaida District,48.61
@@ -27,7 +26,7 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2023,alisos_canyon,41.85,0.0,Alisos Canyon,41.85
 2024,alisos_canyon,43.61,0.0,Alisos Canyon,43.61
 2014,alta_mesa,57.84692756260372,0.0,Alta Mesa,57.84692756260372
-2016,alta_mesa,43.26513447652612,0.0,Alta Mesa,43.26513447652612
+2016,alta_mesa,43.265134476526114,0.0,Alta Mesa,43.265134476526114
 2019,alta_mesa,25.630399352565558,0.0,Alta Mesa,25.630399352565558
 2020,alta_mesa,14.520091734265938,0.0,Alta Mesa,14.520091734265938
 2021,alta_mesa,25.721326319974317,0.0,Alta Mesa,25.721326319974317
@@ -48,11 +47,11 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2019,antelope_valley_of_the_california_high_desert,44.65343920440986,0.0,Antelope Valley of the California High Desert,44.65343920440986
 2020,antelope_valley_of_the_california_high_desert,17.985475580175965,0.0,Antelope Valley of the California High Desert,17.985475580175965
 2021,antelope_valley_of_the_california_high_desert,37.06793575486221,0.0,Antelope Valley of the California High Desert,37.06793575486221
-2022,antelope_valley_of_the_california_high_desert,52.24080420600873,0.0,Antelope Valley of the California High Desert,52.24080420600873
+2022,antelope_valley_of_the_california_high_desert,52.240804206008725,0.0,Antelope Valley of the California High Desert,52.240804206008725
 2023,antelope_valley_of_the_california_high_desert,62.457298716265576,0.0,Antelope Valley of the California High Desert,62.457298716265576
 2024,antelope_valley_of_the_california_high_desert,7.048746062497076,0.0,Antelope Valley of the California High Desert,7.048746062497076
 2014,arroyo_grande_valley,51.56484587684234,0.0,Arroyo Grande Valley,51.56484587684234
-2016,arroyo_grande_valley,2.2922786877826513,0.0,Arroyo Grande Valley,2.2922786877826513
+2016,arroyo_grande_valley,2.2922786877826518,0.0,Arroyo Grande Valley,2.2922786877826518
 2018,arroyo_grande_valley,50.048984382215146,0.0,Arroyo Grande Valley,50.048984382215146
 2019,arroyo_grande_valley,47.45382795251546,0.0,Arroyo Grande Valley,47.45382795251546
 2020,arroyo_grande_valley,48.82317396385597,0.0,Arroyo Grande Valley,48.82317396385597
@@ -91,7 +90,7 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2019,ben_lomond_mountain,34.34,0.0,Ben Lomond Mountain,34.34
 2020,ben_lomond_mountain,36.1452479542454,0.0,Ben Lomond Mountain,36.1452479542454
 2021,ben_lomond_mountain,31.637659451266202,0.0,Ben Lomond Mountain,31.637659451266202
-2022,ben_lomond_mountain,0.7167930497242891,0.0,Ben Lomond Mountain,0.7167930497242891
+2022,ben_lomond_mountain,0.7167930497242896,0.0,Ben Lomond Mountain,0.7167930497242896
 2023,ben_lomond_mountain,34.24453871959392,0.0,Ben Lomond Mountain,34.24453871959392
 2024,ben_lomond_mountain,34.86278540881694,0.0,Ben Lomond Mountain,34.86278540881694
 2014,benmore_valley,48.0,0.0,Benmore Valley,48.0
@@ -118,7 +117,6 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2014,borden_ranch,56.76325334270872,0.0,Borden Ranch,56.76325334270872
 2016,borden_ranch,55.11100003303907,0.0,Borden Ranch,55.11100003303907
 2019,borden_ranch,21.556046111651018,0.0,Borden Ranch,21.556046111651018
-2020,borden_ranch,0.7125707704400639,0.0,Borden Ranch,0.7125707704400639
 2021,borden_ranch,20.995598976020993,0.0,Borden Ranch,20.995598976020993
 2014,california_shenandoah_valley,51.733589458906,0.0,California Shenandoah Valley,51.733589458906
 2016,california_shenandoah_valley,54.52979023807975,0.0,California Shenandoah Valley,54.52979023807975
@@ -126,7 +124,7 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2019,california_shenandoah_valley,53.0447087832555,0.0,California Shenandoah Valley,53.0447087832555
 2020,california_shenandoah_valley,53.46814436675009,0.0,California Shenandoah Valley,53.46814436675009
 2021,california_shenandoah_valley,48.04693828352637,0.0,California Shenandoah Valley,48.04693828352637
-2023,california_shenandoah_valley,3.5419503397871415,0.0,California Shenandoah Valley,3.5419503397871415
+2023,california_shenandoah_valley,3.541950339787142,0.0,California Shenandoah Valley,3.541950339787142
 2018,calistoga,44.59,0.0,Calistoga,44.59
 2019,calistoga,45.12,0.0,Calistoga,45.12
 2020,calistoga,47.47,0.0,Calistoga,47.47
@@ -137,7 +135,7 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2014,capay_valley,47.002198878293754,0.0,Capay Valley,47.002198878293754
 2016,capay_valley,19.54837424086344,0.0,Capay Valley,19.54837424086344
 2018,capay_valley,49.097257335740736,0.0,Capay Valley,49.097257335740736
-2019,capay_valley,6.9040715218890725,0.0,Capay Valley,6.9040715218890725
+2019,capay_valley,6.904071521889073,0.0,Capay Valley,6.904071521889073
 2020,capay_valley,35.21786401426847,0.0,Capay Valley,35.21786401426847
 2021,capay_valley,47.40918980644585,0.0,Capay Valley,47.40918980644585
 2023,capay_valley,48.31445257371228,0.0,Capay Valley,48.31445257371228
@@ -153,12 +151,12 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2016,central_coast,43.51628500676244,0.0,Central Coast,43.51628500676244
 2018,central_coast,50.30579297959466,0.0,Central Coast,50.30579297959466
 2019,central_coast,48.349012336304604,0.0,Central Coast,48.349012336304604
-2020,central_coast,44.018207504701806,0.0,Central Coast,44.018207504701806
+2020,central_coast,35.348980666870666,0.0,Central Coast,35.348980666870666
 2021,central_coast,37.83992642790194,0.0,Central Coast,37.83992642790194
 2022,central_coast,43.59445977556541,0.0,Central Coast,43.59445977556541
 2023,central_coast,42.94241149825467,0.0,Central Coast,42.94241149825467
 2024,central_coast,45.60928006263126,0.0,Central Coast,45.60928006263126
-2014,chalk_hill,45.077258008420515,0.0,Chalk Hill,45.077258008420515
+2014,chalk_hill,45.07725800842051,0.0,Chalk Hill,45.07725800842051
 2016,chalk_hill,28.644682182839656,0.0,Chalk Hill,28.644682182839656
 2018,chalk_hill,42.70367240374412,0.0,Chalk Hill,42.70367240374412
 2019,chalk_hill,28.064736290745298,0.0,Chalk Hill,28.064736290745298
@@ -201,20 +199,19 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2016,clear_lake,13.917977030783197,0.0,Clear Lake,13.917977030783197
 2018,clear_lake,45.14829879329707,0.0,Clear Lake,45.14829879329707
 2019,clear_lake,45.598732510045295,0.0,Clear Lake,45.598732510045295
-2020,clear_lake,47.62753201615266,0.0,Clear Lake,47.62753201615266
+2020,clear_lake,47.62753201615265,0.0,Clear Lake,47.62753201615265
 2021,clear_lake,27.851025831488194,0.0,Clear Lake,27.851025831488194
 2022,clear_lake,49.53204479944803,0.0,Clear Lake,49.53204479944803
 2023,clear_lake,43.05292848218108,0.0,Clear Lake,43.05292848218108
 2024,clear_lake,46.79348039225363,0.0,Clear Lake,46.79348039225363
 2014,clements_hills,34.96788601573068,0.0,Clements Hills,34.96788601573068
 2016,clements_hills,31.663263907359443,0.0,Clements Hills,31.663263907359443
-2018,clements_hills,3.0037458853369445,0.0,Clements Hills,3.0037458853369445
-2019,clements_hills,20.644478752349393,0.0,Clements Hills,20.644478752349393
-2020,clements_hills,52.81138714046323,0.0,Clements Hills,52.81138714046323
+2018,clements_hills,3.003745885336945,0.0,Clements Hills,3.003745885336945
+2019,clements_hills,20.64447875234939,0.0,Clements Hills,20.64447875234939
+2020,clements_hills,12.92599826372993,0.0,Clements Hills,12.92599826372993
 2021,clements_hills,29.159499419154077,0.0,Clements Hills,29.159499419154077
-2022,clements_hills,10.048467884026895,0.0,Clements Hills,10.048467884026895
+2022,clements_hills,10.048467884026897,0.0,Clements Hills,10.048467884026897
 2023,clements_hills,27.724675901729203,0.0,Clements Hills,27.724675901729203
-2024,clements_hills,42.28829589006567,0.0,Clements Hills,42.28829589006567
 2014,cole_ranch,48.04,0.0,Cole Ranch,48.04
 2016,cole_ranch,43.36,0.0,Cole Ranch,43.36
 2018,cole_ranch,44.550000000000004,0.0,Cole Ranch,44.550000000000004
@@ -234,14 +231,14 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2024,comptche,45.160000000000004,0.0,Comptche,45.160000000000004
 2014,contra_costa,53.162184973754655,0.0,Contra Costa,53.162184973754655
 2016,contra_costa,46.809480309932916,0.0,Contra Costa,46.809480309932916
-2018,contra_costa,51.253082401226855,0.0,Contra Costa,51.253082401226855
+2018,contra_costa,51.25308240122685,0.0,Contra Costa,51.25308240122685
 2019,contra_costa,20.027524836394583,0.0,Contra Costa,20.027524836394583
-2020,contra_costa,27.27639424839548,0.0,Contra Costa,27.27639424839548
-2021,contra_costa,48.57437555171999,0.0,Contra Costa,48.57437555171999
+2020,contra_costa,27.276394248395476,0.0,Contra Costa,27.276394248395476
+2021,contra_costa,48.57437555171998,0.0,Contra Costa,48.57437555171998
 2022,contra_costa,52.061338644973354,0.0,Contra Costa,52.061338644973354
 2023,contra_costa,39.06415508424715,0.0,Contra Costa,39.06415508424715
-2024,contra_costa,1.1070599759921553,0.0,Contra Costa,1.1070599759921553
-2014,coombsville,38.58123357783433,0.0,Coombsville,38.58123357783433
+2024,contra_costa,1.1070599759921558,0.0,Contra Costa,1.1070599759921558
+2014,coombsville,38.581233577834325,0.0,Coombsville,38.581233577834325
 2016,coombsville,46.12900395205594,0.0,Coombsville,46.12900395205594
 2018,coombsville,47.095203484578875,0.0,Coombsville,47.095203484578875
 2019,coombsville,37.04987298040477,0.0,Coombsville,37.04987298040477
@@ -252,7 +249,7 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2024,coombsville,48.965151889176845,0.0,Coombsville,48.965151889176845
 2014,cosumnes_river,19.79573579827863,0.0,Cosumnes River,19.79573579827863
 2016,cosumnes_river,19.558159862822528,0.0,Cosumnes River,19.558159862822528
-2019,cosumnes_river,19.583436010773816,0.0,Cosumnes River,19.583436010773816
+2019,cosumnes_river,19.58343601077382,0.0,Cosumnes River,19.58343601077382
 2021,cosumnes_river,17.726400059675996,0.0,Cosumnes River,17.726400059675996
 2018,covelo,48.18,0.0,Covelo,48.18
 2019,covelo,48.7,0.0,Covelo,48.7
@@ -263,7 +260,7 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2016,creston_district,52.37623822513818,0.0,Creston District,52.37623822513818
 2018,creston_district,53.64573247643332,0.0,Creston District,53.64573247643332
 2019,creston_district,52.05131745125894,0.0,Creston District,52.05131745125894
-2020,creston_district,52.37188600359283,0.0,Creston District,52.37188600359283
+2020,creston_district,22.30050563399577,0.0,Creston District,22.30050563399577
 2021,creston_district,49.096505967684934,0.0,Creston District,49.096505967684934
 2022,creston_district,56.28801228665565,0.0,Creston District,56.28801228665565
 2023,creston_district,49.18674643678597,0.0,Creston District,49.18674643678597
@@ -318,7 +315,7 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2021,dunnigan_hills,50.3432198806042,0.0,Dunnigan Hills,50.3432198806042
 2023,dunnigan_hills,51.582212293056585,0.0,Dunnigan Hills,51.582212293056585
 2024,dunnigan_hills,54.97590241309974,0.0,Dunnigan Hills,54.97590241309974
-2014,eagle_peak_mendocino_county,4.024460492353871,0.0,Eagle Peak Mendocino County,4.024460492353871
+2014,eagle_peak_mendocino_county,4.024460492353872,0.0,Eagle Peak Mendocino County,4.024460492353872
 2016,eagle_peak_mendocino_county,44.37332533599855,0.0,Eagle Peak Mendocino County,44.37332533599855
 2018,eagle_peak_mendocino_county,45.58158345016069,0.0,Eagle Peak Mendocino County,45.58158345016069
 2019,eagle_peak_mendocino_county,47.36113212796556,0.0,Eagle Peak Mendocino County,47.36113212796556
@@ -339,8 +336,8 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2016,el_dorado,40.97769071030282,0.0,El Dorado,40.97769071030282
 2018,el_dorado,14.19943186528907,0.0,El Dorado,14.19943186528907
 2019,el_dorado,50.6369452292124,0.0,El Dorado,50.6369452292124
-2020,el_dorado,53.07700043616613,0.0,El Dorado,53.07700043616613
-2021,el_dorado,39.86414850825514,0.0,El Dorado,39.86414850825514
+2020,el_dorado,52.94541527179188,0.0,El Dorado,52.94541527179188
+2021,el_dorado,39.864148508255134,0.0,El Dorado,39.864148508255134
 2022,el_dorado,2.7586905473232854,0.0,El Dorado,2.7586905473232854
 2023,el_dorado,48.773970486759076,0.0,El Dorado,48.773970486759076
 2024,el_dorado,31.415396061674553,0.0,El Dorado,31.415396061674553
@@ -348,7 +345,7 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2016,el_pomar_district,21.87390092485434,0.0,El Pomar District,21.87390092485434
 2018,el_pomar_district,51.959889170491124,0.0,El Pomar District,51.959889170491124
 2019,el_pomar_district,49.9259587511816,0.0,El Pomar District,49.9259587511816
-2020,el_pomar_district,50.61614791227463,0.0,El Pomar District,50.61614791227463
+2020,el_pomar_district,28.357530647961326,0.0,El Pomar District,28.357530647961326
 2021,el_pomar_district,47.03876188419735,0.0,El Pomar District,47.03876188419735
 2022,el_pomar_district,54.52178720363153,0.0,El Pomar District,54.52178720363153
 2023,el_pomar_district,47.64549692024687,0.0,El Pomar District,47.64549692024687
@@ -358,9 +355,9 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2020,fair_play,52.24,0.0,Fair Play,52.24
 2021,fair_play,27.35,0.0,Fair Play,27.35
 2023,fair_play,48.74,0.0,Fair Play,48.74
-2018,fiddletown,0.5690541767609127,0.0,Fiddletown,0.5690541767609127
+2018,fiddletown,0.5690541767609134,0.0,Fiddletown,0.5690541767609134
 2019,fiddletown,50.9048675481222,0.0,Fiddletown,50.9048675481222
-2020,fiddletown,0.522397918111611,0.0,Fiddletown,0.522397918111611
+2020,fiddletown,0.5223979181116115,0.0,Fiddletown,0.5223979181116115
 2014,fort_ross_seaview,42.60574738424069,0.0,Fort Ross-Seaview,42.60574738424069
 2016,fort_ross_seaview,38.62834654700272,0.0,Fort Ross-Seaview,38.62834654700272
 2018,fort_ross_seaview,39.50184860782005,0.0,Fort Ross-Seaview,39.50184860782005
@@ -371,7 +368,7 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2023,fort_ross_seaview,38.553899380290915,0.0,Fort Ross-Seaview,38.553899380290915
 2024,fort_ross_seaview,41.21248399277326,0.0,Fort Ross-Seaview,41.21248399277326
 2014,fountaingrove_district,28.730086529142437,0.0,Fountaingrove District,28.730086529142437
-2016,fountaingrove_district,37.17195570860553,0.0,Fountaingrove District,37.17195570860553
+2016,fountaingrove_district,37.17195570860552,0.0,Fountaingrove District,37.17195570860552
 2018,fountaingrove_district,43.36138258522938,0.0,Fountaingrove District,43.36138258522938
 2019,fountaingrove_district,44.236261300144974,0.0,Fountaingrove District,44.236261300144974
 2020,fountaingrove_district,46.372327314008494,0.0,Fountaingrove District,46.372327314008494
@@ -384,9 +381,9 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2018,gabilan_mountains,47.65373417396357,0.0,Gabilan Mountains,47.65373417396357
 2019,gabilan_mountains,46.95377154795087,0.0,Gabilan Mountains,46.95377154795087
 2020,gabilan_mountains,37.97041443554374,0.0,Gabilan Mountains,37.97041443554374
-2021,gabilan_mountains,35.15076636621946,0.0,Gabilan Mountains,35.15076636621946
-2022,gabilan_mountains,12.687961611931241,0.0,Gabilan Mountains,12.687961611931241
-2023,gabilan_mountains,45.92328715775414,0.0,Gabilan Mountains,45.92328715775414
+2021,gabilan_mountains,35.150766366219464,0.0,Gabilan Mountains,35.150766366219464
+2022,gabilan_mountains,12.687961611931243,0.0,Gabilan Mountains,12.687961611931243
+2023,gabilan_mountains,45.923287157754146,0.0,Gabilan Mountains,45.923287157754146
 2024,gabilan_mountains,45.74620866884975,0.0,Gabilan Mountains,45.74620866884975
 2014,green_valley_of_russian_river_valley,3.953798253333334,0.0,Green Valley of Russian River Valley,3.953798253333334
 2016,green_valley_of_russian_river_valley,3.848391926517273,0.0,Green Valley of Russian River Valley,3.848391926517273
@@ -426,7 +423,7 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2020,high_valley,48.78297151345512,0.0,High Valley,48.78297151345512
 2022,high_valley,51.21015343207577,0.0,High Valley,51.21015343207577
 2023,high_valley,38.55516142129595,0.0,High Valley,38.55516142129595
-2024,high_valley,47.95753771849834,0.0,High Valley,47.95753771849834
+2024,high_valley,47.957537718498344,0.0,High Valley,47.957537718498344
 2014,howell_mountain,41.97812476542472,0.0,Howell Mountain,41.97812476542472
 2016,howell_mountain,40.05228011354283,0.0,Howell Mountain,40.05228011354283
 2018,howell_mountain,45.54167636775876,0.0,Howell Mountain,45.54167636775876
@@ -447,11 +444,9 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2014,jahant,57.91246911580605,0.0,Jahant,57.91246911580605
 2016,jahant,56.30425082365448,0.0,Jahant,56.30425082365448
 2019,jahant,15.738742486514642,0.0,Jahant,15.738742486514642
-2020,jahant,39.53639446417808,0.0,Jahant,39.53639446417808
-2021,jahant,53.01401330436795,0.0,Jahant,53.01401330436795
+2021,jahant,53.01401330436794,0.0,Jahant,53.01401330436794
 2022,jahant,41.275151060335986,0.0,Jahant,41.275151060335986
 2023,jahant,36.66450779490621,0.0,Jahant,36.66450779490621
-2024,jahant,38.79513061861498,0.0,Jahant,38.79513061861498
 2014,kelsey_bench_lake_county,47.408123440835794,0.0,Kelsey Bench-Lake County,47.408123440835794
 2018,kelsey_bench_lake_county,44.48152671781792,0.0,Kelsey Bench-Lake County,44.48152671781792
 2019,kelsey_bench_lake_county,45.09521823102372,0.0,Kelsey Bench-Lake County,45.09521823102372
@@ -461,8 +456,8 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2023,kelsey_bench_lake_county,43.31858509334654,0.0,Kelsey Bench-Lake County,43.31858509334654
 2024,kelsey_bench_lake_county,46.24185939856702,0.0,Kelsey Bench-Lake County,46.24185939856702
 2014,knights_valley,2.7907580466117743,0.0,Knights Valley,2.7907580466117743
-2016,knights_valley,2.5950607937665815,0.0,Knights Valley,2.5950607937665815
-2018,knights_valley,44.480981096226216,0.0,Knights Valley,44.480981096226216
+2016,knights_valley,2.595060793766582,0.0,Knights Valley,2.595060793766582
+2018,knights_valley,44.48098109622622,0.0,Knights Valley,44.48098109622622
 2019,knights_valley,42.759824261402784,0.0,Knights Valley,42.759824261402784
 2020,knights_valley,47.351963582041584,0.0,Knights Valley,47.351963582041584
 2021,knights_valley,42.69126013542123,0.0,Knights Valley,42.69126013542123
@@ -486,18 +481,18 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2014,livermore_valley,47.67240459124822,0.0,Livermore Valley,47.67240459124822
 2016,livermore_valley,45.86580730610989,0.0,Livermore Valley,45.86580730610989
 2018,livermore_valley,42.93301178866298,0.0,Livermore Valley,42.93301178866298
-2019,livermore_valley,0.128734675129614,0.0,Livermore Valley,0.128734675129614
-2020,livermore_valley,0.0751850437895898,0.0,Livermore Valley,0.0751850437895898
+2019,livermore_valley,0.12873467512961456,0.0,Livermore Valley,0.12873467512961456
+2020,livermore_valley,0.07518504378959005,0.0,Livermore Valley,0.07518504378959005
 2021,livermore_valley,38.89752028278415,0.0,Livermore Valley,38.89752028278415
 2014,lodi,48.57414038354675,0.0,Lodi,48.57414038354675
 2016,lodi,45.22372238067906,0.0,Lodi,45.22372238067906
-2018,lodi,2.192416115308433,0.0,Lodi,2.192416115308433
+2018,lodi,2.1924161153084336,0.0,Lodi,2.1924161153084336
 2019,lodi,15.323552632950843,0.0,Lodi,15.323552632950843
-2020,lodi,40.83464871227516,0.0,Lodi,40.83464871227516
+2020,lodi,21.023360854047457,0.0,Lodi,21.023360854047457
 2021,lodi,36.59579336731667,0.0,Lodi,36.59579336731667
 2022,lodi,11.852968069528105,0.0,Lodi,11.852968069528105
 2023,lodi,32.046742957317385,0.0,Lodi,32.046742957317385
-2024,lodi,38.32789187988142,0.0,Lodi,38.32789187988142
+2024,lodi,4.213690511418953,0.0,Lodi,4.213690511418953
 2014,long_valley-lake_county,49.22,0.0,Long Valley-Lake County,49.22
 2016,long_valley-lake_county,45.4,0.0,Long Valley-Lake County,45.4
 2018,long_valley-lake_county,46.46,0.0,Long Valley-Lake County,46.46
@@ -527,18 +522,17 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2014,madera,11.357530186744404,0.0,Madera,11.357530186744404
 2016,madera,10.52572418443525,0.0,Madera,10.52572418443525
 2022,madera,42.127574105250446,0.0,Madera,42.127574105250446
-2023,madera,0.0257201769834096,0.0,Madera,0.0257201769834096
-2024,madera,7.785568743674869,0.0,Madera,7.785568743674869
+2023,madera,0.025720176983410226,0.0,Madera,0.025720176983410226
+2024,madera,7.785568743674868,0.0,Madera,7.785568743674868
 2014,malibu_coast,50.12823979932666,0.0,Malibu Coast,50.12823979932666
 2016,malibu_coast,9.728609695132642,0.0,Malibu Coast,9.728609695132642
-2018,malibu_coast,1.0396823686409544,0.0,Malibu Coast,1.0396823686409544
-2019,malibu_coast,1.470519527688744,0.0,Malibu Coast,1.470519527688744
-2020,malibu_coast,46.29335365828925,0.0,Malibu Coast,46.29335365828925
-2021,malibu_coast,2.1195836734655953,0.0,Malibu Coast,2.1195836734655953
+2018,malibu_coast,1.039682368640955,0.0,Malibu Coast,1.039682368640955
+2019,malibu_coast,1.4705195276887444,0.0,Malibu Coast,1.4705195276887444
+2020,malibu_coast,2.177361340837991,0.0,Malibu Coast,2.177361340837991
+2021,malibu_coast,2.1195836734655957,0.0,Malibu Coast,2.1195836734655957
 2022,malibu_coast,3.453137475690624,0.0,Malibu Coast,3.453137475690624
 2024,malibu_coast,42.634739011053306,0.0,Malibu Coast,42.634739011053306
 2014,malibu_newton_canyon,49.730000000000004,0.0,Malibu-Newton Canyon,49.730000000000004
-2020,malibu_newton_canyon,45.72,0.0,Malibu-Newton Canyon,45.72
 2024,malibu_newton_canyon,41.65,0.0,Malibu-Newton Canyon,41.65
 2014,manton_valley,51.5,0.0,Manton Valley,51.5
 2018,manton_valley,49.27,0.0,Manton Valley,49.27
@@ -569,7 +563,7 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2018,mendocino_ridge,41.41339455346471,0.0,Mendocino Ridge,41.41339455346471
 2019,mendocino_ridge,43.617800491602594,0.0,Mendocino Ridge,43.617800491602594
 2020,mendocino_ridge,43.84108564379554,0.0,Mendocino Ridge,43.84108564379554
-2021,mendocino_ridge,22.62277497843576,0.0,Mendocino Ridge,22.62277497843576
+2021,mendocino_ridge,22.622774978435757,0.0,Mendocino Ridge,22.622774978435757
 2022,mendocino_ridge,42.507507219536635,0.0,Mendocino Ridge,42.507507219536635
 2023,mendocino_ridge,40.50833600082897,0.0,Mendocino Ridge,40.50833600082897
 2024,mendocino_ridge,42.680065196126925,0.0,Mendocino Ridge,42.680065196126925
@@ -584,22 +578,21 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2014,mokelumne_river,55.345469146520635,0.0,Mokelumne River,55.345469146520635
 2016,mokelumne_river,54.15033727985802,0.0,Mokelumne River,54.15033727985802
 2018,mokelumne_river,2.848484289653543,0.0,Mokelumne River,2.848484289653543
-2019,mokelumne_river,13.195523619396623,0.0,Mokelumne River,13.195523619396623
-2020,mokelumne_river,52.69688174035375,0.0,Mokelumne River,52.69688174035375
+2019,mokelumne_river,13.195523619396624,0.0,Mokelumne River,13.195523619396624
+2020,mokelumne_river,28.460638897365563,0.0,Mokelumne River,28.460638897365563
 2021,mokelumne_river,48.886402168297536,0.0,Mokelumne River,48.886402168297536
 2022,mokelumne_river,12.359510148063386,0.0,Mokelumne River,12.359510148063386
-2023,mokelumne_river,48.02331724552274,0.0,Mokelumne River,48.02331724552274
-2024,mokelumne_river,51.613434656246426,0.0,Mokelumne River,51.613434656246426
+2023,mokelumne_river,48.02331724552273,0.0,Mokelumne River,48.02331724552273
 2014,monterey,37.13772611835754,0.0,Monterey,37.13772611835754
 2016,monterey,47.19302277714814,0.0,Monterey,47.19302277714814
 2018,monterey,48.861149961787156,0.0,Monterey,48.861149961787156
 2019,monterey,48.43994205804458,0.0,Monterey,48.43994205804458
 2020,monterey,39.901855953941386,0.0,Monterey,39.901855953941386
 2021,monterey,28.43215839155997,0.0,Monterey,28.43215839155997
-2022,monterey,31.399766822146198,0.0,Monterey,31.399766822146198
+2022,monterey,31.3997668221462,0.0,Monterey,31.3997668221462
 2023,monterey,47.14008899686166,0.0,Monterey,47.14008899686166
 2024,monterey,43.218621764630726,0.0,Monterey,43.218621764630726
-2014,moon_mountain_district_sonoma_county,46.07536185133562,0.0,Moon Mountain District Sonoma County,46.07536185133562
+2014,moon_mountain_district_sonoma_county,46.07536185133563,0.0,Moon Mountain District Sonoma County,46.07536185133563
 2016,moon_mountain_district_sonoma_county,43.01621171988327,0.0,Moon Mountain District Sonoma County,43.01621171988327
 2018,moon_mountain_district_sonoma_county,43.80590500637378,0.0,Moon Mountain District Sonoma County,43.80590500637378
 2019,moon_mountain_district_sonoma_county,44.4860837133066,0.0,Moon Mountain District Sonoma County,44.4860837133066
@@ -653,7 +646,7 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2016,northern_sonoma,31.555196979774387,0.0,Northern Sonoma,31.555196979774387
 2018,northern_sonoma,42.51489952258777,0.0,Northern Sonoma,42.51489952258777
 2019,northern_sonoma,24.188672608688613,0.0,Northern Sonoma,24.188672608688613
-2020,northern_sonoma,45.29155728963512,0.0,Northern Sonoma,45.29155728963512
+2020,northern_sonoma,45.291557289635115,0.0,Northern Sonoma,45.291557289635115
 2021,northern_sonoma,40.82270164402118,0.0,Northern Sonoma,40.82270164402118
 2022,northern_sonoma,45.57912146196014,0.0,Northern Sonoma,45.57912146196014
 2023,northern_sonoma,41.37206578422944,0.0,Northern Sonoma,41.37206578422944
@@ -668,12 +661,12 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2023,oak_knoll_district_of_napa_valley,46.300000000000004,0.0,Oak Knoll District of Napa Valley,46.300000000000004
 2024,oak_knoll_district_of_napa_valley,49.36,0.0,Oak Knoll District of Napa Valley,49.36
 2014,oakville,47.46139278971119,0.0,Oakville,47.46139278971119
-2016,oakville,44.598319816414154,0.0,Oakville,44.598319816414154
+2016,oakville,44.59831981641416,0.0,Oakville,44.59831981641416
 2018,oakville,45.641827816057244,0.0,Oakville,45.641827816057244
 2019,oakville,45.5893876001175,0.0,Oakville,45.5893876001175
 2020,oakville,48.88235607808117,0.0,Oakville,48.88235607808117
-2021,oakville,43.34779804801903,0.0,Oakville,43.34779804801903
-2022,oakville,50.14521827204634,0.0,Oakville,50.14521827204634
+2021,oakville,43.34779804801902,0.0,Oakville,43.34779804801902
+2022,oakville,50.145218272046336,0.0,Oakville,50.145218272046336
 2023,oakville,44.537712054131276,0.0,Oakville,44.537712054131276
 2024,oakville,47.44075243212292,0.0,Oakville,47.44075243212292
 2014,pacheco_pass,49.79,0.0,Pacheco Pass,49.79
@@ -698,19 +691,19 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2023,palos_verdes_peninsula,39.97,0.0,Palos Verdes Peninsula,39.97
 2024,palos_verdes_peninsula,37.43,0.0,Palos Verdes Peninsula,37.43
 2014,paso_robles,50.171664371632545,0.0,Paso Robles,50.171664371632545
-2016,paso_robles,48.51350172387625,0.0,Paso Robles,48.51350172387625
+2016,paso_robles,48.51350172387626,0.0,Paso Robles,48.51350172387626
 2018,paso_robles,54.16783107888827,0.0,Paso Robles,54.16783107888827
 2019,paso_robles,52.99800295623657,0.0,Paso Robles,52.99800295623657
-2020,paso_robles,52.981461149749016,0.0,Paso Robles,52.981461149749016
+2020,paso_robles,26.41494975838769,0.0,Paso Robles,26.41494975838769
 2021,paso_robles,50.02358710808041,0.0,Paso Robles,50.02358710808041
 2022,paso_robles,57.42707874498793,0.0,Paso Robles,57.42707874498793
 2023,paso_robles,50.136881447613824,0.0,Paso Robles,50.136881447613824
 2024,paso_robles,53.098881033009874,0.0,Paso Robles,53.098881033009874
-2014,paso_robles_estrella_district,54.90140075362791,0.0,Paso Robles Estrella District,54.90140075362791
+2014,paso_robles_estrella_district,54.90140075362792,0.0,Paso Robles Estrella District,54.90140075362792
 2016,paso_robles_estrella_district,52.87391427582455,0.0,Paso Robles Estrella District,52.87391427582455
 2018,paso_robles_estrella_district,54.21163981727295,0.0,Paso Robles Estrella District,54.21163981727295
 2019,paso_robles_estrella_district,53.484828555284565,0.0,Paso Robles Estrella District,53.484828555284565
-2020,paso_robles_estrella_district,53.34863141834683,0.0,Paso Robles Estrella District,53.34863141834683
+2020,paso_robles_estrella_district,27.009675210031713,0.0,Paso Robles Estrella District,27.009675210031713
 2021,paso_robles_estrella_district,50.694515652809145,0.0,Paso Robles Estrella District,50.694515652809145
 2022,paso_robles_estrella_district,58.33942638397541,0.0,Paso Robles Estrella District,58.33942638397541
 2023,paso_robles_estrella_district,50.72875812776718,0.0,Paso Robles Estrella District,50.72875812776718
@@ -719,12 +712,11 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2016,paso_robles_geneseo_district,51.25,0.0,Paso Robles Geneseo District,51.25
 2018,paso_robles_geneseo_district,52.730000000000004,0.0,Paso Robles Geneseo District,52.730000000000004
 2019,paso_robles_geneseo_district,51.03,0.0,Paso Robles Geneseo District,51.03
-2020,paso_robles_geneseo_district,51.410000000000004,0.0,Paso Robles Geneseo District,51.410000000000004
 2021,paso_robles_geneseo_district,48.03,0.0,Paso Robles Geneseo District,48.03
 2022,paso_robles_geneseo_district,55.660000000000004,0.0,Paso Robles Geneseo District,55.660000000000004
 2023,paso_robles_geneseo_district,48.61,0.0,Paso Robles Geneseo District,48.61
 2024,paso_robles_geneseo_district,51.25,0.0,Paso Robles Geneseo District,51.25
-2014,paso_robles_highlands_district,59.025524846031274,0.0,Paso Robles Highlands District,59.025524846031274
+2014,paso_robles_highlands_district,59.02552484603128,0.0,Paso Robles Highlands District,59.02552484603128
 2016,paso_robles_highlands_district,57.116126287514895,0.0,Paso Robles Highlands District,57.116126287514895
 2018,paso_robles_highlands_district,57.797217459587515,0.0,Paso Robles Highlands District,57.797217459587515
 2019,paso_robles_highlands_district,57.23152842437763,0.0,Paso Robles Highlands District,57.23152842437763
@@ -737,12 +729,12 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2016,paso_robles_willow_creek_district,44.97843553541838,0.0,Paso Robles Willow Creek District,44.97843553541838
 2018,paso_robles_willow_creek_district,52.57247357867826,0.0,Paso Robles Willow Creek District,52.57247357867826
 2019,paso_robles_willow_creek_district,50.80494701309038,0.0,Paso Robles Willow Creek District,50.80494701309038
-2020,paso_robles_willow_creek_district,51.259622215110234,0.0,Paso Robles Willow Creek District,51.259622215110234
+2020,paso_robles_willow_creek_district,5.371709301669627,0.0,Paso Robles Willow Creek District,5.371709301669627
 2021,paso_robles_willow_creek_district,47.85118725215956,0.0,Paso Robles Willow Creek District,47.85118725215956
 2022,paso_robles_willow_creek_district,55.45678801539562,0.0,Paso Robles Willow Creek District,55.45678801539562
 2023,paso_robles_willow_creek_district,48.43308250694067,0.0,Paso Robles Willow Creek District,48.43308250694067
 2024,paso_robles_willow_creek_district,51.0377462840394,0.0,Paso Robles Willow Creek District,51.0377462840394
-2014,paulsell_valley,7.22211274631451,0.0,Paulsell Valley,7.22211274631451
+2014,paulsell_valley,7.222112746314511,0.0,Paulsell Valley,7.222112746314511
 2016,paulsell_valley,48.82148323050497,0.0,Paulsell Valley,48.82148323050497
 2018,paulsell_valley,56.46489823276828,0.0,Paulsell Valley,56.46489823276828
 2019,paulsell_valley,51.78082986164429,0.0,Paulsell Valley,51.78082986164429
@@ -794,7 +786,7 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2022,red_hills_lake_county,49.66499559757343,0.0,Red Hills Lake County,49.66499559757343
 2023,red_hills_lake_county,44.0952555395088,0.0,Red Hills Lake County,44.0952555395088
 2024,red_hills_lake_county,47.07724736161066,0.0,Red Hills Lake County,47.07724736161066
-2014,redwood_valley,0.3498681387017179,0.0,Redwood Valley,0.3498681387017179
+2014,redwood_valley,0.34986813870171846,0.0,Redwood Valley,0.34986813870171846
 2016,redwood_valley,44.47191421849855,0.0,Redwood Valley,44.47191421849855
 2018,redwood_valley,45.68249503610814,0.0,Redwood Valley,45.68249503610814
 2019,redwood_valley,47.46682574689083,0.0,Redwood Valley,47.46682574689083
@@ -810,7 +802,6 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2021,river_junction,50.75,0.0,River Junction,50.75
 2022,river_junction,55.910000000000004,0.0,River Junction,55.910000000000004
 2023,river_junction,50.1,0.0,River Junction,50.1
-2024,river_junction,53.81,0.0,River Junction,53.81
 2014,rockpile,32.70748010675899,0.0,Rockpile,32.70748010675899
 2016,rockpile,41.99546063552132,0.0,Rockpile,41.99546063552132
 2018,rockpile,42.985113494210815,0.0,Rockpile,42.985113494210815
@@ -819,7 +810,7 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2021,rockpile,41.60117959308149,0.0,Rockpile,41.60117959308149
 2022,rockpile,46.03826648558282,0.0,Rockpile,46.03826648558282
 2023,rockpile,41.760018937675284,0.0,Rockpile,41.760018937675284
-2024,rockpile,44.66371039208831,0.0,Rockpile,44.66371039208831
+2024,rockpile,44.663710392088305,0.0,Rockpile,44.663710392088305
 2014,russian_river_valley,33.96245888945623,0.0,Russian River Valley,33.96245888945623
 2016,russian_river_valley,24.001227135121635,0.0,Russian River Valley,24.001227135121635
 2018,russian_river_valley,41.89703176596325,0.0,Russian River Valley,41.89703176596325
@@ -840,7 +831,6 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2024,rutherford,48.95115560766133,0.0,Rutherford,48.95115560766133
 2014,saddle_rock_malibu,50.080530875848225,0.0,Saddle Rock-Malibu,50.080530875848225
 2016,saddle_rock_malibu,8.630274088244144,0.0,Saddle Rock-Malibu,8.630274088244144
-2020,saddle_rock_malibu,46.19764358023748,0.0,Saddle Rock-Malibu,46.19764358023748
 2024,saddle_rock_malibu,42.26820367809585,0.0,Saddle Rock-Malibu,42.26820367809585
 2014,salado_creek,54.89,0.0,Salado Creek,54.89
 2016,salado_creek,52.87,0.0,Salado Creek,52.87
@@ -854,10 +844,10 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2014,san_antonio_valley,19.9371346067697,0.0,San Antonio Valley,19.9371346067697
 2016,san_antonio_valley,49.40592970057791,0.0,San Antonio Valley,49.40592970057791
 2018,san_antonio_valley,51.340094935954944,0.0,San Antonio Valley,51.340094935954944
-2019,san_antonio_valley,50.24512175445693,0.0,San Antonio Valley,50.24512175445693
+2019,san_antonio_valley,50.245121754456925,0.0,San Antonio Valley,50.245121754456925
 2020,san_antonio_valley,48.47565946731479,0.0,San Antonio Valley,48.47565946731479
 2021,san_antonio_valley,43.53804400030177,0.0,San Antonio Valley,43.53804400030177
-2022,san_antonio_valley,55.82854506683174,0.0,San Antonio Valley,55.82854506683174
+2022,san_antonio_valley,55.828545066831744,0.0,San Antonio Valley,55.828545066831744
 2023,san_antonio_valley,48.48464398173485,0.0,San Antonio Valley,48.48464398173485
 2024,san_antonio_valley,51.12753112185527,0.0,San Antonio Valley,51.12753112185527
 2014,san_benito,23.428661704037342,0.0,San Benito,23.428661704037342
@@ -879,7 +869,7 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2014,san_francisco_bay,43.036487842354795,0.0,San Francisco Bay,43.036487842354795
 2016,san_francisco_bay,33.460598177454486,0.0,San Francisco Bay,33.460598177454486
 2018,san_francisco_bay,43.31277117366545,0.0,San Francisco Bay,43.31277117366545
-2019,san_francisco_bay,19.589298661118228,0.0,San Francisco Bay,19.589298661118228
+2019,san_francisco_bay,19.589298661118224,0.0,San Francisco Bay,19.589298661118224
 2020,san_francisco_bay,13.364557845119093,0.0,San Francisco Bay,13.364557845119093
 2021,san_francisco_bay,34.57682313716498,0.0,San Francisco Bay,34.57682313716498
 2022,san_francisco_bay,15.181956676511291,0.0,San Francisco Bay,15.181956676511291
@@ -889,7 +879,7 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2016,san_juan_creek,57.74806416069288,0.0,San Juan Creek,57.74806416069288
 2018,san_juan_creek,58.40236562779507,0.0,San Juan Creek,58.40236562779507
 2019,san_juan_creek,57.9178311339247,0.0,San Juan Creek,57.9178311339247
-2020,san_juan_creek,57.500417099745235,0.0,San Juan Creek,57.500417099745235
+2020,san_juan_creek,57.16845023154018,0.0,San Juan Creek,57.16845023154018
 2021,san_juan_creek,55.62,0.0,San Juan Creek,55.62
 2022,san_juan_creek,61.96,0.0,San Juan Creek,61.96
 2023,san_juan_creek,54.36,0.0,San Juan Creek,54.36
@@ -904,20 +894,20 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2023,san_lucas,50.44962155483642,0.0,San Lucas,50.44962155483642
 2024,san_lucas,53.80585574833118,0.0,San Lucas,53.80585574833118
 2014,san_luis_obispo_coast,19.84200228264932,0.0,San Luis Obispo Coast,19.84200228264932
-2016,san_luis_obispo_coast,4.1307246393542325,0.0,San Luis Obispo Coast,4.1307246393542325
+2016,san_luis_obispo_coast,4.130724639354233,0.0,San Luis Obispo Coast,4.130724639354233
 2018,san_luis_obispo_coast,49.41685967351996,0.0,San Luis Obispo Coast,49.41685967351996
 2019,san_luis_obispo_coast,46.290390913781884,0.0,San Luis Obispo Coast,46.290390913781884
 2020,san_luis_obispo_coast,47.779007439489995,0.0,San Luis Obispo Coast,47.779007439489995
 2021,san_luis_obispo_coast,43.20461906440581,0.0,San Luis Obispo Coast,43.20461906440581
 2022,san_luis_obispo_coast,49.92433198857363,0.0,San Luis Obispo Coast,49.92433198857363
-2023,san_luis_obispo_coast,43.440934627342244,0.0,San Luis Obispo Coast,43.440934627342244
+2023,san_luis_obispo_coast,43.44093462734224,0.0,San Luis Obispo Coast,43.44093462734224
 2024,san_luis_obispo_coast,45.232621182019535,0.0,San Luis Obispo Coast,45.232621182019535
 2014,san_luis_rey,52.36979013171544,0.0,San Luis Rey,52.36979013171544
 2016,san_luis_rey,54.22581230586712,0.0,San Luis Rey,54.22581230586712
 2018,san_luis_rey,54.786756926212746,0.0,San Luis Rey,54.786756926212746
 2019,san_luis_rey,50.98272439566937,0.0,San Luis Rey,50.98272439566937
 2020,san_luis_rey,52.21476670038953,0.0,San Luis Rey,52.21476670038953
-2021,san_luis_rey,28.779668789356766,0.0,San Luis Rey,28.779668789356766
+2021,san_luis_rey,28.779668789356762,0.0,San Luis Rey,28.779668789356762
 2022,san_luis_rey,55.54995347322449,0.0,San Luis Rey,55.54995347322449
 2023,san_luis_rey,49.15243844077501,0.0,San Luis Rey,49.15243844077501
 2024,san_luis_rey,51.169152763865725,0.0,San Luis Rey,51.169152763865725
@@ -925,7 +915,7 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2016,san_miguel_district,52.97021830249746,0.0,San Miguel District,52.97021830249746
 2018,san_miguel_district,54.267430662933066,0.0,San Miguel District,54.267430662933066
 2019,san_miguel_district,53.923591769462675,0.0,San Miguel District,53.923591769462675
-2020,san_miguel_district,53.80460862335548,0.0,San Miguel District,53.80460862335548
+2020,san_miguel_district,34.8766216383172,0.0,San Miguel District,34.8766216383172
 2021,san_miguel_district,51.4731303695592,0.0,San Miguel District,51.4731303695592
 2022,san_miguel_district,59.22965403004524,0.0,San Miguel District,59.22965403004524
 2023,san_miguel_district,51.337712989478675,0.0,San Miguel District,51.337712989478675
@@ -960,7 +950,7 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2018,santa_cruz_mountains,39.63023082185512,0.0,Santa Cruz Mountains,39.63023082185512
 2019,santa_cruz_mountains,32.56511066301386,0.0,Santa Cruz Mountains,32.56511066301386
 2020,santa_cruz_mountains,32.21006937537206,0.0,Santa Cruz Mountains,32.21006937537206
-2021,santa_cruz_mountains,35.17868086593983,0.0,Santa Cruz Mountains,35.17868086593983
+2021,santa_cruz_mountains,35.17868086593984,0.0,Santa Cruz Mountains,35.17868086593984
 2022,santa_cruz_mountains,14.32869195295797,0.0,Santa Cruz Mountains,14.32869195295797
 2023,santa_cruz_mountains,31.90015821169055,0.0,Santa Cruz Mountains,31.90015821169055
 2024,santa_cruz_mountains,38.80560088406035,0.0,Santa Cruz Mountains,38.80560088406035
@@ -968,7 +958,7 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2016,santa_lucia_highlands,44.98910683556511,0.0,Santa Lucia Highlands,44.98910683556511
 2018,santa_lucia_highlands,46.48769993335417,0.0,Santa Lucia Highlands,46.48769993335417
 2019,santa_lucia_highlands,45.63451875385947,0.0,Santa Lucia Highlands,45.63451875385947
-2020,santa_lucia_highlands,45.94686593641272,0.0,Santa Lucia Highlands,45.94686593641272
+2020,santa_lucia_highlands,45.94686593641273,0.0,Santa Lucia Highlands,45.94686593641273
 2021,santa_lucia_highlands,42.09537196233515,0.0,Santa Lucia Highlands,42.09537196233515
 2022,santa_lucia_highlands,13.959107610592113,0.0,Santa Lucia Highlands,13.959107610592113
 2023,santa_lucia_highlands,44.74217320328529,0.0,Santa Lucia Highlands,44.74217320328529
@@ -984,14 +974,14 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2024,santa_margarita_ranch,53.44536306932823,0.0,Santa Margarita Ranch,53.44536306932823
 2014,santa_maria_valley,52.599175063526914,0.0,Santa Maria Valley,52.599175063526914
 2016,santa_maria_valley,46.737748288575254,0.0,Santa Maria Valley,46.737748288575254
-2018,santa_maria_valley,50.5047526290611,0.0,Santa Maria Valley,50.5047526290611
+2018,santa_maria_valley,50.504752629061095,0.0,Santa Maria Valley,50.504752629061095
 2019,santa_maria_valley,48.9404925820626,0.0,Santa Maria Valley,48.9404925820626
 2020,santa_maria_valley,49.93280632190388,0.0,Santa Maria Valley,49.93280632190388
 2021,santa_maria_valley,45.45051192658876,0.0,Santa Maria Valley,45.45051192658876
 2022,santa_maria_valley,51.27668110720611,0.0,Santa Maria Valley,51.27668110720611
 2023,santa_maria_valley,5.221766066768044,0.0,Santa Maria Valley,5.221766066768044
 2024,santa_maria_valley,47.01602567358359,0.0,Santa Maria Valley,47.01602567358359
-2014,santa_ynez_valley,27.205107382630217,0.0,Santa Ynez Valley,27.205107382630217
+2014,santa_ynez_valley,27.205107382630214,0.0,Santa Ynez Valley,27.205107382630214
 2016,santa_ynez_valley,42.94708425397841,0.0,Santa Ynez Valley,42.94708425397841
 2018,santa_ynez_valley,46.1107154315007,0.0,Santa Ynez Valley,46.1107154315007
 2019,santa_ynez_valley,44.177604978299925,0.0,Santa Ynez Valley,44.177604978299925
@@ -1004,7 +994,7 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2016,sierra_foothills,38.97762572037458,0.0,Sierra Foothills,38.97762572037458
 2018,sierra_foothills,32.849022759349026,0.0,Sierra Foothills,32.849022759349026
 2019,sierra_foothills,47.011346003499256,0.0,Sierra Foothills,47.011346003499256
-2020,sierra_foothills,47.180271706128735,0.0,Sierra Foothills,47.180271706128735
+2020,sierra_foothills,45.90766113300622,0.0,Sierra Foothills,45.90766113300622
 2021,sierra_foothills,40.114600022069524,0.0,Sierra Foothills,40.114600022069524
 2022,sierra_foothills,14.273979548857996,0.0,Sierra Foothills,14.273979548857996
 2023,sierra_foothills,26.599763823802636,0.0,Sierra Foothills,26.599763823802636
@@ -1012,19 +1002,19 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2014,sloughhouse,57.736432604971554,0.0,Sloughhouse,57.736432604971554
 2016,sloughhouse,16.08644742134564,0.0,Sloughhouse,16.08644742134564
 2018,sloughhouse,7.675979698327512,0.0,Sloughhouse,7.675979698327512
-2019,sloughhouse,5.453057354561052,0.0,Sloughhouse,5.453057354561052
+2019,sloughhouse,5.453057354561053,0.0,Sloughhouse,5.453057354561053
 2020,sloughhouse,48.73742853074953,0.0,Sloughhouse,48.73742853074953
 2021,sloughhouse,5.741665455104203,0.0,Sloughhouse,5.741665455104203
-2023,sloughhouse,45.21879315681361,0.0,Sloughhouse,45.21879315681361
-2024,sloughhouse,49.28974889903033,0.0,Sloughhouse,49.28974889903033
-2019,solano_county_green_valley,1.3656730972445472,0.0,Solano County Green Valley,1.3656730972445472
-2021,solano_county_green_valley,1.421676875223405,0.0,Solano County Green Valley,1.421676875223405
-2022,solano_county_green_valley,1.5757473968078015,0.0,Solano County Green Valley,1.5757473968078015
-2023,solano_county_green_valley,1.2227974931584875,0.0,Solano County Green Valley,1.2227974931584875
-2024,solano_county_green_valley,1.3190340274953507,0.0,Solano County Green Valley,1.3190340274953507
+2023,sloughhouse,45.218793156813604,0.0,Sloughhouse,45.218793156813604
+2024,sloughhouse,49.28974889903032,0.0,Sloughhouse,49.28974889903032
+2019,solano_county_green_valley,1.3656730972445477,0.0,Solano County Green Valley,1.3656730972445477
+2021,solano_county_green_valley,1.4216768752234055,0.0,Solano County Green Valley,1.4216768752234055
+2022,solano_county_green_valley,1.5757473968078022,0.0,Solano County Green Valley,1.5757473968078022
+2023,solano_county_green_valley,1.2227974931584882,0.0,Solano County Green Valley,1.2227974931584882
+2024,solano_county_green_valley,1.3190340274953511,0.0,Solano County Green Valley,1.3190340274953511
 2014,sonoma_coast,37.58222330733112,0.0,Sonoma Coast,37.58222330733112
 2016,sonoma_coast,31.05277321690346,0.0,Sonoma Coast,31.05277321690346
-2018,sonoma_coast,42.26629428326094,0.0,Sonoma Coast,42.26629428326094
+2018,sonoma_coast,42.26629428326093,0.0,Sonoma Coast,42.26629428326093
 2019,sonoma_coast,31.108038976359627,0.0,Sonoma Coast,31.108038976359627
 2020,sonoma_coast,45.219264038469504,0.0,Sonoma Coast,45.219264038469504
 2021,sonoma_coast,40.232853647903546,0.0,Sonoma Coast,40.232853647903546
@@ -1055,14 +1045,14 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2019,south_coast,53.87083599732244,0.0,South Coast,53.87083599732244
 2020,south_coast,56.94058209336427,0.0,South Coast,56.94058209336427
 2021,south_coast,47.23242973278188,0.0,South Coast,47.23242973278188
-2022,south_coast,60.00161365771199,0.0,South Coast,60.00161365771199
+2022,south_coast,60.001613657711985,0.0,South Coast,60.001613657711985
 2023,south_coast,53.38704540391462,0.0,South Coast,53.38704540391462
 2024,south_coast,55.60142357474883,0.0,South Coast,55.60142357474883
-2014,spring_mountain_district,0.021967115915109,0.0,Spring Mountain District,0.021967115915109
+2014,spring_mountain_district,0.02196711591510965,0.0,Spring Mountain District,0.02196711591510965
 2016,spring_mountain_district,43.40528923635668,0.0,Spring Mountain District,43.40528923635668
 2018,spring_mountain_district,46.39285592825357,0.0,Spring Mountain District,46.39285592825357
 2019,spring_mountain_district,46.57016527824182,0.0,Spring Mountain District,46.57016527824182
-2020,spring_mountain_district,49.380779436714704,0.0,Spring Mountain District,49.380779436714704
+2020,spring_mountain_district,49.3807794367147,0.0,Spring Mountain District,49.3807794367147
 2021,spring_mountain_district,44.436000673112794,0.0,Spring Mountain District,44.436000673112794
 2022,spring_mountain_district,51.08265969412835,0.0,Spring Mountain District,51.08265969412835
 2023,spring_mountain_district,45.335228842194574,0.0,Spring Mountain District,45.335228842194574
@@ -1071,7 +1061,7 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2018,st__helena,46.338249033812936,0.0,St. Helena,46.338249033812936
 2019,st__helena,46.526113370790426,0.0,St. Helena,46.526113370790426
 2020,st__helena,49.31212451053384,0.0,St. Helena,49.31212451053384
-2021,st__helena,44.39056080470429,0.0,St. Helena,44.39056080470429
+2021,st__helena,44.390560804704286,0.0,St. Helena,44.390560804704286
 2022,st__helena,51.04418656624371,0.0,St. Helena,51.04418656624371
 2023,st__helena,45.31306353671708,0.0,St. Helena,45.31306353671708
 2024,st__helena,48.547923246906294,0.0,St. Helena,48.547923246906294
@@ -1108,9 +1098,9 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2024,temecula_valley,56.3995154994414,0.0,Temecula Valley,56.3995154994414
 2014,templeton_gap_district,21.2827986806882,0.0,Templeton Gap District,21.2827986806882
 2016,templeton_gap_district,20.30825006350755,0.0,Templeton Gap District,20.30825006350755
-2018,templeton_gap_district,51.87902054589249,0.0,Templeton Gap District,51.87902054589249
+2018,templeton_gap_district,51.879020545892494,0.0,Templeton Gap District,51.879020545892494
 2019,templeton_gap_district,49.798953166091245,0.0,Templeton Gap District,49.798953166091245
-2020,templeton_gap_district,50.46419423477779,0.0,Templeton Gap District,50.46419423477779
+2020,templeton_gap_district,33.92520769614473,0.0,Templeton Gap District,33.92520769614473
 2021,templeton_gap_district,46.857694500452126,0.0,Templeton Gap District,46.857694500452126
 2022,templeton_gap_district,54.28872520284175,0.0,Templeton Gap District,54.28872520284175
 2023,templeton_gap_district,47.40527925060558,0.0,Templeton Gap District,47.40527925060558
@@ -1121,20 +1111,20 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2020,tracy_hills,23.31354228810869,0.0,Tracy Hills,23.31354228810869
 2021,tracy_hills,22.157209198673616,0.0,Tracy Hills,22.157209198673616
 2022,tracy_hills,24.535923491683135,0.0,Tracy Hills,24.535923491683135
-2024,tracy_hills,23.599116288340635,0.0,Tracy Hills,23.599116288340635
+2024,tracy_hills,23.599116288340632,0.0,Tracy Hills,23.599116288340632
 2014,trinity_lakes,50.57260247782322,0.0,Trinity Lakes,50.57260247782322
 2016,trinity_lakes,44.601093567689595,0.0,Trinity Lakes,44.601093567689595
 2018,trinity_lakes,45.118506342490655,0.0,Trinity Lakes,45.118506342490655
 2019,trinity_lakes,44.26570526843066,0.0,Trinity Lakes,44.26570526843066
 2020,trinity_lakes,43.934215369970424,0.0,Trinity Lakes,43.934215369970424
-2021,trinity_lakes,41.23335912260619,0.0,Trinity Lakes,41.23335912260619
+2021,trinity_lakes,41.23335912260618,0.0,Trinity Lakes,41.23335912260618
 2022,trinity_lakes,45.56285809360882,0.0,Trinity Lakes,45.56285809360882
 2023,trinity_lakes,42.43446054325224,0.0,Trinity Lakes,42.43446054325224
 2024,trinity_lakes,44.36513045498566,0.0,Trinity Lakes,44.36513045498566
 2014,upper_lake_valley,48.34247798655618,0.0,Upper Lake Valley,48.34247798655618
 2016,upper_lake_valley,4.589451235236488,0.0,Upper Lake Valley,4.589451235236488
 2018,upper_lake_valley,45.30471073658428,0.0,Upper Lake Valley,45.30471073658428
-2019,upper_lake_valley,45.91991997180398,0.0,Upper Lake Valley,45.91991997180398
+2019,upper_lake_valley,45.91991997180397,0.0,Upper Lake Valley,45.91991997180397
 2020,upper_lake_valley,43.135262857362385,0.0,Upper Lake Valley,43.135262857362385
 2022,upper_lake_valley,49.265720446225146,0.0,Upper Lake Valley,49.265720446225146
 2023,upper_lake_valley,38.26468144252207,0.0,Upper Lake Valley,38.26468144252207
@@ -1163,7 +1153,7 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2019,willow_creek,44.771908205394745,0.0,Willow Creek,44.771908205394745
 2020,willow_creek,37.70540047591035,0.0,Willow Creek,37.70540047591035
 2021,willow_creek,33.76234676161707,0.0,Willow Creek,33.76234676161707
-2022,willow_creek,38.56941809255628,0.0,Willow Creek,38.56941809255628
+2022,willow_creek,38.569418092556276,0.0,Willow Creek,38.569418092556276
 2023,willow_creek,39.35032941155303,0.0,Willow Creek,39.35032941155303
 2024,willow_creek,40.534628171290606,0.0,Willow Creek,40.534628171290606
 2014,winters_highlands,52.88,0.0,Winters Highlands,52.88
@@ -1181,7 +1171,7 @@ year,ava_id,annual_eto_in,annual_precip_in,ava_name,water_deficit_in
 2023,york_mountain,46.92,0.0,York Mountain,46.92
 2024,york_mountain,49.17,0.0,York Mountain,49.17
 2014,yorkville_highlands,10.113199037280445,0.0,Yorkville Highlands,10.113199037280445
-2016,yorkville_highlands,39.326826000059725,0.0,Yorkville Highlands,39.326826000059725
+2016,yorkville_highlands,39.32682600005973,0.0,Yorkville Highlands,39.32682600005973
 2018,yorkville_highlands,42.48282400874663,0.0,Yorkville Highlands,42.48282400874663
 2019,yorkville_highlands,44.01561863032986,0.0,Yorkville Highlands,44.01561863032986
 2020,yorkville_highlands,45.100763414752855,0.0,Yorkville Highlands,45.100763414752855

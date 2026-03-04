@@ -470,7 +470,24 @@ def _fetch_daily_eto_batch(
             "precip_in": _val("day-precip"),
         })
 
-    return pd.DataFrame(records)
+    df = pd.DataFrame(records)
+    if df.empty:
+        return df
+
+    # Drop rows with clearly invalid ETo/precip values (CIMIS occasionally returns
+    # wildly negative or astronomically large numbers for certain zip×date combos).
+    # Daily ETo in California ranges from ~0 to ~0.5 inches; clamp beyond [-0.1, 1.0].
+    for col in ("eto_in", "precip_in"):
+        if col in df.columns:
+            bad = df[col].notna() & ((df[col] < -0.1) | (df[col] > 1.0))
+            if bad.any():
+                log.warning(
+                    f"    Dropping {bad.sum()} rows with out-of-range {col} "
+                    f"(min={df.loc[bad, col].min():.2f}, max={df.loc[bad, col].max():.2f})"
+                )
+                df = df[~bad]
+
+    return df
 
 
 def query_year_monthly_batch(zip_codes: list[str], year: int, app_key: str) -> pd.DataFrame:
@@ -929,8 +946,8 @@ def main() -> None:
     cache_path = OUTPUT_DIR / "cimis_monthly_cache.csv"
     if cache_path.exists():
         log.info(f"Resuming from cache: {cache_path}")
-        cached = pd.read_csv(cache_path)
-        already_done = set(zip(cached["zip_code"].astype(str), cached["year"].astype(int)))
+        cached = pd.read_csv(cache_path, dtype={"zip_code": str})
+        already_done = set(zip(cached["zip_code"], cached["year"].astype(int)))
     else:
         cached = pd.DataFrame()
         already_done: set[tuple] = set()
@@ -987,6 +1004,19 @@ def main() -> None:
     if all_eto.empty:
         log.error("No ETo data retrieved. Check your API key and zip codes.")
         return
+
+    # Filter out any bad monthly ETo/precip values that slipped through (e.g.
+    # CIMIS returning large negative numbers for certain zip×month combos).
+    # Monthly ETo in California: 0–15 inches is a safe outer bound.
+    for col in ("eto_in", "precip_in"):
+        if col in all_eto.columns:
+            bad = all_eto[col].notna() & ((all_eto[col] < 0) | (all_eto[col] > 15))
+            if bad.any():
+                log.warning(
+                    f"Dropping {bad.sum()} cached rows with out-of-range {col} "
+                    f"before aggregation (e.g. {all_eto.loc[bad, col].abs().max():.1f} in/mo)"
+                )
+                all_eto = all_eto[~bad]
 
     # ── Step 4a: County-level aggregation ────────────────────────────────────
     log.info("")

@@ -403,8 +403,11 @@ def _fetch_daily_eto_batch(
     for attempt in range(max_retries + 1):
         try:
             resp = requests.get(url, timeout=90, impersonate="chrome124")
-            # WAF block returns 200 OK with an HTML rejection page
-            if "Request Rejected" in resp.text[:500]:
+            # WAF block — two known variants:
+            #   1) 200 OK + body contains "Request Rejected"
+            #   2) 200 OK + body is a generic HTML block page (<!DOCTYPE html …)
+            body_start = resp.text[:500]
+            if "Request Rejected" in body_start or body_start.lstrip().startswith(("<!DOCTYPE", "<html")):
                 if attempt == max_retries:
                     log.error(f"    WAF blocked zips {targets[:60]!r} — skipping batch")
                     return pd.DataFrame()

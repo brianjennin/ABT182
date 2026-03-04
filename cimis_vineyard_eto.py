@@ -98,7 +98,7 @@ log = logging.getLogger(__name__)
 GDB_FOLDER = Path(r"C:\Users\brian\ABT 182 Project\Grant\DWRraw\Data\onlyGDB")
 
 # All outputs (GeoPackage, CSVs, boundary caches) go here
-OUTPUT_DIR = Path(r"C:\Users\brian\ABT 182 Project\WaterStressOutput")
+OUTPUT_DIR = Path(__file__).parent
 
 # California AVA boundaries — bundled GeoJSON in this repository
 AVA_GEOJSON = Path(__file__).parent / "CA_avas.geojson"

@@ -5,16 +5,11 @@ OLS regression of climate variables (ET, temperature, precipitation) on
 grape yield (tons/acre) for the selected counties present in the yield
 dataset, across all available years.
 
-Data sources (within this repository):
-  - Yield:   Emily/Emily/grape_normalized_yield_selected_counties.csv
-  - Climate: county_vineyard_eto_annual.csv  (annual ETo & precip by county)
-  - Climate: county_vineyard_eto_monthly.csv (monthly ETo & precip by county)
-
-NOTE: The current climate dataset only contains ET and precipitation.
-      Precipitation values are all 0.0, and temperature is not available.
-      The regression therefore uses ET as the sole climate predictor with
-      meaningful variation.  Results should be interpreted with this
-      limitation in mind.
+Data sources (within regression/ folder):
+  - Yield:  grape_normalized_yield_selected_counties1.csv
+  - ET:     county_vineyard_eto_annual.csv
+  - Temp:   County temp years.xlsx
+  - Precip: ca_county_precip.xlsx
 """
 
 from __future__ import annotations
@@ -31,12 +26,15 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # ── paths ──────────────────────────────────────────────────────────────────
-ROOT = Path(__file__).resolve().parent.parent
-YIELD_CSV = ROOT / "Emily" / "Emily" / "grape_normalized_yield_selected_counties.csv"
-ANNUAL_CSV = ROOT / "county_vineyard_eto_annual.csv"
-MONTHLY_CSV = ROOT / "county_vineyard_eto_monthly.csv"
-OUT_DIR = Path(__file__).resolve().parent / "output"
+REG_DIR = Path(__file__).resolve().parent
+YIELD_CSV = REG_DIR / "grape_normalized_yield_selected_counties1.csv"
+ETO_CSV = REG_DIR / "county_vineyard_eto_annual.csv"
+TEMP_XLSX = REG_DIR / "County temp years.xlsx"
+PRECIP_XLSX = REG_DIR / "ca_county_precip.xlsx"
+OUT_DIR = REG_DIR / "output"
 
+
+# ── data loading ───────────────────────────────────────────────────────────
 
 def load_yield() -> pd.DataFrame:
     """Load yield data and melt from wide to long format."""
@@ -47,77 +45,109 @@ def load_yield() -> pd.DataFrame:
     return df
 
 
-def load_annual_climate() -> pd.DataFrame:
-    """Load annual ETo and precipitation by county."""
-    df = pd.read_csv(ANNUAL_CSV)
-    df = df.rename(columns={"annual_eto_in": "eto_annual_in",
-                            "annual_precip_in": "precip_annual_in"})
-    return df[["year", "county", "eto_annual_in", "precip_annual_in"]]
+def load_eto() -> pd.DataFrame:
+    """Load annual ETo by county."""
+    df = pd.read_csv(ETO_CSV)
+    df = df.rename(columns={"annual_eto_in": "eto_annual_in"})
+    return df[["year", "county", "eto_annual_in"]]
 
 
-def load_monthly_climate() -> pd.DataFrame:
-    """Load monthly climate data and compute growing-season summaries.
+def load_temperature() -> pd.DataFrame:
+    """Load annual average temperature by county from NOAA data.
 
-    Growing season is defined as April–October (months 4–10) for California
-    vineyards.  We compute:
-      - eto_gs_in      : total growing-season ETo (inches)
-      - precip_gs_in   : total growing-season precipitation (inches)
-      - eto_gs_mean_mo : mean monthly ETo during growing season
+    The xlsx has columns: Year, County, Value (e.g. '57.4°F'), Anomaly, Rank,
+    Mean(1901-2000).  We parse °F values to float and strip ' County' from
+    county names.
     """
-    df = pd.read_csv(MONTHLY_CSV)
-    gs = df[df["month"].between(4, 10)]
+    df = pd.read_excel(TEMP_XLSX)
+    df = df.dropna(subset=["County", "Value"])
+    # Strip ' County' suffix to match other datasets
+    df["county"] = df["County"].str.replace(r"\s*County$", "", regex=True).str.strip()
+    # Parse temperature: remove '°F' and convert to float
+    df["temp_avg_f"] = df["Value"].astype(str).str.replace("°F", "", regex=False).astype(float)
+    df = df.rename(columns={"Year": "year"})
+    return df[["year", "county", "temp_avg_f"]]
 
-    agg = gs.groupby(["year", "county"]).agg(
-        eto_gs_in=("eto_in", "sum"),
-        precip_gs_in=("precip_in", "sum"),
-        eto_gs_mean_mo=("eto_in", "mean"),
-    ).reset_index()
-    return agg
+
+def load_precipitation() -> pd.DataFrame:
+    """Load monthly precipitation and compute annual total.
+
+    The xlsx has columns: county_name, year, Jan..Dec, plus an unnamed avg column.
+    We sum Jan–Dec to get annual total precipitation (inches).
+    """
+    df = pd.read_excel(PRECIP_XLSX)
+    df = df.dropna(subset=["county_name"])
+    month_cols = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    df["precip_annual_in"] = df[month_cols].sum(axis=1)
+    # Growing season precipitation (Apr–Oct)
+    gs_cols = ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct"]
+    df["precip_gs_in"] = df[gs_cols].sum(axis=1)
+    df = df.rename(columns={"county_name": "county"})
+    return df[["year", "county", "precip_annual_in", "precip_gs_in"]]
 
 
 def merge_data() -> pd.DataFrame:
-    """Merge yield with annual and growing-season climate data."""
+    """Merge yield with ET, temperature, and precipitation data."""
     yld = load_yield()
-    ann = load_annual_climate()
-    gs = load_monthly_climate()
+    eto = load_eto()
+    temp = load_temperature()
+    precip = load_precipitation()
 
-    merged = yld.merge(ann, on=["year", "county"], how="inner")
-    merged = merged.merge(gs, on=["year", "county"], how="left")
+    merged = yld.merge(eto, on=["year", "county"], how="left")
+    merged = merged.merge(temp, on=["year", "county"], how="left")
+    merged = merged.merge(precip, on=["year", "county"], how="left")
     merged = merged.sort_values(["county", "year"]).reset_index(drop=True)
     return merged
 
 
+# ── regressions ────────────────────────────────────────────────────────────
+
 def run_regressions(df: pd.DataFrame) -> dict:
     """Run OLS regressions and return results dict."""
     results = {}
-
-    # ── 1. Pooled OLS: yield ~ ETo (annual) ───────────────────────────────
-    X = sm.add_constant(df["eto_annual_in"])
     y = df["yield_tons_per_acre"]
-    model = sm.OLS(y, X).fit()
-    results["pooled_annual_eto"] = model
 
-    # ── 2. Pooled OLS: yield ~ ETo (growing season) ───────────────────────
-    subset_gs = df.dropna(subset=["eto_gs_in"])
-    if len(subset_gs) > 3:
-        X_gs = sm.add_constant(subset_gs["eto_gs_in"])
-        y_gs = subset_gs["yield_tons_per_acre"]
-        model_gs = sm.OLS(y_gs, X_gs).fit()
-        results["pooled_gs_eto"] = model_gs
+    # ── 1. Multiple regression: yield ~ ETo + Temp + Precip ───────────────
+    predictors = ["eto_annual_in", "temp_avg_f", "precip_annual_in"]
+    subset = df.dropna(subset=predictors)
+    if len(subset) > len(predictors) + 1:
+        X = sm.add_constant(subset[predictors])
+        model = sm.OLS(subset["yield_tons_per_acre"], X).fit()
+        results["full_model_eto_temp_precip"] = model
 
-    # ── 3. Pooled OLS with county fixed effects ───────────────────────────
-    county_dummies = pd.get_dummies(df["county"], drop_first=True, dtype=float)
-    X_fe = sm.add_constant(pd.concat([df[["eto_annual_in"]], county_dummies], axis=1))
-    model_fe = sm.OLS(y, X_fe).fit()
-    results["fe_county_annual_eto"] = model_fe
+    # ── 2. Simple regressions for each predictor ─────────────────────────
+    for pred in predictors:
+        sub = df.dropna(subset=[pred])
+        if len(sub) > 3:
+            X = sm.add_constant(sub[pred])
+            model = sm.OLS(sub["yield_tons_per_acre"], X).fit()
+            results[f"simple_{pred}"] = model
 
-    # ── 4. Per-county simple regressions ──────────────────────────────────
+    # ── 3. Multiple regression with county fixed effects ─────────────────
+    subset = df.dropna(subset=predictors)
+    if len(subset) > len(predictors) + 2:
+        county_dummies = pd.get_dummies(subset["county"], drop_first=True, dtype=float)
+        X_fe = sm.add_constant(
+            pd.concat([subset[predictors].reset_index(drop=True),
+                       county_dummies.reset_index(drop=True)], axis=1)
+        )
+        model_fe = sm.OLS(subset["yield_tons_per_acre"].reset_index(drop=True), X_fe).fit()
+        results["fe_county_full"] = model_fe
+
+    # ── 4. Per-county regressions ────────────────────────────────────────
     for county, grp in df.groupby("county"):
-        if len(grp) < 3:
+        sub = grp.dropna(subset=predictors)
+        if len(sub) < len(predictors) + 2:
+            # Not enough observations for multiple regression; try simple ETo
+            sub_eto = grp.dropna(subset=["eto_annual_in"])
+            if len(sub_eto) >= 3:
+                X_c = sm.add_constant(sub_eto["eto_annual_in"])
+                model_c = sm.OLS(sub_eto["yield_tons_per_acre"], X_c).fit()
+                results[f"county_{county}_eto_only"] = model_c
             continue
-        X_c = sm.add_constant(grp["eto_annual_in"])
-        y_c = grp["yield_tons_per_acre"]
-        model_c = sm.OLS(y_c, X_c).fit()
+        X_c = sm.add_constant(sub[predictors])
+        model_c = sm.OLS(sub["yield_tons_per_acre"], X_c).fit()
         results[f"county_{county}"] = model_c
 
     return results
@@ -127,7 +157,7 @@ def print_results(results: dict, df: pd.DataFrame) -> str:
     """Format regression results as a readable report."""
     lines = []
     lines.append("=" * 78)
-    lines.append("REGRESSION ANALYSIS: CLIMATE VARIABLES ON GRAPE YIELD")
+    lines.append("REGRESSION ANALYSIS: ET, TEMPERATURE & PRECIPITATION ON GRAPE YIELD")
     lines.append("=" * 78)
     lines.append("")
 
@@ -142,22 +172,21 @@ def print_results(results: dict, df: pd.DataFrame) -> str:
     # Variable summary
     lines.append("VARIABLE STATISTICS")
     lines.append("-" * 40)
-    for col in ["yield_tons_per_acre", "eto_annual_in", "precip_annual_in"]:
+    for col in ["yield_tons_per_acre", "eto_annual_in", "temp_avg_f", "precip_annual_in", "precip_gs_in"]:
         if col in df.columns:
-            lines.append(f"  {col}:")
-            lines.append(f"    mean={df[col].mean():.3f}  std={df[col].std():.3f}  "
-                         f"min={df[col].min():.3f}  max={df[col].max():.3f}")
+            sub = df[col].dropna()
+            lines.append(f"  {col} (n={len(sub)}):")
+            lines.append(f"    mean={sub.mean():.3f}  std={sub.std():.3f}  "
+                         f"min={sub.min():.3f}  max={sub.max():.3f}")
     lines.append("")
 
-    # Data limitations
-    lines.append("DATA LIMITATIONS")
+    # Missing data check
+    lines.append("DATA COVERAGE")
     lines.append("-" * 40)
-    if df["precip_annual_in"].sum() == 0:
-        lines.append("  * Precipitation: ALL VALUES ARE 0.0 — excluded from regression")
-    lines.append("  * Temperature: NOT AVAILABLE in current dataset")
-    lines.append("  * ET (evapotranspiration) is the only climate predictor with variation")
-    lines.append("  * ET is driven by temperature, solar radiation, humidity, and wind,")
-    lines.append("    so it serves as a partial proxy for temperature effects")
+    for col in ["eto_annual_in", "temp_avg_f", "precip_annual_in"]:
+        n_avail = df[col].notna().sum()
+        n_miss = df[col].isna().sum()
+        lines.append(f"  {col}: {n_avail} available, {n_miss} missing")
     lines.append("")
 
     # Regression results
@@ -171,58 +200,59 @@ def print_results(results: dict, df: pd.DataFrame) -> str:
     return "\n".join(lines)
 
 
+# ── plots ──────────────────────────────────────────────────────────────────
+
 def create_plots(df: pd.DataFrame, results: dict):
     """Generate diagnostic and exploratory plots."""
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     sns.set_theme(style="whitegrid")
 
-    # ── 1. Scatter: ETo vs Yield by county ────────────────────────────────
-    fig, ax = plt.subplots(figsize=(10, 6))
-    for county, grp in df.groupby("county"):
-        ax.scatter(grp["eto_annual_in"], grp["yield_tons_per_acre"],
-                   label=county, s=60, alpha=0.8)
-    # Overall trend line
-    m = results.get("pooled_annual_eto")
-    if m:
-        x_range = np.linspace(df["eto_annual_in"].min(), df["eto_annual_in"].max(), 100)
-        ax.plot(x_range, m.params["const"] + m.params["eto_annual_in"] * x_range,
-                "k--", alpha=0.6, label=f"OLS (R²={m.rsquared:.3f})")
-    ax.set_xlabel("Annual ETo (inches)")
-    ax.set_ylabel("Yield (tons/acre)")
-    ax.set_title("Annual ETo vs Grape Yield by County")
-    ax.legend(loc="best")
+    # ── 1. Scatter matrix: all predictors vs yield ───────────────────────
+    pred_cols = ["eto_annual_in", "temp_avg_f", "precip_annual_in"]
+    avail_cols = [c for c in pred_cols if c in df.columns and df[c].notna().any()]
+
+    fig, axes = plt.subplots(1, len(avail_cols), figsize=(6 * len(avail_cols), 5))
+    if len(avail_cols) == 1:
+        axes = [axes]
+    for ax, col in zip(axes, avail_cols):
+        sub = df.dropna(subset=[col])
+        for county, grp in sub.groupby("county"):
+            ax.scatter(grp[col], grp["yield_tons_per_acre"], label=county, s=60, alpha=0.8)
+        ax.set_xlabel(col)
+        ax.set_ylabel("Yield (tons/acre)")
+        ax.set_title(f"Yield vs {col}")
+    axes[-1].legend(loc="best", fontsize=8)
+    fig.suptitle("Climate Predictors vs Grape Yield", fontsize=14, y=1.02)
     fig.tight_layout()
-    fig.savefig(OUT_DIR / "scatter_eto_vs_yield.png", dpi=150)
+    fig.savefig(OUT_DIR / "scatter_predictors_vs_yield.png", dpi=150, bbox_inches="tight")
     plt.close(fig)
 
-    # ── 2. Per-county scatter with individual trend lines ─────────────────
+    # ── 2. Per-county panels for each predictor ──────────────────────────
     counties = sorted(df["county"].unique())
-    n_counties = len(counties)
-    fig, axes = plt.subplots(2, 3, figsize=(14, 8), sharey=False)
-    axes = axes.flatten()
-    for i, county in enumerate(counties):
-        ax = axes[i]
-        grp = df[df["county"] == county]
-        ax.scatter(grp["eto_annual_in"], grp["yield_tons_per_acre"], s=50)
-        key = f"county_{county}"
-        if key in results:
-            m_c = results[key]
-            x_r = np.linspace(grp["eto_annual_in"].min(), grp["eto_annual_in"].max(), 50)
-            ax.plot(x_r, m_c.params["const"] + m_c.params["eto_annual_in"] * x_r,
-                    "r-", alpha=0.7)
-            ax.set_title(f"{county} (R²={m_c.rsquared:.3f})")
-        else:
-            ax.set_title(county)
-        ax.set_xlabel("Annual ETo (in)")
-        ax.set_ylabel("Yield (t/ac)")
-    for j in range(i + 1, len(axes)):
-        axes[j].set_visible(False)
-    fig.suptitle("Per-County: Annual ETo vs Grape Yield", fontsize=13)
-    fig.tight_layout()
-    fig.savefig(OUT_DIR / "scatter_per_county.png", dpi=150)
-    plt.close(fig)
+    for col in avail_cols:
+        fig, axes_grid = plt.subplots(2, 3, figsize=(14, 8))
+        axes_flat = axes_grid.flatten()
+        for i, county in enumerate(counties):
+            ax = axes_flat[i]
+            grp = df[df["county"] == county].dropna(subset=[col])
+            ax.scatter(grp[col], grp["yield_tons_per_acre"], s=50)
+            if len(grp) >= 3:
+                slope, intercept, r, p, se = stats.linregress(grp[col], grp["yield_tons_per_acre"])
+                x_r = np.linspace(grp[col].min(), grp[col].max(), 50)
+                ax.plot(x_r, intercept + slope * x_r, "r-", alpha=0.7)
+                ax.set_title(f"{county} (r={r:.3f}, p={p:.3f})")
+            else:
+                ax.set_title(county)
+            ax.set_xlabel(col)
+            ax.set_ylabel("Yield (t/ac)")
+        for j in range(len(counties), len(axes_flat)):
+            axes_flat[j].set_visible(False)
+        fig.suptitle(f"Per-County: {col} vs Grape Yield", fontsize=13)
+        fig.tight_layout()
+        fig.savefig(OUT_DIR / f"scatter_per_county_{col}.png", dpi=150)
+        plt.close(fig)
 
-    # ── 3. Yield time series by county ────────────────────────────────────
+    # ── 3. Yield time series by county ───────────────────────────────────
     fig, ax = plt.subplots(figsize=(10, 6))
     for county, grp in df.groupby("county"):
         ax.plot(grp["year"], grp["yield_tons_per_acre"], "o-", label=county)
@@ -234,34 +264,36 @@ def create_plots(df: pd.DataFrame, results: dict):
     fig.savefig(OUT_DIR / "yield_timeseries.png", dpi=150)
     plt.close(fig)
 
-    # ── 4. Residual plot for pooled model ─────────────────────────────────
-    m = results.get("pooled_annual_eto")
+    # ── 4. Residual plot for full model ──────────────────────────────────
+    m = results.get("full_model_eto_temp_precip")
     if m:
         fig, ax = plt.subplots(figsize=(8, 5))
         ax.scatter(m.fittedvalues, m.resid, alpha=0.7)
         ax.axhline(0, color="k", linestyle="--", alpha=0.5)
         ax.set_xlabel("Fitted values")
         ax.set_ylabel("Residuals")
-        ax.set_title("Residuals vs Fitted — Pooled OLS (yield ~ ETo)")
+        ax.set_title("Residuals vs Fitted — Full Model (yield ~ ETo + Temp + Precip)")
         fig.tight_layout()
-        fig.savefig(OUT_DIR / "residuals_pooled.png", dpi=150)
+        fig.savefig(OUT_DIR / "residuals_full_model.png", dpi=150)
         plt.close(fig)
 
-    # ── 5. Correlation heatmap ────────────────────────────────────────────
-    num_cols = ["yield_tons_per_acre", "eto_annual_in"]
-    if "eto_gs_in" in df.columns:
-        num_cols.append("eto_gs_in")
-    corr = df[num_cols].corr()
-    fig, ax = plt.subplots(figsize=(6, 5))
+    # ── 5. Correlation heatmap ───────────────────────────────────────────
+    num_cols = ["yield_tons_per_acre"] + avail_cols
+    if "precip_gs_in" in df.columns:
+        num_cols.append("precip_gs_in")
+    corr = df[num_cols].dropna().corr()
+    fig, ax = plt.subplots(figsize=(7, 6))
     sns.heatmap(corr, annot=True, fmt=".3f", cmap="RdBu_r", center=0,
                 square=True, ax=ax)
-    ax.set_title("Correlation Matrix")
+    ax.set_title("Correlation Matrix: Yield & Climate Variables")
     fig.tight_layout()
     fig.savefig(OUT_DIR / "correlation_heatmap.png", dpi=150)
     plt.close(fig)
 
     print(f"  Plots saved to {OUT_DIR}/")
 
+
+# ── main ───────────────────────────────────────────────────────────────────
 
 def main():
     print("Loading and merging data...")
@@ -270,6 +302,10 @@ def main():
     print(f"Merged dataset: {len(df)} observations")
     print(f"Counties: {sorted(df['county'].unique())}")
     print(f"Years:    {sorted(df['year'].unique())}")
+    print()
+    print("Columns:", df.columns.tolist())
+    print()
+    print(df.head(10).to_string())
     print()
 
     print("Running regressions...")

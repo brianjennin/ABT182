@@ -1,0 +1,292 @@
+==============================================================================
+REGRESSION ANALYSIS: CLIMATE VARIABLES ON GRAPE YIELD
+==============================================================================
+
+DATA SUMMARY
+----------------------------------------
+  Counties : ['Fresno', 'Marin', 'Napa', 'San Diego', 'Santa Barbara', 'Tehama']
+  Years    : [np.int64(2014), np.int64(2016), np.int64(2018), np.int64(2019), np.int64(2020), np.int64(2021), np.int64(2022)]
+  N obs    : 40
+
+VARIABLE STATISTICS
+----------------------------------------
+  yield_tons_per_acre:
+    mean=4.589  std=3.726  min=1.436  max=14.587
+  eto_annual_in:
+    mean=37.439  std=14.840  min=5.012  max=55.803
+  precip_annual_in:
+    mean=0.000  std=0.000  min=0.000  max=0.000
+
+DATA LIMITATIONS
+----------------------------------------
+  * Precipitation: ALL VALUES ARE 0.0 — excluded from regression
+  * Temperature: NOT AVAILABLE in current dataset
+  * ET (evapotranspiration) is the only climate predictor with variation
+  * ET is driven by temperature, solar radiation, humidity, and wind,
+    so it serves as a partial proxy for temperature effects
+
+==============================================================================
+MODEL: pooled_annual_eto
+==============================================================================
+                             OLS Regression Results                            
+===============================================================================
+Dep. Variable:     yield_tons_per_acre   R-squared:                       0.403
+Model:                             OLS   Adj. R-squared:                  0.388
+Method:                  Least Squares   F-statistic:                     25.69
+Date:                 Wed, 11 Mar 2026   Prob (F-statistic):           1.07e-05
+Time:                         06:08:24   Log-Likelihood:                -98.539
+No. Observations:                   40   AIC:                             201.1
+Df Residuals:                       38   BIC:                             204.5
+Df Model:                            1                                         
+Covariance Type:             nonrobust                                         
+=================================================================================
+                    coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------
+const            10.5597      1.265      8.348      0.000       7.999      13.120
+eto_annual_in    -0.1595      0.031     -5.069      0.000      -0.223      -0.096
+==============================================================================
+Omnibus:                        2.813   Durbin-Watson:                   0.863
+Prob(Omnibus):                  0.245   Jarque-Bera (JB):                1.891
+Skew:                          -0.157   Prob(JB):                        0.389
+Kurtosis:                       4.018   Cond. No.                         110.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+==============================================================================
+MODEL: pooled_gs_eto
+==============================================================================
+                             OLS Regression Results                            
+===============================================================================
+Dep. Variable:     yield_tons_per_acre   R-squared:                       0.398
+Model:                             OLS   Adj. R-squared:                  0.382
+Method:                  Least Squares   F-statistic:                     25.07
+Date:                 Wed, 11 Mar 2026   Prob (F-statistic):           1.30e-05
+Time:                         06:08:24   Log-Likelihood:                -98.734
+No. Observations:                   40   AIC:                             201.5
+Df Residuals:                       38   BIC:                             204.8
+Df Model:                            1                                         
+Covariance Type:             nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         10.6749      1.301      8.207      0.000       8.042      13.308
+eto_gs_in     -0.2069      0.041     -5.007      0.000      -0.291      -0.123
+==============================================================================
+Omnibus:                        3.073   Durbin-Watson:                   0.909
+Prob(Omnibus):                  0.215   Jarque-Bera (JB):                2.282
+Skew:                          -0.111   Prob(JB):                        0.319
+Kurtosis:                       4.149   Cond. No.                         88.4
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+==============================================================================
+MODEL: fe_county_annual_eto
+==============================================================================
+                             OLS Regression Results                            
+===============================================================================
+Dep. Variable:     yield_tons_per_acre   R-squared:                       0.934
+Model:                             OLS   Adj. R-squared:                  0.922
+Method:                  Least Squares   F-statistic:                     78.25
+Date:                 Wed, 11 Mar 2026   Prob (F-statistic):           4.37e-18
+Time:                         06:08:24   Log-Likelihood:                -54.406
+No. Observations:                   40   AIC:                             122.8
+Df Residuals:                       33   BIC:                             134.6
+Df Model:                            6                                         
+Covariance Type:             nonrobust                                         
+=================================================================================
+                    coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------
+const            13.0669      0.488     26.792      0.000      12.075      14.059
+eto_annual_in    -0.0611      0.017     -3.614      0.001      -0.095      -0.027
+Marin            -9.3879      0.597    -15.723      0.000     -10.603      -8.173
+Napa             -7.3072      0.691    -10.574      0.000      -8.713      -5.901
+San Diego        -5.5111      0.801     -6.881      0.000      -7.141      -3.882
+Santa Barbara    -7.5153      0.732    -10.266      0.000      -9.005      -6.026
+Tehama           -7.2281      0.733     -9.866      0.000      -8.719      -5.738
+==============================================================================
+Omnibus:                        2.935   Durbin-Watson:                   1.523
+Prob(Omnibus):                  0.230   Jarque-Bera (JB):                1.785
+Skew:                           0.377   Prob(JB):                        0.410
+Kurtosis:                       3.709   Cond. No.                         334.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+==============================================================================
+MODEL: county_Fresno
+==============================================================================
+                             OLS Regression Results                            
+===============================================================================
+Dep. Variable:     yield_tons_per_acre   R-squared:                       0.445
+Model:                             OLS   Adj. R-squared:                  0.334
+Method:                  Least Squares   F-statistic:                     4.011
+Date:                 Wed, 11 Mar 2026   Prob (F-statistic):              0.102
+Time:                         06:08:24   Log-Likelihood:                -12.204
+No. Observations:                    7   AIC:                             28.41
+Df Residuals:                        5   BIC:                             28.30
+Df Model:                            1                                         
+Covariance Type:             nonrobust                                         
+=================================================================================
+                    coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------
+const            14.0044      1.168     11.988      0.000      11.001      17.007
+eto_annual_in    -0.1158      0.058     -2.003      0.102      -0.264       0.033
+==============================================================================
+Omnibus:                          nan   Durbin-Watson:                   0.724
+Prob(Omnibus):                    nan   Jarque-Bera (JB):                0.940
+Skew:                           0.891   Prob(JB):                        0.625
+Kurtosis:                       2.791   Cond. No.                         38.2
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+==============================================================================
+MODEL: county_Marin
+==============================================================================
+                             OLS Regression Results                            
+===============================================================================
+Dep. Variable:     yield_tons_per_acre   R-squared:                       0.216
+Model:                             OLS   Adj. R-squared:                  0.059
+Method:                  Least Squares   F-statistic:                     1.377
+Date:                 Wed, 11 Mar 2026   Prob (F-statistic):              0.293
+Time:                         06:08:24   Log-Likelihood:               -0.18892
+No. Observations:                    7   AIC:                             4.378
+Df Residuals:                        5   BIC:                             4.270
+Df Model:                            1                                         
+Covariance Type:             nonrobust                                         
+=================================================================================
+                    coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------
+const             1.5241      0.288      5.301      0.003       0.785       2.263
+eto_annual_in     0.0103      0.009      1.173      0.293      -0.012       0.033
+==============================================================================
+Omnibus:                          nan   Durbin-Watson:                   1.841
+Prob(Omnibus):                    nan   Jarque-Bera (JB):                0.780
+Skew:                           0.186   Prob(JB):                        0.677
+Kurtosis:                       1.407   Cond. No.                         84.7
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+==============================================================================
+MODEL: county_Napa
+==============================================================================
+                             OLS Regression Results                            
+===============================================================================
+Dep. Variable:     yield_tons_per_acre   R-squared:                       0.437
+Model:                             OLS   Adj. R-squared:                  0.325
+Method:                  Least Squares   F-statistic:                     3.883
+Date:                 Wed, 11 Mar 2026   Prob (F-statistic):              0.106
+Time:                         06:08:24   Log-Likelihood:                -4.5336
+No. Observations:                    7   AIC:                             13.07
+Df Residuals:                        5   BIC:                             12.96
+Df Model:                            1                                         
+Covariance Type:             nonrobust                                         
+=================================================================================
+                    coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------
+const             5.3374      1.092      4.887      0.005       2.530       8.145
+eto_annual_in    -0.0509      0.026     -1.970      0.106      -0.117       0.016
+==============================================================================
+Omnibus:                          nan   Durbin-Watson:                   1.729
+Prob(Omnibus):                    nan   Jarque-Bera (JB):                0.543
+Skew:                           0.681   Prob(JB):                        0.762
+Kurtosis:                       3.078   Cond. No.                         223.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+==============================================================================
+MODEL: county_San Diego
+==============================================================================
+                             OLS Regression Results                            
+===============================================================================
+Dep. Variable:     yield_tons_per_acre   R-squared:                       0.955
+Model:                             OLS   Adj. R-squared:                  0.941
+Method:                  Least Squares   F-statistic:                     64.34
+Date:                 Wed, 11 Mar 2026   Prob (F-statistic):            0.00405
+Time:                         06:08:24   Log-Likelihood:               -0.99372
+No. Observations:                    5   AIC:                             5.987
+Df Residuals:                        3   BIC:                             5.206
+Df Model:                            1                                         
+Covariance Type:             nonrobust                                         
+=================================================================================
+                    coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------
+const             9.4193      0.622     15.151      0.001       7.441      11.398
+eto_annual_in    -0.0999      0.012     -8.021      0.004      -0.140      -0.060
+==============================================================================
+Omnibus:                          nan   Durbin-Watson:                   2.031
+Prob(Omnibus):                    nan   Jarque-Bera (JB):                0.307
+Skew:                          -0.484   Prob(JB):                        0.858
+Kurtosis:                       2.265   Cond. No.                         182.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+==============================================================================
+MODEL: county_Santa Barbara
+==============================================================================
+                             OLS Regression Results                            
+===============================================================================
+Dep. Variable:     yield_tons_per_acre   R-squared:                       0.737
+Model:                             OLS   Adj. R-squared:                  0.684
+Method:                  Least Squares   F-statistic:                     13.98
+Date:                 Wed, 11 Mar 2026   Prob (F-statistic):             0.0134
+Time:                         06:08:24   Log-Likelihood:                -4.2474
+No. Observations:                    7   AIC:                             12.49
+Df Residuals:                        5   BIC:                             12.39
+Df Model:                            1                                         
+Covariance Type:             nonrobust                                         
+=================================================================================
+                    coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------
+const            12.0913      2.498      4.840      0.005       5.669      18.514
+eto_annual_in    -0.2052      0.055     -3.739      0.013      -0.346      -0.064
+==============================================================================
+Omnibus:                          nan   Durbin-Watson:                   1.558
+Prob(Omnibus):                    nan   Jarque-Bera (JB):                0.517
+Skew:                           0.447   Prob(JB):                        0.772
+Kurtosis:                       2.013   Cond. No.                         573.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+==============================================================================
+MODEL: county_Tehama
+==============================================================================
+                             OLS Regression Results                            
+===============================================================================
+Dep. Variable:     yield_tons_per_acre   R-squared:                       0.073
+Model:                             OLS   Adj. R-squared:                 -0.113
+Method:                  Least Squares   F-statistic:                    0.3932
+Date:                 Wed, 11 Mar 2026   Prob (F-statistic):              0.558
+Time:                         06:08:24   Log-Likelihood:                -9.8022
+No. Observations:                    7   AIC:                             23.60
+Df Residuals:                        5   BIC:                             23.50
+Df Model:                            1                                         
+Covariance Type:             nonrobust                                         
+=================================================================================
+                    coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------
+const             4.7737      2.763      1.728      0.145      -2.330      11.877
+eto_annual_in    -0.0376      0.060     -0.627      0.558      -0.192       0.117
+==============================================================================
+Omnibus:                          nan   Durbin-Watson:                   0.585
+Prob(Omnibus):                    nan   Jarque-Bera (JB):                0.716
+Skew:                           0.735   Prob(JB):                        0.699
+Kurtosis:                       2.454   Cond. No.                         290.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

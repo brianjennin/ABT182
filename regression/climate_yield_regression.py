@@ -277,7 +277,39 @@ def create_plots(df: pd.DataFrame, results: dict):
         fig.savefig(OUT_DIR / "residuals_full_model.png", dpi=150)
         plt.close(fig)
 
-    # ── 5. Correlation heatmap ───────────────────────────────────────────
+    # ── 5. Basic regression output plot ─────────────────────────────────
+    # 3-panel figure: one scatter + OLS line per predictor
+    fig, axes = plt.subplots(1, 3, figsize=(16, 5))
+    labels = {"eto_annual_in": "Annual ETo (in)",
+              "temp_avg_f": "Avg Temperature (°F)",
+              "precip_annual_in": "Annual Precip (in)"}
+    for ax, col in zip(axes, pred_cols):
+        sub = df.dropna(subset=[col])
+        x = sub[col]
+        y_vals = sub["yield_tons_per_acre"]
+        # scatter by county
+        for county, grp in sub.groupby("county"):
+            ax.scatter(grp[col], grp["yield_tons_per_acre"], s=50, alpha=0.8, label=county)
+        # OLS line
+        slope, intercept, r, p, se = stats.linregress(x, y_vals)
+        x_line = np.linspace(x.min(), x.max(), 100)
+        ax.plot(x_line, intercept + slope * x_line, "k--", linewidth=1.5)
+        # annotation
+        sign = "+" if intercept >= 0 else "-"
+        ax.text(0.05, 0.95,
+                f"y = {slope:.3f}x {sign} {abs(intercept):.2f}\n"
+                f"R² = {r**2:.3f},  p = {p:.4f}",
+                transform=ax.transAxes, fontsize=9, verticalalignment="top",
+                bbox=dict(boxstyle="round,pad=0.3", facecolor="white", alpha=0.8))
+        ax.set_xlabel(labels.get(col, col), fontsize=11)
+        ax.set_ylabel("Yield (tons/acre)", fontsize=11)
+    axes[0].legend(loc="lower left", fontsize=7)
+    fig.suptitle("OLS Regression: Climate Variables vs Grape Yield", fontsize=14)
+    fig.tight_layout()
+    fig.savefig(OUT_DIR / "regression_output.png", dpi=150)
+    plt.close(fig)
+
+    # ── 6. Correlation heatmap ───────────────────────────────────────────
     num_cols = ["yield_tons_per_acre"] + avail_cols
     if "precip_gs_in" in df.columns:
         num_cols.append("precip_gs_in")

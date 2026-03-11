@@ -36,7 +36,7 @@ Dep. Variable:     yield_tons_per_acre   R-squared:                       0.485
 Model:                             OLS   Adj. R-squared:                  0.444
 Method:                  Least Squares   F-statistic:                     11.93
 Date:                 Wed, 11 Mar 2026   Prob (F-statistic):           1.20e-05
-Time:                         06:20:03   Log-Likelihood:                -99.768
+Time:                         07:28:16   Log-Likelihood:                -99.768
 No. Observations:                   42   AIC:                             207.5
 Df Residuals:                       38   BIC:                             214.5
 Df Model:                            3                                         
@@ -69,7 +69,7 @@ Dep. Variable:     yield_tons_per_acre   R-squared:                       0.388
 Model:                             OLS   Adj. R-squared:                  0.372
 Method:                  Least Squares   F-statistic:                     25.31
 Date:                 Wed, 11 Mar 2026   Prob (F-statistic):           1.07e-05
-Time:                         06:20:03   Log-Likelihood:                -103.41
+Time:                         07:28:16   Log-Likelihood:                -103.41
 No. Observations:                   42   AIC:                             210.8
 Df Residuals:                       40   BIC:                             214.3
 Df Model:                            1                                         
@@ -98,7 +98,7 @@ Dep. Variable:     yield_tons_per_acre   R-squared:                       0.097
 Model:                             OLS   Adj. R-squared:                  0.074
 Method:                  Least Squares   F-statistic:                     4.299
 Date:                 Wed, 11 Mar 2026   Prob (F-statistic):             0.0446
-Time:                         06:20:03   Log-Likelihood:                -111.56
+Time:                         07:28:16   Log-Likelihood:                -111.56
 No. Observations:                   42   AIC:                             227.1
 Df Residuals:                       40   BIC:                             230.6
 Df Model:                            1                                         
@@ -129,7 +129,7 @@ Dep. Variable:     yield_tons_per_acre   R-squared:                       0.061
 Model:                             OLS   Adj. R-squared:                  0.038
 Method:                  Least Squares   F-statistic:                     2.599
 Date:                 Wed, 11 Mar 2026   Prob (F-statistic):              0.115
-Time:                         06:20:03   Log-Likelihood:                -112.38
+Time:                         07:28:16   Log-Likelihood:                -112.38
 No. Observations:                   42   AIC:                             228.8
 Df Residuals:                       40   BIC:                             232.2
 Df Model:                            1                                         
@@ -158,7 +158,7 @@ Dep. Variable:     yield_tons_per_acre   R-squared:                       0.916
 Model:                             OLS   Adj. R-squared:                  0.895
 Method:                  Least Squares   F-statistic:                     44.83
 Date:                 Wed, 11 Mar 2026   Prob (F-statistic):           1.54e-15
-Time:                         06:20:03   Log-Likelihood:                -61.754
+Time:                         07:28:16   Log-Likelihood:                -61.754
 No. Observations:                   42   AIC:                             141.5
 Df Residuals:                       33   BIC:                             157.1
 Df Model:                            8                                         
@@ -196,7 +196,7 @@ Dep. Variable:     yield_tons_per_acre   R-squared:                       0.654
 Model:                             OLS   Adj. R-squared:                  0.309
 Method:                  Least Squares   F-statistic:                     1.893
 Date:                 Wed, 11 Mar 2026   Prob (F-statistic):              0.307
-Time:                         06:20:03   Log-Likelihood:                -10.547
+Time:                         07:28:16   Log-Likelihood:                -10.547
 No. Observations:                    7   AIC:                             29.09
 Df Residuals:                        3   BIC:                             28.88
 Df Model:                            3                                         
@@ -229,7 +229,7 @@ Dep. Variable:     yield_tons_per_acre   R-squared:                       0.771
 Model:                             OLS   Adj. R-squared:                  0.543
 Method:                  Least Squares   F-statistic:                     3.373
 Date:                 Wed, 11 Mar 2026   Prob (F-statistic):              0.172
-Time:                         06:20:03   Log-Likelihood:                 4.1235
+Time:                         07:28:16   Log-Likelihood:                 4.1235
 No. Observations:                    7   AIC:                           -0.2470
 Df Residuals:                        3   BIC:                           -0.4634
 Df Model:                            3                                         
@@ -262,7 +262,7 @@ Dep. Variable:     yield_tons_per_acre   R-squared:                       0.502
 Model:                             OLS   Adj. R-squared:                  0.005
 Method:                  Least Squares   F-statistic:                     1.009
 Date:                 Wed, 11 Mar 2026   Prob (F-statistic):              0.497
-Time:                         06:20:03   Log-Likelihood:                -4.1029
+Time:                         07:28:16   Log-Likelihood:                -4.1029
 No. Observations:                    7   AIC:                             16.21
 Df Residuals:                        3   BIC:                             15.99
 Df Model:                            3                                         
@@ -295,7 +295,7 @@ Dep. Variable:     yield_tons_per_acre   R-squared:                       0.256
 Model:                             OLS   Adj. R-squared:                 -0.489
 Method:                  Least Squares   F-statistic:                    0.3435
 Date:                 Wed, 11 Mar 2026   Prob (F-statistic):              0.798
-Time:                         06:20:03   Log-Likelihood:                -12.248
+Time:                         07:28:16   Log-Likelihood:                -12.248
 No. Observations:                    7   AIC:                             32.50
 Df Residuals:                        3   BIC:                             32.28
 Df Model:                            3                                         
@@ -328,7 +328,7 @@ Dep. Variable:     yield_tons_per_acre   R-squared:                       0.777
 Model:                             OLS   Adj. R-squared:                  0.554
 Method:                  Least Squares   F-statistic:                     3.489
 Date:                 Wed, 11 Mar 2026   Prob (F-statistic):              0.166
-Time:                         06:20:03   Log-Likelihood:                -3.6613
+Time:                         07:28:16   Log-Likelihood:                -3.6613
 No. Observations:                    7   AIC:                             15.32
 Df Residuals:                        3   BIC:                             15.11
 Df Model:                            3                                         
@@ -361,7 +361,7 @@ Dep. Variable:     yield_tons_per_acre   R-squared:                       0.387
 Model:                             OLS   Adj. R-squared:                 -0.226
 Method:                  Least Squares   F-statistic:                    0.6314
 Date:                 Wed, 11 Mar 2026   Prob (F-statistic):              0.643
-Time:                         06:20:03   Log-Likelihood:                -8.3541
+Time:                         07:28:16   Log-Likelihood:                -8.3541
 No. Observations:                    7   AIC:                             24.71
 Df Residuals:                        3   BIC:                             24.49
 Df Model:                            3                                         

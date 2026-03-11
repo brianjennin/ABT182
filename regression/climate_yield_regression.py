@@ -203,98 +203,24 @@ def print_results(results: dict, df: pd.DataFrame) -> str:
 # ── plots ──────────────────────────────────────────────────────────────────
 
 def create_plots(df: pd.DataFrame, results: dict):
-    """Generate diagnostic and exploratory plots."""
+    """Generate regression output and yield time-series plots."""
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     sns.set_theme(style="whitegrid")
 
-    # ── 1. Scatter matrix: all predictors vs yield ───────────────────────
     pred_cols = ["eto_annual_in", "temp_avg_f", "precip_annual_in"]
-    avail_cols = [c for c in pred_cols if c in df.columns and df[c].notna().any()]
-
-    fig, axes = plt.subplots(1, len(avail_cols), figsize=(6 * len(avail_cols), 5))
-    if len(avail_cols) == 1:
-        axes = [axes]
-    for ax, col in zip(axes, avail_cols):
-        sub = df.dropna(subset=[col])
-        for county, grp in sub.groupby("county"):
-            ax.scatter(grp[col], grp["yield_tons_per_acre"], label=county, s=60, alpha=0.8)
-        ax.set_xlabel(col)
-        ax.set_ylabel("Yield (tons/acre)")
-        ax.set_title(f"Yield vs {col}")
-    axes[-1].legend(loc="best", fontsize=8)
-    fig.suptitle("Climate Predictors vs Grape Yield", fontsize=14, y=1.02)
-    fig.tight_layout()
-    fig.savefig(OUT_DIR / "scatter_predictors_vs_yield.png", dpi=150, bbox_inches="tight")
-    plt.close(fig)
-
-    # ── 2. Per-county panels for each predictor ──────────────────────────
-    counties = sorted(df["county"].unique())
-    for col in avail_cols:
-        fig, axes_grid = plt.subplots(2, 3, figsize=(14, 8))
-        axes_flat = axes_grid.flatten()
-        for i, county in enumerate(counties):
-            ax = axes_flat[i]
-            grp = df[df["county"] == county].dropna(subset=[col])
-            ax.scatter(grp[col], grp["yield_tons_per_acre"], s=50)
-            if len(grp) >= 3:
-                slope, intercept, r, p, se = stats.linregress(grp[col], grp["yield_tons_per_acre"])
-                x_r = np.linspace(grp[col].min(), grp[col].max(), 50)
-                ax.plot(x_r, intercept + slope * x_r, "r-", alpha=0.7)
-                ax.set_title(f"{county} (r={r:.3f}, p={p:.3f})")
-            else:
-                ax.set_title(county)
-            ax.set_xlabel(col)
-            ax.set_ylabel("Yield (t/ac)")
-        for j in range(len(counties), len(axes_flat)):
-            axes_flat[j].set_visible(False)
-        fig.suptitle(f"Per-County: {col} vs Grape Yield", fontsize=13)
-        fig.tight_layout()
-        fig.savefig(OUT_DIR / f"scatter_per_county_{col}.png", dpi=150)
-        plt.close(fig)
-
-    # ── 3. Yield time series by county ───────────────────────────────────
-    fig, ax = plt.subplots(figsize=(10, 6))
-    for county, grp in df.groupby("county"):
-        ax.plot(grp["year"], grp["yield_tons_per_acre"], "o-", label=county)
-    ax.set_xlabel("Year")
-    ax.set_ylabel("Yield (tons/acre)")
-    ax.set_title("Grape Yield Over Time by County")
-    ax.legend(loc="best")
-    fig.tight_layout()
-    fig.savefig(OUT_DIR / "yield_timeseries.png", dpi=150)
-    plt.close(fig)
-
-    # ── 4. Residual plot for full model ──────────────────────────────────
-    m = results.get("full_model_eto_temp_precip")
-    if m:
-        fig, ax = plt.subplots(figsize=(8, 5))
-        ax.scatter(m.fittedvalues, m.resid, alpha=0.7)
-        ax.axhline(0, color="k", linestyle="--", alpha=0.5)
-        ax.set_xlabel("Fitted values")
-        ax.set_ylabel("Residuals")
-        ax.set_title("Residuals vs Fitted — Full Model (yield ~ ETo + Temp + Precip)")
-        fig.tight_layout()
-        fig.savefig(OUT_DIR / "residuals_full_model.png", dpi=150)
-        plt.close(fig)
-
-    # ── 5. Basic regression output plot ─────────────────────────────────
-    # 3-panel figure: one scatter + OLS line per predictor
-    fig, axes = plt.subplots(1, 3, figsize=(16, 5))
     labels = {"eto_annual_in": "Annual ETo (in)",
               "temp_avg_f": "Avg Temperature (°F)",
               "precip_annual_in": "Annual Precip (in)"}
+
+    # ── 1. Regression output: scatter + OLS line per predictor ───────────
+    fig, axes = plt.subplots(1, 3, figsize=(16, 5))
     for ax, col in zip(axes, pred_cols):
         sub = df.dropna(subset=[col])
-        x = sub[col]
-        y_vals = sub["yield_tons_per_acre"]
-        # scatter by county
         for county, grp in sub.groupby("county"):
             ax.scatter(grp[col], grp["yield_tons_per_acre"], s=50, alpha=0.8, label=county)
-        # OLS line
-        slope, intercept, r, p, se = stats.linregress(x, y_vals)
-        x_line = np.linspace(x.min(), x.max(), 100)
+        slope, intercept, r, p, se = stats.linregress(sub[col], sub["yield_tons_per_acre"])
+        x_line = np.linspace(sub[col].min(), sub[col].max(), 100)
         ax.plot(x_line, intercept + slope * x_line, "k--", linewidth=1.5)
-        # annotation
         sign = "+" if intercept >= 0 else "-"
         ax.text(0.05, 0.95,
                 f"y = {slope:.3f}x {sign} {abs(intercept):.2f}\n"
@@ -309,17 +235,16 @@ def create_plots(df: pd.DataFrame, results: dict):
     fig.savefig(OUT_DIR / "regression_output.png", dpi=150)
     plt.close(fig)
 
-    # ── 6. Correlation heatmap ───────────────────────────────────────────
-    num_cols = ["yield_tons_per_acre"] + avail_cols
-    if "precip_gs_in" in df.columns:
-        num_cols.append("precip_gs_in")
-    corr = df[num_cols].dropna().corr()
-    fig, ax = plt.subplots(figsize=(7, 6))
-    sns.heatmap(corr, annot=True, fmt=".3f", cmap="RdBu_r", center=0,
-                square=True, ax=ax)
-    ax.set_title("Correlation Matrix: Yield & Climate Variables")
+    # ── 2. Yield time series by county ───────────────────────────────────
+    fig, ax = plt.subplots(figsize=(10, 6))
+    for county, grp in df.groupby("county"):
+        ax.plot(grp["year"], grp["yield_tons_per_acre"], "o-", label=county)
+    ax.set_xlabel("Year")
+    ax.set_ylabel("Yield (tons/acre)")
+    ax.set_title("Grape Yield Over Time by County")
+    ax.legend(loc="best")
     fig.tight_layout()
-    fig.savefig(OUT_DIR / "correlation_heatmap.png", dpi=150)
+    fig.savefig(OUT_DIR / "yield_timeseries.png", dpi=150)
     plt.close(fig)
 
     print(f"  Plots saved to {OUT_DIR}/")

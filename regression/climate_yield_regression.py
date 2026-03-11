@@ -27,7 +27,7 @@ import seaborn as sns
 
 # ── paths ──────────────────────────────────────────────────────────────────
 REG_DIR = Path(__file__).resolve().parent
-YIELD_CSV = REG_DIR / "grape_normalized_yield_selected_counties1.csv"
+YIELD_CSV = REG_DIR / "grape_normalized_yield_selected_counties.csv"
 ETO_CSV = REG_DIR / "county_vineyard_eto_annual.csv"
 TEMP_XLSX = REG_DIR / "County temp years.xlsx"
 PRECIP_XLSX = REG_DIR / "ca_county_precip.xlsx"

@@ -6,58 +6,58 @@ DATA SUMMARY
 ----------------------------------------
   Counties : ['Fresno', 'Marin', 'Napa', 'San Diego', 'Santa Barbara', 'Tehama']
   Years    : [np.int64(2014), np.int64(2016), np.int64(2018), np.int64(2019), np.int64(2020), np.int64(2021), np.int64(2022)]
-  N obs    : 40
+  N obs    : 42
 
 VARIABLE STATISTICS
 ----------------------------------------
-  yield_tons_per_acre (n=40):
-    mean=4.589  std=3.726  min=1.436  max=14.587
-  eto_annual_in (n=40):
-    mean=37.439  std=14.840  min=5.012  max=55.803
-  temp_avg_f (n=40):
-    mean=59.805  std=2.385  min=55.600  max=65.800
-  precip_annual_in (n=40):
-    mean=23.326  std=12.232  min=8.070  max=48.440
-  precip_gs_in (n=40):
-    mean=4.247  std=2.642  min=0.800  max=11.930
+  yield_tons_per_acre (n=42):
+    mean=4.476  std=3.671  min=1.436  max=14.587
+  eto_annual_in (n=42):
+    mean=37.668  std=14.924  min=5.012  max=58.046
+  temp_avg_f (n=42):
+    mean=60.026  std=2.533  min=55.600  max=65.800
+  precip_annual_in (n=42):
+    mean=22.691  std=12.275  min=8.070  max=48.440
+  precip_gs_in (n=42):
+    mean=4.152  std=2.612  min=0.800  max=11.930
 
 DATA COVERAGE
 ----------------------------------------
-  eto_annual_in: 40 available, 0 missing
-  temp_avg_f: 40 available, 0 missing
-  precip_annual_in: 40 available, 0 missing
+  eto_annual_in: 42 available, 0 missing
+  temp_avg_f: 42 available, 0 missing
+  precip_annual_in: 42 available, 0 missing
 
 ==============================================================================
 MODEL: full_model_eto_temp_precip
 ==============================================================================
                              OLS Regression Results                            
 ===============================================================================
-Dep. Variable:     yield_tons_per_acre   R-squared:                       0.526
-Model:                             OLS   Adj. R-squared:                  0.486
-Method:                  Least Squares   F-statistic:                     13.30
-Date:                 Wed, 11 Mar 2026   Prob (F-statistic):           5.36e-06
-Time:                         06:13:49   Log-Likelihood:                -93.953
-No. Observations:                   40   AIC:                             195.9
-Df Residuals:                       36   BIC:                             202.7
+Dep. Variable:     yield_tons_per_acre   R-squared:                       0.485
+Model:                             OLS   Adj. R-squared:                  0.444
+Method:                  Least Squares   F-statistic:                     11.93
+Date:                 Wed, 11 Mar 2026   Prob (F-statistic):           1.20e-05
+Time:                         06:15:16   Log-Likelihood:                -99.768
+No. Observations:                   42   AIC:                             207.5
+Df Residuals:                       38   BIC:                             214.5
 Df Model:                            3                                         
 Covariance Type:             nonrobust                                         
 ====================================================================================
                        coef    std err          t      P>|t|      [0.025      0.975]
 ------------------------------------------------------------------------------------
-const                6.6302     12.465      0.532      0.598     -18.651      31.911
-eto_annual_in       -0.1771      0.035     -5.074      0.000      -0.248      -0.106
-temp_avg_f           0.1171      0.218      0.537      0.594      -0.325       0.559
-precip_annual_in    -0.1035      0.035     -2.939      0.006      -0.175      -0.032
+const               16.1462     11.668      1.384      0.175      -7.475      39.767
+eto_annual_in       -0.1554      0.034     -4.615      0.000      -0.224      -0.087
+temp_avg_f          -0.0609      0.201     -0.302      0.764      -0.469       0.347
+precip_annual_in    -0.0951      0.036     -2.677      0.011      -0.167      -0.023
 ==============================================================================
-Omnibus:                        0.969   Durbin-Watson:                   1.185
-Prob(Omnibus):                  0.616   Jarque-Bera (JB):                0.268
-Skew:                          -0.073   Prob(JB):                        0.875
-Kurtosis:                       3.373   Cond. No.                     2.21e+03
+Omnibus:                        0.406   Durbin-Watson:                   1.149
+Prob(Omnibus):                  0.816   Jarque-Bera (JB):                0.057
+Skew:                          -0.077   Prob(JB):                        0.972
+Kurtosis:                       3.096   Cond. No.                     2.07e+03
 ==============================================================================
 
 Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-[2] The condition number is large, 2.21e+03. This might indicate that there are
+[2] The condition number is large, 2.07e+03. This might indicate that there are
 strong multicollinearity or other numerical problems.
 
 ==============================================================================
@@ -65,25 +65,25 @@ MODEL: simple_eto_annual_in
 ==============================================================================
                              OLS Regression Results                            
 ===============================================================================
-Dep. Variable:     yield_tons_per_acre   R-squared:                       0.403
-Model:                             OLS   Adj. R-squared:                  0.388
-Method:                  Least Squares   F-statistic:                     25.69
+Dep. Variable:     yield_tons_per_acre   R-squared:                       0.388
+Model:                             OLS   Adj. R-squared:                  0.372
+Method:                  Least Squares   F-statistic:                     25.31
 Date:                 Wed, 11 Mar 2026   Prob (F-statistic):           1.07e-05
-Time:                         06:13:49   Log-Likelihood:                -98.539
-No. Observations:                   40   AIC:                             201.1
-Df Residuals:                       38   BIC:                             204.5
+Time:                         06:15:16   Log-Likelihood:                -103.41
+No. Observations:                   42   AIC:                             210.8
+Df Residuals:                       40   BIC:                             214.3
 Df Model:                            1                                         
 Covariance Type:             nonrobust                                         
 =================================================================================
                     coef    std err          t      P>|t|      [0.025      0.975]
 ---------------------------------------------------------------------------------
-const            10.5597      1.265      8.348      0.000       7.999      13.120
-eto_annual_in    -0.1595      0.031     -5.069      0.000      -0.223      -0.096
+const            10.2436      1.231      8.321      0.000       7.755      12.732
+eto_annual_in    -0.1531      0.030     -5.031      0.000      -0.215      -0.092
 ==============================================================================
-Omnibus:                        2.813   Durbin-Watson:                   0.863
-Prob(Omnibus):                  0.245   Jarque-Bera (JB):                1.891
-Skew:                          -0.157   Prob(JB):                        0.389
-Kurtosis:                       4.018   Cond. No.                         110.
+Omnibus:                        2.126   Durbin-Watson:                   0.938
+Prob(Omnibus):                  0.345   Jarque-Bera (JB):                1.224
+Skew:                          -0.024   Prob(JB):                        0.542
+Kurtosis:                       3.835   Cond. No.                         111.
 ==============================================================================
 
 Notes:
@@ -94,30 +94,30 @@ MODEL: simple_temp_avg_f
 ==============================================================================
                              OLS Regression Results                            
 ===============================================================================
-Dep. Variable:     yield_tons_per_acre   R-squared:                       0.079
-Model:                             OLS   Adj. R-squared:                  0.055
-Method:                  Least Squares   F-statistic:                     3.281
-Date:                 Wed, 11 Mar 2026   Prob (F-statistic):             0.0780
-Time:                         06:13:49   Log-Likelihood:                -107.21
-No. Observations:                   40   AIC:                             218.4
-Df Residuals:                       38   BIC:                             221.8
+Dep. Variable:     yield_tons_per_acre   R-squared:                       0.097
+Model:                             OLS   Adj. R-squared:                  0.074
+Method:                  Least Squares   F-statistic:                     4.299
+Date:                 Wed, 11 Mar 2026   Prob (F-statistic):             0.0446
+Time:                         06:15:16   Log-Likelihood:                -111.56
+No. Observations:                   42   AIC:                             227.1
+Df Residuals:                       40   BIC:                             230.6
 Df Model:                            1                                         
 Covariance Type:             nonrobust                                         
 ==============================================================================
                  coef    std err          t      P>|t|      [0.025      0.975]
 ------------------------------------------------------------------------------
-const         30.9321     14.554      2.125      0.040       1.468      60.396
-temp_avg_f    -0.4405      0.243     -1.811      0.078      -0.933       0.052
+const         31.5793     13.083      2.414      0.020       5.138      58.021
+temp_avg_f    -0.4515      0.218     -2.073      0.045      -0.892      -0.011
 ==============================================================================
-Omnibus:                        7.546   Durbin-Watson:                   0.562
-Prob(Omnibus):                  0.023   Jarque-Bera (JB):                7.038
-Skew:                           1.024   Prob(JB):                       0.0296
-Kurtosis:                       3.159   Cond. No.                     1.52e+03
+Omnibus:                        8.314   Durbin-Watson:                   0.565
+Prob(Omnibus):                  0.016   Jarque-Bera (JB):                7.784
+Skew:                           1.044   Prob(JB):                       0.0204
+Kurtosis:                       3.302   Cond. No.                     1.44e+03
 ==============================================================================
 
 Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-[2] The condition number is large, 1.52e+03. This might indicate that there are
+[2] The condition number is large, 1.44e+03. This might indicate that there are
 strong multicollinearity or other numerical problems.
 
 ==============================================================================
@@ -125,25 +125,25 @@ MODEL: simple_precip_annual_in
 ==============================================================================
                              OLS Regression Results                            
 ===============================================================================
-Dep. Variable:     yield_tons_per_acre   R-squared:                       0.085
-Model:                             OLS   Adj. R-squared:                  0.061
-Method:                  Least Squares   F-statistic:                     3.517
-Date:                 Wed, 11 Mar 2026   Prob (F-statistic):             0.0684
-Time:                         06:13:49   Log-Likelihood:                -107.10
-No. Observations:                   40   AIC:                             218.2
-Df Residuals:                       38   BIC:                             221.6
+Dep. Variable:     yield_tons_per_acre   R-squared:                       0.061
+Model:                             OLS   Adj. R-squared:                  0.038
+Method:                  Least Squares   F-statistic:                     2.599
+Date:                 Wed, 11 Mar 2026   Prob (F-statistic):              0.115
+Time:                         06:15:16   Log-Likelihood:                -112.38
+No. Observations:                   42   AIC:                             228.8
+Df Residuals:                       40   BIC:                             232.2
 Df Model:                            1                                         
 Covariance Type:             nonrobust                                         
 ====================================================================================
                        coef    std err          t      P>|t|      [0.025      0.975]
 ------------------------------------------------------------------------------------
-const                6.6573      1.242      5.361      0.000       4.143       9.171
-precip_annual_in    -0.0887      0.047     -1.875      0.068      -0.184       0.007
+const                6.1516      1.179      5.218      0.000       3.769       8.534
+precip_annual_in    -0.0739      0.046     -1.612      0.115      -0.166       0.019
 ==============================================================================
-Omnibus:                       11.708   Durbin-Watson:                   0.521
-Prob(Omnibus):                  0.003   Jarque-Bera (JB):               11.783
-Skew:                           1.290   Prob(JB):                      0.00276
-Kurtosis:                       3.640   Cond. No.                         57.2
+Omnibus:                       14.312   Durbin-Watson:                   0.482
+Prob(Omnibus):                  0.001   Jarque-Bera (JB):               15.414
+Skew:                           1.410   Prob(JB):                     0.000450
+Kurtosis:                       3.928   Cond. No.                         54.6
 ==============================================================================
 
 Notes:
@@ -154,37 +154,37 @@ MODEL: fe_county_full
 ==============================================================================
                              OLS Regression Results                            
 ===============================================================================
-Dep. Variable:     yield_tons_per_acre   R-squared:                       0.935
-Model:                             OLS   Adj. R-squared:                  0.919
-Method:                  Least Squares   F-statistic:                     55.96
-Date:                 Wed, 11 Mar 2026   Prob (F-statistic):           2.77e-16
-Time:                         06:13:49   Log-Likelihood:                -54.128
-No. Observations:                   40   AIC:                             126.3
-Df Residuals:                       31   BIC:                             141.5
+Dep. Variable:     yield_tons_per_acre   R-squared:                       0.916
+Model:                             OLS   Adj. R-squared:                  0.895
+Method:                  Least Squares   F-statistic:                     44.83
+Date:                 Wed, 11 Mar 2026   Prob (F-statistic):           1.54e-15
+Time:                         06:15:16   Log-Likelihood:                -61.754
+No. Observations:                   42   AIC:                             141.5
+Df Residuals:                       33   BIC:                             157.1
 Df Model:                            8                                         
 Covariance Type:             nonrobust                                         
 ====================================================================================
                        coef    std err          t      P>|t|      [0.025      0.975]
 ------------------------------------------------------------------------------------
-const                5.6314     12.645      0.445      0.659     -20.158      31.421
-eto_annual_in       -0.0597      0.018     -3.336      0.002      -0.096      -0.023
-temp_avg_f           0.1284      0.222      0.579      0.567      -0.324       0.581
-precip_annual_in     0.0037      0.020      0.185      0.854      -0.038       0.045
-Marin               -9.4721      0.717    -13.212      0.000     -10.934      -8.010
-Napa                -7.8473      1.085     -7.234      0.000     -10.060      -5.635
-San Diego           -6.4380      1.766     -3.645      0.001     -10.040      -2.836
-Santa Barbara       -7.9015      0.971     -8.137      0.000      -9.882      -5.921
-Tehama              -7.7291      1.076     -7.185      0.000      -9.923      -5.535
+const                8.0031     14.094      0.568      0.574     -20.672      36.678
+eto_annual_in       -0.0477      0.019     -2.562      0.015      -0.086      -0.010
+temp_avg_f           0.0814      0.247      0.329      0.744      -0.421       0.584
+precip_annual_in     0.0109      0.022      0.483      0.632      -0.035       0.057
+Marin               -9.7374      0.790    -12.322      0.000     -11.345      -8.130
+Napa                -8.0503      1.201     -6.701      0.000     -10.495      -5.606
+San Diego           -7.2208      1.952     -3.700      0.001     -11.191      -3.250
+Santa Barbara       -8.1061      1.071     -7.571      0.000     -10.285      -5.928
+Tehama              -8.0484      1.184     -6.796      0.000     -10.458      -5.639
 ==============================================================================
-Omnibus:                        2.681   Durbin-Watson:                   1.495
-Prob(Omnibus):                  0.262   Jarque-Bera (JB):                1.592
-Skew:                           0.296   Prob(JB):                        0.451
-Kurtosis:                       3.777   Cond. No.                     5.70e+03
+Omnibus:                        1.264   Durbin-Watson:                   1.389
+Prob(Omnibus):                  0.532   Jarque-Bera (JB):                0.463
+Skew:                           0.062   Prob(JB):                        0.793
+Kurtosis:                       3.499   Cond. No.                     5.84e+03
 ==============================================================================
 
 Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-[2] The condition number is large, 5.7e+03. This might indicate that there are
+[2] The condition number is large, 5.84e+03. This might indicate that there are
 strong multicollinearity or other numerical problems.
 
 ==============================================================================
@@ -196,7 +196,7 @@ Dep. Variable:     yield_tons_per_acre   R-squared:                       0.654
 Model:                             OLS   Adj. R-squared:                  0.309
 Method:                  Least Squares   F-statistic:                     1.893
 Date:                 Wed, 11 Mar 2026   Prob (F-statistic):              0.307
-Time:                         06:13:49   Log-Likelihood:                -10.547
+Time:                         06:15:16   Log-Likelihood:                -10.547
 No. Observations:                    7   AIC:                             29.09
 Df Residuals:                        3   BIC:                             28.88
 Df Model:                            3                                         
@@ -229,7 +229,7 @@ Dep. Variable:     yield_tons_per_acre   R-squared:                       0.771
 Model:                             OLS   Adj. R-squared:                  0.543
 Method:                  Least Squares   F-statistic:                     3.373
 Date:                 Wed, 11 Mar 2026   Prob (F-statistic):              0.172
-Time:                         06:13:49   Log-Likelihood:                 4.1235
+Time:                         06:15:16   Log-Likelihood:                 4.1235
 No. Observations:                    7   AIC:                           -0.2470
 Df Residuals:                        3   BIC:                           -0.4634
 Df Model:                            3                                         
@@ -262,7 +262,7 @@ Dep. Variable:     yield_tons_per_acre   R-squared:                       0.502
 Model:                             OLS   Adj. R-squared:                  0.005
 Method:                  Least Squares   F-statistic:                     1.009
 Date:                 Wed, 11 Mar 2026   Prob (F-statistic):              0.497
-Time:                         06:13:49   Log-Likelihood:                -4.1029
+Time:                         06:15:16   Log-Likelihood:                -4.1029
 No. Observations:                    7   AIC:                             16.21
 Df Residuals:                        3   BIC:                             15.99
 Df Model:                            3                                         
@@ -291,32 +291,32 @@ MODEL: county_San Diego
 ==============================================================================
                              OLS Regression Results                            
 ===============================================================================
-Dep. Variable:     yield_tons_per_acre   R-squared:                       0.999
-Model:                             OLS   Adj. R-squared:                  0.995
-Method:                  Least Squares   F-statistic:                     286.8
-Date:                 Wed, 11 Mar 2026   Prob (F-statistic):             0.0434
-Time:                         06:13:49   Log-Likelihood:                 8.1250
-No. Observations:                    5   AIC:                            -8.250
-Df Residuals:                        1   BIC:                            -9.812
+Dep. Variable:     yield_tons_per_acre   R-squared:                       0.256
+Model:                             OLS   Adj. R-squared:                 -0.489
+Method:                  Least Squares   F-statistic:                    0.3435
+Date:                 Wed, 11 Mar 2026   Prob (F-statistic):              0.798
+Time:                         06:15:16   Log-Likelihood:                -12.248
+No. Observations:                    7   AIC:                             32.50
+Df Residuals:                        3   BIC:                             32.28
 Df Model:                            3                                         
 Covariance Type:             nonrobust                                         
 ====================================================================================
                        coef    std err          t      P>|t|      [0.025      0.975]
 ------------------------------------------------------------------------------------
-const               -5.2995      2.913     -1.819      0.320     -42.314      31.715
-eto_annual_in       -0.1088      0.004    -27.545      0.023      -0.159      -0.059
-temp_avg_f           0.2264      0.045      4.986      0.126      -0.350       0.803
-precip_annual_in     0.0472      0.012      4.006      0.156      -0.103       0.197
+const                6.2347     57.495      0.108      0.920    -176.741     189.210
+eto_annual_in       -0.0586      0.058     -1.014      0.385      -0.242       0.125
+temp_avg_f          -0.0033      0.891     -0.004      0.997      -2.840       2.834
+precip_annual_in     0.0523      0.205      0.255      0.815      -0.599       0.704
 ==============================================================================
-Omnibus:                          nan   Durbin-Watson:                   2.377
-Prob(Omnibus):                    nan   Jarque-Bera (JB):                1.147
-Skew:                          -1.170   Prob(JB):                        0.564
-Kurtosis:                       2.820   Cond. No.                     4.99e+03
+Omnibus:                          nan   Durbin-Watson:                   0.963
+Prob(Omnibus):                    nan   Jarque-Bera (JB):                0.351
+Skew:                          -0.526   Prob(JB):                        0.839
+Kurtosis:                       2.688   Cond. No.                     5.77e+03
 ==============================================================================
 
 Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-[2] The condition number is large, 4.99e+03. This might indicate that there are
+[2] The condition number is large, 5.77e+03. This might indicate that there are
 strong multicollinearity or other numerical problems.
 
 ==============================================================================
@@ -328,7 +328,7 @@ Dep. Variable:     yield_tons_per_acre   R-squared:                       0.777
 Model:                             OLS   Adj. R-squared:                  0.554
 Method:                  Least Squares   F-statistic:                     3.489
 Date:                 Wed, 11 Mar 2026   Prob (F-statistic):              0.166
-Time:                         06:13:49   Log-Likelihood:                -3.6613
+Time:                         06:15:16   Log-Likelihood:                -3.6613
 No. Observations:                    7   AIC:                             15.32
 Df Residuals:                        3   BIC:                             15.11
 Df Model:                            3                                         
@@ -361,7 +361,7 @@ Dep. Variable:     yield_tons_per_acre   R-squared:                       0.387
 Model:                             OLS   Adj. R-squared:                 -0.226
 Method:                  Least Squares   F-statistic:                    0.6314
 Date:                 Wed, 11 Mar 2026   Prob (F-statistic):              0.643
-Time:                         06:13:50   Log-Likelihood:                -8.3541
+Time:                         06:15:16   Log-Likelihood:                -8.3541
 No. Observations:                    7   AIC:                             24.71
 Df Residuals:                        3   BIC:                             24.49
 Df Model:                            3                                         

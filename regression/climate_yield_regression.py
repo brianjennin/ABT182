@@ -91,6 +91,20 @@ def main():
     fig.savefig(OUT_DIR / "yield_timeseries.png", dpi=150)
     plt.close(fig)
 
+    # -- Climate variable time series (1x3) --
+    fig, axes = plt.subplots(1, 3, figsize=(16, 5))
+    for ax, col in zip(axes, pred_cols):
+        for county, grp in df.dropna(subset=[col]).groupby("county"):
+            ax.plot(grp["year"], grp[col], "o-", label=county)
+        ax.set_xlabel("Year")
+        ax.set_ylabel(labels[col])
+        ax.set_title(f"{labels[col]} Over Time")
+    axes[0].legend(loc="best", fontsize=7)
+    fig.suptitle("Climate Variables Over Time by County", fontsize=14)
+    fig.tight_layout()
+    fig.savefig(OUT_DIR / "climate_timeseries.png", dpi=150)
+    plt.close(fig)
+
     print(f"Saved plots to {OUT_DIR}/")
 
 

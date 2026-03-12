@@ -8,32 +8,33 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-REG_DIR = Path(__file__).resolve().parent
-OUT_DIR = REG_DIR / "output"
+ROOT_DIR = Path(__file__).resolve().parent.parent
+INPUT_DIR = ROOT_DIR / "inputs"
+OUT_DIR = ROOT_DIR / "outputs"
 
 
 def load_data() -> pd.DataFrame:
     """Load and merge yield, ETo, temperature, and precipitation data."""
     # Yield (wide -> long)
-    yld = pd.read_csv(REG_DIR / "grape_normalized_yield_selected_counties.csv")
+    yld = pd.read_csv(INPUT_DIR / "grape_normalized_yield_selected_counties.csv")
     yld = yld.melt(id_vars="county", var_name="year", value_name="yield_tons_per_acre")
     yld["year"] = yld["year"].astype(int)
     yld = yld.dropna(subset=["yield_tons_per_acre"])
 
     # ETo
-    eto = pd.read_csv(REG_DIR / "county_vineyard_eto_annual.csv")
+    eto = pd.read_csv(INPUT_DIR / "county_vineyard_eto_annual.csv")
     eto = eto.rename(columns={"annual_eto_in": "eto_annual_in"})
     eto = eto[["year", "county", "eto_annual_in"]]
 
     # Temperature
-    temp = pd.read_excel(REG_DIR / "County temp years.xlsx")
+    temp = pd.read_excel(INPUT_DIR / "County temp years.xlsx")
     temp = temp.dropna(subset=["County", "Value"])
     temp["county"] = temp["County"].str.replace(r"\s*County$", "", regex=True).str.strip()
     temp["temp_avg_f"] = temp["Value"].astype(str).str.replace("°F", "", regex=False).astype(float)
     temp = temp.rename(columns={"Year": "year"})[["year", "county", "temp_avg_f"]]
 
     # Precipitation
-    precip = pd.read_excel(REG_DIR / "ca_county_precip.xlsx")
+    precip = pd.read_excel(INPUT_DIR / "ca_county_precip.xlsx")
     precip = precip.dropna(subset=["county_name"])
     month_cols = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
                   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
